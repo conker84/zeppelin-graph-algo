@@ -1,0 +1,83 @@
+{
+  "paragraphs": [
+    {
+      "text": "%spark.dep\nz.reset()\nz.load(\"neo4j-contrib:neo4j-spark-connector:2.2.1-M5\")",
+      "user": "anonymous",
+      "dateUpdated": "2019-12-02 10:03:59.258",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "editorMode": "ace/mode/scala",
+        "editorHide": false
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "res0: org.apache.zeppelin.dep.Dependency \u003d org.apache.zeppelin.dep.Dependency@53fc67a9\n"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1535190069294_-373832448",
+      "id": "20180825-094109_1755074418",
+      "dateCreated": "2018-08-25 09:41:09.295",
+      "dateStarted": "2019-12-02 10:03:59.428",
+      "dateFinished": "2019-12-02 10:04:19.314",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%spark.dep\n",
+      "user": "anonymous",
+      "dateUpdated": "2018-09-06 17:10:13.206",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "editorMode": "ace/mode/scala"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "jobName": "paragraph_1535385068596_-2094716857",
+      "id": "20180827-155108_2079722985",
+      "dateCreated": "2018-08-27 15:51:08.596",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    }
+  ],
+  "name": "GraphRM 2019/Load Dependencies",
+  "id": "2DQHAR7VK",
+  "noteParams": {},
+  "noteForms": {},
+  "angularObjects": {
+    "spark:shared_process": []
+  },
+  "config": {
+    "isZeppelinNotebookCronEnable": false
+  },
+  "info": {}
+}

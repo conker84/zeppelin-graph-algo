@@ -1,0 +1,1073 @@
+{
+  "paragraphs": [
+    {
+      "text": "%md\n### Please make sure that you have previously executed [this notebook](/#/notebook/2DQHAR7VK)",
+      "user": "anonymous",
+      "dateUpdated": "2018-09-06 18:57:17.951",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "markdown",
+          "editOnDblClick": true,
+          "completionKey": "TAB",
+          "completionSupport": false
+        },
+        "editorMode": "ace/mode/markdown",
+        "editorHide": true,
+        "tableHide": false
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003ch3\u003ePlease make sure that you have previously executed \u003ca href\u003d\"/#/notebook/2DQHAR7VK\"\u003ethis notebook\u003c/a\u003e\u003c/h3\u003e\n\u003c/div\u003e"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1536251908740_1743815700",
+      "id": "20180906-163828_944263537",
+      "dateCreated": "2018-09-06 16:38:28.741",
+      "dateStarted": "2018-09-06 18:57:17.964",
+      "dateFinished": "2018-09-06 18:57:17.975",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "title": "Use this paragraph if you are executing the entire notebook multiple times",
+      "text": "%neo4j\nmatch (n)\ndetach delete n",
+      "user": "anonymous",
+      "dateUpdated": "2019-10-08 19:10:51.823",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "editorMode": "ace/mode/undefined",
+        "title": true,
+        "editorHide": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": []
+      },
+      "apps": [],
+      "jobName": "paragraph_1531478860842_-1003248919",
+      "id": "20180713-104740_1904298363",
+      "dateCreated": "2018-07-13 10:47:40.842",
+      "dateStarted": "2019-10-08 19:08:38.486",
+      "dateFinished": "2019-10-08 19:08:41.135",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "title": "Download the dataset into the file system",
+      "text": "val file \u003d new java.io.File(\"/zeppelin/spark-warehouse/crimes.csv\")\nscala.io.Source.fromURL(\"https://data.cityofchicago.org/resource/6zsd-86xi.csv\").getLines.foreach{ line \u003d\u003e\n    org.apache.commons.io.FileUtils.writeStringToFile(file, \"\\n\" + line, java.nio.charset.Charset.forName(\"UTF-8\"), true);\n}",
+      "user": "anonymous",
+      "dateUpdated": "2019-10-09 16:13:12.775",
+      "config": {
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "colWidth": 12.0,
+        "editorMode": "ace/mode/scala",
+        "fontSize": 9.0,
+        "results": {},
+        "enabled": true,
+        "title": true,
+        "editorHide": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "jobName": "paragraph_1531061286836_-103570195",
+      "id": "20180707-100041_373321372",
+      "dateCreated": "2018-07-08 14:48:06.836",
+      "dateStarted": "2019-10-08 19:09:19.103",
+      "dateFinished": "2019-10-08 19:09:32.593",
+      "status": "FINISHED",
+      "errorMessage": "",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "title": "Read the dataset",
+      "text": "import org.apache.spark.sql.functions.{split, concat_ws, substring}\nval crimeDF \u003d spark.read.format(\"csv\").option(\"header\", \"true\").load(\"/zeppelin/spark-warehouse/crimes.csv\").where(\"beat is not null\")",
+      "user": "anonymous",
+      "dateUpdated": "2019-12-02 10:14:27.251",
+      "config": {
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "colWidth": 12.0,
+        "editorMode": "ace/mode/scala",
+        "fontSize": 9.0,
+        "results": {},
+        "enabled": true,
+        "title": true,
+        "editorHide": false
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "import org.apache.spark.sql.functions.{split, concat_ws, substring}\ncrimeDF: org.apache.spark.sql.Dataset[org.apache.spark.sql.Row] \u003d [id: string, case_number: string ... 32 more fields]\n"
+          }
+        ]
+      },
+      "runtimeInfos": {
+        "jobUrl": {
+          "propertyName": "jobUrl",
+          "label": "SPARK JOB",
+          "tooltip": "View in Spark web UI",
+          "group": "spark",
+          "values": [
+            "http://172.22.0.3:4040/jobs/job?id\u003d0"
+          ],
+          "interpreterSettingId": "spark"
+        }
+      },
+      "apps": [],
+      "jobName": "paragraph_1531061286837_349701581",
+      "id": "20180707-100627_5456907",
+      "dateCreated": "2018-07-08 14:48:06.837",
+      "dateStarted": "2019-12-02 10:14:27.370",
+      "dateFinished": "2019-12-02 10:14:36.708",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "title": "Print the dataset\u0027s schema",
+      "text": "crimeDF.printSchema",
+      "user": "anonymous",
+      "dateUpdated": "2019-12-02 10:14:45.953",
+      "config": {
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "colWidth": 12.0,
+        "editorMode": "ace/mode/scala",
+        "fontSize": 9.0,
+        "results": {},
+        "enabled": true,
+        "title": true,
+        "editorHide": false
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "root\n |-- id: string (nullable \u003d true)\n |-- case_number: string (nullable \u003d true)\n |-- date: string (nullable \u003d true)\n |-- block: string (nullable \u003d true)\n |-- iucr: string (nullable \u003d true)\n |-- primary_type: string (nullable \u003d true)\n |-- description: string (nullable \u003d true)\n |-- location_description: string (nullable \u003d true)\n |-- arrest: string (nullable \u003d true)\n |-- domestic: string (nullable \u003d true)\n |-- beat: string (nullable \u003d true)\n |-- district: string (nullable \u003d true)\n |-- ward: string (nullable \u003d true)\n |-- community_area: string (nullable \u003d true)\n |-- fbi_code: string (nullable \u003d true)\n |-- x_coordinate: string (nullable \u003d true)\n |-- y_coordinate: string (nullable \u003d true)\n |-- year: string (nullable \u003d true)\n |-- updated_on: string (nullable \u003d true)\n |-- latitude: string (nullable \u003d true)\n |-- longitude: string (nullable \u003d true)\n |-- location: string (nullable \u003d true)\n |-- location_address: string (nullable \u003d true)\n |-- location_city: string (nullable \u003d true)\n |-- location_state: string (nullable \u003d true)\n |-- location_zip: string (nullable \u003d true)\n |-- :@computed_region_awaf_s7ux: string (nullable \u003d true)\n |-- :@computed_region_6mkv_f3dw: string (nullable \u003d true)\n |-- :@computed_region_vrxf_vc4k: string (nullable \u003d true)\n |-- :@computed_region_bdys_3d7i: string (nullable \u003d true)\n |-- :@computed_region_43wa_7qmu: string (nullable \u003d true)\n |-- :@computed_region_rpca_8um6: string (nullable \u003d true)\n |-- :@computed_region_d9mm_jgwp: string (nullable \u003d true)\n |-- :@computed_region_d3ds_rm58: string (nullable \u003d true)\n\n"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1531061286837_-1724462422",
+      "id": "20180707-121247_755957726",
+      "dateCreated": "2018-07-08 14:48:06.837",
+      "dateStarted": "2019-12-02 10:14:46.035",
+      "dateFinished": "2019-12-02 10:14:46.379",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "title": "Defining the graph model",
+      "text": "%md\n\nStarting from that schema we will construct a graph model just like this:\n\u003cdiv style\u003d\"text-align: center;\"\u003e\n    \u003cimg src\u003d\"https://cdn-images-1.medium.com/max/1600/1*EUuRJDcX51dyrLq4eXMp0w.png\"\u003e\n\u003c/div\u003e\n\n\nWe have 4 nodes:\n\n* `Beat` (police district) with a `beat` property;\n* `Crime` with `id`, `description`, `case_number`, `point` properties;\n* `CrimeType` with `primary_type` property;\n* `CrimeDate` with `parsed_date`\n\nAnd 3 relationships:\n\n* `ON_BEAT` starting from a `Beat` and ending in a `Crime`;\n* `IS_TYPE` starting from a `Crime` and ending in a `CrimeType`;\n* `ON_DATE` starting from a `Crime` and ending in a `CrimeDate`;",
+      "user": "anonymous",
+      "dateUpdated": "2019-10-09 18:33:48.202",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "markdown",
+          "editOnDblClick": true,
+          "completionKey": "TAB",
+          "completionSupport": false
+        },
+        "editorMode": "ace/mode/markdown",
+        "editorHide": true,
+        "tableHide": false,
+        "title": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003cp\u003eStarting from that schema we will construct a graph model just like this:\u003cbr/\u003e\u003cdiv style\u003d\"text-align: center;\"\u003e\u003cbr/\u003e \u003cimg src\u003d\"https://cdn-images-1.medium.com/max/1600/1*EUuRJDcX51dyrLq4eXMp0w.png\"\u003e\u003cbr/\u003e\u003c/div\u003e\u003c/p\u003e\n\u003cp\u003eWe have 4 nodes:\u003c/p\u003e\n\u003cul\u003e\n  \u003cli\u003e\u003ccode\u003eBeat\u003c/code\u003e (police district) with a \u003ccode\u003ebeat\u003c/code\u003e property;\u003c/li\u003e\n  \u003cli\u003e\u003ccode\u003eCrime\u003c/code\u003e with \u003ccode\u003eid\u003c/code\u003e, \u003ccode\u003edescription\u003c/code\u003e, \u003ccode\u003ecase_number\u003c/code\u003e, \u003ccode\u003epoint\u003c/code\u003e properties;\u003c/li\u003e\n  \u003cli\u003e\u003ccode\u003eCrimeType\u003c/code\u003e with \u003ccode\u003eprimary_type\u003c/code\u003e property;\u003c/li\u003e\n  \u003cli\u003e\u003ccode\u003eCrimeDate\u003c/code\u003e with \u003ccode\u003eparsed_date\u003c/code\u003e\u003c/li\u003e\n\u003c/ul\u003e\n\u003cp\u003eAnd 3 relationships:\u003c/p\u003e\n\u003cul\u003e\n  \u003cli\u003e\u003ccode\u003eON_BEAT\u003c/code\u003e starting from a \u003ccode\u003eBeat\u003c/code\u003e and ending in a \u003ccode\u003eCrime\u003c/code\u003e;\u003c/li\u003e\n  \u003cli\u003e\u003ccode\u003eIS_TYPE\u003c/code\u003e starting from a \u003ccode\u003eCrime\u003c/code\u003e and ending in a \u003ccode\u003eCrimeType\u003c/code\u003e;\u003c/li\u003e\n  \u003cli\u003e\u003ccode\u003eON_DATE\u003c/code\u003e starting from a \u003ccode\u003eCrime\u003c/code\u003e and ending in a \u003ccode\u003eCrimeDate\u003c/code\u003e;\u003c/li\u003e\n\u003c/ul\u003e\n\u003c/div\u003e"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1536260323535_88415931",
+      "id": "20180906-185843_1647835112",
+      "dateCreated": "2018-09-06 18:58:43.535",
+      "dateStarted": "2019-10-09 18:33:48.202",
+      "dateFinished": "2019-10-09 18:33:48.235",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "title": "Add new columns to the dataset",
+      "text": "val exendedCrimeDF \u003d crimeDF.withColumn(\"parsed_date\", concat_ws(\"\", split(substring(crimeDF(\"date\"), 0, 10), \"-\"))).withColumn(\"point\", concat_ws(\", \", crimeDF(\"latitude\"), crimeDF(\"longitude\")))",
+      "user": "anonymous",
+      "dateUpdated": "2019-12-02 10:15:51.153",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "editorMode": "ace/mode/scala",
+        "title": true,
+        "editorHide": false
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "exendedCrimeDF: org.apache.spark.sql.DataFrame \u003d [id: string, case_number: string ... 34 more fields]\n"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1531062771823_1090620158",
+      "id": "20180708-151251_1184560545",
+      "dateCreated": "2018-07-08 15:12:51.823",
+      "dateStarted": "2019-12-02 10:15:51.238",
+      "dateFinished": "2019-12-02 10:15:51.819",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "title": "Simple data exploration of our dataset as tabular data",
+      "text": "z.show(exendedCrimeDF)",
+      "user": "anonymous",
+      "dateUpdated": "2019-12-02 10:15:54.585",
+      "config": {
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "colWidth": 12.0,
+        "editorMode": "ace/mode/scala",
+        "fontSize": 9.0,
+        "results": {
+          "0": {
+            "graph": {
+              "mode": "table",
+              "height": 300.0,
+              "optionOpen": false,
+              "setting": {
+                "table": {
+                  "tableGridState": {},
+                  "tableColumnTypeState": {
+                    "names": {
+                      ":@computed_region_43wa_7qmu": "string",
+                      ":@computed_region_6mkv_f3dw": "string",
+                      ":@computed_region_awaf_s7ux": "string",
+                      ":@computed_region_bdys_3d7i": "string",
+                      ":@computed_region_d3ds_rm58": "string",
+                      ":@computed_region_d9mm_jgwp": "string",
+                      ":@computed_region_rpca_8um6": "string",
+                      ":@computed_region_vrxf_vc4k": "string",
+                      "arrest": "string",
+                      "beat": "string",
+                      "block": "string",
+                      "case_number": "string",
+                      "community_area": "string",
+                      "date": "string",
+                      "description": "string",
+                      "district": "string",
+                      "domestic": "string",
+                      "fbi_code": "string",
+                      "id": "string",
+                      "iucr": "string",
+                      "latitude": "string",
+                      "location": "string",
+                      "location_address": "string",
+                      "location_city": "string",
+                      "location_description": "string",
+                      "location_state": "string",
+                      "location_zip": "string",
+                      "longitude": "string",
+                      "primary_type": "string",
+                      "updated_on": "string",
+                      "ward": "string",
+                      "x_coordinate": "string",
+                      "y_coordinate": "string",
+                      "year": "string",
+                      "parsed_date": "string",
+                      "point": "string"
+                    },
+                    "updated": false
+                  },
+                  "tableOptionSpecHash": "[{\"name\":\"useFilter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable filter for columns\"},{\"name\":\"showPagination\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable pagination for better navigation\"},{\"name\":\"showAggregationFooter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable a footer for displaying aggregated values\"}]",
+                  "tableOptionValue": {
+                    "useFilter": false,
+                    "showPagination": false,
+                    "showAggregationFooter": false
+                  },
+                  "updated": false,
+                  "initialized": false
+                },
+                "multiBarChart": {
+                  "rotate": {
+                    "degree": "-45"
+                  },
+                  "xLabelStatus": "default"
+                }
+              },
+              "commonSetting": {},
+              "keys": [
+                {
+                  "name": "primary_type",
+                  "index": 5.0,
+                  "aggr": "sum"
+                }
+              ],
+              "groups": [],
+              "values": [
+                {
+                  "name": "primary_type",
+                  "index": 5.0,
+                  "aggr": "count"
+                }
+              ]
+            },
+            "helium": {}
+          }
+        },
+        "enabled": true,
+        "title": true,
+        "editorHide": false
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TABLE",
+            "data": "id\tcase_number\tdate\tblock\tiucr\tprimary_type\tdescription\tlocation_description\tarrest\tdomestic\tbeat\tdistrict\tward\tcommunity_area\tfbi_code\tx_coordinate\ty_coordinate\tyear\tupdated_on\tlatitude\tlongitude\tlocation\tlocation_address\tlocation_city\tlocation_state\tlocation_zip\t:@computed_region_awaf_s7ux\t:@computed_region_6mkv_f3dw\t:@computed_region_vrxf_vc4k\t:@computed_region_bdys_3d7i\t:@computed_region_43wa_7qmu\t:@computed_region_rpca_8um6\t:@computed_region_d9mm_jgwp\t:@computed_region_d3ds_rm58\tparsed_date\tpoint\n11839986\tJC447394\t2019-09-24T23:45:00.000\t002XX W 83RD ST\t031A\tROBBERY\tARMED: HANDGUN\tATM (AUTOMATIC TELLER MACHINE)\tfalse\tfalse\t0622\t006\t21\t44\t03\t1175944\t1849925\t2019\t2019-10-01T16:20:30.000\t41.74355527\t-87.630905732\tPOINT (-87.630905732 41.74355527)\tnull\tnull\tnull\tnull\t18\t21554\t40\t1\t13\t59\t20\t236\t20190924\t41.74355527, -87.630905732\n11839904\tJC447322\t2019-09-24T23:43:00.000\t062XX S ARTESIAN AVE\t051A\tASSAULT\tAGGRAVATED: HANDGUN\tSTREET\tfalse\tfalse\t0825\t008\t16\t66\t04A\t1161111\t1863197\t2019\t2019-10-01T16:20:30.000\t41.780294987\t-87.684888472\tPOINT (-87.684888472 41.780294987)\tnull\tnull\tnull\tnull\t44\t21867\t64\t111\t2\t58\t13\t274\t20190924\t41.780294987, -87.684888472\n11839889\tJC447333\t2019-09-24T23:38:00.000\t115XX S HALSTED ST\t1330\tCRIMINAL TRESPASS\tTO LAND\tGAS STATION\ttrue\tfalse\t0524\t005\t34\t53\t26\t1173048\t1828494\t2019\t2019-10-01T16:20:30.000\t41.684809877\t-87.642147208\tPOINT (-87.642147208 41.684809877)\tnull\tnull\tnull\tnull\t45\t22212\t50\t642\t22\t13\t10\t220\t20190924\t41.684809877, -87.642147208\n11839984\tJC447321\t2019-09-24T23:32:00.000\t048XX S SEELEY AVE\t0420\tBATTERY\tAGGRAVATED:KNIFE/CUTTING INSTR\tSIDEWALK\tfalse\tfalse\t0931\t009\t15\t61\t04B\t1163509\t1872541\t2019\t2019-10-01T16:20:30.000\t41.805886147\t-87.675834977\tPOINT (-87.675834977 41.805886147)\tnull\tnull\tnull\tnull\t29\t14924\t59\t788\t3\t37\t23\t119\t20190924\t41.805886147, -87.675834977\n11840468\tJC447973\t2019-09-24T23:30:00.000\t022XX W WELLINGTON AVE\t1310\tCRIMINAL DAMAGE\tTO PROPERTY\tRESIDENTIAL YARD (FRONT/BACK)\tfalse\tfalse\t1931\t019\t32\t5\t14\t1160893\t1919886\t2019\t2019-10-01T16:20:30.000\t41.935859796\t-87.684116209\tPOINT (-87.684116209 41.935859796)\tnull\tnull\tnull\tnull\t24\t21538\t46\t110\t40\t39\t5\t172\t20190924\t41.935859796, -87.684116209\n11839908\tJC447331\t2019-09-24T23:30:00.000\t070XX S INDIANA AVE\t0430\tBATTERY\tAGGRAVATED: OTHER DANG WEAPON\tSTREET\tfalse\tfalse\t0322\t003\t6\t69\t04B\t1178813\t1858329\t2019\t2019-10-01T16:20:30.000\t41.766552048\t-87.620138318\tPOINT (-87.620138318 41.766552048)\tnull\tnull\tnull\tnull\t31\t22260\t67\t514\t32\t60\t18\t211\t20190924\t41.766552048, -87.620138318\n11840929\tJC447312\t2019-09-24T23:30:00.000\t076XX S PARNELL AVE\t0486\tBATTERY\tDOMESTIC BATTERY SIMPLE\tSTREET\tfalse\ttrue\t0621\t006\t17\t69\t08B\t1173866\t1854430\t2019\t2019-10-01T16:20:30.000\t41.755963853\t-87.638386318\tPOINT (-87.638386318 41.755963853)\tnull\tnull\tnull\tnull\t17\t21554\t67\t495\t31\t59\t20\t229\t20190924\t41.755963853, -87.638386318\n11839980\tJC447310\t2019-09-24T23:30:00.000\t049XX S VINCENNES AVE\t0650\tBURGLARY\tHOME INVASION\tAPARTMENT\tfalse\ttrue\t0223\t002\t4\t38\t05\t1180405\t1872459\t2019\t2019-10-01T16:20:30.000\t41.805289729\t-87.613869705\tPOINT (-87.613869705 41.805289729)\tnull\tnull\tnull\tnull\t1\t21192\t4\t394\t10\t10\t24\t116\t20190924\t41.805289729, -87.613869705\n11840018\tJC447320\t2019-09-24T23:30:00.000\t030XX W MARQUETTE RD\t0460\tBATTERY\tSIMPLE\tRESIDENCE\ttrue\tfalse\t0831\t008\t17\t66\t08B\t1157441\t1860051\t2019\t2019-10-01T16:20:30.000\t41.771737057\t-87.698428543\tPOINT (-87.698428543 41.771737057)\tnull\tnull\tnull\tnull\t44\t21867\t64\t382\t31\t58\t13\t208\t20190924\t41.771737057, -87.698428543\n11839975\tJC447355\t2019-09-24T23:30:00.000\t006XX S WABASH AVE\t0460\tBATTERY\tSIMPLE\tRESIDENCE\tfalse\tfalse\t0123\t001\t4\t32\t08B\t1176895\t1897458\t2019\t2019-10-01T16:20:30.000\t41.873968788\t-87.625987769\tPOINT (-87.625987769 41.873968788)\tnull\tnull\tnull\tnull\t48\t14913\t38\t368\t10\t35\t22\t144\t20190924\t41.873968788, -87.625987769\n11839875\tJC447313\t2019-09-24T23:30:00.000\t035XX S ROCKWELL ST\t2820\tOTHER OFFENSE\tTELEPHONE THREAT\tAPARTMENT\tfalse\ttrue\t0911\t009\t12\t58\t08A\t1159607\t1881118\t2019\t2019-10-01T16:20:30.000\t41.829503506\t-87.689910567\tPOINT (-87.689910567 41.829503506)\tnull\tnull\tnull\tnull\t29\t22248\t55\t638\t1\t56\t23\t96\t20190924\t41.829503506, -87.689910567\n11840603\tJC447781\t2019-09-24T23:30:00.000\t007XX E 43RD ST\t0320\tROBBERY\tSTRONGARM - NO WEAPON\tAPARTMENT\tfalse\tfalse\t0214\t002\t4\t38\t03\t1181953\t1876664\t2019\t2019-10-01T16:20:30.000\t41.816792881\t-87.608062183\tPOINT (-87.608062183 41.816792881)\tnull\tnull\tnull\tnull\t1\t4301\t4\t583\t10\t36\t24\t104\t20190924\t41.816792881, -87.608062183\n11839916\tJC447324\t2019-09-24T23:22:00.000\t059XX S KEDZIE AVE\t5007\tOTHER OFFENSE\tOTHER WEAPONS VIOLATION\tVEHICLE NON-COMMERCIAL\tfalse\tfalse\t0822\t008\t23\t66\t26\t1156066\t1865129\t2019\t2019-10-01T16:20:30.000\t41.785699586\t-87.703332518\tPOINT (-87.703332518 41.785699586)\tnull\tnull\tnull\tnull\t19\t21867\t64\t183\t2\t58\t13\t269\t20190924\t41.785699586, -87.703332518\n11839887\tJC447317\t2019-09-24T23:22:00.000\t001XX E 75TH ST\t5007\tOTHER OFFENSE\tOTHER WEAPONS VIOLATION\tVEHICLE NON-COMMERCIAL\tfalse\tfalse\t0323\t003\t6\t69\t26\t1178566\t1855320\t2019\t2019-10-01T16:20:30.000\t41.758300638\t-87.621134974\tPOINT (-87.621134974 41.758300638)\tnull\tnull\tnull\tnull\t31\t21546\t67\t474\t32\t61\t18\t223\t20190924\t41.758300638, -87.621134974\n11839970\tJC447318\t2019-09-24T23:20:00.000\t042XX W 77TH PL\t051A\tASSAULT\tAGGRAVATED: HANDGUN\tPARKING LOT/GARAGE(NON.RESID.)\tfalse\tfalse\t0834\t008\t18\t70\t04A\t1149296\t1853013\t2019\t2019-10-01T16:20:30.000\t41.752584716\t-87.728467249\tPOINT (-87.728467249 41.752584716)\tnull\tnull\tnull\tnull\t23\t4300\t69\t571\t30\t8\t13\t232\t20190924\t41.752584716, -87.728467249\n11839878\tJC447303\t2019-09-24T23:20:00.000\t004XX E 40TH ST\t0460\tBATTERY\tSIMPLE\tSTREET\tfalse\tfalse\t0214\t002\t3\t38\t08B\t1179965\t1878242\t2019\t2019-10-01T16:20:30.000\t41.821168851\t-87.615306212\tPOINT (-87.615306212 41.821168851)\tnull\tnull\tnull\tnull\t12\t4301\t4\t625\t9\t36\t24\t104\t20190924\t41.821168851, -87.615306212\n11839926\tJC447338\t2019-09-24T23:20:00.000\t004XX N HARDING AVE\t0610\tBURGLARY\tFORCIBLE ENTRY\tRESIDENCE-GARAGE\tfalse\tfalse\t1122\t011\t37\t23\t05\t1149981\t1902626\t2019\t2019-10-01T16:20:30.000\t41.888716467\t-87.724669039\tPOINT (-87.724669039 41.888716467)\tnull\tnull\tnull\tnull\t41\t21572\t24\t584\t45\t30\t16\t82\t20190924\t41.888716467, -87.724669039\n11839917\tJC447336\t2019-09-24T23:20:00.000\t008XX W ADDISON ST\t2022\tNARCOTICS\tPOSS: COCAINE\tPOLICE FACILITY/VEH PARKING LOT\ttrue\tfalse\t1923\t019\t44\t6\t18\t1169826\t1924123\t2019\t2019-10-01T16:20:30.000\t41.947295978\t-87.651162974\tPOINT (-87.651162974 41.947295978)\tnull\tnull\tnull\tnull\t38\t21186\t57\t727\t25\t22\t5\t28\t20190924\t41.947295978, -87.651162974\n11839909\tJC447308\t2019-09-24T23:15:00.000\t066XX S WABASH AVE\t0820\tTHEFT\t$500 AND UNDER\tSIDEWALK\tfalse\ttrue\t0322\t003\t20\t69\t06\t1177754\t1860856\t2019\t2019-10-01T16:20:30.000\t41.773510439\t-87.623943531\tPOINT (-87.623943531 41.773510439)\tnull\tnull\tnull\tnull\t53\t22260\t67\t122\t4\t60\t18\t211\t20190924\t41.773510439, -87.623943531\n11839939\tJC447297\t2019-09-24T23:05:00.000\t026XX N ELSTON AVE\t0860\tTHEFT\tRETAIL THEFT\tDEPARTMENT STORE\ttrue\tfalse\t1432\t014\t1\t22\t06\t1160867\t1917657\t2019\t2019-10-01T16:20:30.000\t41.929743818\t-87.684273777\tPOINT (-87.684273777 41.929743818)\tnull\tnull\tnull\tnull\t24\t22535\t23\t240\t41\t1\t7\t180\t20190924\t41.929743818, -87.684273777\n11839946\tJC447315\t2019-09-24T23:03:00.000\t044XX W KINZIE ST\t0470\tPUBLIC PEACE VIOLATION\tRECKLESS CONDUCT\tSTREET\ttrue\tfalse\t1111\t011\t28\t23\t24\t1146837\t1902217\t2019\t2019-10-01T16:20:30.000\t41.887654741\t-87.736225546\tPOINT (-87.736225546 41.887654741)\tnull\tnull\tnull\tnull\t11\t21572\t27\t732\t23\t30\t16\t90\t20190924\t41.887654741, -87.736225546\n11840142\tJC447564\t2019-09-24T23:00:00.000\t030XX W CHICAGO AVE\t0820\tTHEFT\t$500 AND UNDER\tSTREET\tfalse\tfalse\t1211\t012\t27\t23\t06\t1155860\t1905172\t2019\t2019-10-01T16:20:30.000\t41.895586468\t-87.703010355\tPOINT (-87.703010355 41.895586468)\tnull\tnull\tnull\tnull\t41\t21560\t24\t177\t46\t28\t15\t80\t20190924\t41.895586468, -87.703010355\n11840067\tJC447484\t2019-09-24T23:00:00.000\t025XX S TRUMBULL AVE\t0610\tBURGLARY\tFORCIBLE ENTRY\tRESIDENCE-GARAGE\tfalse\tfalse\t1024\t010\t22\t30\t05\t1153775\t1886857\t2019\t2019-10-01T16:20:30.000\t41.845369904\t-87.711155677\tPOINT (-87.711155677 41.845369904)\tnull\tnull\tnull\tnull\t14\t21569\t32\t755\t28\t57\t21\t130\t20190924\t41.845369904, -87.711155677\n11840105\tJC447572\t2019-09-24T23:00:00.000\t014XX W 69TH ST\t1320\tCRIMINAL DAMAGE\tTO VEHICLE\tVEHICLE NON-COMMERCIAL\tfalse\tfalse\t0725\t007\t17\t67\t14\t1167725\t1858985\t2019\t2019-10-01T16:20:30.000\t41.7685973\t-87.660761186\tPOINT (-87.660761186 41.7685973)\tnull\tnull\tnull\tnull\t17\t22257\t65\t284\t31\t23\t17\t216\t20190924\t41.7685973, -87.660761186\n11839922\tJC447280\t2019-09-24T22:55:00.000\t008XX W RANDOLPH ST\t0460\tBATTERY\tSIMPLE\tRESTAURANT\tfalse\tfalse\t1224\t012\t27\t28\t08B\t1170942\t1901253\t2019\t2019-10-01T16:20:30.000\t41.884515071\t-87.647732897\tPOINT (-87.647732897 41.884515071)\tnull\tnull\tnull\tnull\t41\t14917\t29\t63\t46\t44\t15\t92\t20190924\t41.884515071, -87.647732897\n11839880\tJC447295\t2019-09-24T22:50:00.000\t001XX W 76TH ST\t3731\tINTERFERENCE WITH PUBLIC OFFICER\tOBSTRUCTING IDENTIFICATION\tSTREET\ttrue\tfalse\t0623\t006\t6\t69\t24\t1176569\t1854592\t2019\t2019-10-01T16:20:30.000\t41.756348056\t-87.628475614\tPOINT (-87.628475614 41.756348056)\tnull\tnull\tnull\tnull\t31\t21554\t67\t495\t32\t59\t20\t228\t20190924\t41.756348056, -87.628475614\n11839907\tJC447277\t2019-09-24T22:48:00.000\t070XX S CREGIER AVE\t0486\tBATTERY\tDOMESTIC BATTERY SIMPLE\tAPARTMENT\ttrue\ttrue\t0332\t003\t5\t43\t08B\t1189417\t1858715\t2019\t2019-10-01T16:20:30.000\t41.767363413\t-87.581258802\tPOINT (-87.581258802 41.767363413)\tnull\tnull\tnull\tnull\t32\t22538\t39\t381\t33\t24\t18\t212\t20190924\t41.767363413, -87.581258802\n11839862\tJC447263\t2019-09-24T22:45:00.000\t051XX W CHICAGO AVE\t1811\tNARCOTICS\tPOSS: CANNABIS 30GMS OR LESS\tSIDEWALK\ttrue\tfalse\t1531\t015\t37\t25\t18\t1141746\t1904840\t2019\t2019-10-01T16:20:30.000\t41.894948258\t-87.754856588\tPOINT (-87.754856588 41.894948258)\tnull\tnull\tnull\tnull\t4\t4299\t26\t585\t45\t5\t25\t69\t20190924\t41.894948258, -87.754856588\n11839958\tJC447281\t2019-09-24T22:45:00.000\t035XX W MONTROSE AVE\t0486\tBATTERY\tDOMESTIC BATTERY SIMPLE\tAPARTMENT\tfalse\ttrue\t1723\t017\t35\t16\t08B\t1152130\t1929017\t2019\t2019-10-01T16:20:30.000\t41.961093513\t-87.716079396\tPOINT (-87.716079396 41.961093513)\tnull\tnull\tnull\tnull\t2\t21538\t16\t24\t12\t39\t1\t9\t20190924\t41.961093513, -87.716079396\n11839968\tJC447282\t2019-09-24T22:44:00.000\t037XX W DOUGLAS BLVD\t0810\tTHEFT\tOVER $500\tAPARTMENT\tfalse\ttrue\t1011\t010\t24\t29\t06\t1151826\t1893202\t2019\t2019-10-01T16:20:30.000\t41.862819868\t-87.718141518\tPOINT (-87.718141518 41.862819868)\tnull\tnull\tnull\tnull\t36\t21569\t30\t33\t14\t57\t21\t155\t20190924\t41.862819868, -87.718141518\n11839879\tJC447289\t2019-09-24T22:40:00.000\t061XX S WESTERN AVE\t1310\tCRIMINAL DAMAGE\tTO PROPERTY\tRESTAURANT\tfalse\tfalse\t0825\t008\t16\t66\t14\t1161421\t1863984\t2019\t2019-10-01T16:20:30.000\t41.782448202\t-87.683730159\tPOINT (-87.683730159 41.782448202)\tnull\tnull\tnull\tnull\t44\t22257\t64\t111\t2\t58\t13\t274\t20190924\t41.782448202, -87.683730159\n11839884\tJC447298\t2019-09-24T22:40:00.000\t067XX S PULASKI RD\t2022\tNARCOTICS\tPOSS: COCAINE\tPARKING LOT/GARAGE(NON.RESID.)\ttrue\tfalse\t0833\t008\t13\t65\t18\t1150868\t1859387\t2019\t2019-10-01T16:20:30.000\t41.770045562\t-87.722540591\tPOINT (-87.722540591 41.770045562)\tnull\tnull\tnull\tnull\t23\t21867\t63\t317\t15\t58\t13\t209\t20190924\t41.770045562, -87.722540591\n11840051\tJC447449\t2019-09-24T22:35:00.000\t073XX S COLES AVE\t0820\tTHEFT\t$500 AND UNDER\tSTREET\tfalse\tfalse\t0334\t003\t7\t43\t06\t1194889\t1857049\t2019\t2019-10-01T16:20:30.000\t41.762658744\t-87.561256801\tPOINT (-87.561256801 41.762658744)\tnull\tnull\tnull\tnull\t43\t22538\t39\t421\t37\t24\t18\t213\t20190924\t41.762658744, -87.561256801\n11839903\tJC447278\t2019-09-24T22:33:00.000\t048XX N KEDZIE AVE\t0520\tASSAULT\tAGGRAVATED:KNIFE/CUTTING INSTR\tRESTAURANT\tfalse\tfalse\t1713\t017\t33\t14\t04A\t1154172\t1931913\t2019\t2019-10-01T16:20:30.000\t41.968999706\t-87.708494241\tPOINT (-87.708494241 41.968999706)\tnull\tnull\tnull\tnull\t28\t21849\t14\t750\t20\t20\t1\t1\t20190924\t41.968999706, -87.708494241\n11846572\tJC455353\t2019-09-24T22:30:00.000\t064XX S KEDZIE AVE\t0460\tBATTERY\tSIMPLE\tALLEY\tfalse\tfalse\t0823\t008\t17\t66\t08B\tnull\tnull\t2019\t2019-10-01T16:20:30.000\tnull\tnull\tnull\tnull\tnull\tnull\tnull\tnull\tnull\tnull\tnull\tnull\tnull\tnull\tnull\t20190924\t\n11840332\tJC447506\t2019-09-24T22:30:00.000\t084XX S KEDZIE AVE\t0610\tBURGLARY\tFORCIBLE ENTRY\tBARBERSHOP\tfalse\tfalse\t0834\t008\t18\t70\t05\t1156514\t1848588\t2019\t2019-10-01T16:20:30.000\t41.740299499\t-87.702134948\tPOINT (-87.702134948 41.740299499)\tnull\tnull\tnull\tnull\t6\t4300\t69\t198\t30\t8\t13\t232\t20190924\t41.740299499, -87.702134948\n11840555\tJC447845\t2019-09-24T22:27:00.000\t009XX E 100TH PL\t2825\tOTHER OFFENSE\tHARASSMENT BY TELEPHONE\tRESIDENCE\tfalse\tfalse\t0511\t005\t8\t50\t26\t1184416\t1838276\t2019\t2019-10-01T16:20:30.000\t41.711395123\t-87.600227548\tPOINT (-87.600227548 41.711395123)\tnull\tnull\tnull\tnull\t9\t21861\t47\t643\t35\t19\t10\t250\t20190924\t41.711395123, -87.600227548\n11840022\tJC447271\t2019-09-24T22:23:00.000\t026XX W 13TH ST\t0820\tTHEFT\t$500 AND UNDER\tPARKING LOT/GARAGE(NON.RESID.)\tfalse\tfalse\t1023\t010\t28\t29\t06\t1158777\t1894033\t2019\t2019-10-01T16:20:30.000\t41.864960702\t-87.692602296\tPOINT (-87.692602296 41.864960702)\tnull\tnull\tnull\tnull\t11\t14920\t30\t16\t23\t43\t21\t151\t20190924\t41.864960702, -87.692602296\n11843447\tJC450913\t2019-09-24T22:17:00.000\t0000X W CHESTNUT ST\t2825\tOTHER OFFENSE\tHARASSMENT BY TELEPHONE\tRESIDENCE\tfalse\tfalse\t1832\t018\t2\t8\t26\tnull\tnull\t2019\t2019-10-01T16:20:30.000\tnull\tnull\tnull\tnull\tnull\tnull\tnull\tnull\tnull\tnull\tnull\tnull\tnull\tnull\tnull\t20190924\t\n11839893\tJC447349\t2019-09-24T22:15:00.000\t006XX N STATE ST\t3731\tINTERFERENCE WITH PUBLIC OFFICER\tOBSTRUCTING IDENTIFICATION\tSTREET\tfalse\tfalse\t1832\t018\t42\t8\t24\t1176262\t1904268\t2019\t2019-10-01T16:20:30.000\t41.8926701\t-87.628106353\tPOINT (-87.628106353 41.8926701)\tnull\tnull\tnull\tnull\t22\t21182\t37\t626\t36\t6\t14\t74\t20190924\t41.8926701, -87.628106353\n11839890\tJC447255\t2019-09-24T22:15:00.000\t079XX S DAMEN AVE\t0810\tTHEFT\tOVER $500\tGAS STATION\tfalse\tfalse\t0611\t006\t17\t71\t06\t1164404\t1852184\t2019\t2019-10-01T16:20:30.000\t41.750005014\t-87.673125651\tPOINT (-87.673125651 41.750005014)\tnull\tnull\tnull\tnull\t6\t21554\t70\t574\t30\t59\t20\t231\t20190924\t41.750005014, -87.673125651\n11839960\tJC447261\t2019-09-24T22:10:00.000\t002XX S CENTRAL AVE\t0486\tBATTERY\tDOMESTIC BATTERY SIMPLE\tVEHICLE NON-COMMERCIAL\tfalse\ttrue\t1522\t015\t29\t25\t08B\t1139099\t1898232\t2019\t2019-10-01T16:20:30.000\t41.876863624\t-87.764739259\tPOINT (-87.764739259 41.876863624)\tnull\tnull\tnull\tnull\t52\t22216\t26\t67\t7\t32\t25\t97\t20190924\t41.876863624, -87.764739259\n11839819\tJC447236\t2019-09-24T22:05:00.000\t001XX N CLARK ST\t1320\tCRIMINAL DAMAGE\tTO VEHICLE\tSTREET\tfalse\tfalse\t0122\t001\t42\t32\t14\t1175522\t1901084\t2019\t2019-10-01T16:20:30.000\t41.883949686\t-87.630919768\tPOINT (-87.630919768 41.883949686)\tnull\tnull\tnull\tnull\t22\t14310\t38\t92\t36\t41\t22\t88\t20190924\t41.883949686, -87.630919768\n11841636\tJC448464\t2019-09-24T22:00:00.000\t074XX N CLARK ST\t0460\tBATTERY\tSIMPLE\tNURSING HOME/RETIREMENT HOME\tfalse\tfalse\t2422\t024\t49\t1\t08B\t1163047\t1949438\t2019\t2019-10-01T16:20:30.000\t42.016906591\t-87.675365909\tPOINT (-87.675365909 42.016906591)\tnull\tnull\tnull\tnull\t3\t21853\t10\t489\t5\t9\t11\t33\t20190924\t42.016906591, -87.675365909\n11840077\tJC447517\t2019-09-24T22:00:00.000\t042XX W POTOMAC AVE\t0810\tTHEFT\tOVER $500\tSTREET\tfalse\tfalse\t2534\t025\t37\t23\t06\t1147879\t1908321\t2019\t2019-10-01T16:20:30.000\t41.904384809\t-87.732241912\tPOINT (-87.732241912 41.904384809)\tnull\tnull\tnull\tnull\t4\t4299\t24\t286\t45\t5\t6\t194\t20190924\t41.904384809, -87.732241912\n11840064\tJC447476\t2019-09-24T22:00:00.000\t097XX S WENTWORTH AVE\t1320\tCRIMINAL DAMAGE\tTO VEHICLE\tSTREET\tfalse\tfalse\t0511\t005\t21\t49\t14\t1176662\t1840358\t2019\t2019-10-01T16:20:30.000\t41.71728607\t-87.628561966\tPOINT (-87.628561966 41.71728607)\tnull\tnull\tnull\tnull\t18\t21861\t45\t568\t13\t19\t10\t250\t20190924\t41.71728607, -87.628561966\n11840056\tJC447464\t2019-09-24T22:00:00.000\t028XX S TRIPP AVE\t1320\tCRIMINAL DAMAGE\tTO VEHICLE\tSTREET\tfalse\tfalse\t1031\t010\t22\t30\t14\t1148517\t1884754\t2019\t2019-10-01T16:20:30.000\t41.839701904\t-87.730506309\tPOINT (-87.730506309 41.839701904)\tnull\tnull\tnull\tnull\t14\t21569\t32\t248\t28\t57\t21\t167\t20190924\t41.839701904, -87.730506309\n11841255\tJC448882\t2019-09-24T22:00:00.000\t006XX E 112TH ST\t1320\tCRIMINAL DAMAGE\tTO VEHICLE\tVEHICLE NON-COMMERCIAL\tfalse\tfalse\t0531\t005\t9\t50\t14\t1182663\t1830895\t2019\t2019-10-01T16:20:30.000\t41.691181473\t-87.606875402\tPOINT (-87.606875402 41.691181473)\tnull\tnull\tnull\tnull\t30\t21861\t47\t601\t43\t19\t10\t265\t20190924\t41.691181473, -87.606875402\n11839866\tJC447269\t2019-09-24T22:00:00.000\t062XX S ROCKWELL ST\t0330\tROBBERY\tAGGRAVATED\tSIDEWALK\tfalse\tfalse\t0825\t008\t16\t66\t03\t1160112\t1863183\t2019\t2019-10-01T16:20:30.000\t41.780277183\t-87.688551376\tPOINT (-87.688551376 41.780277183)\tnull\tnull\tnull\tnull\t44\t21867\t64\t111\t2\t58\t13\t274\t20190924\t41.780277183, -87.688551376\n11840764\tJC448406\t2019-09-24T22:00:00.000\t027XX N MAGNOLIA AVE\t0810\tTHEFT\tOVER $500\tSTREET\tfalse\tfalse\t1932\t019\t43\t7\t06\t1167501\t1918263\t2019\t2019-10-01T16:20:30.000\t41.931266319\t-87.659878229\tPOINT (-87.659878229 41.931266319)\tnull\tnull\tnull\tnull\t16\t21190\t68\t796\t34\t16\t5\t173\t20190924\t41.931266319, -87.659878229\n11840015\tJC447424\t2019-09-24T22:00:00.000\t018XX W JUNEWAY TER\t1305\tCRIMINAL DAMAGE\tCRIMINAL DEFACEMENT\tCTA GARAGE / OTHER PROPERTY\tfalse\tfalse\t2422\t024\t49\t1\t14\t1162839\t1951492\t2019\t2019-10-01T16:20:30.000\t42.022547189\t-87.676073253\tPOINT (-87.676073253 42.022547189)\tnull\tnull\tnull\tnull\t3\t21853\t10\t340\t5\t9\t11\t32\t20190924\t42.022547189, -87.676073253\n11840057\tJC447446\t2019-09-24T22:00:00.000\t054XX W FERDINAND ST\t1320\tCRIMINAL DAMAGE\tTO VEHICLE\tSTREET\tfalse\tfalse\t1523\t015\t37\t25\t14\t1140048\t1902622\t2019\t2019-10-01T16:20:30.000\t41.888893039\t-87.761147298\tPOINT (-87.761147298 41.888893039)\tnull\tnull\tnull\tnull\t11\t22216\t26\t673\t45\t32\t25\t84\t20190924\t41.888893039, -87.761147298\n11839982\tJC447374\t2019-09-24T22:00:00.000\t126XX S EMERALD AVE\t0560\tASSAULT\tSIMPLE\tRESIDENCE\tfalse\tfalse\t0523\t005\t34\t53\t08A\t1173626\t1820982\t2019\t2019-10-01T16:20:30.000\t41.664182979\t-87.640252496\tPOINT (-87.640252496 41.664182979)\tnull\tnull\tnull\tnull\t45\t21861\t50\t7\t22\t19\t10\t218\t20190924\t41.664182979, -87.640252496\n11839850\tJC447243\t2019-09-24T21:45:00.000\t038XX W 81ST PL\t0530\tASSAULT\tAGGRAVATED: OTHER DANG WEAPON\tSTREET\tfalse\ttrue\t0834\t008\t18\t70\t04A\t1152168\t1850264\t2019\t2019-10-01T16:20:30.000\t41.744985103\t-87.718014469\tPOINT (-87.718014469 41.744985103)\tnull\tnull\tnull\tnull\t6\t4300\t69\t199\t30\t8\t13\t232\t20190924\t41.744985103, -87.718014469\n11840410\tJC447612\t2019-09-24T21:45:00.000\t069XX S CREGIER AVE\t0810\tTHEFT\tOVER $500\tSTREET\tfalse\tfalse\t0332\t003\t5\t43\t06\t1189400\t1859338\t2019\t2019-10-01T16:20:30.000\t41.769073384\t-87.581301147\tPOINT (-87.581301147 41.769073384)\tnull\tnull\tnull\tnull\t32\t22538\t39\t381\t33\t24\t18\t212\t20190924\t41.769073384, -87.581301147\n11839905\tJC447267\t2019-09-24T21:44:00.000\t025XX N MILWAUKEE AVE\t0610\tBURGLARY\tFORCIBLE ENTRY\tRESIDENCE-GARAGE\tfalse\tfalse\t1414\t014\t32\t22\t05\t1155420\t1916681\t2019\t2019-10-01T16:20:30.000\t41.927177003\t-87.704316385\tPOINT (-87.704316385 41.927177003)\tnull\tnull\tnull\tnull\t15\t22535\t23\t549\t40\t1\t7\t182\t20190924\t41.927177003, -87.704316385\n11839846\tJC447253\t2019-09-24T21:44:00.000\t049XX N MILWAUKEE AVE\t1330\tCRIMINAL TRESPASS\tTO LAND\tRESTAURANT\ttrue\tfalse\t1623\t016\t45\t11\t26\t1139401\t1932248\t2019\t2019-10-01T16:20:30.000\t41.970201736\t-87.7627994\tPOINT (-87.7627994 41.970201736)\tnull\tnull\tnull\tnull\t20\t21869\t11\t129\t50\t48\t12\t58\t20190924\t41.970201736, -87.7627994\n11839847\tJC447250\t2019-09-24T21:40:00.000\t051XX W NORTH AVE\t0890\tTHEFT\tFROM BUILDING\tRESTAURANT\tfalse\tfalse\t2533\t025\t37\t25\t06\t1141672\t1910146\t2019\t2019-10-01T16:20:30.000\t41.909509901\t-87.754996996\tPOINT (-87.754996996 41.909509901)\tnull\tnull\tnull\tnull\t4\t22615\t26\t600\t45\t5\t6\t195\t20190924\t41.909509901, -87.754996996\n11839848\tJC447216\t2019-09-24T21:32:00.000\t049XX W WABANSIA AVE\t0486\tBATTERY\tDOMESTIC BATTERY SIMPLE\tRESIDENCE\tfalse\ttrue\t2533\t025\t37\t25\t08B\t1143048\t1910847\t2019\t2019-10-01T16:20:30.000\t41.911407951\t-87.749924589\tPOINT (-87.749924589 41.911407951)\tnull\tnull\tnull\tnull\t4\t22615\t26\t523\t45\t2\t6\t195\t20190924\t41.911407951, -87.749924589\n11840231\tJC447518\t2019-09-24T21:30:00.000\t014XX W 84TH ST\t0610\tBURGLARY\tFORCIBLE ENTRY\tPARK PROPERTY\tfalse\tfalse\t0614\t006\t21\t71\t05\t1168095\t1849042\t2019\t2019-10-01T16:20:30.000\t41.741304411\t-87.659690327\tPOINT (-87.659690327 41.741304411)\tnull\tnull\tnull\tnull\t18\t21554\t70\t531\t13\t59\t20\t237\t20190924\t41.741304411, -87.659690327\n11839816\tJC447249\t2019-09-24T21:30:00.000\t005XX E 51ST ST\t0560\tASSAULT\tSIMPLE\tHOSPITAL BUILDING/GROUNDS\tfalse\tfalse\t0223\t002\t3\t38\t08A\t1180467\t1871309\t2019\t2019-10-01T16:20:30.000\t41.802132606\t-87.613677631\tPOINT (-87.613677631 41.802132606)\tnull\tnull\tnull\tnull\t1\t21192\t7\t218\t10\t10\t24\t124\t20190924\t41.802132606, -87.613677631\n11839910\tJC447268\t2019-09-24T21:30:00.000\t066XX S BISHOP ST\t031A\tROBBERY\tARMED: HANDGUN\tSIDEWALK\tfalse\tfalse\t0725\t007\t16\t67\t03\t1167811\t1860649\t2019\t2019-10-01T16:20:30.000\t41.773161684\t-87.66039823\tPOINT (-87.66039823 41.773161684)\tnull\tnull\tnull\tnull\t17\t22257\t65\t284\t2\t23\t17\t204\t20190924\t41.773161684, -87.66039823\n11839925\tJC447223\t2019-09-24T21:30:00.000\t011XX S MOZART ST\t0486\tBATTERY\tDOMESTIC BATTERY SIMPLE\tALLEY\tfalse\ttrue\t1135\t011\t28\t29\t08B\t1157532\t1894912\t2019\t2019-10-01T16:20:30.000\t41.867398176\t-87.697148807\tPOINT (-87.697148807 41.867398176)\tnull\tnull\tnull\tnull\t11\t21184\t30\t35\t23\t28\t16\t146\t20190924\t41.867398176, -87.697148807\n11839882\tJC447241\t2019-09-24T21:23:00.000\t022XX S DAMEN AVE\t143A\tWEAPONS VIOLATION\tUNLAWFUL POSS OF HANDGUN\tALLEY\tfalse\tfalse\t1034\t010\t25\t31\t15\t1163383\t1889267\t2019\t2019-10-01T16:20:30.000\t41.851786766\t-87.675827594\tPOINT (-87.675827594 41.851786766)\tnull\tnull\tnull\tnull\t8\t14920\t33\t126\t26\t43\t21\t159\t20190924\t41.851786766, -87.675827594\n11839843\tJC447252\t2019-09-24T21:22:00.000\t095XX S GENOA AVE\t4650\tOTHER OFFENSE\tSEX OFFENDER: FAIL TO REGISTER\tSTREET\tfalse\tfalse\t2223\t022\t21\t73\t26\t1170937\t1841612\t2019\t2019-10-01T16:20:30.000\t41.72085392\t-87.649493693\tPOINT (-87.649493693 41.72085392)\tnull\tnull\tnull\tnull\t18\t22212\t72\t592\t13\t13\t9\t243\t20190924\t41.72085392, -87.649493693\n11839947\tJC447196\t2019-09-24T21:19:00.000\t0000X W 111TH ST\t2820\tOTHER OFFENSE\tTELEPHONE THREAT\tHOSPITAL BUILDING/GROUNDS\tfalse\tfalse\t0522\t005\t34\t49\t08A\t1177873\t1831361\t2019\t2019-10-01T16:20:30.000\t41.692569761\t-87.624397882\tPOINT (-87.624397882 41.692569761)\tnull\tnull\tnull\tnull\t45\t21861\t45\t524\t22\t19\t10\t260\t20190924\t41.692569761, -87.624397882\n11839857\tJC447233\t2019-09-24T21:18:00.000\t111XX S STATE ST\t1330\tCRIMINAL TRESPASS\tTO LAND\tGAS STATION\tfalse\tfalse\t0522\t005\t34\t49\t26\t1178229\t1831287\t2019\t2019-10-01T16:20:30.000\t41.692358646\t-87.623096746\tPOINT (-87.623096746 41.692358646)\tnull\tnull\tnull\tnull\t30\t21861\t45\t253\t43\t19\t10\t265\t20190924\t41.692358646, -87.623096746\n11839876\tJC447246\t2019-09-24T21:17:00.000\t066XX S WASHTENAW AVE\t0420\tBATTERY\tAGGRAVATED:KNIFE/CUTTING INSTR\tAPARTMENT\tfalse\ttrue\t0831\t008\t17\t66\t04B\t1159518\t1860550\t2019\t2019-10-01T16:20:30.000\t41.773064058\t-87.690801214\tPOINT (-87.690801214 41.773064058)\tnull\tnull\tnull\tnull\t44\t21867\t64\t382\t31\t58\t13\t208\t20190924\t41.773064058, -87.690801214\n11842568\tJC450467\t2019-09-24T21:15:00.000\t055XX W HOMER ST\t0820\tTHEFT\t$500 AND UNDER\tPARKING LOT/GARAGE(NON.RESID.)\tfalse\tfalse\t2515\t025\t37\t25\t06\tnull\tnull\t2019\t2019-10-01T16:20:30.000\tnull\tnull\tnull\tnull\tnull\tnull\tnull\tnull\tnull\tnull\tnull\tnull\tnull\tnull\tnull\t20190924\t\n11840523\tJC447202\t2019-09-24T21:15:00.000\t085XX S DR MARTIN LUTHER KING JR DR\t0486\tBATTERY\tDOMESTIC BATTERY SIMPLE\tRESIDENCE\tfalse\ttrue\t0632\t006\t6\t44\t08B\t1180403\t1848523\t2019\t2019-10-01T16:20:30.000\t41.739606977\t-87.61461067\tPOINT (-87.61461067 41.739606977)\tnull\tnull\tnull\tnull\t31\t21546\t40\t406\t32\t61\t20\t241\t20190924\t41.739606977, -87.61461067\n11839794\tJC447217\t2019-09-24T21:12:00.000\t018XX E 71ST ST\t5111\tOTHER OFFENSE\tGUN OFFENDER: ANNUAL REGISTRATION\tSTREET\tfalse\tfalse\t0332\t003\t5\t43\t26\t1189862\t1858297\t2019\t2019-10-01T16:20:30.000\t41.766205698\t-87.57964114\tPOINT (-87.57964114 41.766205698)\tnull\tnull\tnull\tnull\t32\t22538\t39\t381\t33\t24\t18\t212\t20190924\t41.766205698, -87.57964114\n11839814\tJC447210\t2019-09-24T21:09:00.000\t006XX W 61ST ST\t2826\tOTHER OFFENSE\tHARASSMENT BY ELECTRONIC MEANS\tRESIDENCE\tfalse\ttrue\t0711\t007\t16\t68\t26\t1173080\t1864440\t2019\t2019-10-01T16:20:30.000\t41.783449861\t-87.640971514\tPOINT (-87.640971514 41.783449861)\tnull\tnull\tnull\tnull\t19\t21559\t66\t22\t2\t11\t17\t135\t20190924\t41.783449861, -87.640971514\n11842017\tJC449822\t2019-09-24T21:09:00.000\t044XX S WHIPPLE ST\t1477\tWEAPONS VIOLATION\tRECKLESS FIREARM DISCHARGE\tSCHOOL, PRIVATE, BUILDING\tfalse\tfalse\t0922\t009\t15\t58\t15\t1156773\t1875067\t2019\t2019-10-01T16:20:30.000\t41.812956574\t-87.700472032\tPOINT (-87.700472032 41.812956574)\tnull\tnull\tnull\tnull\t49\t22248\t55\t156\t3\t56\t23\t115\t20190924\t41.812956574, -87.700472032\n11839923\tJC447230\t2019-09-24T21:06:00.000\t072XX S DAMEN AVE\t143A\tWEAPONS VIOLATION\tUNLAWFUL POSS OF HANDGUN\tSTREET\ttrue\tfalse\t0735\t007\t17\t67\t15\t1164275\t1856712\t2019\t2019-10-01T16:20:30.000\t41.762433209\t-87.673471099\tPOINT (-87.673471099 41.762433209)\tnull\tnull\tnull\tnull\t17\t22257\t65\t433\t31\t23\t17\t7\t20190924\t41.762433209, -87.673471099\n24766\tJC447139\t2019-09-24T21:04:00.000\t020XX S HOYNE AVE\t0110\tHOMICIDE\tFIRST DEGREE MURDER\tSTREET\tfalse\tfalse\t1234\t012\t25\t31\t01A\t1162688\t1890194\t2019\t2019-10-01T16:20:30.000\t41.85434512\t-87.678352471\tPOINT (-87.678352471 41.85434512)\tnull\tnull\tnull\tnull\t8\t14920\t33\t366\t26\t43\t15\t121\t20190924\t41.85434512, -87.678352471\n11846030\tJC453993\t2019-09-24T21:02:00.000\t0000X E RANDOLPH ST\t0860\tTHEFT\tRETAIL THEFT\tDEPARTMENT STORE\tfalse\tfalse\t0111\t001\t42\t32\t06\tnull\tnull\t2019\t2019-10-01T16:20:30.000\tnull\tnull\tnull\tnull\tnull\tnull\tnull\tnull\tnull\tnull\tnull\tnull\tnull\tnull\tnull\t20190924\t\n11839805\tJC447179\t2019-09-24T21:01:00.000\t065XX S HERMITAGE AVE\t0486\tBATTERY\tDOMESTIC BATTERY SIMPLE\tSTREET\tfalse\ttrue\t0725\t007\t15\t67\t08B\t1165794\t1861322\t2019\t2019-10-01T16:20:30.000\t41.775051555\t-87.667772981\tPOINT (-87.667772981 41.775051555)\tnull\tnull\tnull\tnull\t44\t22257\t65\t280\t3\t23\t17\t204\t20190924\t41.775051555, -87.667772981\n11840096\tJC447461\t2019-09-24T21:00:00.000\t017XX W BALMORAL AVE\t0820\tTHEFT\t$500 AND UNDER\tSTREET\tfalse\tfalse\t2012\t020\t40\t77\t06\t1163608\t1935905\t2019\t2019-10-01T16:20:30.000\t41.979759825\t-87.673685211\tPOINT (-87.673685211 41.979759825)\tnull\tnull\tnull\tnull\t46\t22616\t76\t564\t24\t15\t2\t55\t20190924\t41.979759825, -87.673685211\n11840111\tJC447522\t2019-09-24T21:00:00.000\t024XX N ARTESIAN AVE\t0810\tTHEFT\tOVER $500\tSTREET\tfalse\tfalse\t1431\t014\t1\t22\t06\t1159620\t1916199\t2019\t2019-10-01T16:20:30.000\t41.925768777\t-87.688896433\tPOINT (-87.688896433 41.925768777)\tnull\tnull\tnull\tnull\t24\t22535\t23\t240\t41\t1\t7\t184\t20190924\t41.925768777, -87.688896433\n11839789\tJC447181\t2019-09-24T21:00:00.000\t004XX E 63RD ST\t1121\tDECEPTIVE PRACTICE\tCOUNTERFEITING DOCUMENT\tCONVENIENCE STORE\tfalse\tfalse\t0312\t003\t20\t42\t10\t1180454\t1863341\t2019\t2019-10-01T16:20:30.000\t41.780267983\t-87.613969818\tPOINT (-87.613969818 41.780267983)\tnull\tnull\tnull\tnull\t53\t22260\t9\t332\t4\t60\t18\t277\t20190924\t41.780267983, -87.613969818\n11840300\tJC447685\t2019-09-24T21:00:00.000\t106XX S EDBROOKE AVE\t1310\tCRIMINAL DAMAGE\tTO PROPERTY\tRESIDENCE\tfalse\tfalse\t0512\t005\t9\t49\t14\t1179145\t1834383\t2019\t2019-10-01T16:20:30.000\t41.700833731\t-87.619649223\tPOINT (-87.619649223 41.700833731)\tnull\tnull\tnull\tnull\t30\t21861\t45\t236\t43\t19\t10\t256\t20190924\t41.700833731, -87.619649223\n11839906\tJC447231\t2019-09-24T21:00:00.000\t117XX S STATE ST\t0460\tBATTERY\tSIMPLE\tAPARTMENT\tfalse\tfalse\t0532\t005\t9\t53\t08B\t1178352\t1827293\t2019\t2019-10-01T16:20:30.000\t41.68139574\t-87.622767037\tPOINT (-87.622767037 41.68139574)\tnull\tnull\tnull\tnull\t45\t21861\t50\t255\t22\t19\t10\t267\t20190924\t41.68139574, -87.622767037\n11840380\tJC447492\t2019-09-24T21:00:00.000\t095XX S GREENWOOD AVE\t1320\tCRIMINAL DAMAGE\tTO VEHICLE\tSTREET\tfalse\tfalse\t0511\t005\t8\t50\t14\t1185216\t1841886\t2019\t2019-10-01T16:20:30.000\t41.721282658\t-87.597184751\tPOINT (-87.597184751 41.721282658)\tnull\tnull\tnull\tnull\t9\t21861\t47\t643\t35\t19\t10\t250\t20190924\t41.721282658, -87.597184751\n11840068\tJC447483\t2019-09-24T21:00:00.000\t024XX S RIDGEWAY AVE\t0610\tBURGLARY\tFORCIBLE ENTRY\tRESIDENCE-GARAGE\tfalse\tfalse\t1013\t010\t22\t30\t05\t1151762\t1887466\t2019\t2019-10-01T16:20:30.000\t41.847080857\t-87.718527222\tPOINT (-87.718527222 41.847080857)\tnull\tnull\tnull\tnull\t14\t21569\t32\t754\t28\t57\t21\t161\t20190924\t41.847080857, -87.718527222\n11839949\tJC447379\t2019-09-24T21:00:00.000\t117XX S STATE ST\t0460\tBATTERY\tSIMPLE\tAPARTMENT\tfalse\tfalse\t0532\t005\t9\t53\t08B\t1178352\t1827293\t2019\t2019-10-01T16:20:30.000\t41.68139574\t-87.622767037\tPOINT (-87.622767037 41.68139574)\tnull\tnull\tnull\tnull\t45\t21861\t50\t255\t22\t19\t10\t267\t20190924\t41.68139574, -87.622767037\n11840643\tJC448338\t2019-09-24T21:00:00.000\t017XX E 72ND ST\t0620\tBURGLARY\tUNLAWFUL ENTRY\tRESIDENCE\tfalse\tfalse\t0324\t003\t7\t43\t05\t1189209\t1857587\t2019\t2019-10-01T16:20:30.000\t41.764273074\t-87.582057311\tPOINT (-87.582057311 41.764273074)\tnull\tnull\tnull\tnull\t32\t22538\t39\t452\t37\t24\t18\t217\t20190924\t41.764273074, -87.582057311\n11840771\tJC448422\t2019-09-24T21:00:00.000\t017XX W SCHOOL ST\t0820\tTHEFT\t$500 AND UNDER\tSTREET\tfalse\tfalse\t1922\t019\t47\t6\t06\t1164012\t1921953\t2019\t2019-10-01T16:20:30.000\t41.941466372\t-87.672595108\tPOINT (-87.672595108 41.941466372)\tnull\tnull\tnull\tnull\t16\t4449\t57\t742\t18\t22\t5\t19\t20190924\t41.941466372, -87.672595108\n11839996\tJC447242\t2019-09-24T21:00:00.000\t049XX S HONORE ST\t1563\tSEX OFFENSE\tCRIMINAL SEXUAL ABUSE\tAPARTMENT\tfalse\tfalse\t0931\t009\t15\t61\t17\t1164852\t1871849\t2019\t2019-10-01T16:20:30.000\t41.803958918\t-87.670928907\tPOINT (-87.670928907 41.803958918)\tnull\tnull\tnull\tnull\t19\t14924\t59\t709\t3\t37\t23\t119\t20190924\t41.803958918, -87.670928907\n11839807\tJC447203\t2019-09-24T21:00:00.000\t034XX W LAKE ST\t0560\tASSAULT\tSIMPLE\tSTREET\tfalse\ttrue\t1123\t011\t28\t27\t08A\t1153386\t1901186\t2019\t2019-10-01T16:20:30.000\t41.884698004\t-87.712202803\tPOINT (-87.712202803 41.884698004)\tnull\tnull\tnull\tnull\t11\t21572\t28\t176\t23\t30\t16\t86\t20190924\t41.884698004, -87.712202803\n11839812\tJC447191\t2019-09-24T20:55:00.000\t015XX W 54TH ST\t1811\tNARCOTICS\tPOSS: CANNABIS 30GMS OR LESS\tSIDEWALK\ttrue\tfalse\t0934\t009\t16\t61\t18\t1166824\t1868914\t2019\t2019-10-01T16:20:30.000\t41.795863004\t-87.663780408\tPOINT (-87.663780408 41.795863004)\tnull\tnull\tnull\tnull\t19\t14924\t59\t790\t2\t37\t23\t127\t20190924\t41.795863004, -87.663780408\n11839790\tJC447180\t2019-09-24T20:53:00.000\t023XX W SUPERIOR ST\t1477\tWEAPONS VIOLATION\tRECKLESS FIREARM DISCHARGE\tSIDEWALK\tfalse\tfalse\t1221\t012\t1\t24\t15\t1160702\t1904941\t2019\t2019-10-01T16:20:30.000\t41.894853594\t-87.685233197\tPOINT (-87.685233197 41.894853594)\tnull\tnull\tnull\tnull\t24\t21184\t25\t546\t41\t28\t15\t80\t20190924\t41.894853594, -87.685233197\n11839870\tJC447209\t2019-09-24T20:49:00.000\t003XX W 107TH ST\t0910\tMOTOR VEHICLE THEFT\tAUTOMOBILE\tSTREET\tfalse\tfalse\t0513\t005\t34\t49\t07\t1175947\t1833971\t2019\t2019-10-01T16:20:30.000\t41.699775269\t-87.63137139\tPOINT (-87.63137139 41.699775269)\tnull\tnull\tnull\tnull\t45\t21861\t45\t524\t22\t19\t10\t256\t20190924\t41.699775269, -87.63137139\n11839927\tJC447283\t2019-09-24T20:48:00.000\t087XX S BUFFALO AVE\t1310\tCRIMINAL DAMAGE\tTO PROPERTY\tRESIDENCE\tfalse\tfalse\t0424\t004\t10\t46\t14\t1199561\t1847590\t2019\t2019-10-01T16:20:30.000\t41.736586261\t-87.544451454\tPOINT (-87.544451454 41.736586261)\tnull\tnull\tnull\tnull\t47\t21202\t42\t509\t47\t25\t19\t239\t20190924\t41.736586261, -87.544451454\n11839784\tJC447170\t2019-09-24T20:47:00.000\t054XX W WALTON ST\t1477\tWEAPONS VIOLATION\tRECKLESS FIREARM DISCHARGE\tRESIDENCE PORCH/HALLWAY\tfalse\tfalse\t1524\t015\t37\t25\t15\t1139826\t1905800\t2019\t2019-10-01T16:20:30.000\t41.89761792\t-87.76188485\tPOINT (-87.76188485 41.89761792)\tnull\tnull\tnull\tnull\t4\t4299\t26\t562\t45\t5\t25\t67\t20190924\t41.89761792, -87.76188485\n11839838\tJC447176\t2019-09-24T20:45:00.000\t009XX N LOREL AVE\t1310\tCRIMINAL DAMAGE\tTO PROPERTY\tRESIDENTIAL YARD (FRONT/BACK)\tfalse\tfalse\t1524\t015\t37\t25\t14\t1140500\t1905843\t2019\t2019-10-01T16:20:30.000\t41.897723572\t-87.759408233\tPOINT (-87.759408233 41.897723572)\tnull\tnull\tnull\tnull\t4\t4299\t26\t562\t45\t5\t25\t67\t20190924\t41.897723572, -87.759408233\n11839800\tJC447173\t2019-09-24T20:45:00.000\t085XX S ESCANABA AVE\t143A\tWEAPONS VIOLATION\tUNLAWFUL POSS OF HANDGUN\tRESIDENTIAL YARD (FRONT/BACK)\ttrue\tfalse\t0423\t004\t10\t46\t15\t1196967\t1848890\t2019\t2019-10-01T16:20:30.000\t41.740218419\t-87.55391167\tPOINT (-87.55391167 41.740218419)\tnull\tnull\tnull\tnull\t47\t21202\t42\t226\t47\t25\t19\t238\t20190924\t41.740218419, -87.55391167\n11840582\tJC448029\t2019-09-24T20:45:00.000\t088XX S BURLEY AVE\t1320\tCRIMINAL DAMAGE\tTO VEHICLE\tSTREET\tfalse\tfalse\t0424\t004\t10\t46\t14\t1199202\t1847068\t2019\t2019-10-01T16:20:30.000\t41.735162876\t-87.54578418\tPOINT (-87.54578418 41.735162876)\tnull\tnull\tnull\tnull\tnull\t21202\t42\t509\t47\t25\t19\t239\t20190924\t41.735162876, -87.54578418\n11839827\tJC447163\t2019-09-24T20:45:00.000\t008XX N HERMITAGE AVE\t0630\tBURGLARY\tATTEMPT FORCIBLE ENTRY\tRESIDENCE-GARAGE\tfalse\tfalse\t1213\t012\t1\t24\t05\t1164566\t1906053\t2019\t2019-10-01T16:20:30.000\t41.897824034\t-87.671010279\tPOINT (-87.671010279 41.897824034)\tnull\tnull\tnull\tnull\t24\t21560\t25\t518\t41\t4\t15\t60\t20190924\t41.897824034, -87.671010279\n11839781\tJC447151\t2019-09-24T20:40:00.000\t073XX S EMERALD AVE\t0486\tBATTERY\tDOMESTIC BATTERY SIMPLE\tAPARTMENT\ttrue\ttrue\t0732\t007\t6\t68\t08B\t1172573\t1856118\t2019\t2019-10-01T16:20:30.000\t41.760624499\t-87.643075224\tPOINT (-87.643075224 41.760624499)\tnull\tnull\tnull\tnull\t17\t21559\t66\t511\t32\t11\t17\t214\t20190924\t41.760624499, -87.643075224\n11840524\tJC447197\t2019-09-24T20:40:00.000\t051XX S KIMBARK AVE\t0340\tROBBERY\tATTEMPT: STRONGARM-NO WEAPON\tSTREET\tfalse\tfalse\t0234\t002\t4\t41\t03\t1185540\t1871215\t2019\t2019-10-01T16:20:30.000\t41.801756603\t-87.595076063\tPOINT (-87.595076063 41.801756603)\tnull\tnull\tnull\tnull\t1\t21192\t8\t412\t10\t10\t24\t122\t20190924\t41.801756603, -87.595076063\n11839810\tJC447160\t2019-09-24T20:40:00.000\t028XX S KOSTNER AVE\t0486\tBATTERY\tDOMESTIC BATTERY SIMPLE\tAPARTMENT\tfalse\ttrue\t1031\t010\t22\t30\t08B\t1147518\t1884845\t2019\t2019-10-01T16:20:30.000\t41.839970802\t-87.734169915\tPOINT (-87.734169915 41.839970802)\tnull\tnull\tnull\tnull\t14\t21569\t32\t205\t28\t57\t21\t167\t20190924\t41.839970802, -87.734169915\n11839818\tJC447208\t2019-09-24T20:40:00.000\t011XX N HARDING AVE\t2027\tNARCOTICS\tPOSS: CRACK\tSIDEWALK\ttrue\tfalse\t1112\t011\t37\t23\t18\t1149847\t1907216\t2019\t2019-10-01T16:20:30.000\t41.90131451\t-87.725041634\tPOINT (-87.725041634 41.90131451)\tnull\tnull\tnull\tnull\t41\t4299\t24\t456\t45\t5\t16\t66\t20190924\t41.90131451, -87.725041634\n11839803\tJC447147\t2019-09-24T20:34:00.000\t077XX S PEORIA ST\t143A\tWEAPONS VIOLATION\tUNLAWFUL POSS OF HANDGUN\tSTREET\ttrue\tfalse\t0621\t006\t17\t71\t15\t1171650\t1853431\t2019\t2019-10-01T16:20:30.000\t41.753271303\t-87.64653667\tPOINT (-87.64653667 41.753271303)\tnull\tnull\tnull\tnull\t17\t21554\t70\t572\t31\t59\t20\t229\t20190924\t41.753271303, -87.64653667\n11842833\tJC450765\t2019-09-24T20:30:00.000\t001XX W GARFIELD BLVD\t1122\tDECEPTIVE PRACTICE\tCOUNTERFEIT CHECK\tCURRENCY EXCHANGE\tfalse\tfalse\t0225\t002\t3\t37\t10\tnull\tnull\t2019\t2019-10-01T16:20:30.000\tnull\tnull\tnull\tnull\tnull\tnull\tnull\tnull\tnull\tnull\tnull\tnull\tnull\tnull\tnull\t20190924\t\n11839951\tJC447316\t2019-09-24T20:30:00.000\t009XX W 33RD PL\t0620\tBURGLARY\tUNLAWFUL ENTRY\tRESIDENCE\tfalse\tfalse\t0913\t009\t11\t60\t05\t1170578\t1882764\t2019\t2019-10-01T16:20:30.000\t41.833787749\t-87.649610211\tPOINT (-87.649610211 41.833787749)\tnull\tnull\tnull\tnull\t26\t14920\t58\t171\t48\t43\t23\t162\t20190924\t41.833787749, -87.649610211\n11839997\tJC447256\t2019-09-24T20:30:00.000\t015XX W 18TH ST\t0820\tTHEFT\t$500 AND UNDER\tSTREET\tfalse\tfalse\t1233\t012\t25\t31\t06\t1166432\t1891490\t2019\t2019-10-01T16:20:30.000\t41.85782227\t-87.664573456\tPOINT (-87.664573456 41.85782227)\tnull\tnull\tnull\tnull\t8\t14920\t33\t270\t26\t43\t15\t150\t20190924\t41.85782227, -87.664573456\n11839945\tJC447260\t2019-09-24T20:30:00.000\t037XX S WELLS ST\t0810\tTHEFT\tOVER $500\tSTREET\tfalse\tfalse\t0915\t009\t3\t34\t06\t1175247\t1880357\t2019\t2019-10-01T16:20:30.000\t41.827079483\t-87.63255077\tPOINT (-87.63255077 41.827079483)\tnull\tnull\tnull\tnull\t12\t14924\t35\t296\t9\t37\t23\t170\t20190924\t41.827079483, -87.63255077\n11845264\tJC447528\t2019-09-24T20:30:00.000\t034XX W GRANVILLE AVE\t0810\tTHEFT\tOVER $500\tDRIVEWAY - RESIDENTIAL\tfalse\tfalse\t1711\t017\t50\t13\t06\tnull\tnull\t2019\t2019-10-01T16:20:30.000\tnull\tnull\tnull\tnull\tnull\tnull\tnull\tnull\tnull\tnull\tnull\tnull\tnull\tnull\tnull\t20190924\t\n11842215\tJC447275\t2019-09-24T20:30:00.000\t0000X E WASHINGTON ST\t1365\tCRIMINAL TRESPASS\tTO RESIDENCE\tRESIDENCE\tfalse\tfalse\t0112\t001\t42\t32\t26\t1176912\t1900830\t2019\t2019-10-01T16:20:30.000\t41.883221363\t-87.625823296\tPOINT (-87.625823296 41.883221363)\tnull\tnull\tnull\tnull\t22\t14310\t38\t580\t36\t41\t22\t93\t20190924\t41.883221363, -87.625823296\n11840522\tJC447177\t2019-09-24T20:30:00.000\t077XX S PEORIA ST\t1365\tCRIMINAL TRESPASS\tTO RESIDENCE\tRESIDENCE\tfalse\ttrue\t0621\t006\t17\t71\t26\t1171646\t1853593\t2019\t2019-10-01T16:20:30.000\t41.753715939\t-87.646546589\tPOINT (-87.646546589 41.753715939)\tnull\tnull\tnull\tnull\t17\t21554\t70\t572\t31\t59\t20\t229\t20190924\t41.753715939, -87.646546589\n11840765\tJC448298\t2019-09-24T20:30:00.000\t024XX S CHRISTIANA AVE\t0820\tTHEFT\t$500 AND UNDER\tRESIDENTIAL YARD (FRONT/BACK)\tfalse\tfalse\t1024\t010\t12\t30\t06\t1154416\t1887655\t2019\t2019-10-01T16:20:30.000\t41.847546944\t-87.708781964\tPOINT (-87.708781964 41.847546944)\tnull\tnull\tnull\tnull\t14\t21569\t32\t291\t1\t57\t21\t130\t20190924\t41.847546944, -87.708781964\n11840268\tJC447759\t2019-09-24T20:30:00.000\t092XX S THROOP ST\t1153\tDECEPTIVE PRACTICE\tFINANCIAL IDENTITY THEFT OVER $ 300\tRESIDENCE\tfalse\tfalse\t2222\t022\t21\t73\t11\t1169284\t1843472\t2019\t2019-10-01T16:20:30.000\t41.725993908\t-87.655494624\tPOINT (-87.655494624 41.725993908)\tnull\tnull\tnull\tnull\t18\t21554\t72\t195\t13\t59\t9\t244\t20190924\t41.725993908, -87.655494624\n11840806\tJC448152\t2019-09-24T20:29:00.000\t016XX W DIVISION ST\t0860\tTHEFT\tRETAIL THEFT\tSMALL RETAIL STORE\tfalse\tfalse\t1424\t014\t1\t24\t06\t1164808\t1908052\t2019\t2019-10-01T16:20:30.000\t41.903304304\t-87.670064675\tPOINT (-87.670064675 41.903304304)\tnull\tnull\tnull\tnull\t24\t21560\t25\t481\t41\t4\t7\t200\t20190924\t41.903304304, -87.670064675\n11841794\tJC447129\t2019-09-24T20:28:00.000\t070XX S DAMEN AVE\t0560\tASSAULT\tSIMPLE\tGAS STATION\tfalse\tfalse\t0735\t007\t17\t67\t08A\t1164246\t1857777\t2019\t2019-10-01T16:20:30.000\t41.765356327\t-87.673547448\tPOINT (-87.673547448 41.765356327)\tnull\tnull\tnull\tnull\t17\t22257\t65\t283\t31\t23\t17\t7\t20190924\t41.765356327, -87.673547448\n11845448\tJC454140\t2019-09-24T20:24:00.000\t043XX N BERNARD ST\t4386\tOTHER OFFENSE\tVIOLATION OF CIVIL NO CONTACT ORDER\tAPARTMENT\tfalse\tfalse\t1723\t017\t35\t16\t26\tnull\tnull\t2019\t2019-10-01T16:20:30.000\tnull\tnull\tnull\tnull\tnull\tnull\tnull\tnull\tnull\tnull\tnull\tnull\tnull\tnull\tnull\t20190924\t\n11839897\tJC447150\t2019-09-24T20:23:00.000\t058XX N KIMBALL AVE\t1320\tCRIMINAL DAMAGE\tTO VEHICLE\tSTREET\tfalse\tfalse\t1711\t017\t39\t13\t14\t1152654\t1938652\t2019\t2019-10-01T16:20:30.000\t41.987522157\t-87.713896744\tPOINT (-87.713896744 41.987522157)\tnull\tnull\tnull\tnull\t28\t4450\t13\t799\t38\t50\t1\t53\t20190924\t41.987522157, -87.713896744\n11841958\tJC449522\t2019-09-24T20:15:00.000\t028XX N ORCHARD ST\t0810\tTHEFT\tOVER $500\tAPARTMENT\tfalse\tfalse\t1934\t019\t44\t6\t06\tnull\tnull\t2019\t2019-10-01T16:20:30.000\tnull\tnull\tnull\tnull\tnull\tnull\tnull\tnull\tnull\tnull\tnull\tnull\tnull\tnull\tnull\t20190924\t\n11841780\tJC447165\t2019-09-24T20:11:00.000\t044XX S EVANS AVE\t0460\tBATTERY\tSIMPLE\tSCHOOL, PUBLIC, GROUNDS\tfalse\tfalse\t0221\t002\t4\t38\t08B\t1181893\t1875833\t2019\t2019-10-01T16:20:30.000\t41.814513943\t-87.608307995\tPOINT (-87.608307995 41.814513943)\tnull\tnull\tnull\tnull\t1\t4301\t4\t161\t10\t36\t24\t114\t20190924\t41.814513943, -87.608307995\n11839798\tJC447156\t2019-09-24T20:10:00.000\t011XX W 90TH ST\t0498\tBATTERY\tAGGRAVATED DOMESTIC BATTERY: HANDS/FIST/FEET SERIOUS INJURY\tRESIDENCE\tfalse\ttrue\t2222\t022\t21\t73\t04B\t1170136\t1845112\t2019\t2019-10-01T16:20:30.000\t41.730475852\t-87.65232616\tPOINT (-87.65232616 41.730475852)\tnull\tnull\tnull\tnull\t18\t21554\t72\t151\t13\t59\t9\t244\t20190924\t41.730475852, -87.65232616\n11839856\tJC447141\t2019-09-24T20:09:00.000\t008XX W 123RD ST\t041A\tBATTERY\tAGGRAVATED: HANDGUN\tSIDEWALK\tfalse\tfalse\t0524\t005\t34\t53\t04B\t1173211\t1823603\t2019\t2019-10-01T16:20:30.000\t41.671384589\t-87.641694233\tPOINT (-87.641694233 41.671384589)\tnull\tnull\tnull\tnull\t45\t21861\t50\t60\t22\t13\t10\t220\t20190924\t41.671384589, -87.641694233\n11839809\tJC447145\t2019-09-24T20:06:00.000\t011XX S KEDZIE AVE\t0486\tBATTERY\tDOMESTIC BATTERY SIMPLE\tSTREET\tfalse\ttrue\t1134\t011\t24\t29\t08B\t1155196\t1895116\t2019\t2019-10-01T16:20:30.000\t41.868005159\t-87.705719182\tPOINT (-87.705719182 41.868005159)\tnull\tnull\tnull\tnull\t36\t21184\t30\t98\t14\t28\t16\t140\t20190924\t41.868005159, -87.705719182\n11839777\tJC447123\t2019-09-24T20:06:00.000\t071XX S ASHLAND AVE\t5111\tOTHER OFFENSE\tGUN OFFENDER: ANNUAL REGISTRATION\tPARKING LOT/GARAGE(NON.RESID.)\ttrue\tfalse\t0735\t007\t17\t67\t26\t1166911\t1857552\t2019\t2019-10-01T16:20:30.000\t41.764682386\t-87.663785792\tPOINT (-87.663785792 41.764682386)\tnull\tnull\tnull\tnull\t17\t22257\t65\t433\t31\t23\t17\t7\t20190924\t41.764682386, -87.663785792\n11839749\tJC447137\t2019-09-24T20:06:00.000\t012XX S AVERS AVE\t1821\tNARCOTICS\tMANU/DEL:CANNABIS 10GM OR LESS\tSTREET\ttrue\tfalse\t1011\t010\t24\t29\t18\t1150905\t1894214\t2019\t2019-10-01T16:20:30.000\t41.865614975\t-87.721495958\tPOINT (-87.721495958 41.865614975)\tnull\tnull\tnull\tnull\t36\t21569\t30\t33\t14\t57\t21\t155\t20190924\t41.865614975, -87.721495958\n11839836\tJC447134\t2019-09-24T20:04:00.000\t049XX W GLADYS AVE\t0810\tTHEFT\tOVER $500\tRESIDENTIAL YARD (FRONT/BACK)\tfalse\ttrue\t1533\t015\t29\t25\t06\t1143711\t1897892\t2019\t2019-10-01T16:20:30.000\t41.875845532\t-87.747813694\tPOINT (-87.747813694 41.875845532)\tnull\tnull\tnull\tnull\t36\t22216\t26\t69\t7\t32\t25\t137\t20190924\t41.875845532, -87.747813694\n11840575\tJC447126\t2019-09-24T20:00:00.000\t007XX E 79TH ST\t0486\tBATTERY\tDOMESTIC BATTERY SIMPLE\tSTREET\tfalse\ttrue\t0624\t006\t6\t69\t08B\t1182383\t1852783\t2019\t2019-10-01T16:20:30.000\t41.751251277\t-87.607224621\tPOINT (-87.607224621 41.751251277)\tnull\tnull\tnull\tnull\t31\t21546\t67\t496\t32\t61\t20\t227\t20190924\t41.751251277, -87.607224621\n11840574\tJC448075\t2019-09-24T20:00:00.000\t008XX E 89TH ST\t1310\tCRIMINAL DAMAGE\tTO PROPERTY\tAPARTMENT\tfalse\tfalse\t0632\t006\t8\t44\t14\t1183312\t1846143\t2019\t2019-10-01T16:20:30.000\t41.733008828\t-87.604026545\tPOINT (-87.604026545 41.733008828)\tnull\tnull\tnull\tnull\t9\t21546\t40\t429\t35\t61\t20\t248\t20190924\t41.733008828, -87.604026545\n11840241\tJC447665\t2019-09-24T20:00:00.000\t008XX N MICHIGAN AVE\t0870\tTHEFT\tPOCKET-PICKING\tOTHER\tfalse\tfalse\t1833\t018\t2\t8\t06\t1177338\t1906181\t2019\t2019-10-01T16:20:30.000\t41.897895128\t-87.624096605\tPOINT (-87.624096605 41.897895128)\tnull\tnull\tnull\tnull\t22\t21182\t37\t104\t36\t6\t14\t71\t20190924\t41.897895128, -87.624096605\n11840381\tJC447880\t2019-09-24T20:00:00.000\t023XX W ST PAUL AVE\t0810\tTHEFT\tOVER $500\tSTREET\tfalse\tfalse\t1434\t014\t32\t24\t06\t1160443\t1911734\t2019\t2019-10-01T16:20:30.000\t41.913499486\t-87.685996164\tPOINT (-87.685996164 41.913499486)\tnull\tnull\tnull\tnull\t24\t22535\t25\t298\t40\t1\t7\t192\t20190924\t41.913499486, -87.685996164\n11843661\tJC450660\t2019-09-24T20:00:00.000\t008XX N MICHIGAN AVE\t0460\tBATTERY\tSIMPLE\tOTHER\tfalse\tfalse\t1833\t018\t2\t8\t08B\tnull\tnull\t2019\t2019-10-01T16:20:30.000\tnull\tnull\tnull\tnull\tnull\tnull\tnull\tnull\tnull\tnull\tnull\tnull\tnull\tnull\tnull\t20190924\t\n11840242\tJC447626\t2019-09-24T20:00:00.000\t037XX W COLUMBUS AVE\t0610\tBURGLARY\tFORCIBLE ENTRY\tRESTAURANT\tfalse\tfalse\t0834\t008\t18\t70\t05\t1153088\t1848792\t2019\t2019-10-01T16:20:30.000\t41.740927581\t-87.714682185\tPOINT (-87.714682185 41.740927581)\tnull\tnull\tnull\tnull\t6\t4300\t69\t198\t30\t8\t13\t232\t20190924\t41.740927581, -87.714682185\n11843338\tJC449132\t2019-09-24T20:00:00.000\t023XX S SACRAMENTO AVE\t0485\tBATTERY\tAGGRAVATED OF A CHILD\tRESIDENCE\tfalse\ttrue\t1033\t010\t12\t30\t04B\tnull\tnull\t2019\t2019-10-01T16:20:30.000\tnull\tnull\tnull\tnull\tnull\tnull\tnull\tnull\tnull\tnull\tnull\tnull\tnull\tnull\tnull\t20190924\t\n11840297\tJC447678\t2019-09-24T20:00:00.000\t071XX S MILLARD AVE\t1792\tKIDNAPPING\tCHILD ABDUCTION/STRANGER\tRESIDENTIAL YARD (FRONT/BACK)\tfalse\tfalse\t0833\t008\t13\t65\t26\t1153272\t1856919\t2019\t2019-10-01T16:20:30.000\t41.76322579\t-87.713793599\tPOINT (-87.713793599 41.76322579)\tnull\tnull\tnull\tnull\t23\t21867\t63\t317\t15\t58\t13\t209\t20190924\t41.76322579, -87.713793599\n11840550\tJC447125\t2019-09-24T20:00:00.000\t009XX E 90TH ST\t1310\tCRIMINAL DAMAGE\tTO PROPERTY\tRESIDENCE\tfalse\ttrue\t0413\t004\t8\t47\t14\t1184349\t1845507\t2019\t2019-10-01T16:20:30.000\t41.731239397\t-87.600247414\tPOINT (-87.600247414 41.731239397)\tnull\tnull\tnull\tnull\t9\t21546\t43\t472\t35\t61\t19\t246\t20190924\t41.731239397, -87.600247414\n11839831\tJC447157\t2019-09-24T19:54:00.000\t071XX S JEFFERY BLVD\t0460\tBATTERY\tSIMPLE\tSTREET\tfalse\tfalse\t0333\t003\t5\t43\t08B\t1190776\t1858184\t2019\t2019-10-01T16:20:30.000\t41.76587359\t-87.576294705\tPOINT (-87.576294705 41.76587359)\tnull\tnull\tnull\tnull\t32\t22538\t39\t452\t33\t24\t18\t89\t20190924\t41.76587359, -87.576294705\n11839808\tJC447115\t2019-09-24T19:52:00.000\t011XX E 81ST ST\t041A\tBATTERY\tAGGRAVATED: HANDGUN\tVACANT LOT/LAND\tfalse\tfalse\t0411\t004\t8\t45\t04B\t1185367\t1851526\t2019\t2019-10-01T16:20:30.000\t41.747732317\t-87.596329316\tPOINT (-87.596329316 41.747732317)\tnull\tnull\tnull\tnull\t9\t21546\t41\t133\t35\t61\t19\t224\t20190924\t41.747732317, -87.596329316\n11839776\tJC447124\t2019-09-24T19:51:00.000\t068XX S PERRY AVE\t0498\tBATTERY\tAGGRAVATED DOMESTIC BATTERY: HANDS/FIST/FEET SERIOUS INJURY\tAPARTMENT\tfalse\ttrue\t0722\t007\t6\t69\t04B\t1176579\t1859596\t2019\t2019-10-01T16:20:30.000\t41.770079376\t-87.628288655\tPOINT (-87.628288655 41.770079376)\tnull\tnull\tnull\tnull\t31\t21559\t67\t513\t32\t11\t17\t201\t20190924\t41.770079376, -87.628288655\n11842001\tJC447132\t2019-09-24T19:50:00.000\t075XX W ADDISON ST\t0460\tBATTERY\tSIMPLE\tAPARTMENT\tfalse\tfalse\t1631\t016\t38\t17\t08B\t1125358\t1923017\t2019\t2019-10-01T16:20:30.000\t41.945115811\t-87.814642773\tPOINT (-87.814642773 41.945115811)\tnull\tnull\tnull\tnull\t39\t22254\t17\t392\t19\t52\t12\t29\t20190924\t41.945115811, -87.814642773\n11841994\tJC447122\t2019-09-24T19:50:00.000\t075XX W ADDISON ST\t0486\tBATTERY\tDOMESTIC BATTERY SIMPLE\tAPARTMENT\tfalse\tfalse\t1631\t016\t38\t17\t08B\t1125358\t1923017\t2019\t2019-10-01T16:20:30.000\t41.945115811\t-87.814642773\tPOINT (-87.814642773 41.945115811)\tnull\tnull\tnull\tnull\t39\t22254\t17\t392\t19\t52\t12\t29\t20190924\t41.945115811, -87.814642773\n11840884\tJC448418\t2019-09-24T19:46:00.000\t074XX N CLARK ST\t0820\tTHEFT\t$500 AND UNDER\tGROCERY FOOD STORE\ttrue\tfalse\t2422\t024\t49\t1\t06\t1163097\t1949086\t2019\t2019-10-01T16:20:30.000\t42.015939642\t-87.675191881\tPOINT (-87.675191881 42.015939642)\tnull\tnull\tnull\tnull\t3\t21853\t10\t489\t5\t9\t11\t32\t20190924\t42.015939642, -87.675191881\n11839684\tJC447128\t2019-09-24T19:45:00.000\t017XX N MARCEY ST\t1320\tCRIMINAL DAMAGE\tTO VEHICLE\tSTREET\tfalse\tfalse\t1811\t018\t2\t7\t14\t1168866\t1911857\t2019\t2019-10-01T16:20:30.000\t41.913658386\t-87.655048339\tPOINT (-87.655048339 41.913658386)\tnull\tnull\tnull\tnull\t16\t21190\t68\t168\t11\t16\t14\t186\t20190924\t41.913658386, -87.655048339\n11839682\tJC447085\t2019-09-24T19:45:00.000\t040XX W DIVERSEY AVE\t0860\tTHEFT\tRETAIL THEFT\tDEPARTMENT STORE\tfalse\tfalse\t2524\t025\t31\t22\t06\t1148986\t1918311\t2019\t2019-10-01T16:20:30.000\t41.931776952\t-87.72791651\tPOINT (-87.72791651 41.931776952)\tnull\tnull\tnull\tnull\t7\t22615\t22\t464\t17\t21\t6\t175\t20190924\t41.931776952, -87.72791651\n11841186\tJC447923\t2019-09-24T19:45:00.000\t021XX W 107TH ST\t2826\tOTHER OFFENSE\tHARASSMENT BY ELECTRONIC MEANS\tRESIDENCE\tfalse\ttrue\t2212\t022\t19\t72\t26\t1163826\t1833641\t2019\t2019-10-01T16:20:30.000\t41.699132222\t-87.675762754\tPOINT (-87.675762754 41.699132222)\tnull\tnull\tnull\tnull\t33\t22212\t74\t380\t42\t13\t9\t257\t20190924\t41.699132222, -87.675762754\n11840638\tJC448306\t2019-09-24T19:45:00.000\t036XX W DIVERSEY AVE\t1310\tCRIMINAL DAMAGE\tTO PROPERTY\tCHURCH/SYNAGOGUE/PLACE OF WORSHIP\tfalse\tfalse\t2523\t025\t30\t21\t14\t1151749\t1918377\t2019\t2019-10-01T16:20:30.000\t41.931904075\t-87.717761103\tPOINT (-87.717761103 41.931904075)\tnull\tnull\tnull\tnull\t15\t22535\t22\t71\t21\t39\t6\t175\t20190924\t41.931904075, -87.717761103\n11839758\tJC447114\t2019-09-24T19:42:00.000\t033XX W DOUGLAS BLVD\t1330\tCRIMINAL TRESPASS\tTO LAND\tRESIDENTIAL YARD (FRONT/BACK)\ttrue\tfalse\t1021\t010\t24\t29\t26\t1154350\t1893258\t2019\t2019-10-01T16:20:30.000\t41.862923534\t-87.708874639\tPOINT (-87.708874639 41.862923534)\tnull\tnull\tnull\tnull\t36\t21569\t30\t34\t14\t57\t21\t153\t20190924\t41.862923534, -87.708874639\n11839752\tJC447110\t2019-09-24T19:42:00.000\t046XX W MAYPOLE AVE\t5111\tOTHER OFFENSE\tGUN OFFENDER: ANNUAL REGISTRATION\tSTREET\ttrue\tfalse\t1113\t011\t28\t25\t26\t1145384\t1901056\t2019\t2019-10-01T16:20:30.000\t41.884496442\t-87.741590875\tPOINT (-87.741590875 41.884496442)\tnull\tnull\tnull\tnull\t11\t22216\t26\t696\t23\t32\t16\t90\t20190924\t41.884496442, -87.741590875\n11839825\tJC447099\t2019-09-24T19:40:00.000\t013XX S THROOP ST\t0560\tASSAULT\tSIMPLE\tCHA PARKING LOT/GROUNDS\tfalse\tfalse\t1233\t012\t25\t28\t08A\t1167979\t1894109\t2019\t2019-10-01T16:20:30.000\t41.864975822\t-87.658819527\tPOINT (-87.658819527 41.864975822)\tnull\tnull\tnull\tnull\t48\t14920\t29\t96\t26\t43\t15\t150\t20190924\t41.864975822, -87.658819527\n11839726\tJC447113\t2019-09-24T19:40:00.000\t009XX N RUSH ST\t0860\tTHEFT\tRETAIL THEFT\tSMALL RETAIL STORE\tfalse\tfalse\t1833\t018\t42\t8\t06\t1176475\t1907007\t2019\t2019-10-01T16:20:30.000\t41.900181244\t-87.627241312\tPOINT (-87.627241312 41.900181244)\tnull\tnull\tnull\tnull\t22\t21182\t37\t104\t36\t6\t14\t71\t20190924\t41.900181244, -87.627241312\n11839874\tJC447251\t2019-09-24T19:40:00.000\t017XX N CLARK ST\t0810\tTHEFT\tOVER $500\tSTREET\tfalse\tfalse\t1814\t018\t43\t7\t06\t1174859\t1911834\t2019\t2019-10-01T16:20:30.000\t41.913463107\t-87.633032121\tPOINT (-87.633032121 41.913463107)\tnull\tnull\tnull\tnull\t51\t21190\t68\t271\t34\t16\t14\t134\t20190924\t41.913463107, -87.633032121\n11839727\tJC447092\t2019-09-24T19:39:00.000\t001XX N MAYFIELD AVE\t2024\tNARCOTICS\tPOSS: HEROIN(WHITE)\tSIDEWALK\ttrue\tfalse\t1512\t015\t29\t25\t18\t1137140\t1900408\t2019\t2019-10-01T16:20:30.000\t41.882870247\t-87.771879959\tPOINT (-87.771879959 41.882870247)\tnull\tnull\tnull\tnull\t52\t22216\t26\t618\t7\t32\t25\t85\t20190924\t41.882870247, -87.771879959\n11839792\tJC447200\t2019-09-24T19:36:00.000\t001XX N LAKE SHORE DR NB\t0810\tTHEFT\tOVER $500\tSTREET\tfalse\tfalse\t0114\t001\t42\t32\t06\t1179880\t1900915\t2019\t2019-10-01T16:20:30.000\t41.883386945\t-87.614922158\tPOINT (-87.614922158 41.883386945)\tnull\tnull\tnull\tnull\t22\t21182\t38\t159\t36\t41\t22\t87\t20190924\t41.883386945, -87.614922158\n11839824\tJC447127\t2019-09-24T19:35:00.000\t021XX E 70TH ST\t0470\tPUBLIC PEACE VIOLATION\tRECKLESS CONDUCT\tSIDEWALK\tfalse\tfalse\t0331\t003\t5\t43\t24\t1191600\t1858970\t2019\t2019-10-01T16:20:30.000\t41.768010495\t-87.57324906\tPOINT (-87.57324906 41.768010495)\tnull\tnull\tnull\tnull\t32\t22538\t39\t152\t33\t24\t18\t262\t20190924\t41.768010495, -87.57324906\n11840420\tJC447086\t2019-09-24T19:30:00.000\t049XX W HUBBARD ST\t0460\tBATTERY\tSIMPLE\tSTREET\tfalse\tfalse\t1532\t015\t37\t25\t08B\t1143291\t1902558\t2019\t2019-10-01T16:20:30.000\t41.888657457\t-87.7492392\tPOINT (-87.7492392 41.888657457)\tnull\tnull\tnull\tnull\t11\t22216\t26\t694\t45\t32\t25\t81\t20190924\t41.888657457, -87.7492392\n11839817\tJC447219\t2019-09-24T19:30:00.000\t008XX W HUBBARD ST\t0810\tTHEFT\tOVER $500\tSTREET\tfalse\tfalse\t1214\t012\t27\t24\t06\t1170881\t1903281\t2019\t2019-10-01T16:20:30.000\t41.890081373\t-87.64789741\tPOINT (-87.64789741 41.890081373)\tnull\tnull\tnull\tnull\t41\t22620\t25\t522\t46\t49\t15\t76\t20190924\t41.890081373, -87.64789741\n11840732\tJC448283\t2019-09-24T19:30:00.000\t076XX S SOUTH SHORE DR\t0820\tTHEFT\t$500 AND UNDER\tRESIDENCE\tfalse\tfalse\t0421\t004\t7\t43\t06\t1196717\t1855401\t2019\t2019-10-01T16:20:30.000\t41.758091299\t-87.554611718\tPOINT (-87.554611718 41.758091299)\tnull\tnull\tnull\tnull\t43\t22538\t39\t421\t37\t24\t19\t225\t20190924\t41.758091299, -87.554611718\n11842773\tJC450682\t2019-09-24T19:30:00.000\t003XX E 55TH PL\t0820\tTHEFT\t$500 AND UNDER\tSTREET\tfalse\tfalse\t0231\t002\t20\t40\t06\tnull\tnull\t2019\t2019-10-01T16:20:30.000\tnull\tnull\tnull\tnull\tnull\tnull\tnull\tnull\tnull\tnull\tnull\tnull\tnull\tnull\tnull\t20190924\t\n11843823\tJC447105\t2019-09-24T19:30:00.000\t036XX S VINCENNES AVE\t0326\tROBBERY\tAGGRAVATED VEHICULAR HIJACKING\tPARK PROPERTY\tfalse\tfalse\t0212\t002\t4\t35\t03\tnull\tnull\t2019\t2019-10-01T16:20:30.000\tnull\tnull\tnull\tnull\tnull\tnull\tnull\tnull\tnull\tnull\tnull\tnull\tnull\tnull\tnull\t20190924\t\n11839766\tJC447167\t2019-09-24T19:25:00.000\t003XX W 35TH ST\t2820\tOTHER OFFENSE\tTELEPHONE THREAT\tSPORTS ARENA/STADIUM\tfalse\tfalse\t0915\t009\t11\t34\t08A\t1174431\t1881739\t2019\t2019-10-01T16:20:30.000\t41.830890037\t-87.635503335\tPOINT (-87.635503335 41.830890037)\tnull\tnull\tnull\tnull\t26\t21194\t35\t296\t48\t37\t23\t170\t20190924\t41.830890037, -87.635503335\n11841977\tJC449032\t2019-09-24T19:25:00.000\t029XX W WILCOX ST\t1152\tDECEPTIVE PRACTICE\tILLEGAL USE CASH CARD\tOTHER\tfalse\tfalse\t1124\t011\t27\t27\t11\t1156905\t1899216\t2019\t2019-10-01T16:20:30.000\t41.879221513\t-87.699333919\tPOINT (-87.699333919 41.879221513)\tnull\tnull\tnull\tnull\t48\t21184\t28\t51\t46\t28\t16\t123\t20190924\t41.879221513, -87.699333919\n11839774\tJC447079\t2019-09-24T19:21:00.000\t043XX S ST LAWRENCE AVE\t0486\tBATTERY\tDOMESTIC BATTERY SIMPLE\tAPARTMENT\tfalse\ttrue\t0221\t002\t4\t38\t08B\t1180983\t1876427\t2019\t2019-10-01T16:20:30.000\t41.816164946\t-87.611627646\tPOINT (-87.611627646 41.816164946)\tnull\tnull\tnull\tnull\t1\t4301\t4\t161\t10\t36\t24\t114\t20190924\t41.816164946, -87.611627646\n11839780\tJC447204\t2019-09-24T19:20:00.000\t011XX S CANAL ST\t1220\tDECEPTIVE PRACTICE\tTHEFT OF LOST/MISLAID PROP\tRESTAURANT\tfalse\tfalse\t0124\t001\t25\t28\t11\t1173303\t1895451\t2019\t2019-10-01T16:20:30.000\t41.868541914\t-87.639235361\tPOINT (-87.639235361 41.868541914)\tnull\tnull\tnull\tnull\t48\t14917\t29\t97\t26\t44\t22\t147\t20190924\t41.868541914, -87.639235361\n11839755\tJC447062\t2019-09-24T19:20:00.000\t001XX W 108TH PL\t0560\tASSAULT\tSIMPLE\tSTREET\tfalse\ttrue\t0513\t005\t34\t49\t08A\t1177281\t1833007\t2019\t2019-10-01T16:20:30.000\t41.697099974\t-87.626515832\tPOINT (-87.626515832 41.697099974)\tnull\tnull\tnull\tnull\t45\t21861\t45\t524\t22\t19\t10\t260\t20190924\t41.697099974, -87.626515832\n11839767\tJC447097\t2019-09-24T19:19:00.000\t042XX S WASHTENAW AVE\t1710\tOFFENSE INVOLVING CHILDREN\tENDANGERING LIFE/HEALTH CHILD\tRESIDENCE\tfalse\ttrue\t0921\t009\t15\t58\t20\t1159069\t1876472\t2019\t2019-10-01T16:20:30.000\t41.816765361\t-87.692011723\tPOINT (-87.692011723 41.816765361)\tnull\tnull\tnull\tnull\t29\t22248\t55\t641\t3\t56\t23\t110\t20190924\t41.816765361, -87.692011723\n11840790\tJC448171\t2019-09-24T19:15:00.000\t0000X E MONROE ST\t0890\tTHEFT\tFROM BUILDING\tOTHER\tfalse\tfalse\t0112\t001\t42\t32\t06\t1177098\t1899952\t2019\t2019-10-01T16:20:30.000\t41.880807873\t-87.625166905\tPOINT (-87.625166905 41.880807873)\tnull\tnull\tnull\tnull\t22\t14311\t38\t367\t36\t34\t22\t93\t20190924\t41.880807873, -87.625166905\n11839787\tJC447100\t2019-09-24T19:15:00.000\t005XX N CENTRAL AVE\t0486\tBATTERY\tDOMESTIC BATTERY SIMPLE\tAPARTMENT\tfalse\ttrue\t1523\t015\t37\t25\t08B\t1138943\t1902924\t2019\t2019-10-01T16:20:30.000\t41.889741913\t-87.765198001\tPOINT (-87.765198001 41.889741913)\tnull\tnull\tnull\tnull\t52\t22216\t26\t672\t7\t32\t25\t85\t20190924\t41.889741913, -87.765198001\n11840451\tJC447954\t2019-09-24T19:15:00.000\t061XX N WESTERN AVE\t1152\tDECEPTIVE PRACTICE\tILLEGAL USE CASH CARD\tBANK\tfalse\tfalse\t2413\t024\t40\t2\t11\t1159207\t1940780\t2019\t2019-10-01T16:20:30.000\t41.993228887\t-87.689735615\tPOINT (-87.689735615 41.993228887)\tnull\tnull\tnull\tnull\t42\t4450\t20\t31\t24\t50\t11\t52\t20190924\t41.993228887, -87.689735615\n11839782\tJC447076\t2019-09-24T19:15:00.000\t008XX N LECLAIRE AVE\t2027\tNARCOTICS\tPOSS: CRACK\tSTREET\ttrue\tfalse\t1531\t015\t37\t25\t18\t1142201\t1905207\t2019\t2019-10-01T16:20:30.000\t41.895946918\t-87.753176359\tPOINT (-87.753176359 41.895946918)\tnull\tnull\tnull\tnull\t4\t4299\t26\t585\t45\t5\t25\t69\t20190924\t41.895946918, -87.753176359\n11839663\tJC447058\t2019-09-24T19:13:00.000\t038XX N CHRISTIANA AVE\t0560\tASSAULT\tSIMPLE\tSIDEWALK\tfalse\tfalse\t1733\t017\t33\t16\t08A\t1153375\t1925342\t2019\t2019-10-01T16:20:30.000\t41.950984364\t-87.711600118\tPOINT (-87.711600118 41.950984364)\tnull\tnull\tnull\tnull\t2\t21538\t16\t325\t20\t39\t1\t23\t20190924\t41.950984364, -87.711600118\n11841634\tJC447055\t2019-09-24T19:10:00.000\t062XX W ADDISON ST\t0520\tASSAULT\tAGGRAVATED:KNIFE/CUTTING INSTR\tALLEY\tfalse\tfalse\t1633\t016\t36\t17\t04A\t1134147\t1923289\t2019\t2019-10-01T16:20:30.000\t41.945711719\t-87.782330781\tPOINT (-87.782330781 41.945711719)\tnull\tnull\tnull\tnull\t39\t22254\t17\t443\t44\t52\t12\t27\t20190924\t41.945711719, -87.782330781\n11840412\tJC447700\t2019-09-24T19:07:00.000\t082XX S VINCENNES AVE\t0460\tBATTERY\tSIMPLE\tSCHOOL, PUBLIC, GROUNDS\tfalse\tfalse\t0622\t006\t21\t44\t08B\t1174602\t1850318\t2019\t2019-10-01T16:20:30.000\t41.744663667\t-87.63581122\tPOINT (-87.63581122 41.744663667)\tnull\tnull\tnull\tnull\t18\t21554\t40\t1\t13\t59\t20\t236\t20190924\t41.744663667, -87.63581122\n11839650\tJC447054\t2019-09-24T19:06:00.000\t004XX W 118TH ST\t1477\tWEAPONS VIOLATION\tRECKLESS FIREARM DISCHARGE\tSTREET\tfalse\tfalse\t0522\t005\t34\t53\t15\t1175652\t1826664\t2019\t2019-10-01T16:20:30.000\t41.679730347\t-87.632669173\tPOINT (-87.632669173 41.679730347)\tnull\tnull\tnull\tnull\t45\t21861\t50\t255\t22\t19\t10\t267\t20190924\t41.679730347, -87.632669173\n11839901\tJC447102\t2019-09-24T19:04:00.000\t004XX W 118TH ST\t041A\tBATTERY\tAGGRAVATED: HANDGUN\tSIDEWALK\tfalse\tfalse\t0522\t005\t34\t53\t04B\t1175652\t1826664\t2019\t2019-10-01T16:20:30.000\t41.679730347\t-87.632669173\tPOINT (-87.632669173 41.679730347)\tnull\tnull\tnull\tnull\t45\t21861\t50\t255\t22\t19\t10\t267\t20190924\t41.679730347, -87.632669173\n11839729\tJC447066\t2019-09-24T19:01:00.000\t0000X S STATE ST\t0860\tTHEFT\tRETAIL THEFT\tDEPARTMENT STORE\ttrue\tfalse\t0112\t001\t42\t32\t06\t1176389\t1900278\t2019\t2019-10-01T16:20:30.000\t41.88171846\t-87.627760426\tPOINT (-87.627760426 41.88171846)\tnull\tnull\tnull\tnull\t22\t14311\t38\t367\t36\t34\t22\t93\t20190924\t41.88171846, -87.627760426\n11839894\tJC447244\t2019-09-24T19:00:00.000\t111XX S VERNON AVE\t1150\tDECEPTIVE PRACTICE\tCREDIT CARD FRAUD\tAUTO / BOAT / RV DEALERSHIP\tfalse\tfalse\t0531\t005\t9\t49\t11\t1181229\t1831011\t2019\t2019-10-01T16:20:30.000\t41.69153286\t-87.612121809\tPOINT (-87.612121809 41.69153286)\tnull\tnull\tnull\tnull\t30\t21861\t45\t253\t43\t19\t10\t265\t20190924\t41.69153286, -87.612121809\n11839793\tJC447215\t2019-09-24T19:00:00.000\t062XX S NAGLE AVE\t1305\tCRIMINAL DAMAGE\tCRIMINAL DEFACEMENT\tRESIDENCE-GARAGE\tfalse\tfalse\t0812\t008\t13\t64\t14\t1134483\t1862482\t2019\t2019-10-01T16:20:30.000\t41.778842439\t-87.782529682\tPOINT (-87.782529682 41.778842439)\tnull\tnull\tnull\tnull\t35\t22268\t62\t335\t15\t7\t13\t272\t20190924\t41.778842439, -87.782529682\n11840714\tJC448305\t2019-09-24T19:00:00.000\t035XX N OAK PARK AVE\t0910\tMOTOR VEHICLE THEFT\tAUTOMOBILE\tSTREET\tfalse\tfalse\t1632\t016\t38\t17\t07\t1130450\t1922679\t2019\t2019-10-01T16:20:30.000\t41.94410222\t-87.795933961\tPOINT (-87.795933961 41.94410222)\tnull\tnull\tnull\tnull\t39\t22254\t17\t396\t19\t52\t12\t17\t20190924\t41.94410222, -87.795933961\n11840119\tJC447438\t2019-09-24T19:00:00.000\t001XX N MENARD AVE\t0910\tMOTOR VEHICLE THEFT\tAUTOMOBILE\tSTREET\tfalse\tfalse\t1512\t015\t29\t25\t07\t1137694\t1900366\t2019\t2019-10-01T16:20:30.000\t41.88274503\t-87.769846629\tPOINT (-87.769846629 41.88274503)\tnull\tnull\tnull\tnull\t52\t22216\t26\t618\t7\t32\t25\t85\t20190924\t41.88274503, -87.769846629\n11840008\tJC447406\t2019-09-24T19:00:00.000\t018XX N PULASKI RD\t0820\tTHEFT\t$500 AND UNDER\tSTREET\ttrue\tfalse\t2534\t025\t35\t20\t06\t1149425\t1911912\t2019\t2019-10-01T16:20:30.000\t41.914208997\t-87.726469659\tPOINT (-87.726469659 41.914208997)\tnull\tnull\tnull\tnull\t27\t22535\t21\t135\t12\t2\t6\t194\t20190924\t41.914208997, -87.726469659\n11845262\tJC447475\t2019-09-24T19:00:00.000\t030XX N SAWYER AVE\t0810\tTHEFT\tOVER $500\tSTREET\tfalse\tfalse\t1412\t014\t35\t21\t06\tnull\tnull\t2019\t2019-10-01T16:20:30.000\tnull\tnull\tnull\tnull\tnull\tnull\tnull\tnull\tnull\tnull\tnull\tnull\tnull\tnull\tnull\t20190924\t\n11840467\tJC447975\t2019-09-24T19:00:00.000\t075XX S CARPENTER ST\t1320\tCRIMINAL DAMAGE\tTO VEHICLE\tSTREET\tfalse\tfalse\t0612\t006\t17\t71\t14\t1170621\t1854740\t2019\t2019-10-01T16:20:30.000\t41.756885848\t-87.650269476\tPOINT (-87.650269476 41.756885848)\tnull\tnull\tnull\tnull\t17\t21554\t70\t572\t31\t59\t20\t230\t20190924\t41.756885848, -87.650269476\n11840469\tJC447140\t2019-09-24T19:00:00.000\t047XX S KOLIN AVE\t0620\tBURGLARY\tUNLAWFUL ENTRY\tAPARTMENT\tfalse\tfalse\t0815\t008\t14\t57\t05\t1148156\t1872905\t2019\t2019-10-01T16:20:30.000\t41.807193516\t-87.732135287\tPOINT (-87.732135287 41.807193516)\tnull\tnull\tnull\tnull\t35\t22248\t54\t697\t8\t56\t13\t105\t20190924\t41.807193516, -87.732135287\n11840835\tJC448482\t2019-09-24T19:00:00.000\t005XX N CLAREMONT AVE\t0820\tTHEFT\t$500 AND UNDER\tSTREET\tfalse\tfalse\t1221\t012\t26\t24\t06\t1160643\t1903611\t2019\t2019-10-01T16:20:30.000\t41.891205185\t-87.68548677\tPOINT (-87.68548677 41.891205185)\tnull\tnull\tnull\tnull\t10\t21184\t25\t546\t49\t28\t15\t80\t20190924\t41.891205185, -87.68548677\n11842761\tJC450540\t2019-09-24T19:00:00.000\t016XX N MILWAUKEE AVE\t0890\tTHEFT\tFROM BUILDING\tBARBERSHOP\tfalse\tfalse\t1434\t014\t2\t24\t06\tnull\tnull\t2019\t2019-10-01T16:20:30.000\tnull\tnull\tnull\tnull\tnull\tnull\tnull\tnull\tnull\tnull\tnull\tnull\tnull\tnull\tnull\t20190924\t\n11840066\tJC447482\t2019-09-24T19:00:00.000\t018XX N CENTRAL PARK AVE\t1320\tCRIMINAL DAMAGE\tTO VEHICLE\tSTREET\tfalse\tfalse\t2535\t025\t1\t22\t14\t1152092\t1911885\t2019\t2019-10-01T16:20:30.000\t41.914082704\t-87.716672184\tPOINT (-87.716672184 41.914082704)\tnull\tnull\tnull\tnull\t10\t22535\t23\t351\t41\t1\t7\t190\t20190924\t41.914082704, -87.716672184\n11841139\tJC448468\t2019-09-24T19:00:00.000\t005XX W BRIAR PL\t1310\tCRIMINAL DAMAGE\tTO PROPERTY\tRESIDENCE\tfalse\tfalse\t1934\t019\t44\t6\t14\t1171878\t1921006\t2019\t2019-10-01T16:20:30.000\t41.938697753\t-87.6437126\tPOINT (-87.6437126 41.938697753)\tnull\tnull\tnull\tnull\t38\t4449\t57\t683\t25\t22\t5\t30\t20190924\t41.938697753, -87.6437126\n11840450\tJC447873\t2019-09-24T19:00:00.000\t028XX S LAWNDALE AVE\t1320\tCRIMINAL DAMAGE\tTO VEHICLE\tSTREET\tfalse\tfalse\t1031\t010\t22\t30\t14\t1152163\t1884970\t2019\t2019-10-01T16:20:30.000\t41.840223636\t-87.71712127\tPOINT (-87.71712127 41.840223636)\tnull\tnull\tnull\tnull\t14\t21569\t32\t234\t28\t57\t21\t167\t20190924\t41.840223636, -87.71712127\n11839978\tJC447174\t2019-09-24T19:00:00.000\t006XX W DIVISION ST\t2826\tOTHER OFFENSE\tHARASSMENT BY ELECTRONIC MEANS\tAPARTMENT\tfalse\ttrue\t1822\t018\t27\t8\t26\t1171881\t1908252\t2019\t2019-10-01T16:20:30.000\t41.903700111\t-87.644078325\tPOINT (-87.644078325 41.903700111)\tnull\tnull\tnull\tnull\t41\t14926\t37\t108\t46\t54\t14\t199\t20190924\t41.903700111, -87.644078325\n11839802\tJC447171\t2019-09-24T19:00:00.000\t087XX S MARQUETTE AVE\t0530\tASSAULT\tAGGRAVATED: OTHER DANG WEAPON\tSTREET\tfalse\tfalse\t0423\t004\t7\t46\t04A\t1195772\t1847566\t2019\t2019-10-01T16:20:30.000\t41.73661487\t-87.558333597\tPOINT (-87.558333597 41.73661487)\tnull\tnull\tnull\tnull\t43\t21202\t42\t508\t37\t25\t19\t238\t20190924\t41.73661487, -87.558333597\n11842558\tJC450389\t2019-09-24T19:00:00.000\t096XX S PRAIRIE AVE\t0820\tTHEFT\t$500 AND UNDER\tRESIDENTIAL YARD (FRONT/BACK)\tfalse\tfalse\t0511\t005\t9\t49\t06\tnull\tnull\t2019\t2019-10-01T16:20:30.000\tnull\tnull\tnull\tnull\tnull\tnull\tnull\tnull\tnull\tnull\tnull\tnull\tnull\tnull\tnull\t20190924\t\n11840055\tJC447437\t2019-09-24T19:00:00.000\t012XX W ROSCOE ST\t0810\tTHEFT\tOVER $500\tSTREET\tfalse\tfalse\t1924\t019\t44\t6\t06\t1167426\t1922713\t2019\t2019-10-01T16:20:30.000\t41.943478951\t-87.660025403\tPOINT (-87.660025403 41.943478951)\tnull\tnull\tnull\tnull\t38\t4449\t57\t741\t25\t22\t5\t28\t20190924\t41.943478951, -87.660025403\n11839765\tJC447013\t2019-09-24T18:58:00.000\t093XX S COLFAX AVE\t0560\tASSAULT\tSIMPLE\tRESIDENCE\tfalse\tfalse\t0423\t004\t7\t48\t08A\t1195138\t1843482\t2019\t2019-10-01T16:20:30.000\t41.725423661\t-87.560790612\tPOINT (-87.560790612 41.725423661)\tnull\tnull\tnull\tnull\t43\t21202\t44\t493\t37\t25\t19\t238\t20190924\t41.725423661, -87.560790612\n11839779\tJC447031\t2019-09-24T18:54:00.000\t099XX S OAKLEY AVE\t0486\tBATTERY\tDOMESTIC BATTERY SIMPLE\tRESIDENCE\tfalse\ttrue\t2213\t022\t19\t72\t08B\t1162794\t1838684\t2019\t2019-10-01T16:20:30.000\t41.712992633\t-87.67940127\tPOINT (-87.67940127 41.712992633)\tnull\tnull\tnull\tnull\t33\t22212\t71\t629\t42\t13\t9\t252\t20190924\t41.712992633, -87.67940127\n11839885\tJC447041\t2019-09-24T18:52:00.000\t069XX S WABASH AVE\t1310\tCRIMINAL DAMAGE\tTO PROPERTY\tRESIDENCE\ttrue\tfalse\t0322\t003\t6\t69\t14\t1177922\t1859081\t2019\t2019-10-01T16:20:30.000\t41.768635844\t-87.623381396\tPOINT (-87.623381396 41.768635844)\tnull\tnull\tnull\tnull\t31\t22260\t67\t514\t32\t60\t18\t211\t20190924\t41.768635844, -87.623381396\n11839804\tJC447164\t2019-09-24T18:49:00.000\t059XX S DAMEN AVE\t0470\tPUBLIC PEACE VIOLATION\tRECKLESS CONDUCT\tPARK PROPERTY\ttrue\tfalse\t0714\t007\t16\t67\t24\t1164041\t1865354\t2019\t2019-10-01T16:20:30.000\t41.786152942\t-87.674085942\tPOINT (-87.674085942 41.786152942)\tnull\tnull\tnull\tnull\t44\t22257\t65\t275\t2\t23\t17\t164\t20190924\t41.786152942, -87.674085942\n11840320\tJC447609\t2019-09-24T18:45:00.000\t089XX S MUSKEGON AVE\t0530\tASSAULT\tAGGRAVATED: OTHER DANG WEAPON\tPARK PROPERTY\tfalse\tfalse\t0423\t004\t7\t46\t04A\t1196565\t1846235\t2019\t2019-10-01T16:20:30.000\t41.732942865\t-87.555472437\tPOINT (-87.555472437 41.732942865)\tnull\tnull\tnull\tnull\tnull\t21202\t42\t175\t47\t25\t19\t238\t20190924\t41.732942865, -87.555472437\n11840083\tJC447047\t2019-09-24T18:45:00.000\t020XX W 70TH ST\t0820\tTHEFT\t$500 AND UNDER\tRESIDENCE\tfalse\ttrue\t0735\t007\t17\t67\t06\t1164000\t1858234\t2019\t2019-10-01T16:20:30.000\t41.766615573\t-87.674436286\tPOINT (-87.674436286 41.766615573)\tnull\tnull\tnull\tnull\t17\t22257\t65\t283\t31\t23\t17\t7\t20190924\t41.766615573, -87.674436286\n11840225\tJC447485\t2019-09-24T18:40:00.000\t020XX W OGDEN AVE\t1320\tCRIMINAL DAMAGE\tTO VEHICLE\tSTREET\tfalse\tfalse\t1225\t012\t27\t28\t14\t1162848\t1896549\t2019\t2019-10-01T16:20:30.000\t41.871780487\t-87.677587044\tPOINT (-87.677587044 41.871780487)\tnull\tnull\tnull\tnull\t8\t21184\t29\t5\t23\t28\t15\t139\t20190924\t41.871780487, -87.677587044\n11839863\tJC447014\t2019-09-24T18:39:00.000\t059XX S CALUMET AVE\t0560\tASSAULT\tSIMPLE\tSTREET\tfalse\tfalse\t0232\t002\t20\t40\t08A\t1179500\t1865625\t2019\t2019-10-01T16:20:30.000\t41.786557348\t-87.617397586\tPOINT (-87.617397586 41.786557348)\tnull\tnull\tnull\tnull\t53\t22260\t7\t164\t4\t60\t24\t268\t20190924\t41.786557348, -87.617397586\n24764\tJC446934\t2019-09-24T18:35:00.000\t002XX N HAMLIN BLVD\t0110\tHOMICIDE\tFIRST DEGREE MURDER\tSTREET\tfalse\tfalse\t1122\t011\t28\t26\t01A\t1151030\t1900684\t2019\t2019-10-01T16:20:30.000\t41.88336693\t-87.72086759\tPOINT (-87.72086759 41.88336693)\tnull\tnull\tnull\tnull\t11\t21572\t28\t176\t23\t30\t16\t82\t20190924\t41.88336693, -87.72086759\n24765\tJC446929\t2019-09-24T18:33:00.000\t000XX E GARFIELD BLVD\t0110\tHOMICIDE\tFIRST DEGREE MURDER\tALLEY\tfalse\tfalse\t0225\t002\t20\t40\t01A\t1177487\t1868439\t2019\t2019-10-01T16:20:30.000\t41.794325001\t-87.624693192\tPOINT (-87.624693192 41.794325001)\tnull\tnull\tnull\tnull\t12\t22260\t7\t403\t9\t10\t24\t111\t20190924\t41.794325001, -87.624693192\n11839665\tJC447038\t2019-09-24T18:30:00.000\t001XX N STATE ST\t0860\tTHEFT\tRETAIL THEFT\tDEPARTMENT STORE\tfalse\tfalse\t0111\t001\t42\t32\t06\t1176338\t1901346\t2019\t2019-10-01T16:20:30.000\t41.884650262\t-87.627915459\tPOINT (-87.627915459 41.884650262)\tnull\tnull\tnull\tnull\t22\t14309\t38\t92\t36\t42\t22\t88\t20190924\t41.884650262, -87.627915459\n11842207\tJC449916\t2019-09-24T18:30:00.000\t022XX S HOMAN AVE\t0910\tMOTOR VEHICLE THEFT\tAUTOMOBILE\tVEHICLE NON-COMMERCIAL\tfalse\tfalse\t1024\t010\t22\t30\t07\t1154045\t1888955\t2019\t2019-10-01T16:20:30.000\t41.851121693\t-87.710108923\tPOINT (-87.710108923 41.851121693)\tnull\tnull\tnull\tnull\t14\t21569\t32\t755\t28\t57\t21\t130\t20190924\t41.851121693, -87.710108923\n11839672\tJC447028\t2019-09-24T18:30:00.000\t041XX S DR MARTIN LUTHER KING JR DR\t0486\tBATTERY\tDOMESTIC BATTERY SIMPLE\tSTREET\tfalse\ttrue\t0214\t002\t3\t38\t08B\t1179549\t1877429\t2019\t2019-10-01T16:20:30.000\t41.818947444\t-87.616857161\tPOINT (-87.616857161 41.818947444)\tnull\tnull\tnull\tnull\t12\t4301\t4\t163\t9\t36\t24\t104\t20190924\t41.818947444, -87.616857161\n11839656\tJC447026\t2019-09-24T18:30:00.000\t004XX N WELLS ST\t0890\tTHEFT\tFROM BUILDING\tRESTAURANT\tfalse\tfalse\t1831\t018\t42\t8\t06\t1174656\t1903357\t2019\t2019-10-01T16:20:30.000\t41.890206336\t-87.634031756\tPOINT (-87.634031756 41.890206336)\tnull\tnull\tnull\tnull\t22\t4446\t37\t670\t36\t55\t14\t73\t20190924\t41.890206336, -87.634031756\n11839786\tJC447044\t2019-09-24T18:30:00.000\t052XX W WASHINGTON BLVD\t041A\tBATTERY\tAGGRAVATED: HANDGUN\tSIDEWALK\tfalse\tfalse\t1522\t015\t28\t25\t04B\t1141581\t1900253\t2019\t2019-10-01T16:20:30.000\t41.882364022\t-87.755576028\tPOINT (-87.755576028 41.882364022)\tnull\tnull\tnull\tnull\t11\t22216\t26\t674\t23\t32\t25\t84\t20190924\t41.882364022, -87.755576028\n11839845\tJC446996\t2019-09-24T18:29:00.000\t029XX S DR MARTIN LUTHER KING JR DR\t1320\tCRIMINAL DAMAGE\tTO VEHICLE\tCTA BUS\tfalse\tfalse\t0133\t001\t4\t35\t14\t1179288\t1885690\t2019\t2019-10-01T16:20:30.000\t41.841622217\t-87.617562101\tPOINT (-87.617562101 41.841622217)\tnull\tnull\tnull\tnull\t1\t21194\t1\t191\t10\t40\t22\t163\t20190924\t41.841622217, -87.617562101\n11839760\tJC446991\t2019-09-24T18:28:00.000\t024XX E 76TH ST\t1320\tCRIMINAL DAMAGE\tTO VEHICLE\tSTREET\tfalse\tfalse\t0421\t004\t7\t43\t14\t1194002\t1855050\t2019\t2019-10-01T16:20:30.000\t41.757195137\t-87.564573204\tPOINT (-87.564573204 41.757195137)\tnull\tnull\tnull\tnull\t43\t22538\t39\t245\t37\t24\t19\t225\t20190924\t41.757195137, -87.564573204\n11839631\tJC447036\t2019-09-24T18:26:00.000\t008XX N ST LOUIS AVE\t2014\tNARCOTICS\tMANU/DELIVER: HEROIN (WHITE)\tABANDONED BUILDING\ttrue\tfalse\t1121\t011\t27\t23\t18\t1152892\t1905442\t2019\t2019-10-01T16:20:30.000\t41.896386691\t-87.71390403\tPOINT (-87.71390403 41.896386691)\tnull\tnull\tnull\tnull\t41\t4299\t24\t423\t46\t5\t16\t65\t20190924\t41.896386691, -87.71390403\n11842797\tJC450572\t2019-09-24T18:20:00.000\t011XX W 83RD ST\t0820\tTHEFT\t$500 AND UNDER\tRESIDENCE\tfalse\tfalse\t0613\t006\t21\t71\t06\tnull\tnull\t2019\t2019-10-01T16:20:30.000\tnull\tnull\tnull\tnull\tnull\tnull\tnull\tnull\tnull\tnull\tnull\tnull\tnull\tnull\tnull\t20190924\t\n11839773\tJC447130\t2019-09-24T18:15:00.000\t046XX N KIMBALL AVE\t0460\tBATTERY\tSIMPLE\tSTREET\tfalse\tfalse\t1723\t017\t33\t14\t08B\t1152886\t1930479\t2019\t2019-10-01T16:20:30.000\t41.965090358\t-87.713261027\tPOINT (-87.713261027 41.965090358)\tnull\tnull\tnull\tnull\t2\t21849\t14\t24\t20\t20\t1\t9\t20190924\t41.965090358, -87.713261027\n11839591\tJC446975\t2019-09-24T18:15:00.000\t012XX S AVERS AVE\t1661\tGAMBLING\tGAME/DICE\tSIDEWALK\ttrue\tfalse\t1011\t010\t24\t29\t19\t1150905\t1894214\t2019\t2019-10-01T16:20:30.000\t41.865614975\t-87.721495958\tPOINT (-87.721495958 41.865614975)\tnull\tnull\tnull\tnull\t36\t21569\t30\t33\t14\t57\t21\t155\t20190924\t41.865614975, -87.721495958\n11839683\tJC447109\t2019-09-24T18:15:00.000\t0000X N CICERO AVE\t0820\tTHEFT\t$500 AND UNDER\tCTA BUS\tfalse\tfalse\t1113\t011\t28\t25\t06\t1144386\t1899712\t2019\t2019-10-01T16:20:30.000\t41.880827171\t-87.745289524\tPOINT (-87.745289524 41.880827171)\tnull\tnull\tnull\tnull\t11\t22216\t26\t696\t23\t32\t16\t90\t20190924\t41.880827171, -87.745289524\n11839742\tJC446993\t2019-09-24T18:12:00.000\t050XX W ROSCOE ST\t1365\tCRIMINAL TRESPASS\tTO RESIDENCE\tRESIDENCE\tfalse\tfalse\t1634\t016\t31\t15\t26\t1142199\t1922136\t2019\t2019-10-01T16:20:30.000\t41.942401926\t-87.752762775\tPOINT (-87.752762775 41.942401926)\tnull\tnull\tnull\tnull\t25\t22618\t15\t114\t17\t21\t12\t26\t20190924\t41.942401926, -87.752762775\n11839799\tJC447074\t2019-09-24T18:03:00.000\t004XX W DIVISION ST\t0860\tTHEFT\tRETAIL THEFT\tGROCERY FOOD STORE\ttrue\tfalse\t1821\t018\t27\t8\t06\t1173175\t1908290\t2019\t2019-10-01T16:20:30.000\t41.903775756\t-87.639324074\tPOINT (-87.639324074 41.903775756)\tnull\tnull\tnull\tnull\t41\t14926\t37\t148\t46\t54\t14\t51\t20190924\t41.903775756, -87.639324074\n11840680\tJC448330\t2019-09-24T18:00:00.000\t054XX W CORTEZ ST\t1320\tCRIMINAL DAMAGE\tTO VEHICLE\tRESIDENTIAL YARD (FRONT/BACK)\tfalse\tfalse\t1524\t015\t37\t25\t14\t1139731\t1906464\t2019\t2019-10-01T16:20:30.000\t41.899441752\t-87.762217544\tPOINT (-87.762217544 41.899441752)\tnull\tnull\tnull\tnull\t4\t4299\t26\t562\t45\t5\t25\t67\t20190924\t41.899441752, -87.762217544\n11839775\tJC447029\t2019-09-24T18:00:00.000\t062XX S PAULINA ST\t1310\tCRIMINAL DAMAGE\tTO PROPERTY\tRESIDENCE\tfalse\tfalse\t0714\t007\t15\t67\t14\t1166079\t1863364\t2019\t2019-10-01T16:20:30.000\t41.780649008\t-87.666670175\tPOINT (-87.666670175 41.780649008)\tnull\tnull\tnull\tnull\t44\t22257\t65\t276\t3\t23\t17\t164\t20190924\t41.780649008, -87.666670175\n11840273\tJC447744\t2019-09-24T18:00:00.000\t077XX N HASKINS AVE\t1345\tCRIMINAL DAMAGE\tTO CITY OF CHICAGO PROPERTY\tCTA TRAIN\tfalse\tfalse\t2422\t024\t49\t1\t14\t1163173\t1951318\t2019\t2019-10-01T16:20:30.000\t42.022062685\t-87.67484904\tPOINT (-87.67484904 42.022062685)\tnull\tnull\tnull\tnull\t3\t21853\t10\t340\t5\t9\t11\t32\t20190924\t42.022062685, -87.67484904\n11839872\tJC447245\t2019-09-24T18:00:00.000\t009XX W BELMONT AVE\t1150\tDECEPTIVE PRACTICE\tCREDIT CARD FRAUD\tCTA STATION\tfalse\tfalse\t1933\t019\t44\t6\t11\t1169269\t1921430\t2019\t2019-10-01T16:20:30.000\t41.93991842\t-87.653288878\tPOINT (-87.653288878 41.93991842)\tnull\tnull\tnull\tnull\t38\t4449\t57\t681\t25\t22\t5\t31\t20190924\t41.93991842, -87.653288878\n11839614\tJC446987\t2019-09-24T18:00:00.000\t002XX N LA SALLE ST\t0890\tTHEFT\tFROM BUILDING\tRESTAURANT\tfalse\tfalse\t0122\t001\t42\t32\t06\t1175092\t1901998\t2019\t2019-10-01T16:20:30.000\t41.886467402\t-87.632471344\tPOINT (-87.632471344 41.886467402)\tnull\tnull\tnull\tnull\t22\t14309\t38\t92\t36\t42\t22\t79\t20190924\t41.886467402, -87.632471344\n11843057\tJC451099\t2019-09-24T18:00:00.000\t022XX S HALSTED ST\t0810\tTHEFT\tOVER $500\tOTHER\tfalse\tfalse\t1235\t012\t11\t31\t06\tnull\tnull\t2019\t2019-10-01T16:20:30.000\tnull\tnull\tnull\tnull\tnull\tnull\tnull\tnull\tnull\tnull\tnull\tnull\tnull\tnull\tnull\t20190924\t\n11839598\tJC446967\t2019-09-24T18:00:00.000\t0000X E HARRISON ST\t0860\tTHEFT\tRETAIL THEFT\tSMALL RETAIL STORE\tfalse\tfalse\t0123\t001\t4\t32\t06\t1176553\t1897606\t2019\t2019-10-01T16:20:30.000\t41.874382636\t-87.627238948\tPOINT (-87.627238948 41.874382636)\tnull\tnull\tnull\tnull\t48\t14913\t38\t368\t10\t35\t22\t144\t20190924\t41.874382636, -87.627238948\n11841071\tJC447265\t2019-09-24T18:00:00.000\t014XX E 70TH ST\t0820\tTHEFT\t$500 AND UNDER\tSTREET\tfalse\tfalse\t0332\t003\t5\t43\t06\t1186934\t1858866\t2019\t2019-10-01T16:20:30.000\t41.767836987\t-87.590355138\tPOINT (-87.590355138 41.767836987)\tnull\tnull\tnull\tnull\t32\t22260\t39\t416\t33\t60\t18\t212\t20190924\t41.767836987, -87.590355138\n11840163\tJC447616\t2019-09-24T18:00:00.000\t049XX S KIMBARK AVE\t0820\tTHEFT\t$500 AND UNDER\tVEHICLE NON-COMMERCIAL\tfalse\tfalse\t0222\t002\t4\t39\t06\t1185511\t1872440\t2019\t2019-10-01T16:20:30.000\t41.805118777\t-87.595143832\tPOINT (-87.595143832 41.805118777)\tnull\tnull\tnull\tnull\t1\t21192\t5\t356\t10\t10\t24\t113\t20190924\t41.805118777, -87.595143832\n11839545\tJC446939\t2019-09-24T17:59:00.000\t077XX S ADA ST\t1310\tCRIMINAL DAMAGE\tTO PROPERTY\tAPARTMENT\tfalse\ttrue\t0612\t006\t17\t71\t14\t1168783\t1853506\t2019\t2019-10-01T16:20:30.000\t41.753539436\t-87.657040981\tPOINT (-87.657040981 41.753539436)\tnull\tnull\tnull\tnull\t17\t21554\t70\t572\t31\t59\t20\t230\t20190924\t41.753539436, -87.657040981\n11839679\tJC446961\t2019-09-24T17:55:00.000\t032XX W NORTH AVE\t0860\tTHEFT\tRETAIL THEFT\tDEPARTMENT STORE\ttrue\tfalse\t1422\t014\t26\t23\t06\t1154551\t1910454\t2019\t2019-10-01T16:20:30.000\t41.910107045\t-87.707676543\tPOINT (-87.707676543 41.910107045)\tnull\tnull\tnull\tnull\t10\t22535\t24\t455\t49\t1\t7\t171\t20190924\t41.910107045, -87.707676543\n11842470\tJC450354\t2019-09-24T17:53:00.000\t070XX S ARTESIAN AVE\t2825\tOTHER OFFENSE\tHARASSMENT BY TELEPHONE\tRESIDENCE\tfalse\tfalse\t0832\t008\t17\t66\t26\tnull\tnull\t2019\t2019-10-01T16:20:30.000\tnull\tnull\tnull\tnull\tnull\tnull\tnull\tnull\tnull\tnull\tnull\tnull\tnull\tnull\tnull\t20190924\t\n11839771\tJC446960\t2019-09-24T17:51:00.000\t076XX S OGLESBY AVE\t0620\tBURGLARY\tUNLAWFUL ENTRY\tRESIDENCE\tfalse\tfalse\t0414\t004\t7\t43\t05\t1193196\t1854723\t2019\t2019-10-01T16:20:30.000\t41.756317549\t-87.56753768\tPOINT (-87.56753768 41.756317549)\tnull\tnull\tnull\tnull\t43\t22538\t39\t420\t37\t24\t19\t222\t20190924\t41.756317549, -87.56753768\n11839648\tJC446963\t2019-09-24T17:50:00.000\t013XX W 64TH ST\t0486\tBATTERY\tDOMESTIC BATTERY SIMPLE\tSTREET\ttrue\ttrue\t0724\t007\t16\t67\t08B\t1168314\t1862319\t2019\t2019-10-01T16:20:30.000\t41.777733558\t-87.658506316\tPOINT (-87.658506316 41.777733558)\tnull\tnull\tnull\tnull\t19\t22257\t65\t21\t2\t23\t17\t203\t20190924\t41.777733558, -87.658506316\n11839613\tJC446956\t2019-09-24T17:50:00.000\t066XX S STONY ISLAND AVE\t0860\tTHEFT\tRETAIL THEFT\tGAS STATION\tfalse\tfalse\t0321\t003\t5\t42\t06\t1188012\t1861466\t2019\t2019-10-01T16:20:30.000\t41.774945985\t-87.586321063\tPOINT (-87.586321063 41.774945985)\tnull\tnull\tnull\tnull\t32\t22260\t9\t134\t33\t24\t18\t262\t20190924\t41.774945985, -87.586321063\n11839677\tJC446954\t2019-09-24T17:50:00.000\t011XX W JACKSON BLVD\t0860\tTHEFT\tRETAIL THEFT\tDEPARTMENT STORE\ttrue\tfalse\t1232\t012\t25\t28\t06\t1168933\t1898798\t2019\t2019-10-01T16:20:30.000\t41.877822179\t-87.655181405\tPOINT (-87.655181405 41.877822179)\tnull\tnull\tnull\tnull\t48\t14917\t29\t91\t26\t44\t15\t95\t20190924\t41.877822179, -87.655181405\n11839625\tJC446965\t2019-09-24T17:47:00.000\t036XX W FILLMORE ST\t1310\tCRIMINAL DAMAGE\tTO PROPERTY\tOTHER\tfalse\tfalse\t1133\t011\t24\t29\t14\t1152216\t1895128\t2019\t2019-10-01T16:20:30.000\t41.868097353\t-87.716659073\tPOINT (-87.716659073 41.868097353)\tnull\tnull\tnull\tnull\t36\t21572\t30\t98\t14\t30\t16\t141\t20190924\t41.868097353, -87.716659073\n11839744\tJC447034\t2019-09-24T17:45:00.000\t057XX N ELSTON AVE\t0460\tBATTERY\tSIMPLE\tOTHER COMMERCIAL TRANSPORTATION\tfalse\tfalse\t1622\t016\t39\t11\t08B\t1137428\t1937934\t2019\t2019-10-01T16:20:30.000\t41.985840434\t-87.769916818\tPOINT (-87.769916818 41.985840434)\tnull\tnull\tnull\tnull\t20\t22532\t11\t701\t50\t18\t12\t43\t20190924\t41.985840434, -87.769916818\n11839712\tJC446989\t2019-09-24T17:45:00.000\t012XX N DAMEN AVE\t0890\tTHEFT\tFROM BUILDING\tRESTAURANT\tfalse\tfalse\t1424\t014\t1\t24\t06\t1162846\t1908146\t2019\t2019-10-01T16:20:30.000\t41.903603648\t-87.677268862\tPOINT (-87.677268862 41.903603648)\tnull\tnull\tnull\tnull\t24\t21560\t25\t481\t41\t4\t7\t200\t20190924\t41.903603648, -87.677268862\n11839575\tJC446955\t2019-09-24T17:45:00.000\t053XX S BISHOP ST\t1320\tCRIMINAL DAMAGE\tTO VEHICLE\tSTREET\tfalse\tfalse\t0934\t009\t20\t61\t14\t1167573\t1869338\t2019\t2019-10-01T16:20:30.000\t41.797010468\t-87.661021625\tPOINT (-87.661021625 41.797010468)\tnull\tnull\tnull\tnull\t19\t14924\t59\t790\t4\t37\t23\t127\t20190924\t41.797010468, -87.661021625\n11841719\tJC449468\t2019-09-24T17:40:00.000\t002XX W MERCHANDISE MART PLZ\t0810\tTHEFT\tOVER $500\tSIDEWALK\tfalse\tfalse\t1831\t018\t42\t8\t06\t1174456\t1902539\t2019\t2019-10-01T16:20:30.000\t41.887966168\t-87.634790696\tPOINT (-87.634790696 41.887966168)\tnull\tnull\tnull\tnull\t22\t4446\t37\t652\t36\t55\t14\t73\t20190924\t41.887966168, -87.634790696\n11840041\tJC447198\t2019-09-24T17:40:00.000\t016XX N FAIRFIELD AVE\t0810\tTHEFT\tOVER $500\tRESIDENCE\tfalse\tfalse\t1421\t014\t1\t24\t06\t1157784\t1910840\t2019\t2019-10-01T16:20:30.000\t41.911100934\t-87.695789216\tPOINT (-87.695789216 41.911100934)\tnull\tnull\tnull\tnull\t24\t22535\t25\t299\t41\t1\t7\t171\t20190924\t41.911100934, -87.695789216\n11839556\tJC446920\t2019-09-24T17:37:00.000\t065XX S RACINE AVE\t2820\tOTHER OFFENSE\tTELEPHONE THREAT\tPARK PROPERTY\tfalse\ttrue\t0724\t007\t17\t67\t08A\t1169443\t1861521\t2019\t2019-10-01T16:20:30.000\t41.775519362\t-87.654390481\tPOINT (-87.654390481 41.775519362)\tnull\tnull\tnull\tnull\t17\t22257\t65\t21\t31\t23\t17\t203\t20190924\t41.775519362, -87.654390481\n11839675\tJC446925\t2019-09-24T17:35:00.000\t044XX N BROADWAY\t0860\tTHEFT\tRETAIL THEFT\tDEPARTMENT STORE\ttrue\tfalse\t1913\t019\t46\t3\t06\t1168469\t1929861\t2019\t2019-10-01T16:20:30.000\t41.963070794\t-87.655984213\tPOINT (-87.655984213 41.963070794)\tnull\tnull\tnull\tnull\t37\t22616\t31\t241\t39\t15\t5\t6\t20190924\t41.963070794, -87.655984213\n11840553\tJC448146\t2019-09-24T17:30:00.000\t006XX N MICHIGAN AVE\t0860\tTHEFT\tRETAIL THEFT\tSMALL RETAIL STORE\tfalse\tfalse\t1834\t018\t42\t8\t06\t1177316\t1904626\t2019\t2019-10-01T16:20:30.000\t41.893628633\t-87.624224612\tPOINT (-87.624224612 41.893628633)\tnull\tnull\tnull\tnull\t22\t21182\t37\t626\t36\t6\t14\t74\t20190924\t41.893628633, -87.624224612\n11842767\tJC446932\t2019-09-24T17:30:00.000\t013XX S WABASH AVE\t1310\tCRIMINAL DAMAGE\tTO PROPERTY\tOTHER\tfalse\tfalse\t0131\t001\t3\t33\t14\tnull\tnull\t2019\t2019-10-01T16:20:30.000\tnull\tnull\tnull\tnull\tnull\tnull\tnull\tnull\tnull\tnull\tnull\tnull\tnull\tnull\tnull\t20190924\t\n11839630\tJC446974\t2019-09-24T17:30:00.000\t046XX W NORTH AVE\t0860\tTHEFT\tRETAIL THEFT\tDEPARTMENT STORE\ttrue\tfalse\t2533\t025\t37\t25\t06\t1145011\t1910225\t2019\t2019-10-01T16:20:30.000\t41.909664252\t-87.742728815\tPOINT (-87.742728815 41.909664252)\tnull\tnull\tnull\tnull\t4\t22615\t26\t62\t45\t2\t6\t195\t20190924\t41.909664252, -87.742728815\n11839655\tJC447040\t2019-09-24T17:30:00.000\t053XX W HIRSCH ST\t1365\tCRIMINAL TRESPASS\tTO RESIDENCE\tRESIDENCE\tfalse\tfalse\t2532\t025\t37\t25\t26\t1140282\t1908793\t2019\t2019-10-01T16:20:30.000\t41.905822718\t-87.760136539\tPOINT (-87.760136539 41.905822718)\tnull\tnull\tnull\tnull\t4\t4299\t26\t599\t45\t5\t6\t145\t20190924\t41.905822718, -87.760136539\n11839747\tJC446943\t2019-09-24T17:30:00.000\t105XX S CALHOUN AVE\t143A\tWEAPONS VIOLATION\tUNLAWFUL POSS OF HANDGUN\tALLEY\ttrue\tfalse\t0434\t004\t10\t51\t15\t1194870\t1835579\t2019\t2019-10-01T16:20:30.000\t41.703743667\t-87.562031614\tPOINT (-87.562031614 41.703743667)\tnull\tnull\tnull\tnull\t47\t21202\t48\t174\t47\t25\t19\t255\t20190924\t41.703743667, -87.562031614\n11839871\tJC447290\t2019-09-24T17:28:00.000\t001XX W 108TH ST\t2024\tNARCOTICS\tPOSS: HEROIN(WHITE)\tSTREET\ttrue\tfalse\t0513\t005\t34\t49\t18\t1177083\t1833334\t2019\t2019-10-01T16:20:30.000\t41.698001766\t-87.627230976\tPOINT (-87.627230976 41.698001766)\tnull\tnull\tnull\tnull\t45\t21861\t45\t524\t22\t19\t10\t260\t20190924\t41.698001766, -87.627230976\n11839801\tJC447003\t2019-09-24T17:27:00.000\t008XX N MICHIGAN AVE\t0860\tTHEFT\tRETAIL THEFT\tDEPARTMENT STORE\ttrue\tfalse\t1833\t018\t42\t8\t06\t1177338\t1906160\t2019\t2019-10-01T16:20:30.000\t41.897837503\t-87.624097243\tPOINT (-87.624097243 41.897837503)\tnull\tnull\tnull\tnull\t22\t21182\t37\t104\t36\t6\t14\t71\t20190924\t41.897837503, -87.624097243\n11839595\tJC446924\t2019-09-24T17:20:00.000\t010XX W RANDOLPH ST\t0860\tTHEFT\tRETAIL THEFT\tDEPARTMENT STORE\tfalse\tfalse\t1224\t012\t27\t28\t06\t1169307\t1901120\t2019\t2019-10-01T16:20:30.000\t41.884185797\t-87.653740666\tPOINT (-87.653740666 41.884185797)\tnull\tnull\tnull\tnull\t41\t14917\t29\t63\t46\t44\t15\t92\t20190924\t41.884185797, -87.653740666\n11839542\tJC446905\t2019-09-24T17:15:00.000\t031XX N MASON AVE\t0486\tBATTERY\tDOMESTIC BATTERY SIMPLE\tAPARTMENT\tfalse\ttrue\t2514\t025\t30\t19\t08B\t1136171\t1920257\t2019\t2019-10-01T16:20:30.000\t41.937355645\t-87.774963744\tPOINT (-87.774963744 41.937355645)\tnull\tnull\tnull\tnull\t27\t22254\t19\t82\t21\t52\t6\t177\t20190924\t41.937355645, -87.774963744\n11839493\tJC446856\t2019-09-24T17:15:00.000\t030XX E 79TH ST\t0560\tASSAULT\tSIMPLE\tCTA BUS\tfalse\tfalse\t0421\t004\t7\t46\t08A\t1197416\t1853159\t2019\t2019-10-01T16:20:30.000\t41.751921702\t-87.552124624\tPOINT (-87.552124624 41.751921702)\tnull\tnull\tnull\tnull\t43\t21202\t42\t505\t37\t24\t19\t225\t20190924\t41.751921702, -87.552124624\n11839867\tJC447045\t2019-09-24T17:10:00.000\t022XX E 93RD ST\t0488\tBATTERY\tAGGRAVATED DOMESTIC BATTERY: HANDGUN\tRESIDENCE\tfalse\tfalse\t0413\t004\t7\t48\t04B\t1192624\t1843737\t2019\t2019-10-01T16:20:30.000\t41.726184949\t-87.569991034\tPOINT (-87.569991034 41.726184949)\tnull\tnull\tnull\tnull\t43\t21202\t44\t492\t37\t25\t19\t246\t20190924\t41.726184949, -87.569991034\n11839633\tJC446894\t2019-09-24T17:07:00.000\t012XX N DEARBORN ST\t0860\tTHEFT\tRETAIL THEFT\tSMALL RETAIL STORE\ttrue\tfalse\t1824\t018\t2\t8\t06\t1175711\t1908536\t2019\t2019-10-01T16:20:30.000\t41.904394115\t-87.630001432\tPOINT (-87.630001432 41.904394115)\tnull\tnull\tnull\tnull\t22\t14926\t37\t17\t11\t54\t14\t197\t20190924\t41.904394115, -87.630001432\n11839605\tJC447018\t2019-09-24T17:00:00.000\t052XX S HONORE ST\t0620\tBURGLARY\tUNLAWFUL ENTRY\tAPARTMENT\tfalse\tfalse\t0932\t009\t16\t61\t05\t1164906\t1869892\t2019\t2019-10-01T16:20:30.000\t41.798587534\t-87.670786184\tPOINT (-87.670786184 41.798587534)\tnull\tnull\tnull\tnull\t19\t14924\t59\t767\t2\t37\t23\t128\t20190924\t41.798587534, -87.670786184\n11839533\tJC446868\t2019-09-24T17:00:00.000\t012XX S SPAULDING AVE\t0486\tBATTERY\tDOMESTIC BATTERY SIMPLE\tAPARTMENT\ttrue\ttrue\t1022\t010\t24\t29\t08B\t1154560\t1894222\t2019\t2019-10-01T16:20:30.000\t41.865564662\t-87.708077974\tPOINT (-87.708077974 41.865564662)\tnull\tnull\tnull\tnull\t36\t21569\t30\t34\t14\t57\t21\t152\t20190924\t41.865564662, -87.708077974\n11840103\tJC447516\t2019-09-24T17:00:00.000\t004XX S JEFFERSON ST\t0910\tMOTOR VEHICLE THEFT\tAUTOMOBILE\tPARKING LOT/GARAGE(NON.RESID.)\tfalse\tfalse\t0121\t001\t25\t28\t07\t1172395\t1898264\t2019\t2019-10-01T16:20:30.000\t41.87628108\t-87.642485683\tPOINT (-87.642485683 41.87628108)\tnull\tnull\tnull\tnull\t48\t14917\t29\t97\t26\t44\t22\t91\t20190924\t41.87628108, -87.642485683\n11839562\tJC446923\t2019-09-24T17:00:00.000\t002XX S STATE ST\t0870\tTHEFT\tPOCKET-PICKING\tCTA TRAIN\tfalse\tfalse\t0113\t001\t42\t32\t06\t1176417\t1899156\t2019\t2019-10-01T16:20:30.000\t41.878638996\t-87.627691486\tPOINT (-87.627691486 41.878638996)\tnull\tnull\tnull\tnull\t22\t14912\t38\t92\t36\t29\t22\t126\t20190924\t41.878638996, -87.627691486\n11842475\tJC450178\t2019-09-24T17:00:00.000\t013XX W 52ND ST\t0460\tBATTERY\tSIMPLE\tPARK PROPERTY\tfalse\tfalse\t0934\t009\t20\t61\t08B\tnull\tnull\t2019\t2019-10-01T16:20:30.000\tnull\tnull\tnull\tnull\tnull\tnull\tnull\tnull\tnull\tnull\tnull\tnull\tnull\tnull\tnull\t20190924\t\n11839823\tJC447006\t2019-09-24T17:00:00.000\t101XX S WASHTENAW AVE\t0486\tBATTERY\tDOMESTIC BATTERY SIMPLE\tRESIDENCE\tfalse\tfalse\t2211\t022\t19\t72\t08B\t1160156\t1837195\t2019\t2019-10-01T16:20:30.000\t41.708961132\t-87.689103369\tPOINT (-87.689103369 41.708961132)\tnull\tnull\tnull\tnull\t33\t4447\t71\t661\t42\t33\t9\t254\t20190924\t41.708961132, -87.689103369\n11839508\tJC446872\t2019-09-24T17:00:00.000\t003XX N CENTRAL AVE\t2093\tNARCOTICS\tFOUND SUSPECT NARCOTICS\tRESIDENCE\ttrue\tfalse\t1523\t015\t37\t25\t18\t1138983\t1901704\t2019\t2019-10-01T16:20:30.000\t41.886393351\t-87.765080772\tPOINT (-87.765080772 41.886393351)\tnull\tnull\tnull\tnull\t11\t22216\t26\t674\t45\t32\t25\t84\t20190924\t41.886393351, -87.765080772\n11840198\tJC447595\t2019-09-24T17:00:00.000\t032XX W 47TH ST\t0810\tTHEFT\tOVER $500\tOTHER\tfalse\tfalse\t0821\t008\t14\t58\t06\t1155358\t1873286\t2019\t2019-10-01T16:20:30.000\t41.808097749\t-87.705710045\tPOINT (-87.705710045 41.808097749)\tnull\tnull\tnull\tnull\t49\t22248\t55\t85\t8\t56\t13\t103\t20190924\t41.808097749, -87.705710045\n11839553\tJC446897\t2019-09-24T16:56:00.000\t067XX S LAFLIN ST\t051A\tASSAULT\tAGGRAVATED: HANDGUN\tSIDEWALK\tfalse\tfalse\t0725\t007\t16\t67\t04A\t1167495\t1860066\t2019\t2019-10-01T16:20:30.000\t41.771568636\t-87.661573303\tPOINT (-87.661573303 41.771568636)\tnull\tnull\tnull\tnull\t17\t22257\t65\t284\t2\t23\t17\t204\t20190924\t41.771568636, -87.661573303\n11839615\tJC446942\t2019-09-24T16:55:00.000\t039XX W WILCOX ST\t2027\tNARCOTICS\tPOSS: CRACK\tSIDEWALK\ttrue\tfalse\t1122\t011\t28\t26\t18\t1150114\t1899045\t2019\t2019-10-01T16:20:30.000\t41.878887224\t-87.724273943\tPOINT (-87.724273943 41.878887224)\tnull\tnull\tnull\tnull\t11\t21572\t27\t736\t23\t30\t16\t82\t20190924\t41.878887224, -87.724273943\n11839578\tJC446877\t2019-09-24T16:53:00.000\t051XX S MARSHFIELD AVE\t0486\tBATTERY\tDOMESTIC BATTERY SIMPLE\tAPARTMENT\tfalse\ttrue\t0932\t009\t16\t61\t08B\t1166213\t1870591\t2019\t2019-10-01T16:20:30.000\t41.800477928\t-87.665973235\tPOINT (-87.665973235 41.800477928)\tnull\tnull\tnull\tnull\t19\t14924\t59\t789\t2\t37\t23\t128\t20190924\t41.800477928, -87.665973235\n11839567\tJC446926\t2019-09-24T16:48:00.000\t046XX W NORTH AVE\t0860\tTHEFT\tRETAIL THEFT\tDEPARTMENT STORE\ttrue\tfalse\t2533\t025\t37\t25\t06\t1145011\t1910225\t2019\t2019-10-01T16:20:30.000\t41.909664252\t-87.742728815\tPOINT (-87.742728815 41.909664252)\tnull\tnull\tnull\tnull\t4\t22615\t26\t62\t45\t2\t6\t195\t20190924\t41.909664252, -87.742728815\n11839544\tJC446833\t2019-09-24T16:45:00.000\t079XX S JUSTINE ST\t0560\tASSAULT\tSIMPLE\tRESIDENCE\tfalse\ttrue\t0612\t006\t21\t71\t08A\t1167388\t1851959\t2019\t2019-10-01T16:20:30.000\t41.749324231\t-87.662197379\tPOINT (-87.662197379 41.749324231)\tnull\tnull\tnull\tnull\t18\t21554\t70\t558\t13\t59\t20\t230\t20190924\t41.749324231, -87.662197379\n11840286\tJC447603\t2019-09-24T16:45:00.000\t016XX N SPRINGFIELD AVE\t1320\tCRIMINAL DAMAGE\tTO VEHICLE\tSTREET\tfalse\tfalse\t2535\t025\t26\t23\t14\t1150132\t1910552\t2019\t2019-10-01T16:20:30.000\t41.910463271\t-87.723907738\tPOINT (-87.723907738 41.910463271)\tnull\tnull\tnull\tnull\t27\t22535\t24\t391\t49\t1\t6\t193\t20190924\t41.910463271, -87.723907738\n11840581\tJC446901\t2019-09-24T16:45:00.000\t055XX N WESTERN AVE\t1345\tCRIMINAL DAMAGE\tTO CITY OF CHICAGO PROPERTY\tSTREET\tfalse\tfalse\t2011\t020\t40\t4\t14\t1159334\t1936625\t2019\t2019-10-01T16:20:30.000\t41.981824778\t-87.689383377\tPOINT (-87.689383377 41.981824778)\tnull\tnull\tnull\tnull\t46\t21849\t6\t29\t24\t20\t2\t57\t20190924\t41.981824778, -87.689383377\n11839621\tJC446944\t2019-09-24T16:45:00.000\t081XX S ESSEX AVE\t2820\tOTHER OFFENSE\tTELEPHONE THREAT\tRESIDENCE\tfalse\tfalse\t0422\t004\t7\t46\t08A\t1194262\t1851481\t2019\t2019-10-01T16:20:30.000\t41.747395139\t-87.56373736\tPOINT (-87.56373736 41.747395139)\tnull\tnull\tnull\tnull\t43\t21202\t42\t478\t37\t25\t19\t234\t20190924\t41.747395139, -87.56373736\n11839518\tJC446871\t2019-09-24T16:44:00.000\t014XX N OGDEN AVE\t1345\tCRIMINAL DAMAGE\tTO CITY OF CHICAGO PROPERTY\tSCHOOL, PUBLIC, GROUNDS\tfalse\tfalse\t1822\t018\t27\t8\t14\t1171353\t1909648\t2019\t2019-10-01T16:20:30.000\t41.907542438\t-87.645976688\tPOINT (-87.645976688 41.907542438)\tnull\tnull\tnull\tnull\t41\t14926\t37\t108\t46\t54\t14\t199\t20190924\t41.907542438, -87.645976688\n11839529\tJC446842\t2019-09-24T16:44:00.000\t080XX S GREEN ST\t0560\tASSAULT\tSIMPLE\tSIDEWALK\tfalse\tfalse\t0621\t006\t21\t71\t08A\t1172035\t1851531\t2019\t2019-10-01T16:20:30.000\t41.748049014\t-87.645181481\tPOINT (-87.645181481 41.748049014)\tnull\tnull\tnull\tnull\t18\t21554\t70\t487\t13\t59\t20\t229\t20190924\t41.748049014, -87.645181481\n11839604\tJC446907\t2019-09-24T16:38:00.000\t014XX W MADISON ST\t2820\tOTHER OFFENSE\tTELEPHONE THREAT\tOTHER\tfalse\tfalse\t1224\t012\t27\t28\t08A\t1166873\t1900131\t2019\t2019-10-01T16:20:30.000\t41.881524451\t-87.662706932\tPOINT (-87.662706932 41.881524451)\tnull\tnull\tnull\tnull\t41\t14917\t29\t91\t46\t44\t15\t92\t20190924\t41.881524451, -87.662706932\n11842768\tJC450628\t2019-09-24T16:33:00.000\t021XX N ELSTON AVE\t1150\tDECEPTIVE PRACTICE\tCREDIT CARD FRAUD\tDEPARTMENT STORE\tfalse\tfalse\t1432\t014\t32\t22\t11\tnull\tnull\t2019\t2019-10-01T16:20:30.000\tnull\tnull\tnull\tnull\tnull\tnull\tnull\tnull\tnull\tnull\tnull\tnull\tnull\tnull\tnull\t20190924\t\n11841802\tJC449483\t2019-09-24T16:30:00.000\t012XX W 13TH ST\t0560\tASSAULT\tSIMPLE\tAPARTMENT\tfalse\tfalse\t1233\t012\t25\t28\t08A\t1168330\t1894202\t2019\t2019-10-01T16:20:30.000\t41.865223447\t-87.65752832\tPOINT (-87.65752832 41.865223447)\tnull\tnull\tnull\tnull\t48\t14920\t29\t96\t26\t43\t15\t150\t20190924\t41.865223447, -87.65752832\n11839690\tJC446928\t2019-09-24T16:30:00.000\t064XX S DR MARTIN LUTHER KING JR DR\t1130\tDECEPTIVE PRACTICE\tFRAUD OR CONFIDENCE GAME\tAPPLIANCE STORE\tfalse\tfalse\t0312\t003\t20\t42\t11\t1180025\t1862499\t2019\t2019-10-01T16:20:30.000\t41.777967289\t-87.615568353\tPOINT (-87.615568353 41.777967289)\tnull\tnull\tnull\tnull\t53\t22260\t9\t332\t4\t60\t18\t277\t20190924\t41.777967289, -87.615568353\n11841250\tJC448862\t2019-09-24T16:30:00.000\t008XX N SPRINGFIELD AVE\t1750\tOFFENSE INVOLVING CHILDREN\tCHILD ABUSE\tRESIDENCE\tfalse\ttrue\t1112\t011\t37\t23\t08B\t1150238\t1905308\t2019\t2019-10-01T16:20:30.000\t41.896071148\t-87.723655246\tPOINT (-87.723655246 41.896071148)\tnull\tnull\tnull\tnull\t41\t4299\t24\t456\t45\t5\t16\t66\t20190924\t41.896071148, -87.723655246\n11839608\tJC446973\t2019-09-24T16:30:00.000\t061XX S ARTESIAN AVE\t1320\tCRIMINAL DAMAGE\tTO VEHICLE\tSTREET\tfalse\tfalse\t0825\t008\t16\t66\t14\t1161094\t1863794\t2019\t2019-10-01T16:20:30.000\t41.781933589\t-87.684934293\tPOINT (-87.684934293 41.781933589)\tnull\tnull\tnull\tnull\t44\t21867\t64\t111\t2\t58\t13\t274\t20190924\t41.781933589, -87.684934293\n11840600\tJC446881\t2019-09-24T16:30:00.000\t072XX S JEFFERY BLVD\t0486\tBATTERY\tDOMESTIC BATTERY SIMPLE\tSTREET\tfalse\tfalse\t0333\t003\t5\t43\t08B\t1190805\t1857044\t2019\t2019-10-01T16:20:30.000\t41.762744637\t-87.57622519\tPOINT (-87.57622519 41.762744637)\tnull\tnull\tnull\tnull\t32\t22538\t39\t453\t33\t24\t18\t89\t20190924\t41.762744637, -87.57622519\n11840302\tJC447704\t2019-09-24T16:30:00.000\t042XX S PRINCETON AVE\t0620\tBURGLARY\tUNLAWFUL ENTRY\tCHA APARTMENT\tfalse\tfalse\t0925\t009\t3\t37\t05\t1175000\t1876652\t2019\t2019-10-01T16:20:30.000\t41.81691816\t-87.633567673\tPOINT (-87.633567673 41.81691816)\tnull\tnull\tnull\tnull\t12\t14924\t3\t189\t9\t37\t23\t106\t20190924\t41.81691816, -87.633567673\n11840097\tJC447502\t2019-09-24T16:30:00.000\t011XX S CANAL ST\t0810\tTHEFT\tOVER $500\tPARKING LOT/GARAGE(NON.RESID.)\tfalse\tfalse\t0124\t001\t25\t28\t06\t1173303\t1895451\t2019\t2019-10-01T16:20:30.000\t41.868541914\t-87.639235361\tPOINT (-87.639235361 41.868541914)\tnull\tnull\tnull\tnull\t48\t14917\t29\t97\t26\t44\t22\t147\t20190924\t41.868541914, -87.639235361\n11839530\tJC446841\t2019-09-24T16:30:00.000\t048XX W THOMAS ST\t0486\tBATTERY\tDOMESTIC BATTERY SIMPLE\tSTREET\tfalse\ttrue\t1531\t015\t37\t25\t08B\t1143975\t1906882\t2019\t2019-10-01T16:20:30.000\t41.900510205\t-87.74661868\tPOINT (-87.74661868 41.900510205)\tnull\tnull\tnull\tnull\t4\t4299\t26\t578\t45\t5\t25\t69\t20190924\t41.900510205, -87.74661868\n11839627\tJC446880\t2019-09-24T16:25:00.000\t011XX W JACKSON BLVD\t0860\tTHEFT\tRETAIL THEFT\tDEPARTMENT STORE\ttrue\tfalse\t1232\t012\t25\t28\t06\t1168933\t1898798\t2019\t2019-10-01T16:20:30.000\t41.877822179\t-87.655181405\tPOINT (-87.655181405 41.877822179)\tnull\tnull\tnull\tnull\t48\t14917\t29\t91\t26\t44\t15\t95\t20190924\t41.877822179, -87.655181405\n11839469\tJC446808\t2019-09-24T16:25:00.000\t039XX W JACKSON BLVD\t2027\tNARCOTICS\tPOSS: CRACK\tSIDEWALK\ttrue\tfalse\t1132\t011\t28\t26\t18\t1150182\t1898397\t2019\t2019-10-01T16:20:30.000\t41.877107715\t-87.724041149\tPOINT (-87.724041149 41.877107715)\tnull\tnull\tnull\tnull\t11\t21572\t27\t736\t23\t30\t16\t142\t20190924\t41.877107715, -87.724041149\n11839658\tJC446837\t2019-09-24T16:24:00.000\t056XX N KIMBALL AVE\t0460\tBATTERY\tSIMPLE\tPARKING LOT/GARAGE(NON.RESID.)\tfalse\tfalse\t1711\t017\t39\t13\t08B\t1152698\t1937206\t2019\t2019-10-01T16:20:30.000\t41.983553381\t-87.713773382\tPOINT (-87.713773382 41.983553381)\tnull\tnull\tnull\tnull\t28\t4450\t13\t799\t38\t50\t1\t53\t20190924\t41.983553381, -87.713773382\n11839500\tJC446817\t2019-09-24T16:17:00.000\t004XX W DIVISION ST\t0890\tTHEFT\tFROM BUILDING\tDEPARTMENT STORE\tfalse\tfalse\t1821\t018\t27\t8\t06\t1173175\t1908290\t2019\t2019-10-01T16:20:30.000\t41.903775756\t-87.639324074\tPOINT (-87.639324074 41.903775756)\tnull\tnull\tnull\tnull\t41\t14926\t37\t148\t46\t54\t14\t51\t20190924\t41.903775756, -87.639324074\n11841289\tJC448841\t2019-09-24T16:14:00.000\t031XX W MADISON ST\t0860\tTHEFT\tRETAIL THEFT\tSMALL RETAIL STORE\tfalse\tfalse\t1222\t012\t28\t27\t06\t1155397\t1899849\t2019\t2019-10-01T16:20:30.000\t41.880988964\t-87.704854042\tPOINT (-87.704854042 41.880988964)\tnull\tnull\tnull\tnull\t11\t21184\t28\t39\t23\t28\t15\t77\t20190924\t41.880988964, -87.704854042\n11839757\tJC446828\t2019-09-24T16:14:00.000\t0000X W 109TH ST\t0486\tBATTERY\tDOMESTIC BATTERY SIMPLE\tRESIDENCE\tfalse\ttrue\t0513\t005\t34\t49\t08B\t1177910\t1832690\t2019\t2019-10-01T16:20:30.000\t41.696215893\t-87.624222362\tPOINT (-87.624222362 41.696215893)\tnull\tnull\tnull\tnull\t45\t21861\t45\t524\t22\t19\t10\t260\t20190924\t41.696215893, -87.624222362\n11839601\tJC447022\t2019-09-24T16:08:00.000\t068XX S DANTE AVE\t0620\tBURGLARY\tUNLAWFUL ENTRY\tRESIDENCE-GARAGE\tfalse\tfalse\t0332\t003\t5\t43\t05\t1187139\t1859962\t2019\t2019-10-01T16:20:30.000\t41.770839645\t-87.589568991\tPOINT (-87.589568991 41.770839645)\tnull\tnull\tnull\tnull\t32\t22260\t39\t416\t33\t60\t18\t212\t20190924\t41.770839645, -87.589568991\n11839476\tJC446766\t2019-09-24T16:04:00.000\t070XX S YALE AVE\t0486\tBATTERY\tDOMESTIC BATTERY SIMPLE\tSCHOOL, PUBLIC, GROUNDS\tfalse\ttrue\t0731\t007\t6\t69\t08B\t1175843\t1858239\t2019\t2019-10-01T16:20:30.000\t41.76637214\t-87.631027123\tPOINT (-87.631027123 41.76637214)\tnull\tnull\tnull\tnull\t31\t21559\t67\t513\t32\t11\t17\t210\t20190924\t41.76637214, -87.631027123\n11839788\tJC446843\t2019-09-24T16:00:00.000\t072XX S SOUTH CHICAGO AVE\t0460\tBATTERY\tSIMPLE\tSTREET\tfalse\tfalse\t0324\t003\t5\t69\t08B\t1183538\t1857410\t2019\t2019-10-01T16:20:30.000\t41.763921407\t-87.602848187\tPOINT (-87.602848187 41.763921407)\tnull\tnull\tnull\tnull\t32\t21546\t67\t121\t33\t61\t18\t217\t20190924\t41.763921407, -87.602848187\n11839841\tJC447279\t2019-09-24T16:00:00.000\t0000X S MICHIGAN AVE\t1150\tDECEPTIVE PRACTICE\tCREDIT CARD FRAUD\tSIDEWALK\tfalse\tfalse\t0112\t001\t42\t32\t11\t1177317\t1900273\t2019\t2019-10-01T16:20:30.000\t41.881683753\t-87.624353027\tPOINT (-87.624353027 41.881683753)\tnull\tnull\tnull\tnull\t22\t14311\t38\t367\t36\t34\t22\t87\t20190924\t41.881683753, -87.624353027\n11840016\tJC447272\t2019-09-24T16:00:00.000\t019XX E 73RD PL\t1153\tDECEPTIVE PRACTICE\tFINANCIAL IDENTITY THEFT OVER $ 300\tRESIDENCE\tfalse\tfalse\t0333\t003\t7\t43\t11\t1190599\t1856624\t2019\t2019-10-01T16:20:30.000\t41.761597096\t-87.576993735\tPOINT (-87.576993735 41.761597096)\tnull\tnull\tnull\tnull\t32\t22538\t39\t419\t37\t24\t18\t89\t20190924\t41.761597096, -87.576993735\n11840605\tJC448309\t2019-09-24T16:00:00.000\t066XX S MINERVA AVE\t1750\tOFFENSE INVOLVING CHILDREN\tCHILD ABUSE\tAPARTMENT\tfalse\ttrue\t0321\t003\t5\t42\t08B\t1185026\t1861148\t2019\t2019-10-01T16:20:30.000\t41.774144018\t-87.597277144\tPOINT (-87.597277144 41.774144018)\tnull\tnull\tnull\tnull\t32\t22260\t9\t27\t33\t60\t18\t206\t20190924\t41.774144018, -87.597277144\n11840063\tJC447481\t2019-09-24T16:00:00.000\t053XX S DREXEL AVE\t1320\tCRIMINAL DAMAGE\tTO VEHICLE\tVEHICLE NON-COMMERCIAL\tfalse\tfalse\t0233\t002\t5\t41\t14\t1183145\t1869994\t2019\t2019-10-01T16:20:30.000\t41.798462192\t-87.603897346\tPOINT (-87.603897346 41.798462192)\tnull\tnull\tnull\tnull\t1\t21192\t8\t440\t33\t10\t24\t124\t20190924\t41.798462192, -87.603897346\n11839490\tJC446763\t2019-09-24T16:00:00.000\t014XX W DEVON AVE\t0460\tBATTERY\tSIMPLE\tSIDEWALK\tfalse\tfalse\t2433\t024\t48\t77\t08B\t1165322\t1942608\t2019\t2019-10-01T16:20:30.000\t41.99811665\t-87.66719008\tPOINT (-87.66719008 41.99811665)\tnull\tnull\tnull\tnull\t46\t4451\t76\t358\t16\t14\t11\t50\t20190924\t41.99811665, -87.66719008\n11839832\tJC446935\t2019-09-24T16:00:00.000\t012XX W WASHBURNE AVE\t0486\tBATTERY\tDOMESTIC BATTERY SIMPLE\tRESIDENCE\tfalse\ttrue\t1233\t012\t25\t28\t08B\t1168242\t1894530\t2019\t2019-10-01T16:20:30.000\t41.866125406\t-87.657841894\tPOINT (-87.657841894 41.866125406)\tnull\tnull\tnull\tnull\t48\t14920\t29\t96\t26\t43\t15\t150\t20190924\t41.866125406, -87.657841894\n11839516\tJC446822\t2019-09-24T16:00:00.000\t131XX S CORLISS AVE\t0560\tASSAULT\tSIMPLE\tCHA APARTMENT\tfalse\tfalse\t0533\t005\t9\t54\t08A\t1184011\t1818247\t2019\t2019-10-01T16:20:30.000\t41.656442278\t-87.60233312\tPOINT (-87.60233312 41.656442278)\tnull\tnull\tnull\tnull\t30\t4460\t51\t10\t43\t47\t10\t221\t20190924\t41.656442278, -87.60233312\n11845868\tJC454645\t2019-09-24T16:00:00.000\t038XX N LAKEWOOD AVE\t1130\tDECEPTIVE PRACTICE\tFRAUD OR CONFIDENCE GAME\tRESIDENCE\tfalse\tfalse\t1923\t019\t44\t6\t11\tnull\tnull\t2019\t2019-10-01T16:20:30.000\tnull\tnull\tnull\tnull\tnull\tnull\tnull\tnull\tnull\tnull\tnull\tnull\tnull\tnull\tnull\t20190924\t\n11839762\tJC447030\t2019-09-24T16:00:00.000\t016XX W 89TH ST\t0890\tTHEFT\tFROM BUILDING\tRESIDENCE\tfalse\tfalse\t2221\t022\t21\t71\t06\t1166807\t1845677\t2019\t2019-10-01T16:20:30.000\t41.732097927\t-87.664505307\tPOINT (-87.664505307 41.732097927)\tnull\tnull\tnull\tnull\t18\t21554\t72\t488\t13\t59\t9\t245\t20190924\t41.732097927, -87.664505307\n11845503\tJC454172\t2019-09-24T16:00:00.000\t041XX S ROCKWELL ST\t0486\tBATTERY\tDOMESTIC BATTERY SIMPLE\tRESIDENCE\tfalse\ttrue\t0921\t009\t12\t58\t08B\tnull\tnull\t2019\t2019-10-01T16:20:30.000\tnull\tnull\tnull\tnull\tnull\tnull\tnull\tnull\tnull\tnull\tnull\tnull\tnull\tnull\tnull\t20190924\t\n11839459\tJC446775\t2019-09-24T16:00:00.000\t080XX S DREXEL AVE\t1310\tCRIMINAL DAMAGE\tTO PROPERTY\tRESIDENCE\tfalse\tfalse\t0631\t006\t8\t44\t14\t1183632\t1851799\t2019\t2019-10-01T16:20:30.000\t41.748522062\t-87.602678321\tPOINT (-87.602678321 41.748522062)\tnull\tnull\tnull\tnull\t9\t21546\t40\t247\t35\t61\t20\t235\t20190924\t41.748522062, -87.602678321\n11839673\tJC447042\t2019-09-24T15:58:00.000\t048XX S CHAMPLAIN AVE\t2825\tOTHER OFFENSE\tHARASSMENT BY TELEPHONE\tRESIDENCE\tfalse\ttrue\t0223\t002\t4\t38\t26\t1181414\t1873105\t2019\t2019-10-01T16:20:30.000\t41.807039169\t-87.61014921\tPOINT (-87.61014921 41.807039169)\tnull\tnull\tnull\tnull\t1\t21192\t4\t165\t10\t10\t24\t116\t20190924\t41.807039169, -87.61014921\n11839840\tJC447065\t2019-09-24T15:50:00.000\t127XX S PARNELL AVE\t0820\tTHEFT\t$500 AND UNDER\tSTREET\tfalse\tfalse\t0523\t005\t9\t53\t06\t1174962\t1820245\t2019\t2019-10-01T16:20:30.000\t41.662130942\t-87.635385175\tPOINT (-87.635385175 41.662130942)\tnull\tnull\tnull\tnull\t30\t21861\t50\t7\t43\t19\t10\t218\t20190924\t41.662130942, -87.635385175\n11839517\tJC446891\t2019-09-24T15:50:00.000\t079XX S LAFAYETTE AVE\t1330\tCRIMINAL TRESPASS\tTO LAND\tPARKING LOT/GARAGE(NON.RESID.)\ttrue\tfalse\t0623\t006\t17\t44\t26\t1177312\t1852570\t2019\t2019-10-01T16:20:30.000\t41.750782715\t-87.625813624\tPOINT (-87.625813624 41.750782715)\tnull\tnull\tnull\tnull\t31\t21554\t40\t1\t31\t59\t20\t228\t20190924\t41.750782715, -87.625813624\n11839750\tJC446764\t2019-09-24T15:50:00.000\t014XX E 65TH ST\t1310\tCRIMINAL DAMAGE\tTO PROPERTY\tPARKING LOT/GARAGE(NON.RESID.)\tfalse\tfalse\t0321\t003\t20\t42\t14\t1186932\t1862181\t2019\t2019-10-01T16:20:30.000\t41.776933681\t-87.590257484\tPOINT (-87.590257484 41.776933681)\tnull\tnull\tnull\tnull\t53\t22260\t9\t134\t4\t60\t18\t273\t20190924\t41.776933681, -87.590257484\n11840576\tJC446816\t2019-09-24T15:50:00.000\t005XX E 35TH ST\t051A\tASSAULT\tAGGRAVATED: HANDGUN\tSCHOOL, PRIVATE, GROUNDS\tfalse\tfalse\t0212\t002\t4\t35\t04A\t1180355\t1881901\t2019\t2019-10-01T16:20:30.000\t41.831200469\t-87.613763088\tPOINT (-87.613763088 41.831200469)\tnull\tnull\tnull\tnull\t1\t21194\t1\t581\t10\t40\t24\t169\t20190924\t41.831200469, -87.613763088\n11839594\tJC446803\t2019-09-24T15:49:00.000\t001XX N STATE ST\t0860\tTHEFT\tRETAIL THEFT\tDEPARTMENT STORE\ttrue\tfalse\t0111\t001\t42\t32\t06\t1176352\t1900927\t2019\t2019-10-01T16:20:30.000\t41.883500187\t-87.627876698\tPOINT (-87.627876698 41.883500187)\tnull\tnull\tnull\tnull\t22\t14310\t38\t580\t36\t41\t22\t88\t20190924\t41.883500187, -87.627876698\n11840665\tJC446711\t2019-09-24T15:47:00.000\t008XX N LATROBE AVE\t0460\tBATTERY\tSIMPLE\tSIDEWALK\tfalse\tfalse\t1524\t015\t37\t25\t08B\t1141202\t1905135\t2019\t2019-10-01T16:20:30.000\t41.89576782\t-87.756847301\tPOINT (-87.756847301 41.89576782)\tnull\tnull\tnull\tnull\t4\t4299\t26\t562\t45\t5\t25\t67\t20190924\t41.89576782, -87.756847301\n11839886\tJC447039\t2019-09-24T15:45:00.000\t013XX N LUIS MUNOZ MARIN DR E\t1562\tSEX OFFENSE\tAGG CRIMINAL SEXUAL ABUSE\tPARK PROPERTY\tfalse\tfalse\t1423\t014\t26\t24\t17\t1157250\t1908691\t2019\t2019-10-01T16:20:30.000\t41.905214774\t-87.697809447\tPOINT (-87.697809447 41.905214774)\tnull\tnull\tnull\tnull\t10\t22535\t25\t301\t49\t4\t7\t62\t20190924\t41.905214774, -87.697809447\n11839668\tJC447048\t2019-09-24T15:45:00.000\t014XX W BARRY AVE\t1305\tCRIMINAL DAMAGE\tCRIMINAL DEFACEMENT\tALLEY\tfalse\tfalse\t1933\t019\t32\t6\t14\t1166162\t1920680\t2019\t2019-10-01T16:20:30.000\t41.937927449\t-87.664729517\tPOINT (-87.664729517 41.937927449)\tnull\tnull\tnull\tnull\t16\t4449\t57\t712\t40\t22\t5\t31\t20190924\t41.937927449, -87.664729517\n11839472\tJC446791\t2019-09-24T15:42:00.000\t053XX S ABERDEEN ST\t0810\tTHEFT\tOVER $500\tRESIDENCE\tfalse\tfalse\t0934\t009\t20\t61\t06\t1169890\t1869372\t2019\t2019-10-01T16:20:30.000\t41.797053727\t-87.652523935\tPOINT (-87.652523935 41.797053727)\tnull\tnull\tnull\tnull\t19\t14924\t59\t791\t4\t37\t23\t127\t20190924\t41.797053727, -87.652523935\n11839474\tJC446714\t2019-09-24T15:41:00.000\t043XX W 21ST ST\t0486\tBATTERY\tDOMESTIC BATTERY SIMPLE\tRESIDENCE\ttrue\ttrue\t1012\t010\t24\t29\t08B\t1147828\t1889735\t2019\t2019-10-01T16:20:30.000\t41.853383663\t-87.732906874\tPOINT (-87.732906874 41.853383663)\tnull\tnull\tnull\tnull\t36\t21569\t30\t753\t14\t57\t21\t109\t20190924\t41.853383663, -87.732906874\n11839513\tJC446772\t2019-09-24T15:40:00.000\t006XX W 43RD ST\t051A\tASSAULT\tAGGRAVATED: HANDGUN\tSTREET\ttrue\ttrue\t0925\t009\t11\t61\t04A\t1172986\t1876397\t2019\t2019-10-01T16:20:30.000\t41.816263185\t-87.640963038\tPOINT (-87.640963038 41.816263185)\tnull\tnull\tnull\tnull\t26\t14924\t59\t123\t48\t37\t23\t106\t20190924\t41.816263185, -87.640963038\n11839734\tJC446731\t2019-09-24T15:40:00.000\t012XX S UNION AVE\t0326\tROBBERY\tAGGRAVATED VEHICULAR HIJACKING\tSTREET\tfalse\tfalse\t1232\t012\t11\t28\t03\t1171722\t1894446\t2019\t2019-10-01T16:20:30.000\t41.865819053\t-87.645069093\tPOINT (-87.645069093 41.865819053)\tnull\tnull\tnull\tnull\t8\t14917\t29\t97\t48\t44\t15\t95\t20190924\t41.865819053, -87.645069093\n11839651\tJC446716\t2019-09-24T15:35:00.000\t009XX W WINDSOR AVE\t143A\tWEAPONS VIOLATION\tUNLAWFUL POSS OF HANDGUN\tSTREET\ttrue\tfalse\t1914\t019\t46\t3\t15\t1169202\t1930376\t2019\t2019-10-01T16:20:30.000\t41.964468039\t-87.653274223\tPOINT (-87.653274223 41.964468039)\tnull\tnull\tnull\tnull\t37\t22616\t31\t20\t39\t15\t5\t4\t20190924\t41.964468039, -87.653274223\n11839795\tJC446806\t2019-09-24T15:35:00.000\t007XX E 131ST ST\t0460\tBATTERY\tSIMPLE\tSTREET\tfalse\tfalse\t0533\t005\t9\t54\t08B\t1183788\t1818527\t2019\t2019-10-01T16:20:30.000\t41.657215827\t-87.603140417\tPOINT (-87.603140417 41.657215827)\tnull\tnull\tnull\tnull\t30\t4460\t51\t9\t43\t47\t10\t221\t20190924\t41.657215827, -87.603140417\n11839583\tJC446801\t2019-09-24T15:35:00.000\t036XX N MILWAUKEE AVE\t051A\tASSAULT\tAGGRAVATED: HANDGUN\tSCHOOL, PUBLIC, GROUNDS\tfalse\tfalse\t1731\t017\t45\t16\t04A\t1146726\t1923676\t2019\t2019-10-01T16:20:30.000\t41.946542477\t-87.736084376\tPOINT (-87.736084376 41.946542477)\tnull\tnull\tnull\tnull\t25\t22618\t16\t327\t50\t21\t1\t25\t20190924\t41.946542477, -87.736084376\n11839948\tJC447262\t2019-09-24T15:30:00.000\t003XX W 35TH ST\t1320\tCRIMINAL DAMAGE\tTO VEHICLE\tPARKING LOT/GARAGE(NON.RESID.)\tfalse\tfalse\t0915\t009\t11\t34\t14\t1174431\t1881739\t2019\t2019-10-01T16:20:30.000\t41.830890037\t-87.635503335\tPOINT (-87.635503335 41.830890037)\tnull\tnull\tnull\tnull\t26\t21194\t35\t296\t48\t37\t23\t170\t20190924\t41.830890037, -87.635503335\n11840647\tJC448064\t2019-09-24T15:30:00.000\t045XX N MAGNOLIA AVE\t1154\tDECEPTIVE PRACTICE\tFINANCIAL IDENTITY THEFT $300 AND UNDER\tRESIDENCE\tfalse\tfalse\t1913\t019\t46\t3\t11\t1167101\t1930317\t2019\t2019-10-01T16:20:30.000\t41.964351639\t-87.661000678\tPOINT (-87.661000678 41.964351639)\tnull\tnull\tnull\tnull\t37\t22616\t31\t611\t39\t15\t5\t6\t20190924\t41.964351639, -87.661000678\n11842569\tJC449467\t2019-09-24T15:30:00.000\t055XX W DRUMMOND PL\t1752\tOFFENSE INVOLVING CHILDREN\tAGG CRIM SEX ABUSE FAM MEMBER\tAPARTMENT\tfalse\tfalse\t2514\t025\t30\t19\t17\tnull\tnull\t2019\t2019-10-01T16:20:30.000\tnull\tnull\tnull\tnull\tnull\tnull\tnull\tnull\tnull\tnull\tnull\tnull\tnull\tnull\tnull\t20190924\t"
+          },
+          {
+            "type": "HTML",
+            "data": "\u003cdiv class\u003d\"result-alert alert-warning\" role\u003d\"alert\"\u003e\u003cbutton type\u003d\"button\" class\u003d\"close\" data-dismiss\u003d\"alert\" aria-label\u003d\"Close\"\u003e\u003cspan aria-hidden\u003d\"true\"\u003e\u0026times;\u003c/span\u003e\u003c/button\u003e\u003cstrong\u003eOutput is truncated\u003c/strong\u003e to 102400 bytes. Learn more about \u003cstrong\u003eZEPPELIN_INTERPRETER_OUTPUT_LIMIT\u003c/strong\u003e\u003c/div\u003e"
+          }
+        ]
+      },
+      "runtimeInfos": {
+        "jobUrl": {
+          "propertyName": "jobUrl",
+          "label": "SPARK JOB",
+          "tooltip": "View in Spark web UI",
+          "group": "spark",
+          "values": [
+            "http://172.22.0.3:4040/jobs/job?id\u003d1"
+          ],
+          "interpreterSettingId": "spark"
+        }
+      },
+      "apps": [],
+      "jobName": "paragraph_1531061286838_-215958779",
+      "id": "20180707-121512_253138728",
+      "dateCreated": "2018-07-08 14:48:06.838",
+      "dateStarted": "2019-12-02 10:15:54.669",
+      "dateFinished": "2019-12-02 10:15:56.026",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "title": "Defining some constraints in order to speed up the import process",
+      "text": "%neo4j\nCREATE CONSTRAINT ON (b:Beat) ASSERT b.beat IS UNIQUE",
+      "user": "anonymous",
+      "dateUpdated": "2019-12-02 10:17:38.335",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "editorMode": "ace/mode/undefined",
+        "title": true,
+        "editorHide": false
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": []
+      },
+      "apps": [],
+      "jobName": "paragraph_1531478967044_37282497",
+      "id": "20180713-104927_1066363206",
+      "dateCreated": "2018-07-13 10:49:27.044",
+      "dateStarted": "2019-12-02 10:17:38.395",
+      "dateFinished": "2019-12-02 10:17:38.420",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%neo4j\nCREATE CONSTRAINT ON (c:Crime) ASSERT c.id IS UNIQUE",
+      "user": "anonymous",
+      "dateUpdated": "2019-12-02 10:17:39.334",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "editorMode": "ace/mode/undefined",
+        "editorHide": false
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": []
+      },
+      "apps": [],
+      "jobName": "paragraph_1531479110875_-1206618405",
+      "id": "20180713-105150_970778668",
+      "dateCreated": "2018-07-13 10:51:50.875",
+      "dateStarted": "2019-12-02 10:17:39.407",
+      "dateFinished": "2019-12-02 10:17:39.534",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%neo4j\nCREATE CONSTRAINT ON (ct:CrimeType) ASSERT ct.primary_type IS UNIQUE",
+      "user": "anonymous",
+      "dateUpdated": "2019-12-02 10:17:41.495",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "editorMode": "ace/mode/undefined",
+        "editorHide": false
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": []
+      },
+      "apps": [],
+      "jobName": "paragraph_1531479117177_1896619312",
+      "id": "20180713-105157_1649634868",
+      "dateCreated": "2018-07-13 10:51:57.177",
+      "dateStarted": "2019-12-02 10:17:41.563",
+      "dateFinished": "2019-12-02 10:17:41.660",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%neo4j\nCREATE CONSTRAINT ON (cd:CrimeDate) ASSERT cd.parsed_date IS UNIQUE",
+      "user": "anonymous",
+      "dateUpdated": "2019-12-02 10:17:42.843",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "editorMode": "ace/mode/undefined",
+        "editorHide": false
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": []
+      },
+      "apps": [],
+      "jobName": "paragraph_1531479123579_13259999",
+      "id": "20180713-105203_1470837881",
+      "dateCreated": "2018-07-13 10:52:03.579",
+      "dateStarted": "2019-12-02 10:17:42.894",
+      "dateFinished": "2019-12-02 10:17:43.011",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "title": "Let\u0027s import the Data as Graph into Neo4j by using the Neo4j-Spark-Connetor",
+      "text": "import org.neo4j.spark._\n\n//Nodes\nval beat \u003d (\"Beat\", Seq(\"beat\")) // Beat node, with beat property\nval crime \u003d (\"Crime\", Seq(\"id\", \"description\", \"case_number\", \"point\")) // Crime node with id, description, case_number, point properties\nval crimeType \u003d (\"CrimeType\", Seq(\"primary_type\")) // CrimeType node with primary_type property\nval crimesDates \u003d (\"CrimeDate\", Seq(\"parsed_date\")) // CrimeDate node with parsed_date property\n\n//Relationships\nval on_beat \u003d (\"ON_BEAT\", Seq.empty) // ON_BEAT relationship starting from a Beat and ending in a Crime\nval is_type \u003d (\"IS_TYPE\", Seq.empty) // IS_TYPE relationship starting from a Crime and ending in a CrimeType\nval on_date \u003d (\"ON_DATE\", Seq.empty) // ON_DATE relationship starting from a Crime and ending in a CrimeDate\n\n/*\n * Neo4jDataFrame provides `mergeEdgeList(sc: SparkContext, dataFrame: DataFrame, source: (label,Seq[prop]), relationship: (type,Seq[prop]), target: (label,Seq[prop]))` to merge a DataFrame back into a Neo4j graph\n * - both nodes are merged by first propery in sequence, all the others will be set on the entity, relat\n * - relationships are merged between the two nodes and all properties from sequence will be set on the relationship\n * - property names from the sequence are used as column names for the data-frame, currently there is no name translation\n * - the result are sent in batches of 10000 to the graph \n */\nNeo4jDataFrame.mergeEdgeList(sc, exendedCrimeDF, beat, on_beat, crime)\nNeo4jDataFrame.mergeEdgeList(sc, exendedCrimeDF, crime, is_type, crimeType)\nNeo4jDataFrame.mergeEdgeList(sc, exendedCrimeDF, crime, on_date, crimesDates)",
+      "user": "anonymous",
+      "dateUpdated": "2019-12-02 10:18:08.665",
+      "config": {
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "colWidth": 12.0,
+        "editorMode": "ace/mode/scala",
+        "fontSize": 9.0,
+        "results": {},
+        "enabled": true,
+        "title": true,
+        "editorHide": false
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "import org.neo4j.spark._\nbeat: (String, Seq[String]) \u003d (Beat,List(beat))\ncrime: (String, Seq[String]) \u003d (Crime,List(id, description, case_number, point))\ncrimeType: (String, Seq[String]) \u003d (CrimeType,List(primary_type))\ncrimesDates: (String, Seq[String]) \u003d (CrimeDate,List(parsed_date))\non_beat: (String, Seq[Nothing]) \u003d (ON_BEAT,List())\nis_type: (String, Seq[Nothing]) \u003d (IS_TYPE,List())\non_date: (String, Seq[Nothing]) \u003d (ON_DATE,List())\n"
+          }
+        ]
+      },
+      "runtimeInfos": {
+        "jobUrl": {
+          "propertyName": "jobUrl",
+          "label": "SPARK JOB",
+          "tooltip": "View in Spark web UI",
+          "group": "spark",
+          "values": [
+            "http://172.22.0.3:4040/jobs/job?id\u003d2",
+            "http://172.22.0.3:4040/jobs/job?id\u003d3",
+            "http://172.22.0.3:4040/jobs/job?id\u003d4",
+            "http://172.22.0.3:4040/jobs/job?id\u003d5",
+            "http://172.22.0.3:4040/jobs/job?id\u003d6",
+            "http://172.22.0.3:4040/jobs/job?id\u003d7"
+          ],
+          "interpreterSettingId": "spark"
+        }
+      },
+      "apps": [],
+      "jobName": "paragraph_1531061286839_-1155358193",
+      "id": "20180707-104902_1291015604",
+      "dateCreated": "2018-07-08 14:48:06.839",
+      "dateStarted": "2019-12-02 10:18:08.719",
+      "dateFinished": "2019-12-02 10:18:24.090",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%neo4j\nmatch (n) return count(n)",
+      "user": "anonymous",
+      "dateUpdated": "2019-12-02 10:18:28.677",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {
+          "0": {
+            "graph": {
+              "mode": "table",
+              "height": 300.0,
+              "optionOpen": false,
+              "setting": {
+                "table": {
+                  "tableGridState": {},
+                  "tableColumnTypeState": {
+                    "names": {
+                      "count(n)": "string"
+                    },
+                    "updated": false
+                  },
+                  "tableOptionSpecHash": "[{\"name\":\"useFilter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable filter for columns\"},{\"name\":\"showPagination\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable pagination for better navigation\"},{\"name\":\"showAggregationFooter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable a footer for displaying aggregated values\"}]",
+                  "tableOptionValue": {
+                    "useFilter": false,
+                    "showPagination": false,
+                    "showAggregationFooter": false
+                  },
+                  "updated": false,
+                  "initialized": false
+                }
+              },
+              "commonSetting": {}
+            }
+          }
+        },
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "editorMode": "ace/mode/undefined",
+        "editorHide": false
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TABLE",
+            "data": "count(n)\n2301\n"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1531479184435_-328485382",
+      "id": "20180713-105304_1366717066",
+      "dateCreated": "2018-07-13 10:53:04.435",
+      "dateStarted": "2019-12-02 10:18:28.775",
+      "dateFinished": "2019-12-02 10:18:28.807",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "title": "Let\u0027s query the graph directly from Zeppelin!",
+      "text": "%neo4j\nMATCH (crime:Crime)-[is:IS_TYPE]-\u003e(type:CrimeType),\n    (crime)-[on:ON_DATE]-\u003e(date:CrimeDate)\nRETURN crime, is, type, on, date\nlimit 10",
+      "user": "anonymous",
+      "dateUpdated": "2019-12-02 10:18:54.283",
+      "config": {
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "colWidth": 12.0,
+        "editorMode": "ace/mode/undefined",
+        "fontSize": 9.0,
+        "results": {
+          "0": {
+            "graph": {
+              "mode": "network",
+              "height": 408.0,
+              "optionOpen": false,
+              "setting": {
+                "table": {
+                  "tableGridState": {},
+                  "tableColumnTypeState": {
+                    "names": {
+                      "id": "string",
+                      "label": "string",
+                      "description": "string",
+                      "case_number": "string",
+                      "point": "string",
+                      "primary_type": "string",
+                      "parsed_date": "string"
+                    },
+                    "updated": false
+                  },
+                  "tableOptionSpecHash": "[{\"name\":\"useFilter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable filter for columns\"},{\"name\":\"showPagination\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable pagination for better navigation\"},{\"name\":\"showAggregationFooter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable a footer for displaying aggregated values\"}]",
+                  "tableOptionValue": {
+                    "useFilter": false,
+                    "showPagination": false,
+                    "showAggregationFooter": false
+                  },
+                  "updated": false,
+                  "initialized": false
+                },
+                "pieChart": {},
+                "network": {
+                  "properties": {
+                    "CrimeType": {
+                      "selected": "primary_type",
+                      "keys": [
+                        "primary_type",
+                        "id",
+                        "label"
+                      ]
+                    },
+                    "Crime": {
+                      "selected": "case_number",
+                      "keys": [
+                        "description",
+                        "case_number",
+                        "id",
+                        "label"
+                      ]
+                    },
+                    "CrimeDate": {
+                      "selected": "parsed_date",
+                      "keys": [
+                        "parsed_date",
+                        "id",
+                        "label"
+                      ]
+                    }
+                  },
+                  "d3Graph": {
+                    "forceLayout": {
+                      "timeout": 10000.0,
+                      "charge": -120.0,
+                      "linkDistance": 80.0
+                    },
+                    "zoom": {
+                      "minScale": "1.3"
+                    }
+                  }
+                },
+                "volume-leaflet": {
+                  "coordinates": {
+                    "name": "point",
+                    "index": 4.0,
+                    "aggr": "sum"
+                  },
+                  "tooltip": {
+                    "name": "primary_type",
+                    "index": 5.0,
+                    "aggr": "sum"
+                  },
+                  "popup": {
+                    "name": "description",
+                    "index": 2.0,
+                    "aggr": "sum"
+                  }
+                },
+                "multiBarChart": {
+                  "rotate": {
+                    "degree": "-45"
+                  },
+                  "xLabelStatus": "default"
+                }
+              },
+              "keys": [
+                {
+                  "name": "label",
+                  "index": 1.0,
+                  "aggr": "sum"
+                }
+              ],
+              "groups": [],
+              "values": [
+                {
+                  "name": "label",
+                  "index": 1.0,
+                  "aggr": "count"
+                }
+              ],
+              "commonSetting": {}
+            },
+            "helium": {}
+          }
+        },
+        "enabled": true,
+        "title": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "NETWORK",
+            "data": "{\"nodes\":[{\"id\":352,\"data\":{\"description\":\"SIMPLE\",\"case_number\":\"JC447379\",\"id\":\"11839949\",\"point\":\"41.68139574, -87.622767037\"},\"label\":\"Crime\"},{\"id\":291,\"data\":{\"description\":\"TO VEHICLE\",\"case_number\":\"JC447572\",\"id\":\"11840105\",\"point\":\"41.7685973, -87.660761186\"},\"label\":\"Crime\"},{\"id\":644,\"data\":{\"description\":\"FROM BUILDING\",\"case_number\":\"JC448437\",\"id\":\"11840760\",\"point\":\"41.938221619, -87.754223085\"},\"label\":\"Crime\"},{\"id\":519,\"data\":{\"description\":\"AUTOMOBILE\",\"case_number\":\"JC447516\",\"id\":\"11840103\",\"point\":\"41.87628108, -87.642485683\"},\"label\":\"Crime\"},{\"id\":2281,\"data\":{\"primary_type\":\"ASSAULT\"},\"label\":\"CrimeType\"},{\"id\":745,\"data\":{\"description\":\"SIMPLE\",\"case_number\":\"JC446366\",\"id\":\"11839258\",\"point\":\"41.898412853, -87.731100475\"},\"label\":\"Crime\"},{\"id\":2283,\"data\":{\"primary_type\":\"BATTERY\"},\"label\":\"CrimeType\"},{\"id\":2284,\"data\":{\"primary_type\":\"CRIMINAL DAMAGE\"},\"label\":\"CrimeType\"},{\"id\":848,\"data\":{\"description\":\"DOMESTIC BATTERY SIMPLE\",\"case_number\":\"JC446139\",\"id\":\"11839073\",\"point\":\"41.896257026, -87.726107056\"},\"label\":\"Crime\"},{\"id\":2288,\"data\":{\"primary_type\":\"THEFT\"},\"label\":\"CrimeType\"},{\"id\":2289,\"data\":{\"primary_type\":\"PUBLIC PEACE VIOLATION\"},\"label\":\"CrimeType\"},{\"id\":435,\"data\":{\"description\":\"AGGRAVATED:KNIFE/CUTTING INSTR\",\"case_number\":\"JC447055\",\"id\":\"11841634\",\"point\":\"41.945711719, -87.782330781\"},\"label\":\"Crime\"},{\"id\":2295,\"data\":{\"primary_type\":\"MOTOR VEHICLE THEFT\"},\"label\":\"CrimeType\"},{\"id\":889,\"data\":{\"description\":\"RETAIL THEFT\",\"case_number\":\"JC446024\",\"id\":\"11838922\",\"point\":\"41.78701723, -87.645505595\"},\"label\":\"Crime\"},{\"id\":860,\"data\":{\"description\":\"$500 AND UNDER\",\"case_number\":\"JC447727\",\"id\":\"11840810\",\"point\":\"41.890384236, -87.624109917\"},\"label\":\"Crime\"},{\"id\":2269,\"data\":{\"parsed_date\":\"20190924\"},\"label\":\"CrimeDate\"},{\"id\":829,\"data\":{\"description\":\"FALSE POLICE REPORT\",\"case_number\":\"JC446223\",\"id\":\"11839295\",\"point\":\"41.874997972, -87.686513346\"},\"label\":\"Crime\"}],\"edges\":[{\"source\":745,\"target\":2281,\"id\":2497,\"data\":{},\"label\":\"IS_TYPE\"},{\"source\":889,\"target\":2269,\"id\":4642,\"data\":{},\"label\":\"ON_DATE\"},{\"source\":860,\"target\":2269,\"id\":4613,\"data\":{},\"label\":\"ON_DATE\"},{\"source\":829,\"target\":2269,\"id\":4582,\"data\":{},\"label\":\"ON_DATE\"},{\"source\":848,\"target\":2283,\"id\":2600,\"data\":{},\"label\":\"IS_TYPE\"},{\"source\":352,\"target\":2269,\"id\":4105,\"data\":{},\"label\":\"ON_DATE\"},{\"source\":435,\"target\":2281,\"id\":2187,\"data\":{},\"label\":\"IS_TYPE\"},{\"source\":291,\"target\":2269,\"id\":4044,\"data\":{},\"label\":\"ON_DATE\"},{\"source\":644,\"target\":2269,\"id\":4397,\"data\":{},\"label\":\"ON_DATE\"},{\"source\":519,\"target\":2269,\"id\":4272,\"data\":{},\"label\":\"ON_DATE\"},{\"source\":889,\"target\":2288,\"id\":2641,\"data\":{},\"label\":\"IS_TYPE\"},{\"source\":745,\"target\":2269,\"id\":4498,\"data\":{},\"label\":\"ON_DATE\"},{\"source\":860,\"target\":2288,\"id\":2612,\"data\":{},\"label\":\"IS_TYPE\"},{\"source\":829,\"target\":2289,\"id\":2581,\"data\":{},\"label\":\"IS_TYPE\"},{\"source\":352,\"target\":2283,\"id\":2104,\"data\":{},\"label\":\"IS_TYPE\"},{\"source\":848,\"target\":2269,\"id\":4601,\"data\":{},\"label\":\"ON_DATE\"},{\"source\":291,\"target\":2284,\"id\":2043,\"data\":{},\"label\":\"IS_TYPE\"},{\"source\":435,\"target\":2269,\"id\":4188,\"data\":{},\"label\":\"ON_DATE\"},{\"source\":644,\"target\":2288,\"id\":2396,\"data\":{},\"label\":\"IS_TYPE\"},{\"source\":519,\"target\":2295,\"id\":2271,\"data\":{},\"label\":\"IS_TYPE\"}],\"labels\":{\"Beat\":\"#111989\",\"Crime\":\"#6E47B7\",\"CrimeType\":\"#685761\",\"CrimeDate\":\"#28E751\"},\"types\":[\"IS_TYPE\",\"ON_BEAT\",\"ON_DATE\"],\"directed\":true}"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1531061286840_1114642955",
+      "id": "20180707-123200_2053990595",
+      "dateCreated": "2018-07-08 14:48:06.840",
+      "dateStarted": "2019-12-02 10:18:54.342",
+      "dateFinished": "2019-12-02 10:18:54.712",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "title": "The Neo4j Interpreter can leverage Zeppelin\u0027s Dynamic Forms in order to built parameterized queries!",
+      "text": "%neo4j\nMATCH (crime:Crime)-[is:IS_TYPE]-\u003e(type:CrimeType{primary_type: \u0027${Crime Type}\u0027}),\n    (crime)-[on:ON_DATE]-\u003e(date:CrimeDate)\nRETURN crime, is, type, on, date",
+      "user": "anonymous",
+      "dateUpdated": "2019-12-02 10:37:25.096",
+      "config": {
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "colWidth": 12.0,
+        "editorMode": "ace/mode/undefined",
+        "fontSize": 9.0,
+        "results": {
+          "0": {
+            "graph": {
+              "mode": "volume-leaflet",
+              "height": 496.0,
+              "optionOpen": true,
+              "setting": {
+                "table": {
+                  "tableGridState": {},
+                  "tableColumnTypeState": {
+                    "names": {
+                      "id": "string",
+                      "label": "string",
+                      "description": "string",
+                      "case_number": "string",
+                      "point": "string",
+                      "parsed_date": "string",
+                      "primary_type": "string"
+                    },
+                    "updated": false
+                  },
+                  "tableOptionSpecHash": "[{\"name\":\"useFilter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable filter for columns\"},{\"name\":\"showPagination\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable pagination for better navigation\"},{\"name\":\"showAggregationFooter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable a footer for displaying aggregated values\"}]",
+                  "tableOptionValue": {
+                    "useFilter": false,
+                    "showPagination": false,
+                    "showAggregationFooter": false
+                  },
+                  "updated": false,
+                  "initialized": false
+                },
+                "volume-leaflet": {
+                  "coordinates": {
+                    "name": "point",
+                    "index": 4.0,
+                    "aggr": "sum"
+                  },
+                  "tooltip": {
+                    "name": "description",
+                    "index": 2.0,
+                    "aggr": "sum"
+                  },
+                  "popup": {
+                    "name": "case_number",
+                    "index": 3.0,
+                    "aggr": "sum"
+                  }
+                },
+                "multiBarChart": {
+                  "rotate": {
+                    "degree": "-45"
+                  },
+                  "xLabelStatus": "default"
+                },
+                "lineChart": {
+                  "rotate": {
+                    "degree": "-45"
+                  },
+                  "xLabelStatus": "default"
+                },
+                "stackedAreaChart": {
+                  "rotate": {
+                    "degree": "-45"
+                  },
+                  "xLabelStatus": "default"
+                },
+                "network": {
+                  "properties": {
+                    "Crime": {
+                      "selected": "description",
+                      "keys": [
+                        "description",
+                        "case_number",
+                        "id",
+                        "point",
+                        "label"
+                      ]
+                    },
+                    "CrimeDate": {
+                      "selected": "parsed_date",
+                      "keys": [
+                        "date",
+                        "parsed_date",
+                        "id",
+                        "label"
+                      ]
+                    },
+                    "CrimeType": {
+                      "selected": "primary_type",
+                      "keys": [
+                        "primary_type",
+                        "id",
+                        "label"
+                      ]
+                    }
+                  },
+                  "d3Graph": {
+                    "forceLayout": {
+                      "timeout": 10000.0,
+                      "charge": -120.0,
+                      "linkDistance": 80.0
+                    },
+                    "zoom": {
+                      "minScale": 1.3
+                    }
+                  }
+                },
+                "pieChart": {}
+              },
+              "keys": [
+                {
+                  "name": "description",
+                  "index": 2.0,
+                  "aggr": "sum"
+                }
+              ],
+              "groups": [],
+              "values": [
+                {
+                  "name": "description",
+                  "index": 2.0,
+                  "aggr": "count"
+                }
+              ],
+              "commonSetting": {}
+            },
+            "helium": {}
+          }
+        },
+        "enabled": true,
+        "title": true,
+        "editorHide": false
+      },
+      "settings": {
+        "params": {
+          "Crime Type": "WEAPONS VIOLATION"
+        },
+        "forms": {
+          "Crime Type": {
+            "type": "TextBox",
+            "name": "Crime Type",
+            "defaultValue": "",
+            "hidden": false
+          }
+        }
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "NETWORK",
+            "data": "{\"nodes\":[{\"id\":578,\"data\":{\"description\":\"UNLAWFUL POSS OF HANDGUN\",\"case_number\":\"JC446716\",\"id\":\"11839651\",\"point\":\"41.964468039, -87.653274223\"},\"label\":\"Crime\"},{\"id\":1478,\"data\":{\"description\":\"UNLAWFUL POSS OF HANDGUN\",\"case_number\":\"JC454813\",\"id\":\"11845979\",\"point\":\"41.93070377, -87.719610142\"},\"label\":\"Crime\"},{\"id\":585,\"data\":{\"description\":\"UNLAWFUL USE OTHER FIREARM\",\"case_number\":\"JC446793\",\"id\":\"11839470\",\"point\":\"41.73081695, -87.567045643\"},\"label\":\"Crime\"},{\"id\":971,\"data\":{\"description\":\"UNLAWFUL POSS OF HANDGUN\",\"case_number\":\"JC445190\",\"id\":\"11838797\",\"point\":\"41.743801568, -87.551757698\"},\"label\":\"Crime\"},{\"id\":331,\"data\":{\"description\":\"UNLAWFUL POSS OF HANDGUN\",\"case_number\":\"JC447241\",\"id\":\"11839882\",\"point\":\"41.851786766, -87.675827594\"},\"label\":\"Crime\"},{\"id\":1297,\"data\":{\"description\":\"UNLAWFUL POSS OF HANDGUN\",\"case_number\":\"JC455086\",\"id\":\"11846350\",\"point\":\"41.736847954, -87.551420665\"},\"label\":\"Crime\"},{\"id\":2003,\"data\":{\"description\":\"RECKLESS FIREARM DISCHARGE\",\"case_number\":\"JC453630\",\"id\":\"11845042\",\"point\":\"41.900349302, -87.762609842\"},\"label\":\"Crime\"},{\"id\":851,\"data\":{\"description\":\"UNLAWFUL POSS OF HANDGUN\",\"case_number\":\"JC446121\",\"id\":\"11839116\",\"point\":\"41.872642551, -87.716281263\"},\"label\":\"Crime\"},{\"id\":340,\"data\":{\"description\":\"RECKLESS FIREARM DISCHARGE\",\"case_number\":\"JC449822\",\"id\":\"11842017\",\"point\":\"41.812956574, -87.700472032\"},\"label\":\"Crime\"},{\"id\":341,\"data\":{\"description\":\"UNLAWFUL POSS OF HANDGUN\",\"case_number\":\"JC447230\",\"id\":\"11839923\",\"point\":\"41.762433209, -87.673471099\"},\"label\":\"Crime\"},{\"id\":727,\"data\":{\"description\":\"UNLAWFUL POSS OF HANDGUN\",\"case_number\":\"JC446525\",\"id\":\"11839611\",\"point\":\"41.756125596, -87.641085687\"},\"label\":\"Crime\"},{\"id\":921,\"data\":{\"description\":\"RECKLESS FIREARM DISCHARGE\",\"case_number\":\"JC445982\",\"id\":\"11838865\",\"point\":\"41.671313211, -87.645347874\"},\"label\":\"Crime\"},{\"id\":1819,\"data\":{\"description\":\"UNLAWFUL USE OTHER DANG WEAPON\",\"case_number\":\"JC454020\",\"id\":\"11845682\",\"point\":\"41.780328363, -87.717896689\"},\"label\":\"Crime\"},{\"id\":796,\"data\":{\"description\":\"UNLAWFUL POSS OF HANDGUN\",\"case_number\":\"JC446265\",\"id\":\"11839190\",\"point\":\"41.880717301, -87.72628358\"},\"label\":\"Crime\"},{\"id\":2269,\"data\":{\"parsed_date\":\"20190924\"},\"label\":\"CrimeDate\"},{\"id\":2077,\"data\":{\"description\":\"UNLAWFUL POSS OF HANDGUN\",\"case_number\":\"JC453542\",\"id\":\"11845001\",\"point\":\"41.804218324, -87.722696616\"},\"label\":\"Crime\"},{\"id\":2270,\"data\":{\"parsed_date\":\"20190923\"},\"label\":\"CrimeDate\"},{\"id\":2272,\"data\":{\"parsed_date\":\"20190930\"},\"label\":\"CrimeDate\"},{\"id\":2273,\"data\":{\"parsed_date\":\"20190929\"},\"label\":\"CrimeDate\"},{\"id\":1251,\"data\":{\"description\":\"UNLAWFUL USE OTHER DANG WEAPON\",\"case_number\":\"JC445464\",\"id\":\"11838410\",\"point\":\"41.850957372, -87.732312933\"},\"label\":\"Crime\"},{\"id\":1957,\"data\":{\"description\":\"RECKLESS FIREARM DISCHARGE\",\"case_number\":\"JC453703\",\"id\":\"11845135\",\"point\":\"41.801615031, -87.741774571\"},\"label\":\"Crime\"},{\"id\":1446,\"data\":{\"description\":\"UNLAWFUL POSS OF HANDGUN\",\"case_number\":\"JC454835\",\"id\":\"11846153\",\"point\":\"41.756141682, -87.569977\"},\"label\":\"Crime\"},{\"id\":1574,\"data\":{\"description\":\"UNLAWFUL POSS OF HANDGUN\",\"case_number\":\"JC454518\",\"id\":\"11845826\",\"point\":\"41.76508964, -87.623288534\"},\"label\":\"Crime\"},{\"id\":358,\"data\":{\"description\":\"RECKLESS FIREARM DISCHARGE\",\"case_number\":\"JC447180\",\"id\":\"11839790\",\"point\":\"41.894853594, -87.685233197\"},\"label\":\"Crime\"},{\"id\":1959,\"data\":{\"description\":\"UNLAWFUL POSS OF HANDGUN\",\"case_number\":\"JC453701\",\"id\":\"11845116\",\"point\":\"41.754713709, -87.576055707\"},\"label\":\"Crime\"},{\"id\":1961,\"data\":{\"description\":\"UNLAWFUL POSS OF HANDGUN\",\"case_number\":\"JC453700\",\"id\":\"11845166\",\"point\":\"41.757230688, -87.624738576\"},\"label\":\"Crime\"},{\"id\":361,\"data\":{\"description\":\"RECKLESS FIREARM DISCHARGE\",\"case_number\":\"JC447170\",\"id\":\"11839784\",\"point\":\"41.89761792, -87.76188485\"},\"label\":\"Crime\"},{\"id\":363,\"data\":{\"description\":\"UNLAWFUL POSS OF HANDGUN\",\"case_number\":\"JC447173\",\"id\":\"11839800\",\"point\":\"41.740218419, -87.55391167\"},\"label\":\"Crime\"},{\"id\":1006,\"data\":{\"description\":\"UNLAWFUL POSS OF HANDGUN\",\"case_number\":\"JC445836\",\"id\":\"11838759\",\"point\":\"41.69478059, -87.650502256\"},\"label\":\"Crime\"},{\"id\":1262,\"data\":{\"description\":\"UNLAWFUL POSS OF HANDGUN\",\"case_number\":\"JC445387\",\"id\":\"11838499\",\"point\":\"41.900305436, -87.766496537\"},\"label\":\"Crime\"},{\"id\":1522,\"data\":{\"description\":\"RECKLESS FIREARM DISCHARGE\",\"case_number\":\"JC454750\",\"id\":\"11845941\",\"point\":\"41.795911297, -87.63186358\"},\"label\":\"Crime\"},{\"id\":882,\"data\":{\"description\":\"RECKLESS FIREARM DISCHARGE\",\"case_number\":\"JC446056\",\"id\":\"11838924\",\"point\":\"41.869325046, -87.742428396\"},\"label\":\"Crime\"},{\"id\":370,\"data\":{\"description\":\"UNLAWFUL POSS OF HANDGUN\",\"case_number\":\"JC447147\",\"id\":\"11839803\",\"point\":\"41.753271303, -87.64653667\"},\"label\":\"Crime\"},{\"id\":2291,\"data\":{\"primary_type\":\"WEAPONS VIOLATION\"},\"label\":\"CrimeType\"},{\"id\":755,\"data\":{\"description\":\"UNLAWFUL POSS OF HANDGUN\",\"case_number\":\"JC446450\",\"id\":\"11839212\",\"point\":\"41.823840564, -87.684276841\"},\"label\":\"Crime\"},{\"id\":2164,\"data\":{\"description\":\"RECKLESS FIREARM DISCHARGE\",\"case_number\":\"JC453409\",\"id\":\"11844833\",\"point\":\"41.782322158, -87.635109908\"},\"label\":\"Crime\"},{\"id\":2037,\"data\":{\"description\":\"UNLAWFUL POSS OF HANDGUN\",\"case_number\":\"JC453593\",\"id\":\"11845029\",\"point\":\"41.874869834, -87.73527607\"},\"label\":\"Crime\"},{\"id\":437,\"data\":{\"description\":\"RECKLESS FIREARM DISCHARGE\",\"case_number\":\"JC447054\",\"id\":\"11839650\",\"point\":\"41.679730347, -87.632669173\"},\"label\":\"Crime\"},{\"id\":1400,\"data\":{\"description\":\"UNLAWFUL USE/SALE AIR RIFLE\",\"case_number\":\"JC454965\",\"id\":\"11846117\",\"point\":\"41.85483101, -87.623864157\"},\"label\":\"Crime\"},{\"id\":760,\"data\":{\"description\":\"UNLAWFUL POSS OTHER FIREARM\",\"case_number\":\"JC446357\",\"id\":\"11839309\",\"point\":\"41.743268307, -87.650219617\"},\"label\":\"Crime\"},{\"id\":761,\"data\":{\"description\":\"UNLAWFUL POSS OF HANDGUN\",\"case_number\":\"JC446548\",\"id\":\"11839635\",\"point\":\"41.702277082, -87.650792808\"},\"label\":\"Crime\"},{\"id\":1337,\"data\":{\"description\":\"POSS FIREARM/AMMO:NO FOID CARD\",\"case_number\":\"JC455038\",\"id\":\"11846308\",\"point\":\"41.819062402, -87.700437598\"},\"label\":\"Crime\"},{\"id\":1338,\"data\":{\"description\":\"RECKLESS FIREARM DISCHARGE\",\"case_number\":\"JC455036\",\"id\":\"11846219\",\"point\":\"41.874947338, -87.72547164\"},\"label\":\"Crime\"},{\"id\":1212,\"data\":{\"description\":\"RECKLESS FIREARM DISCHARGE\",\"case_number\":\"JC445493\",\"id\":\"11838666\",\"point\":\"41.854937183, -87.658792874\"},\"label\":\"Crime\"},{\"id\":509,\"data\":{\"description\":\"UNLAWFUL POSS OF HANDGUN\",\"case_number\":\"JC446943\",\"id\":\"11839747\",\"point\":\"41.703743667, -87.562031614\"},\"label\":\"Crime\"},{\"id\":1023,\"data\":{\"description\":\"UNLAWFUL POSS OF HANDGUN\",\"case_number\":\"JC445848\",\"id\":\"11838735\",\"point\":\"41.783015253, -87.609638259\"},\"label\":\"Crime\"},{\"id\":639,\"data\":{\"description\":\"UNLAWFUL USE/SALE AIR RIFLE\",\"case_number\":\"JC446641\",\"id\":\"11839432\",\"point\":\"41.744430477, -87.555465709\"},\"label\":\"Crime\"}],\"edges\":[{\"source\":727,\"target\":2269,\"id\":4480,\"data\":{},\"label\":\"ON_DATE\"},{\"source\":1961,\"target\":2291,\"id\":3713,\"data\":{},\"label\":\"IS_TYPE\"},{\"source\":1251,\"target\":2270,\"id\":5004,\"data\":{},\"label\":\"ON_DATE\"},{\"source\":437,\"target\":2291,\"id\":2189,\"data\":{},\"label\":\"IS_TYPE\"},{\"source\":358,\"target\":2269,\"id\":4111,\"data\":{},\"label\":\"ON_DATE\"},{\"source\":1337,\"target\":2291,\"id\":3089,\"data\":{},\"label\":\"IS_TYPE\"},{\"source\":361,\"target\":2269,\"id\":4114,\"data\":{},\"label\":\"ON_DATE\"},{\"source\":1338,\"target\":2291,\"id\":3090,\"data\":{},\"label\":\"IS_TYPE\"},{\"source\":1212,\"target\":2291,\"id\":2964,\"data\":{},\"label\":\"IS_TYPE\"},{\"source\":363,\"target\":2269,\"id\":4116,\"data\":{},\"label\":\"ON_DATE\"},{\"source\":1006,\"target\":2270,\"id\":4759,\"data\":{},\"label\":\"ON_DATE\"},{\"source\":1262,\"target\":2270,\"id\":5015,\"data\":{},\"label\":\"ON_DATE\"},{\"source\":578,\"target\":2291,\"id\":2330,\"data\":{},\"label\":\"IS_TYPE\"},{\"source\":1522,\"target\":2272,\"id\":5275,\"data\":{},\"label\":\"ON_DATE\"},{\"source\":882,\"target\":2269,\"id\":4635,\"data\":{},\"label\":\"ON_DATE\"},{\"source\":370,\"target\":2269,\"id\":4123,\"data\":{},\"label\":\"ON_DATE\"},{\"source\":755,\"target\":2269,\"id\":4508,\"data\":{},\"label\":\"ON_DATE\"},{\"source\":2164,\"target\":2273,\"id\":5917,\"data\":{},\"label\":\"ON_DATE\"},{\"source\":2037,\"target\":2273,\"id\":5790,\"data\":{},\"label\":\"ON_DATE\"},{\"source\":1478,\"target\":2291,\"id\":3230,\"data\":{},\"label\":\"IS_TYPE\"},{\"source\":1400,\"target\":2272,\"id\":5153,\"data\":{},\"label\":\"ON_DATE\"},{\"source\":760,\"target\":2269,\"id\":4513,\"data\":{},\"label\":\"ON_DATE\"},{\"source\":585,\"target\":2291,\"id\":2337,\"data\":{},\"label\":\"IS_TYPE\"},{\"source\":761,\"target\":2269,\"id\":4514,\"data\":{},\"label\":\"ON_DATE\"},{\"source\":971,\"target\":2291,\"id\":2723,\"data\":{},\"label\":\"IS_TYPE\"},{\"source\":331,\"target\":2291,\"id\":2083,\"data\":{},\"label\":\"IS_TYPE\"},{\"source\":509,\"target\":2269,\"id\":4262,\"data\":{},\"label\":\"ON_DATE\"},{\"source\":1023,\"target\":2270,\"id\":4776,\"data\":{},\"label\":\"ON_DATE\"},{\"source\":639,\"target\":2269,\"id\":4392,\"data\":{},\"label\":\"ON_DATE\"},{\"source\":2003,\"target\":2291,\"id\":3755,\"data\":{},\"label\":\"IS_TYPE\"},{\"source\":851,\"target\":2291,\"id\":2603,\"data\":{},\"label\":\"IS_TYPE\"},{\"source\":340,\"target\":2291,\"id\":2092,\"data\":{},\"label\":\"IS_TYPE\"},{\"source\":341,\"target\":2291,\"id\":2093,\"data\":{},\"label\":\"IS_TYPE\"},{\"source\":727,\"target\":2291,\"id\":2479,\"data\":{},\"label\":\"IS_TYPE\"},{\"source\":1297,\"target\":2272,\"id\":5050,\"data\":{},\"label\":\"ON_DATE\"},{\"source\":1251,\"target\":2291,\"id\":3003,\"data\":{},\"label\":\"IS_TYPE\"},{\"source\":358,\"target\":2291,\"id\":2110,\"data\":{},\"label\":\"IS_TYPE\"},{\"source\":361,\"target\":2291,\"id\":2113,\"data\":{},\"label\":\"IS_TYPE\"},{\"source\":921,\"target\":2269,\"id\":4674,\"data\":{},\"label\":\"ON_DATE\"},{\"source\":363,\"target\":2291,\"id\":2115,\"data\":{},\"label\":\"IS_TYPE\"},{\"source\":1819,\"target\":2272,\"id\":5572,\"data\":{},\"label\":\"ON_DATE\"},{\"source\":796,\"target\":2269,\"id\":4549,\"data\":{},\"label\":\"ON_DATE\"},{\"source\":1006,\"target\":2291,\"id\":2758,\"data\":{},\"label\":\"IS_TYPE\"},{\"source\":2077,\"target\":2273,\"id\":5830,\"data\":{},\"label\":\"ON_DATE\"},{\"source\":1262,\"target\":2291,\"id\":3014,\"data\":{},\"label\":\"IS_TYPE\"},{\"source\":1522,\"target\":2291,\"id\":3274,\"data\":{},\"label\":\"IS_TYPE\"},{\"source\":882,\"target\":2291,\"id\":2634,\"data\":{},\"label\":\"IS_TYPE\"},{\"source\":370,\"target\":2291,\"id\":2122,\"data\":{},\"label\":\"IS_TYPE\"},{\"source\":755,\"target\":2291,\"id\":2507,\"data\":{},\"label\":\"IS_TYPE\"},{\"source\":2164,\"target\":2291,\"id\":3916,\"data\":{},\"label\":\"IS_TYPE\"},{\"source\":2037,\"target\":2291,\"id\":3789,\"data\":{},\"label\":\"IS_TYPE\"},{\"source\":1957,\"target\":2272,\"id\":5710,\"data\":{},\"label\":\"ON_DATE\"},{\"source\":1446,\"target\":2272,\"id\":5199,\"data\":{},\"label\":\"ON_DATE\"},{\"source\":1574,\"target\":2272,\"id\":5327,\"data\":{},\"label\":\"ON_DATE\"},{\"source\":1400,\"target\":2291,\"id\":3152,\"data\":{},\"label\":\"IS_TYPE\"},{\"source\":1959,\"target\":2272,\"id\":5712,\"data\":{},\"label\":\"ON_DATE\"},{\"source\":760,\"target\":2291,\"id\":2512,\"data\":{},\"label\":\"IS_TYPE\"},{\"source\":761,\"target\":2291,\"id\":2513,\"data\":{},\"label\":\"IS_TYPE\"},{\"source\":1961,\"target\":2272,\"id\":5714,\"data\":{},\"label\":\"ON_DATE\"},{\"source\":509,\"target\":2291,\"id\":2261,\"data\":{},\"label\":\"IS_TYPE\"},{\"source\":1023,\"target\":2291,\"id\":2775,\"data\":{},\"label\":\"IS_TYPE\"},{\"source\":639,\"target\":2291,\"id\":2391,\"data\":{},\"label\":\"IS_TYPE\"},{\"source\":437,\"target\":2269,\"id\":4190,\"data\":{},\"label\":\"ON_DATE\"},{\"source\":1337,\"target\":2272,\"id\":5090,\"data\":{},\"label\":\"ON_DATE\"},{\"source\":1338,\"target\":2272,\"id\":5091,\"data\":{},\"label\":\"ON_DATE\"},{\"source\":1212,\"target\":2270,\"id\":4965,\"data\":{},\"label\":\"ON_DATE\"},{\"source\":1297,\"target\":2291,\"id\":3049,\"data\":{},\"label\":\"IS_TYPE\"},{\"source\":578,\"target\":2269,\"id\":4331,\"data\":{},\"label\":\"ON_DATE\"},{\"source\":1478,\"target\":2272,\"id\":5231,\"data\":{},\"label\":\"ON_DATE\"},{\"source\":921,\"target\":2291,\"id\":2673,\"data\":{},\"label\":\"IS_TYPE\"},{\"source\":585,\"target\":2269,\"id\":4338,\"data\":{},\"label\":\"ON_DATE\"},{\"source\":1819,\"target\":2291,\"id\":3571,\"data\":{},\"label\":\"IS_TYPE\"},{\"source\":796,\"target\":2291,\"id\":2548,\"data\":{},\"label\":\"IS_TYPE\"},{\"source\":971,\"target\":2270,\"id\":4724,\"data\":{},\"label\":\"ON_DATE\"},{\"source\":331,\"target\":2269,\"id\":4084,\"data\":{},\"label\":\"ON_DATE\"},{\"source\":2077,\"target\":2291,\"id\":3829,\"data\":{},\"label\":\"IS_TYPE\"},{\"source\":2003,\"target\":2273,\"id\":5756,\"data\":{},\"label\":\"ON_DATE\"},{\"source\":851,\"target\":2269,\"id\":4604,\"data\":{},\"label\":\"ON_DATE\"},{\"source\":340,\"target\":2269,\"id\":4093,\"data\":{},\"label\":\"ON_DATE\"},{\"source\":1957,\"target\":2291,\"id\":3709,\"data\":{},\"label\":\"IS_TYPE\"},{\"source\":1446,\"target\":2291,\"id\":3198,\"data\":{},\"label\":\"IS_TYPE\"},{\"source\":341,\"target\":2269,\"id\":4094,\"data\":{},\"label\":\"ON_DATE\"},{\"source\":1574,\"target\":2291,\"id\":3326,\"data\":{},\"label\":\"IS_TYPE\"},{\"source\":1959,\"target\":2291,\"id\":3711,\"data\":{},\"label\":\"IS_TYPE\"}],\"labels\":{\"Beat\":\"#111989\",\"Crime\":\"#6E47B7\",\"CrimeType\":\"#685761\",\"CrimeDate\":\"#28E751\"},\"types\":[\"IS_TYPE\",\"ON_BEAT\",\"ON_DATE\"],\"directed\":true}"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1531061286841_274308145",
+      "id": "20180707-123430_1872711974",
+      "dateCreated": "2018-07-08 14:48:06.841",
+      "dateStarted": "2019-12-02 10:22:35.341",
+      "dateFinished": "2019-12-02 10:22:35.568",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%neo4j\n",
+      "user": "anonymous",
+      "dateUpdated": "2018-07-09 16:38:07.996",
+      "config": {},
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "jobName": "paragraph_1531154287989_-1212711150",
+      "id": "20180709-163807_900340418",
+      "dateCreated": "2018-07-09 16:38:07.990",
+      "status": "READY",
+      "errorMessage": "",
+      "progressUpdateIntervalMs": 500
+    }
+  ],
+  "name": "GraphRM 2019/Neo4j and Spark-Connector",
+  "id": "2DHCVSHV5",
+  "noteParams": {},
+  "noteForms": {},
+  "angularObjects": {
+    "md:shared_process": [],
+    "neo4j:shared_process": [],
+    "spark:shared_process": []
+  },
+  "config": {
+    "isZeppelinNotebookCronEnable": false,
+    "looknfeel": "default",
+    "personalizedMode": "false"
+  },
+  "info": {}
+}
