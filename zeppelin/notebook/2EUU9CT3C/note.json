@@ -1,0 +1,244 @@
+{
+  "paragraphs": [
+    {
+      "text": "%md\n## Stream local clustering coefficient",
+      "user": "anonymous",
+      "dateUpdated": "2019-12-07 11:59:17.874",
+      "config": {
+        "tableHide": false,
+        "editorSetting": {
+          "editOnDblClick": true,
+          "language": "markdown",
+          "completionSupport": false
+        },
+        "colWidth": 12.0,
+        "editorMode": "ace/mode/markdown",
+        "fontSize": 9.0,
+        "editorHide": true,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003ch2\u003eStream local clustering coefficient\u003c/h2\u003e\n\u003c/div\u003e"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1575719928127_1429386788",
+      "id": "20191207-114641_1084520692",
+      "dateCreated": "2019-12-07 11:58:48.127",
+      "dateStarted": "2019-12-07 11:59:17.889",
+      "dateFinished": "2019-12-07 11:59:17.902",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%neo4j\nCALL algo.triangleCount.stream(\u0027Library\u0027, \u0027DEPENDS_ON\u0027)\nYIELD nodeId, triangles, coefficient\nWHERE coefficient \u003e 0\nRETURN algo.getNodeById(nodeId).id AS library, coefficient\nORDER BY coefficient DESC\n",
+      "user": "anonymous",
+      "dateUpdated": "2019-12-07 11:58:55.346",
+      "config": {
+        "editorSetting": {
+          "editOnDblClick": false
+        },
+        "colWidth": 12.0,
+        "editorMode": "ace/mode/undefined",
+        "fontSize": 9.0,
+        "results": {
+          "0": {
+            "graph": {
+              "mode": "table",
+              "height": 300.0,
+              "optionOpen": false,
+              "setting": {
+                "table": {
+                  "tableGridState": {},
+                  "tableColumnTypeState": {
+                    "names": {
+                      "library": "string",
+                      "coefficient": "string"
+                    },
+                    "updated": false
+                  },
+                  "tableOptionSpecHash": "[{\"name\":\"useFilter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable filter for columns\"},{\"name\":\"showPagination\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable pagination for better navigation\"},{\"name\":\"showAggregationFooter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable a footer for displaying aggregated values\"}]",
+                  "tableOptionValue": {
+                    "useFilter": false,
+                    "showPagination": false,
+                    "showAggregationFooter": false
+                  },
+                  "updated": false,
+                  "initialized": false
+                }
+              },
+              "commonSetting": {}
+            }
+          }
+        },
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TABLE",
+            "data": "library\tcoefficient\n\"ipykernel\"\t1.0\n\"six\"\t0.3333333333333333\n\"python-dateutil\"\t0.3333333333333333\n\"jupyter\"\t0.3333333333333333\n\"jpy-console\"\t0.3333333333333333\n\"matplotlib\"\t0.16666666666666666\n"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1575719928128_267124165",
+      "id": "20191207-114720_18204489",
+      "dateCreated": "2019-12-07 11:58:48.128",
+      "dateStarted": "2019-12-07 11:58:55.135",
+      "dateFinished": "2019-12-07 11:58:55.228",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%md\n## Stream triangles",
+      "user": "anonymous",
+      "dateUpdated": "2019-12-07 11:59:34.707",
+      "config": {
+        "tableHide": false,
+        "editorSetting": {
+          "editOnDblClick": true,
+          "language": "markdown",
+          "completionSupport": false
+        },
+        "colWidth": 12.0,
+        "editorMode": "ace/mode/markdown",
+        "fontSize": 9.0,
+        "editorHide": true,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003ch2\u003eStream triangles\u003c/h2\u003e\n\u003c/div\u003e"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1575719928129_1541559103",
+      "id": "20191207-114843_887180679",
+      "dateCreated": "2019-12-07 11:58:48.129",
+      "dateStarted": "2019-12-07 11:59:34.707",
+      "dateFinished": "2019-12-07 11:59:34.722",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%neo4j\nCALL algo.triangle.stream(\"Library\",\"DEPENDS_ON\")\nYIELD nodeA, nodeB, nodeC\nRETURN algo.getNodeById(nodeA).id AS nodeA,\n       algo.getNodeById(nodeB).id AS nodeB,\n       algo.getNodeById(nodeC).id AS nodeC\n",
+      "user": "anonymous",
+      "dateUpdated": "2019-12-07 11:59:25.670",
+      "config": {
+        "editorSetting": {
+          "editOnDblClick": false
+        },
+        "colWidth": 12.0,
+        "editorMode": "ace/mode/undefined",
+        "fontSize": 9.0,
+        "results": {
+          "0": {
+            "graph": {
+              "mode": "table",
+              "height": 300.0,
+              "optionOpen": false,
+              "setting": {
+                "table": {
+                  "tableGridState": {},
+                  "tableColumnTypeState": {
+                    "names": {
+                      "nodeA": "string",
+                      "nodeB": "string",
+                      "nodeC": "string"
+                    },
+                    "updated": false
+                  },
+                  "tableOptionSpecHash": "[{\"name\":\"useFilter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable filter for columns\"},{\"name\":\"showPagination\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable pagination for better navigation\"},{\"name\":\"showAggregationFooter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable a footer for displaying aggregated values\"}]",
+                  "tableOptionValue": {
+                    "useFilter": false,
+                    "showPagination": false,
+                    "showAggregationFooter": false
+                  },
+                  "updated": false,
+                  "initialized": false
+                }
+              },
+              "commonSetting": {}
+            }
+          }
+        },
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TABLE",
+            "data": "nodeA\tnodeB\tnodeC\n\"six\"\t\"python-dateutil\"\t\"matplotlib\"\n\"jupyter\"\t\"jpy-console\"\t\"ipykernel\"\n"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1575719928129_1527464832",
+      "id": "20191207-114728_61427870",
+      "dateCreated": "2019-12-07 11:58:48.130",
+      "dateStarted": "2019-12-07 11:59:25.461",
+      "dateFinished": "2019-12-07 11:59:25.534",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%neo4j\n",
+      "user": "anonymous",
+      "dateUpdated": "2019-12-07 11:58:48.130",
+      "config": {},
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "jobName": "paragraph_1575719928130_-1785173192",
+      "id": "20191207-114958_2002234398",
+      "dateCreated": "2019-12-07 11:58:48.130",
+      "status": "READY",
+      "errorMessage": "",
+      "progressUpdateIntervalMs": 500
+    }
+  ],
+  "name": "Community detection/Triangles",
+  "id": "2EUU9CT3C",
+  "noteParams": {},
+  "noteForms": {},
+  "angularObjects": {
+    "md:shared_process": [],
+    "neo4j:shared_process": []
+  },
+  "config": {
+    "isZeppelinNotebookCronEnable": false
+  },
+  "info": {}
+}

@@ -1,0 +1,538 @@
+{
+  "paragraphs": [
+    {
+      "text": "%md\n## Stream Label propagation",
+      "user": "anonymous",
+      "dateUpdated": "2019-12-07 12:00:41.679",
+      "config": {
+        "tableHide": false,
+        "editorSetting": {
+          "editOnDblClick": true,
+          "language": "markdown",
+          "completionSupport": false
+        },
+        "colWidth": 12.0,
+        "editorMode": "ace/mode/markdown",
+        "fontSize": 9.0,
+        "editorHide": true,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003ch2\u003eStream Label propagation\u003c/h2\u003e\n\u003c/div\u003e"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1575719494465_-139499170",
+      "id": "20191207-114641_1084520692",
+      "dateCreated": "2019-12-07 11:51:34.466",
+      "dateStarted": "2019-12-07 12:00:41.678",
+      "dateFinished": "2019-12-07 12:00:41.700",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%neo4j\nCALL algo.labelPropagation.stream(\"Library\", \"DEPENDS_ON\",\n  { iterations: 10 })\nYIELD nodeId, label\nRETURN label,\n       collect(algo.getNodeById(nodeId).id) AS libraries\nORDER BY size(libraries) DESC\n\n\n",
+      "user": "anonymous",
+      "dateUpdated": "2019-12-07 11:51:47.854",
+      "config": {
+        "editorSetting": {
+          "editOnDblClick": false
+        },
+        "colWidth": 12.0,
+        "editorMode": "ace/mode/undefined",
+        "fontSize": 9.0,
+        "results": {
+          "0": {
+            "graph": {
+              "mode": "table",
+              "height": 300.0,
+              "optionOpen": false,
+              "setting": {
+                "table": {
+                  "tableGridState": {},
+                  "tableColumnTypeState": {
+                    "names": {
+                      "label": "string",
+                      "libraries": "string"
+                    },
+                    "updated": false
+                  },
+                  "tableOptionSpecHash": "[{\"name\":\"useFilter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable filter for columns\"},{\"name\":\"showPagination\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable pagination for better navigation\"},{\"name\":\"showAggregationFooter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable a footer for displaying aggregated values\"}]",
+                  "tableOptionValue": {
+                    "useFilter": false,
+                    "showPagination": false,
+                    "showAggregationFooter": false
+                  },
+                  "updated": false,
+                  "initialized": false
+                }
+              },
+              "commonSetting": {}
+            }
+          }
+        },
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TABLE",
+            "data": "label\tlibraries\n9\t[\"six\",\"pandas\",\"python-dateutil\",\"matplotlib\",\"spacy\"]\n21\t[\"jupyter\",\"jpy-console\",\"ipykernel\"]\n23\t[\"nbconvert\",\"jpy-client\",\"jpy-core\"]\n17\t[\"pyspark\",\"py4j\"]\n11\t[\"numpy\"]\n13\t[\"pytz\"]\n"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1575719494467_-2090337855",
+      "id": "20191207-114720_18204489",
+      "dateCreated": "2019-12-07 11:51:34.467",
+      "dateStarted": "2019-12-07 11:51:47.503",
+      "dateFinished": "2019-12-07 11:51:47.617",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%md\n## Write back Label propagation",
+      "user": "anonymous",
+      "dateUpdated": "2019-12-07 11:52:20.478",
+      "config": {
+        "tableHide": false,
+        "editorSetting": {
+          "editOnDblClick": true,
+          "language": "markdown",
+          "completionSupport": false
+        },
+        "colWidth": 12.0,
+        "editorMode": "ace/mode/markdown",
+        "fontSize": 9.0,
+        "editorHide": true,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003ch2\u003eWrite back Label propagation\u003c/h2\u003e\n\u003c/div\u003e"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1575719494468_-58809927",
+      "id": "20191207-114843_887180679",
+      "dateCreated": "2019-12-07 11:51:34.468",
+      "dateStarted": "2019-12-07 11:52:20.486",
+      "dateFinished": "2019-12-07 11:52:20.518",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%neo4j\nCALL algo.labelPropagation(\"Library\", \"DEPENDS_ON\",\n  { iterations: 10 })",
+      "user": "anonymous",
+      "dateUpdated": "2019-12-07 11:52:12.376",
+      "config": {
+        "editorSetting": {
+          "editOnDblClick": false
+        },
+        "colWidth": 12.0,
+        "editorMode": "ace/mode/undefined",
+        "fontSize": 9.0,
+        "results": {
+          "0": {
+            "graph": {
+              "mode": "table",
+              "height": 300.0,
+              "optionOpen": false,
+              "setting": {
+                "table": {
+                  "tableGridState": {},
+                  "tableColumnTypeState": {
+                    "names": {
+                      "loadMillis": "string",
+                      "computeMillis": "string",
+                      "writeMillis": "string",
+                      "postProcessingMillis": "string",
+                      "nodes": "string",
+                      "communityCount": "string",
+                      "iterations": "string",
+                      "didConverge": "string",
+                      "p1": "string",
+                      "p5": "string",
+                      "p10": "string",
+                      "p25": "string",
+                      "p50": "string",
+                      "p75": "string",
+                      "p90": "string",
+                      "p95": "string",
+                      "p99": "string",
+                      "p100": "string",
+                      "weightProperty": "string",
+                      "write": "string",
+                      "seedProperty": "string",
+                      "writeProperty": "string"
+                    },
+                    "updated": false
+                  },
+                  "tableOptionSpecHash": "[{\"name\":\"useFilter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable filter for columns\"},{\"name\":\"showPagination\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable pagination for better navigation\"},{\"name\":\"showAggregationFooter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable a footer for displaying aggregated values\"}]",
+                  "tableOptionValue": {
+                    "useFilter": false,
+                    "showPagination": false,
+                    "showAggregationFooter": false
+                  },
+                  "updated": false,
+                  "initialized": false
+                }
+              },
+              "commonSetting": {}
+            }
+          }
+        },
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TABLE",
+            "data": "loadMillis\tcomputeMillis\twriteMillis\tpostProcessingMillis\tnodes\tcommunityCount\titerations\tdidConverge\tp1\tp5\tp10\tp25\tp50\tp75\tp90\tp95\tp99\tp100\tweightProperty\twrite\tseedProperty\twriteProperty\n6\t0\t0\t11\t15\t6\t3\tTRUE\t1\t1\t1\t1\t2\t3\t3\t5\t5\t5\tNULL\tTRUE\tNULL\tNULL\n"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1575719494469_1732988087",
+      "id": "20191207-114728_61427870",
+      "dateCreated": "2019-12-07 11:51:34.469",
+      "dateStarted": "2019-12-07 11:52:11.351",
+      "dateFinished": "2019-12-07 11:52:11.423",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%md\n## Write back stream Louvain",
+      "user": "anonymous",
+      "dateUpdated": "2019-12-07 11:51:34.470",
+      "config": {
+        "tableHide": false,
+        "editorSetting": {
+          "editOnDblClick": true,
+          "language": "markdown",
+          "completionSupport": false
+        },
+        "colWidth": 12.0,
+        "editorMode": "ace/mode/markdown",
+        "fontSize": 9.0,
+        "editorHide": true,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003ch2\u003eWrite back stream Louvain\u003c/h2\u003e\n\u003c/div\u003e"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1575719494470_-1091578343",
+      "id": "20191207-115006_1527017338",
+      "dateCreated": "2019-12-07 11:51:34.470",
+      "status": "READY",
+      "errorMessage": "",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%neo4j\nCALL algo.louvain.stream(\"Library\", \"DEPENDS_ON\", {includeIntermediateCommunities:true})\nYIELD nodeId, communities\nWITH algo.getNodeById(nodeId) AS node, communities\nSET node.communities \u003d communities\n",
+      "user": "anonymous",
+      "dateUpdated": "2019-12-07 11:51:34.474",
+      "config": {
+        "editorSetting": {
+          "editOnDblClick": false
+        },
+        "colWidth": 12.0,
+        "editorMode": "ace/mode/undefined",
+        "fontSize": 9.0,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": []
+      },
+      "apps": [],
+      "jobName": "paragraph_1575719494471_-428823465",
+      "id": "20191207-114902_652917899",
+      "dateCreated": "2019-12-07 11:51:34.471",
+      "status": "READY",
+      "errorMessage": "",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%md\n## Read first layer",
+      "user": "anonymous",
+      "dateUpdated": "2019-12-07 11:51:34.475",
+      "config": {
+        "tableHide": true,
+        "editorSetting": {
+          "editOnDblClick": true,
+          "language": "markdown",
+          "completionSupport": false
+        },
+        "colWidth": 12.0,
+        "editorMode": "ace/mode/markdown",
+        "fontSize": 9.0,
+        "editorHide": false,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003ch2\u003eRead first layer\u003c/h2\u003e\n\u003c/div\u003e"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1575719494474_-866471128",
+      "id": "20191207-115027_1484743918",
+      "dateCreated": "2019-12-07 11:51:34.474",
+      "status": "READY",
+      "errorMessage": "",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%neo4j\nMATCH (l:Library)\nRETURN l.communities[0] AS community, collect(l.id) AS libraries\nORDER BY size(libraries) DESC\n",
+      "user": "anonymous",
+      "dateUpdated": "2019-12-07 11:51:34.475",
+      "config": {
+        "editorSetting": {
+          "editOnDblClick": false
+        },
+        "colWidth": 12.0,
+        "editorMode": "ace/mode/undefined",
+        "fontSize": 9.0,
+        "results": {
+          "0": {
+            "graph": {
+              "mode": "table",
+              "height": 300.0,
+              "optionOpen": false,
+              "setting": {
+                "table": {
+                  "tableGridState": {},
+                  "tableColumnTypeState": {
+                    "names": {
+                      "community": "string",
+                      "libraries": "string"
+                    },
+                    "updated": false
+                  },
+                  "tableOptionSpecHash": "[{\"name\":\"useFilter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable filter for columns\"},{\"name\":\"showPagination\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable pagination for better navigation\"},{\"name\":\"showAggregationFooter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable a footer for displaying aggregated values\"}]",
+                  "tableOptionValue": {
+                    "useFilter": false,
+                    "showPagination": false,
+                    "showAggregationFooter": false
+                  },
+                  "updated": false,
+                  "initialized": false
+                }
+              },
+              "commonSetting": {}
+            }
+          }
+        },
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TABLE",
+            "data": "community\tlibraries\n6\t[\"six\",\"pandas\",\"numpy\",\"python-dateutil\",\"pytz\",\"matplotlib\",\"spacy\"]\n12\t[\"jupyter\",\"jpy-console\",\"ipykernel\"]\n14\t[\"nbconvert\",\"jpy-client\",\"jpy-core\"]\n8\t[\"pyspark\",\"py4j\"]\n"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1575719494475_574304415",
+      "id": "20191207-114938_1607926124",
+      "dateCreated": "2019-12-07 11:51:34.475",
+      "status": "READY",
+      "errorMessage": "",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%md\n## Read second layer",
+      "user": "anonymous",
+      "dateUpdated": "2019-12-07 11:51:34.476",
+      "config": {
+        "tableHide": false,
+        "editorSetting": {
+          "editOnDblClick": true,
+          "language": "markdown",
+          "completionSupport": false
+        },
+        "colWidth": 12.0,
+        "editorMode": "ace/mode/markdown",
+        "fontSize": 9.0,
+        "editorHide": true,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003ch2\u003eRead second layer\u003c/h2\u003e\n\u003c/div\u003e"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1575719494476_531059544",
+      "id": "20191207-115043_741993173",
+      "dateCreated": "2019-12-07 11:51:34.476",
+      "status": "READY",
+      "errorMessage": "",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%neo4j\nMATCH (l:Library)\nRETURN l.communities[-1] AS community, collect(l.id) AS libraries\nORDER BY size(libraries) DESC\n",
+      "user": "anonymous",
+      "dateUpdated": "2019-12-07 11:51:34.477",
+      "config": {
+        "editorSetting": {
+          "editOnDblClick": false
+        },
+        "colWidth": 12.0,
+        "editorMode": "ace/mode/undefined",
+        "fontSize": 9.0,
+        "results": {
+          "0": {
+            "graph": {
+              "mode": "table",
+              "height": 300.0,
+              "optionOpen": false,
+              "setting": {
+                "table": {
+                  "tableGridState": {},
+                  "tableColumnTypeState": {
+                    "names": {
+                      "community": "string",
+                      "libraries": "string"
+                    },
+                    "updated": false
+                  },
+                  "tableOptionSpecHash": "[{\"name\":\"useFilter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable filter for columns\"},{\"name\":\"showPagination\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable pagination for better navigation\"},{\"name\":\"showAggregationFooter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable a footer for displaying aggregated values\"}]",
+                  "tableOptionValue": {
+                    "useFilter": false,
+                    "showPagination": false,
+                    "showAggregationFooter": false
+                  },
+                  "updated": false,
+                  "initialized": false
+                }
+              },
+              "commonSetting": {}
+            }
+          }
+        },
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TABLE",
+            "data": "community\tlibraries\n6\t[\"six\",\"pandas\",\"numpy\",\"python-dateutil\",\"pytz\",\"matplotlib\",\"spacy\"]\n14\t[\"jupyter\",\"jpy-console\",\"nbconvert\",\"ipykernel\",\"jpy-client\",\"jpy-core\"]\n8\t[\"pyspark\",\"py4j\"]\n"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1575719494477_-465260189",
+      "id": "20191207-114951_2101869524",
+      "dateCreated": "2019-12-07 11:51:34.477",
+      "status": "READY",
+      "errorMessage": "",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%neo4j\n",
+      "user": "anonymous",
+      "dateUpdated": "2019-12-07 11:51:34.478",
+      "config": {},
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "jobName": "paragraph_1575719494477_558918148",
+      "id": "20191207-114958_2002234398",
+      "dateCreated": "2019-12-07 11:51:34.477",
+      "status": "READY",
+      "errorMessage": "",
+      "progressUpdateIntervalMs": 500
+    }
+  ],
+  "name": "Community detection/Label propagation",
+  "id": "2EVY3PMRJ",
+  "noteParams": {},
+  "noteForms": {},
+  "angularObjects": {
+    "md:shared_process": [],
+    "neo4j:shared_process": []
+  },
+  "config": {
+    "isZeppelinNotebookCronEnable": false
+  },
+  "info": {}
+}
