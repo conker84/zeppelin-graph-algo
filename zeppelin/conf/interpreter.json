@@ -1278,7 +1278,7 @@
         },
         "zeppelin.pyspark.python": {
           "name": "zeppelin.pyspark.python",
-          "value": "python",
+          "value": "python3",
           "type": "string"
         },
         "spark.neo4j.bolt.url": {
