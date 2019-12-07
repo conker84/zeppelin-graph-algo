@@ -1,0 +1,236 @@
+{
+  "paragraphs": [
+    {
+      "text": "%md\n## Streaming degree centrality",
+      "user": "anonymous",
+      "dateUpdated": "2019-12-07 11:32:21.540",
+      "config": {
+        "tableHide": true,
+        "editorSetting": {
+          "language": "markdown",
+          "editOnDblClick": true,
+          "completionKey": "TAB",
+          "completionSupport": false
+        },
+        "colWidth": 12.0,
+        "editorMode": "ace/mode/markdown",
+        "fontSize": 9.0,
+        "editorHide": false,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003ch2\u003eStreaming pagerank centrality\u003c/h2\u003e\n\u003c/div\u003e"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1575718324870_2049827122",
+      "id": "20191207-112728_2069065216",
+      "dateCreated": "2019-12-07 11:32:04.870",
+      "status": "READY",
+      "errorMessage": "",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%neo4j\nMATCH (u:User)\nRETURN u.id AS name,\n       size((u)-[:FOLLOWS]-\u003e()) AS follows,\n       size((u)\u003c-[:FOLLOWS]-()) AS followers\n\n",
+      "user": "anonymous",
+      "dateUpdated": "2019-12-07 11:32:13.442",
+      "config": {
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "colWidth": 12.0,
+        "editorMode": "ace/mode/undefined",
+        "fontSize": 9.0,
+        "results": {
+          "0": {
+            "graph": {
+              "mode": "table",
+              "height": 300.0,
+              "optionOpen": false,
+              "setting": {
+                "table": {
+                  "tableGridState": {},
+                  "tableColumnTypeState": {
+                    "names": {
+                      "name": "string",
+                      "follows": "string",
+                      "followers": "string"
+                    },
+                    "updated": false
+                  },
+                  "tableOptionSpecHash": "[{\"name\":\"useFilter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable filter for columns\"},{\"name\":\"showPagination\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable pagination for better navigation\"},{\"name\":\"showAggregationFooter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable a footer for displaying aggregated values\"}]",
+                  "tableOptionValue": {
+                    "useFilter": false,
+                    "showPagination": false,
+                    "showAggregationFooter": false
+                  },
+                  "updated": false,
+                  "initialized": false
+                }
+              },
+              "commonSetting": {}
+            }
+          }
+        },
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TABLE",
+            "data": "name\tfollows\tfollowers\n\"Alice\"\t4\t3\n\"Bridget\"\t3\t2\n\"Charles\"\t1\t1\n\"Doug\"\t1\t5\n\"Mark\"\t2\t1\n\"Michael\"\t3\t2\n\"David\"\t1\t1\n\"Amy\"\t0\t1\n\"James\"\t1\t0\n"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1575718324872_-1616009407",
+      "id": "20191207-112455_1660358477",
+      "dateCreated": "2019-12-07 11:32:04.872",
+      "dateStarted": "2019-12-07 11:32:13.258",
+      "dateFinished": "2019-12-07 11:32:13.321",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%md\n## Write back degree centrality\n",
+      "user": "anonymous",
+      "dateUpdated": "2019-12-07 11:32:28.538",
+      "config": {
+        "tableHide": false,
+        "editorSetting": {
+          "language": "markdown",
+          "editOnDblClick": true,
+          "completionKey": "TAB",
+          "completionSupport": false
+        },
+        "colWidth": 12.0,
+        "editorMode": "ace/mode/markdown",
+        "fontSize": 9.0,
+        "editorHide": true,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003ch2\u003eWrite back degree centrality\u003c/h2\u003e\n\u003c/div\u003e"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1575718324874_-734143563",
+      "id": "20191207-112839_1421236737",
+      "dateCreated": "2019-12-07 11:32:04.874",
+      "dateStarted": "2019-12-07 11:32:28.539",
+      "dateFinished": "2019-12-07 11:32:28.555",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%neo4j\nMATCH (u:User)\nset u.followers \u003d size((u)\u003c-[:FOLLOWS]-())\n",
+      "user": "anonymous",
+      "dateUpdated": "2019-12-07 11:32:31.513",
+      "config": {
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "colWidth": 12.0,
+        "editorMode": "ace/mode/undefined",
+        "fontSize": 9.0,
+        "results": {
+          "0": {
+            "graph": {
+              "mode": "table",
+              "height": 300.0,
+              "optionOpen": false,
+              "setting": {
+                "table": {
+                  "tableGridState": {},
+                  "tableColumnTypeState": {
+                    "names": {
+                      "nodes": "string",
+                      "iterations": "string",
+                      "loadMillis": "string",
+                      "computeMillis": "string",
+                      "writeMillis": "string",
+                      "dampingFactor": "string",
+                      "write": "string",
+                      "writeProperty": "string"
+                    },
+                    "updated": false
+                  },
+                  "tableOptionSpecHash": "[{\"name\":\"useFilter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable filter for columns\"},{\"name\":\"showPagination\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable pagination for better navigation\"},{\"name\":\"showAggregationFooter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable a footer for displaying aggregated values\"}]",
+                  "tableOptionValue": {
+                    "useFilter": false,
+                    "showPagination": false,
+                    "showAggregationFooter": false
+                  },
+                  "updated": false,
+                  "initialized": false
+                }
+              },
+              "commonSetting": {}
+            }
+          }
+        },
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": []
+      },
+      "apps": [],
+      "jobName": "paragraph_1575718324875_1114419135",
+      "id": "20191207-112554_511336751",
+      "dateCreated": "2019-12-07 11:32:04.875",
+      "dateStarted": "2019-12-07 11:32:31.525",
+      "dateFinished": "2019-12-07 11:32:31.587",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    }
+  ],
+  "name": "Centrality/Degree",
+  "id": "2EXEQC8RJ",
+  "noteParams": {},
+  "noteForms": {},
+  "angularObjects": {
+    "md:shared_process": [],
+    "neo4j:shared_process": [],
+    "spark:shared_process": []
+  },
+  "config": {
+    "isZeppelinNotebookCronEnable": false
+  },
+  "info": {}
+}

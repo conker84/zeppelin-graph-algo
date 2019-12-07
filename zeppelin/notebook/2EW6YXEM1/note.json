@@ -1,0 +1,93 @@
+{
+  "paragraphs": [
+    {
+      "text": "WITH \"https://raw.githubusercontent.com/neo4j-graph-analytics/book/master/data/social-nodes.csv\"\nAS uri\nLOAD CSV WITH HEADERS FROM uri AS row\nMERGE (:User {id: row.id})\n",
+      "user": "anonymous",
+      "dateUpdated": "2019-12-07 11:19:11.361",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "editOnDblClick": false
+        },
+        "editorMode": "ace/mode/undefined"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": []
+      },
+      "apps": [],
+      "jobName": "paragraph_1575717341970_-1273236391",
+      "id": "20191207-111541_1437265370",
+      "dateCreated": "2019-12-07 11:15:41.970",
+      "dateStarted": "2019-12-07 11:19:11.394",
+      "dateFinished": "2019-12-07 11:19:12.180",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "WITH \"https://raw.githubusercontent.com/neo4j-graph-analytics/book/master/data/social-relationships.csv\"\nAS uri\nLOAD CSV WITH HEADERS FROM uri AS row\nMATCH (source:User {id: row.src})\nMATCH (destination:User {id: row.dst})\nMERGE (source)-[:FOLLOWS]-\u003e(destination)\n",
+      "user": "anonymous",
+      "dateUpdated": "2019-12-07 11:20:01.082",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "editOnDblClick": false
+        },
+        "editorMode": "ace/mode/undefined"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": []
+      },
+      "apps": [],
+      "jobName": "paragraph_1575717470757_235724351",
+      "id": "20191207-111750_1475912359",
+      "dateCreated": "2019-12-07 11:17:50.757",
+      "dateStarted": "2019-12-07 11:19:47.036",
+      "dateFinished": "2019-12-07 11:19:47.680",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "user": "anonymous",
+      "config": {},
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "jobName": "paragraph_1575717586972_968643562",
+      "id": "20191207-111946_1789842762",
+      "dateCreated": "2019-12-07 11:19:46.972",
+      "status": "READY",
+      "progressUpdateIntervalMs": 500
+    }
+  ],
+  "name": "Centrality/Import",
+  "id": "2EW6YXEM1",
+  "noteParams": {},
+  "noteForms": {},
+  "angularObjects": {
+    "md:shared_process": [],
+    "neo4j:shared_process": [],
+    "spark:shared_process": []
+  },
+  "config": {
+    "isZeppelinNotebookCronEnable": false
+  },
+  "info": {}
+}

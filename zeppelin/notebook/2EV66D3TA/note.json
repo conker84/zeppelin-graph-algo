@@ -1,0 +1,241 @@
+{
+  "paragraphs": [
+    {
+      "text": "%md\n## Streaming pagerank centrality",
+      "user": "anonymous",
+      "dateUpdated": "2019-12-07 11:30:42.848",
+      "config": {
+        "tableHide": false,
+        "editorSetting": {
+          "language": "markdown",
+          "editOnDblClick": true,
+          "completionKey": "TAB",
+          "completionSupport": false
+        },
+        "colWidth": 12.0,
+        "editorMode": "ace/mode/markdown",
+        "fontSize": 9.0,
+        "editorHide": true,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003ch2\u003eStreaming pagerank centrality\u003c/h2\u003e\n\u003c/div\u003e"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1575718233536_-1291284381",
+      "id": "20191207-112728_2069065216",
+      "dateCreated": "2019-12-07 11:30:33.536",
+      "dateStarted": "2019-12-07 11:30:42.854",
+      "dateFinished": "2019-12-07 11:30:42.873",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%neo4j\nCALL algo.pageRank.stream(\u0027User\u0027, \u0027FOLLOWS\u0027, {iterations:20, dampingFactor:0.85})\nYIELD nodeId, score\nRETURN algo.getNodeById(nodeId).id AS page, score\nORDER BY score DESC\n",
+      "user": "anonymous",
+      "dateUpdated": "2019-12-07 11:30:51.012",
+      "config": {
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "colWidth": 12.0,
+        "editorMode": "ace/mode/undefined",
+        "fontSize": 9.0,
+        "results": {
+          "0": {
+            "graph": {
+              "mode": "table",
+              "height": 300.0,
+              "optionOpen": false,
+              "setting": {
+                "table": {
+                  "tableGridState": {},
+                  "tableColumnTypeState": {
+                    "names": {
+                      "page": "string",
+                      "score": "string"
+                    },
+                    "updated": false
+                  },
+                  "tableOptionSpecHash": "[{\"name\":\"useFilter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable filter for columns\"},{\"name\":\"showPagination\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable pagination for better navigation\"},{\"name\":\"showAggregationFooter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable a footer for displaying aggregated values\"}]",
+                  "tableOptionValue": {
+                    "useFilter": false,
+                    "showPagination": false,
+                    "showAggregationFooter": false
+                  },
+                  "updated": false,
+                  "initialized": false
+                }
+              },
+              "commonSetting": {}
+            }
+          }
+        },
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TABLE",
+            "data": "page\tscore\n\"Doug\"\t1.671956494869664\n\"Mark\"\t1.5623059164267037\n\"Alice\"\t1.1116563910618424\n\"Bridget\"\t0.5358271526871249\n\"Michael\"\t0.5358271526871249\n\"Amy\"\t0.3858750030398369\n\"Charles\"\t0.38475333093665537\n\"David\"\t0.27750000506639483\n\"James\"\t0.15000000000000002\n"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1575718233543_375177731",
+      "id": "20191207-112455_1660358477",
+      "dateCreated": "2019-12-07 11:30:33.543",
+      "dateStarted": "2019-12-07 11:30:50.822",
+      "dateFinished": "2019-12-07 11:30:50.878",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%md\n## Write back pagerank centrality\n",
+      "user": "anonymous",
+      "dateUpdated": "2019-12-07 11:30:58.690",
+      "config": {
+        "tableHide": false,
+        "editorSetting": {
+          "language": "markdown",
+          "editOnDblClick": true,
+          "completionKey": "TAB",
+          "completionSupport": false
+        },
+        "colWidth": 12.0,
+        "editorMode": "ace/mode/markdown",
+        "fontSize": 9.0,
+        "editorHide": true,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003ch2\u003eWrite back pagerank centrality\u003c/h2\u003e\n\u003c/div\u003e"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1575718233544_756286542",
+      "id": "20191207-112839_1421236737",
+      "dateCreated": "2019-12-07 11:30:33.544",
+      "dateStarted": "2019-12-07 11:30:58.698",
+      "dateFinished": "2019-12-07 11:30:58.715",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%neo4j\nCALL algo.pageRank(\u0027User\u0027, \u0027FOLLOWS\u0027, {iterations:20, dampingFactor:0.85})",
+      "user": "anonymous",
+      "dateUpdated": "2019-12-07 11:31:05.798",
+      "config": {
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "colWidth": 12.0,
+        "editorMode": "ace/mode/undefined",
+        "fontSize": 9.0,
+        "results": {
+          "0": {
+            "graph": {
+              "mode": "table",
+              "height": 300.0,
+              "optionOpen": false,
+              "setting": {
+                "table": {
+                  "tableGridState": {},
+                  "tableColumnTypeState": {
+                    "names": {
+                      "nodes": "string",
+                      "iterations": "string",
+                      "loadMillis": "string",
+                      "computeMillis": "string",
+                      "writeMillis": "string",
+                      "dampingFactor": "string",
+                      "write": "string",
+                      "writeProperty": "string"
+                    },
+                    "updated": false
+                  },
+                  "tableOptionSpecHash": "[{\"name\":\"useFilter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable filter for columns\"},{\"name\":\"showPagination\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable pagination for better navigation\"},{\"name\":\"showAggregationFooter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable a footer for displaying aggregated values\"}]",
+                  "tableOptionValue": {
+                    "useFilter": false,
+                    "showPagination": false,
+                    "showAggregationFooter": false
+                  },
+                  "updated": false,
+                  "initialized": false
+                }
+              },
+              "commonSetting": {}
+            }
+          }
+        },
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TABLE",
+            "data": "nodes\titerations\tloadMillis\tcomputeMillis\twriteMillis\tdampingFactor\twrite\twriteProperty\n9\t20\t15\t16\t1\t0.85\tTRUE\t\"pagerank\"\n"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1575718233545_-670379986",
+      "id": "20191207-112554_511336751",
+      "dateCreated": "2019-12-07 11:30:33.545",
+      "dateStarted": "2019-12-07 11:31:05.610",
+      "dateFinished": "2019-12-07 11:31:05.663",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    }
+  ],
+  "name": "Centrality/Pagerank",
+  "id": "2EV66D3TA",
+  "noteParams": {},
+  "noteForms": {},
+  "angularObjects": {
+    "md:shared_process": [],
+    "neo4j:shared_process": [],
+    "spark:shared_process": []
+  },
+  "config": {
+    "isZeppelinNotebookCronEnable": false
+  },
+  "info": {}
+}
