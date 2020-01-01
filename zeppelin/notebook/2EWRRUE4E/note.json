@@ -1,0 +1,98 @@
+{
+  "paragraphs": [
+    {
+      "text": "MATCH (source:Place {id: \"Den Haag\"}),\n      (destination:Place {id: \"London\"})\nCALL algo.shortestPath.astar.stream(source, destination, \"distance\", \"latitude\", \"longitude\")\nYIELD nodeId, cost\nRETURN algo.getNodeById(nodeId).id AS place, cost\n\n",
+      "user": "anonymous",
+      "dateUpdated": "2020-01-01 19:01:10.905",
+      "config": {
+        "editorSetting": {
+          "editOnDblClick": false
+        },
+        "colWidth": 12.0,
+        "editorMode": "ace/mode/undefined",
+        "fontSize": 9.0,
+        "results": {
+          "0": {
+            "graph": {
+              "mode": "table",
+              "height": 300.0,
+              "optionOpen": false,
+              "setting": {
+                "table": {
+                  "tableGridState": {},
+                  "tableColumnTypeState": {
+                    "names": {
+                      "place": "string",
+                      "cost": "string"
+                    },
+                    "updated": false
+                  },
+                  "tableOptionSpecHash": "[{\"name\":\"useFilter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable filter for columns\"},{\"name\":\"showPagination\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable pagination for better navigation\"},{\"name\":\"showAggregationFooter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable a footer for displaying aggregated values\"}]",
+                  "tableOptionValue": {
+                    "useFilter": false,
+                    "showPagination": false,
+                    "showAggregationFooter": false
+                  },
+                  "updated": false,
+                  "initialized": false
+                }
+              },
+              "commonSetting": {}
+            }
+          }
+        },
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TABLE",
+            "data": "place\tcost\n\"Den Haag\"\t0.0\n\"Hoek van Holland\"\t27.0\n\"Felixstowe\"\t234.0\n\"Ipswich\"\t256.0\n\"Colchester\"\t288.0\n\"London\"\t394.0\n"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1577905262717_1957168895",
+      "id": "20200101-190009_1220471711",
+      "dateCreated": "2020-01-01 19:01:02.717",
+      "dateStarted": "2020-01-01 19:01:10.627",
+      "dateFinished": "2020-01-01 19:01:10.796",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "user": "anonymous",
+      "dateUpdated": "2020-01-01 19:01:02.731",
+      "config": {},
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "jobName": "paragraph_1577905262730_-960712196",
+      "id": "20200101-190028_1585661323",
+      "dateCreated": "2020-01-01 19:01:02.730",
+      "status": "READY",
+      "errorMessage": "",
+      "progressUpdateIntervalMs": 500
+    }
+  ],
+  "name": "Path finding/Astar/Neo4j",
+  "id": "2EWRRUE4E",
+  "noteParams": {},
+  "noteForms": {},
+  "angularObjects": {
+    "md:shared_process": [],
+    "neo4j:shared_process": [],
+    "spark:shared_process": []
+  },
+  "config": {
+    "isZeppelinNotebookCronEnable": false
+  },
+  "info": {}
+}

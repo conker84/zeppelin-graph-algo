@@ -523,13 +523,14 @@
       "progressUpdateIntervalMs": 500
     }
   ],
-  "name": "Community detection/Label propagation",
+  "name": "Community detection/Label propagation/Neo4j",
   "id": "2EVY3PMRJ",
   "noteParams": {},
   "noteForms": {},
   "angularObjects": {
     "md:shared_process": [],
-    "neo4j:shared_process": []
+    "neo4j:shared_process": [],
+    "spark:shared_process": []
   },
   "config": {
     "isZeppelinNotebookCronEnable": false

@@ -3,20 +3,20 @@
     {
       "text": "%md\n## Stream Louvain",
       "user": "anonymous",
-      "dateUpdated": "2019-12-07 11:47:20.667",
+      "dateUpdated": "2020-01-01 11:19:45.064",
       "config": {
-        "colWidth": 12.0,
-        "fontSize": 9.0,
-        "enabled": true,
-        "results": {},
+        "tableHide": false,
         "editorSetting": {
           "editOnDblClick": true,
           "language": "markdown",
           "completionSupport": false
         },
+        "colWidth": 12.0,
         "editorMode": "ace/mode/markdown",
+        "fontSize": 9.0,
         "editorHide": true,
-        "tableHide": false
+        "results": {},
+        "enabled": true
       },
       "settings": {
         "params": {},
@@ -32,22 +32,24 @@
         ]
       },
       "apps": [],
-      "jobName": "paragraph_1575719201387_-1348716207",
+      "jobName": "paragraph_1577877585064_1143178536",
       "id": "20191207-114641_1084520692",
-      "dateCreated": "2019-12-07 11:46:41.387",
-      "dateStarted": "2019-12-07 11:47:20.668",
-      "dateFinished": "2019-12-07 11:47:22.209",
-      "status": "FINISHED",
+      "dateCreated": "2020-01-01 11:19:45.064",
+      "status": "READY",
+      "errorMessage": "",
       "progressUpdateIntervalMs": 500
     },
     {
       "text": "%neo4j\nCALL algo.louvain.stream(\"Library\", \"DEPENDS_ON\", {includeIntermediateCommunities:true})\nYIELD nodeId, communities\nRETURN algo.getNodeById(nodeId).id AS libraries, communities\n\n",
       "user": "anonymous",
-      "dateUpdated": "2019-12-07 11:48:28.303",
+      "dateUpdated": "2020-01-01 11:19:45.071",
       "config": {
+        "editorSetting": {
+          "editOnDblClick": false
+        },
         "colWidth": 12.0,
+        "editorMode": "ace/mode/undefined",
         "fontSize": 9.0,
-        "enabled": true,
         "results": {
           "0": {
             "graph": {
@@ -78,10 +80,7 @@
             }
           }
         },
-        "editorSetting": {
-          "editOnDblClick": false
-        },
-        "editorMode": "ace/mode/undefined"
+        "enabled": true
       },
       "settings": {
         "params": {},
@@ -97,31 +96,30 @@
         ]
       },
       "apps": [],
-      "jobName": "paragraph_1575719240614_1188936296",
+      "jobName": "paragraph_1577877585071_2133291149",
       "id": "20191207-114720_18204489",
-      "dateCreated": "2019-12-07 11:47:20.614",
-      "dateStarted": "2019-12-07 11:48:28.348",
-      "dateFinished": "2019-12-07 11:48:28.534",
-      "status": "FINISHED",
+      "dateCreated": "2020-01-01 11:19:45.071",
+      "status": "READY",
+      "errorMessage": "",
       "progressUpdateIntervalMs": 500
     },
     {
       "text": "%md\n## Write back Louvain",
       "user": "anonymous",
-      "dateUpdated": "2019-12-07 11:48:52.155",
+      "dateUpdated": "2020-01-01 11:19:45.072",
       "config": {
-        "colWidth": 12.0,
-        "fontSize": 9.0,
-        "enabled": true,
-        "results": {},
+        "tableHide": false,
         "editorSetting": {
           "editOnDblClick": true,
           "language": "markdown",
           "completionSupport": false
         },
+        "colWidth": 12.0,
         "editorMode": "ace/mode/markdown",
+        "fontSize": 9.0,
         "editorHide": true,
-        "tableHide": false
+        "results": {},
+        "enabled": true
       },
       "settings": {
         "params": {},
@@ -137,27 +135,26 @@
         ]
       },
       "apps": [],
-      "jobName": "paragraph_1575719323367_-641798175",
+      "jobName": "paragraph_1577877585072_-1714377284",
       "id": "20191207-114843_887180679",
-      "dateCreated": "2019-12-07 11:48:43.367",
-      "dateStarted": "2019-12-07 11:48:52.174",
-      "dateFinished": "2019-12-07 11:48:52.222",
-      "status": "FINISHED",
+      "dateCreated": "2020-01-01 11:19:45.072",
+      "status": "READY",
+      "errorMessage": "",
       "progressUpdateIntervalMs": 500
     },
     {
       "text": "%neo4j\nCALL algo.louvain(\"Library\", \"DEPENDS_ON\", {includeIntermediateCommunities:true})",
       "user": "anonymous",
-      "dateUpdated": "2019-12-07 11:49:02.887",
+      "dateUpdated": "2020-01-01 11:19:45.072",
       "config": {
-        "colWidth": 12.0,
-        "fontSize": 9.0,
-        "enabled": true,
-        "results": {},
         "editorSetting": {
           "editOnDblClick": false
         },
-        "editorMode": "ace/mode/undefined"
+        "colWidth": 12.0,
+        "editorMode": "ace/mode/undefined",
+        "fontSize": 9.0,
+        "results": {},
+        "enabled": true
       },
       "settings": {
         "params": {},
@@ -173,31 +170,30 @@
         ]
       },
       "apps": [],
-      "jobName": "paragraph_1575719248128_-2131859849",
+      "jobName": "paragraph_1577877585072_861183138",
       "id": "20191207-114728_61427870",
-      "dateCreated": "2019-12-07 11:47:28.128",
-      "dateStarted": "2019-12-07 11:49:02.934",
-      "dateFinished": "2019-12-07 11:49:02.993",
-      "status": "ERROR",
+      "dateCreated": "2020-01-01 11:19:45.072",
+      "status": "READY",
+      "errorMessage": "",
       "progressUpdateIntervalMs": 500
     },
     {
       "text": "%md\n## Write back stream Louvain",
       "user": "anonymous",
-      "dateUpdated": "2019-12-07 11:50:17.390",
+      "dateUpdated": "2020-01-01 11:19:45.073",
       "config": {
-        "colWidth": 12.0,
-        "fontSize": 9.0,
-        "enabled": true,
-        "results": {},
+        "tableHide": false,
         "editorSetting": {
           "editOnDblClick": true,
           "language": "markdown",
           "completionSupport": false
         },
+        "colWidth": 12.0,
         "editorMode": "ace/mode/markdown",
+        "fontSize": 9.0,
         "editorHide": true,
-        "tableHide": false
+        "results": {},
+        "enabled": true
       },
       "settings": {
         "params": {},
@@ -213,27 +209,26 @@
         ]
       },
       "apps": [],
-      "jobName": "paragraph_1575719406172_1653121868",
+      "jobName": "paragraph_1577877585072_1182672134",
       "id": "20191207-115006_1527017338",
-      "dateCreated": "2019-12-07 11:50:06.173",
-      "dateStarted": "2019-12-07 11:50:17.412",
-      "dateFinished": "2019-12-07 11:50:17.440",
-      "status": "FINISHED",
+      "dateCreated": "2020-01-01 11:19:45.072",
+      "status": "READY",
+      "errorMessage": "",
       "progressUpdateIntervalMs": 500
     },
     {
       "text": "%neo4j\nCALL algo.louvain.stream(\"Library\", \"DEPENDS_ON\", {includeIntermediateCommunities:true})\nYIELD nodeId, communities\nWITH algo.getNodeById(nodeId) AS node, communities\nSET node.communities \u003d communities\n",
       "user": "anonymous",
-      "dateUpdated": "2019-12-07 11:49:38.160",
+      "dateUpdated": "2020-01-01 11:19:45.073",
       "config": {
-        "colWidth": 12.0,
-        "fontSize": 9.0,
-        "enabled": true,
-        "results": {},
         "editorSetting": {
           "editOnDblClick": false
         },
-        "editorMode": "ace/mode/undefined"
+        "colWidth": 12.0,
+        "editorMode": "ace/mode/undefined",
+        "fontSize": 9.0,
+        "results": {},
+        "enabled": true
       },
       "settings": {
         "params": {},
@@ -244,31 +239,30 @@
         "msg": []
       },
       "apps": [],
-      "jobName": "paragraph_1575719342887_1582036030",
+      "jobName": "paragraph_1577877585073_1823546242",
       "id": "20191207-114902_652917899",
-      "dateCreated": "2019-12-07 11:49:02.887",
-      "dateStarted": "2019-12-07 11:49:38.213",
-      "dateFinished": "2019-12-07 11:49:38.406",
-      "status": "FINISHED",
+      "dateCreated": "2020-01-01 11:19:45.073",
+      "status": "READY",
+      "errorMessage": "",
       "progressUpdateIntervalMs": 500
     },
     {
       "text": "%md\n## Read first layer",
       "user": "anonymous",
-      "dateUpdated": "2019-12-07 12:00:54.981",
+      "dateUpdated": "2020-01-01 11:19:45.073",
       "config": {
-        "colWidth": 12.0,
-        "fontSize": 9.0,
-        "enabled": true,
-        "results": {},
+        "tableHide": false,
         "editorSetting": {
           "editOnDblClick": true,
           "language": "markdown",
           "completionSupport": false
         },
+        "colWidth": 12.0,
         "editorMode": "ace/mode/markdown",
+        "fontSize": 9.0,
         "editorHide": true,
-        "tableHide": false
+        "results": {},
+        "enabled": true
       },
       "settings": {
         "params": {},
@@ -284,22 +278,24 @@
         ]
       },
       "apps": [],
-      "jobName": "paragraph_1575719427189_-664475215",
+      "jobName": "paragraph_1577877585073_885040226",
       "id": "20191207-115027_1484743918",
-      "dateCreated": "2019-12-07 11:50:27.189",
-      "dateStarted": "2019-12-07 12:00:54.975",
-      "dateFinished": "2019-12-07 12:00:55.001",
-      "status": "FINISHED",
+      "dateCreated": "2020-01-01 11:19:45.073",
+      "status": "READY",
+      "errorMessage": "",
       "progressUpdateIntervalMs": 500
     },
     {
       "text": "%neo4j\nMATCH (l:Library)\nRETURN l.communities[0] AS community, collect(l.id) AS libraries\nORDER BY size(libraries) DESC\n",
       "user": "anonymous",
-      "dateUpdated": "2019-12-07 11:49:51.953",
+      "dateUpdated": "2020-01-01 11:19:45.074",
       "config": {
+        "editorSetting": {
+          "editOnDblClick": false
+        },
         "colWidth": 12.0,
+        "editorMode": "ace/mode/undefined",
         "fontSize": 9.0,
-        "enabled": true,
         "results": {
           "0": {
             "graph": {
@@ -330,10 +326,7 @@
             }
           }
         },
-        "editorSetting": {
-          "editOnDblClick": false
-        },
-        "editorMode": "ace/mode/undefined"
+        "enabled": true
       },
       "settings": {
         "params": {},
@@ -349,31 +342,30 @@
         ]
       },
       "apps": [],
-      "jobName": "paragraph_1575719378160_1234785593",
+      "jobName": "paragraph_1577877585073_-1307694525",
       "id": "20191207-114938_1607926124",
-      "dateCreated": "2019-12-07 11:49:38.160",
-      "dateStarted": "2019-12-07 11:49:51.059",
-      "dateFinished": "2019-12-07 11:49:51.256",
-      "status": "FINISHED",
+      "dateCreated": "2020-01-01 11:19:45.073",
+      "status": "READY",
+      "errorMessage": "",
       "progressUpdateIntervalMs": 500
     },
     {
       "text": "%md\n## Read second layer",
       "user": "anonymous",
-      "dateUpdated": "2019-12-07 11:50:50.738",
+      "dateUpdated": "2020-01-01 11:19:45.074",
       "config": {
-        "colWidth": 12.0,
-        "fontSize": 9.0,
-        "enabled": true,
-        "results": {},
+        "tableHide": false,
         "editorSetting": {
           "editOnDblClick": true,
           "language": "markdown",
           "completionSupport": false
         },
+        "colWidth": 12.0,
         "editorMode": "ace/mode/markdown",
+        "fontSize": 9.0,
         "editorHide": true,
-        "tableHide": false
+        "results": {},
+        "enabled": true
       },
       "settings": {
         "params": {},
@@ -389,22 +381,24 @@
         ]
       },
       "apps": [],
-      "jobName": "paragraph_1575719443149_-883806526",
+      "jobName": "paragraph_1577877585074_-927938125",
       "id": "20191207-115043_741993173",
-      "dateCreated": "2019-12-07 11:50:43.149",
-      "dateStarted": "2019-12-07 11:50:50.752",
-      "dateFinished": "2019-12-07 11:50:50.794",
-      "status": "FINISHED",
+      "dateCreated": "2020-01-01 11:19:45.074",
+      "status": "READY",
+      "errorMessage": "",
       "progressUpdateIntervalMs": 500
     },
     {
       "text": "%neo4j\nMATCH (l:Library)\nRETURN l.communities[-1] AS community, collect(l.id) AS libraries\nORDER BY size(libraries) DESC\n",
       "user": "anonymous",
-      "dateUpdated": "2019-12-07 11:49:59.473",
+      "dateUpdated": "2020-01-01 11:19:45.074",
       "config": {
+        "editorSetting": {
+          "editOnDblClick": false
+        },
         "colWidth": 12.0,
+        "editorMode": "ace/mode/undefined",
         "fontSize": 9.0,
-        "enabled": true,
         "results": {
           "0": {
             "graph": {
@@ -435,10 +429,7 @@
             }
           }
         },
-        "editorSetting": {
-          "editOnDblClick": false
-        },
-        "editorMode": "ace/mode/undefined"
+        "enabled": true
       },
       "settings": {
         "params": {},
@@ -454,38 +445,22 @@
         ]
       },
       "apps": [],
-      "jobName": "paragraph_1575719391006_-369458169",
+      "jobName": "paragraph_1577877585074_-2005784342",
       "id": "20191207-114951_2101869524",
-      "dateCreated": "2019-12-07 11:49:51.007",
-      "dateStarted": "2019-12-07 11:49:58.618",
-      "dateFinished": "2019-12-07 11:49:58.692",
-      "status": "FINISHED",
-      "progressUpdateIntervalMs": 500
-    },
-    {
-      "text": "%neo4j\n",
-      "user": "anonymous",
-      "dateUpdated": "2019-12-07 11:49:58.513",
-      "config": {},
-      "settings": {
-        "params": {},
-        "forms": {}
-      },
-      "apps": [],
-      "jobName": "paragraph_1575719398504_1553220154",
-      "id": "20191207-114958_2002234398",
-      "dateCreated": "2019-12-07 11:49:58.505",
+      "dateCreated": "2020-01-01 11:19:45.074",
       "status": "READY",
+      "errorMessage": "",
       "progressUpdateIntervalMs": 500
     }
   ],
-  "name": "Community detection/Louvain",
-  "id": "2EUXNT736",
+  "name": "Community detection/Louvain/Neo4j",
+  "id": "2EVJ1P6NU",
   "noteParams": {},
   "noteForms": {},
   "angularObjects": {
     "md:shared_process": [],
-    "neo4j:shared_process": []
+    "neo4j:shared_process": [],
+    "spark:shared_process": []
   },
   "config": {
     "isZeppelinNotebookCronEnable": false

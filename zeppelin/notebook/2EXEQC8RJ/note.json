@@ -220,7 +220,7 @@
       "progressUpdateIntervalMs": 500
     }
   ],
-  "name": "Centrality/Degree",
+  "name": "Centrality/Degree/Neo4j",
   "id": "2EXEQC8RJ",
   "noteParams": {},
   "noteForms": {},

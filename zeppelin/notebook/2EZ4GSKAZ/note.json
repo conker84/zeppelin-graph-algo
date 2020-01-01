@@ -1,0 +1,93 @@
+{
+  "paragraphs": [
+    {
+      "text": "// tag::neo4j-import-nodes[]\nWITH \"https://github.com/neo4j-graph-analytics/book/raw/master/data/transport-nodes.csv\"\nAS uri\nLOAD CSV WITH HEADERS FROM uri  AS row\nMERGE (place:Place {id:row.id})\nSET place.latitude \u003d toFloat(row.latitude),\n    place.longitude \u003d toFloat(row.latitude),\n    place.population \u003d toInteger(row.population)\n// end::neo4j-import-nodes[]\n",
+      "user": "anonymous",
+      "dateUpdated": "2020-01-01 18:59:21.464",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "editOnDblClick": false
+        },
+        "editorMode": "ace/mode/undefined"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": []
+      },
+      "apps": [],
+      "jobName": "paragraph_1577905158280_-622487282",
+      "id": "20200101-185918_1723596286",
+      "dateCreated": "2020-01-01 18:59:18.280",
+      "dateStarted": "2020-01-01 18:59:21.486",
+      "dateFinished": "2020-01-01 18:59:25.292",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "// tag::neo4j-import-relationships[]\nWITH \"https://github.com/neo4j-graph-analytics/book/raw/master/data/transport-relationships.csv\"\nAS uri\nLOAD CSV WITH HEADERS FROM uri AS row\nMATCH (origin:Place {id: row.src})\nMATCH (destination:Place {id: row.dst})\nMERGE (origin)-[:EROAD {distance: toInteger(row.cost)}]-\u003e(destination)\n\n// end::neo4j-import-relationships[]\n",
+      "user": "anonymous",
+      "dateUpdated": "2020-01-01 18:59:30.482",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "editOnDblClick": false
+        },
+        "editorMode": "ace/mode/undefined"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": []
+      },
+      "apps": [],
+      "jobName": "paragraph_1577905161464_-679092108",
+      "id": "20200101-185921_1885909668",
+      "dateCreated": "2020-01-01 18:59:21.464",
+      "dateStarted": "2020-01-01 18:59:30.505",
+      "dateFinished": "2020-01-01 18:59:31.715",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "user": "anonymous",
+      "config": {},
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "jobName": "paragraph_1577905170482_-1910942363",
+      "id": "20200101-185930_854950597",
+      "dateCreated": "2020-01-01 18:59:30.483",
+      "status": "READY",
+      "progressUpdateIntervalMs": 500
+    }
+  ],
+  "name": "Path finding/Neo4j import",
+  "id": "2EZ4GSKAZ",
+  "noteParams": {},
+  "noteForms": {},
+  "angularObjects": {
+    "md:shared_process": [],
+    "neo4j:shared_process": [],
+    "spark:shared_process": []
+  },
+  "config": {
+    "isZeppelinNotebookCronEnable": false
+  },
+  "info": {}
+}

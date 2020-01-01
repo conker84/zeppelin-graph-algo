@@ -1388,6 +1388,8 @@
       "option": {
         "remote": true,
         "port": -1,
+        "perNote": "shared",
+        "perUser": "shared",
         "isExistingProcess": false,
         "setPermission": false,
         "owners": [],
@@ -1624,6 +1626,29 @@
     }
   },
   "interpreterBindings": {
+    "2EZ4GSKAZ": [
+      "neo4j",
+      "spark",
+      "md",
+      "angular",
+      "sh",
+      "livy",
+      "alluxio",
+      "file",
+      "flink",
+      "python",
+      "ignite",
+      "lens",
+      "cassandra",
+      "kylin",
+      "elasticsearch",
+      "jdbc",
+      "hbase",
+      "bigquery",
+      "pig",
+      "groovy",
+      "sap"
+    ],
     "2EWEVG83X": [
       "spark",
       "md",
@@ -1647,28 +1672,8 @@
       "neo4j",
       "sap"
     ],
-    "2EUXNT736": [
-      "neo4j",
-      "spark",
-      "md",
-      "angular",
-      "sh",
-      "livy",
-      "alluxio",
-      "file",
-      "flink",
-      "python",
-      "ignite",
-      "lens",
-      "cassandra",
-      "kylin",
-      "elasticsearch",
-      "jdbc",
-      "hbase",
-      "bigquery",
-      "pig",
-      "groovy",
-      "sap"
+    "2EVMJ5PJC": [
+      "spark"
     ],
     "2EUU9CT3C": [
       "neo4j",
@@ -1694,28 +1699,8 @@
       "sap"
     ],
     "2DMJBRQPS": [],
-    "2DQHAR7VK": [
-      "spark",
-      "md",
-      "angular",
-      "sh",
-      "livy",
-      "alluxio",
-      "file",
-      "flink",
-      "python",
-      "ignite",
-      "lens",
-      "cassandra",
-      "kylin",
-      "elasticsearch",
-      "jdbc",
-      "hbase",
-      "bigquery",
-      "pig",
-      "groovy",
-      "neo4j",
-      "sap"
+    "2EWK7AKFQ": [
+      "spark"
     ],
     "2EUEDJ3R6": [
       "spark",
@@ -1740,7 +1725,79 @@
       "neo4j",
       "sap"
     ],
+    "2EXTYPK53": [
+      "spark"
+    ],
     "2EXEQC8RJ": [
+      "spark",
+      "md",
+      "angular",
+      "sh",
+      "livy",
+      "alluxio",
+      "file",
+      "flink",
+      "python",
+      "ignite",
+      "lens",
+      "cassandra",
+      "kylin",
+      "elasticsearch",
+      "jdbc",
+      "hbase",
+      "bigquery",
+      "pig",
+      "groovy",
+      "neo4j",
+      "sap"
+    ],
+    "2EYQ66NNH": [
+      "neo4j",
+      "spark",
+      "md",
+      "angular",
+      "sh",
+      "livy",
+      "alluxio",
+      "file",
+      "flink",
+      "python",
+      "ignite",
+      "lens",
+      "cassandra",
+      "kylin",
+      "elasticsearch",
+      "jdbc",
+      "hbase",
+      "bigquery",
+      "pig",
+      "groovy",
+      "sap"
+    ],
+    "2EWCD4Q9X": [
+      "spark",
+      "md",
+      "angular",
+      "sh",
+      "livy",
+      "alluxio",
+      "file",
+      "flink",
+      "python",
+      "ignite",
+      "lens",
+      "cassandra",
+      "kylin",
+      "elasticsearch",
+      "jdbc",
+      "hbase",
+      "bigquery",
+      "pig",
+      "groovy",
+      "neo4j",
+      "sap"
+    ],
+    "2EYQBRAT1": [
       "spark",
       "md",
       "angular",
@@ -1786,7 +1843,8 @@
       "neo4j",
       "sap"
     ],
-    "2DQXKF16G": [
+    "2EU4ZXFE3": [
+      "neo4j",
       "spark",
       "md",
       "angular",
@@ -1806,10 +1864,9 @@
       "bigquery",
       "pig",
       "groovy",
-      "neo4j",
       "sap"
     ],
-    "2EU4ZXFE3": [
+    "2EWRRUE4E": [
       "neo4j",
       "spark",
       "md",
@@ -1856,6 +1913,52 @@
       "groovy",
       "sap"
     ],
+    "2EYUXH8U3": [
+      "spark",
+      "md",
+      "angular",
+      "sh",
+      "livy",
+      "alluxio",
+      "file",
+      "flink",
+      "python",
+      "ignite",
+      "lens",
+      "cassandra",
+      "kylin",
+      "elasticsearch",
+      "jdbc",
+      "hbase",
+      "bigquery",
+      "pig",
+      "groovy",
+      "neo4j",
+      "sap"
+    ],
+    "2EX6JWPAG": [
+      "neo4j",
+      "spark",
+      "md",
+      "angular",
+      "sh",
+      "livy",
+      "alluxio",
+      "file",
+      "flink",
+      "python",
+      "ignite",
+      "lens",
+      "cassandra",
+      "kylin",
+      "elasticsearch",
+      "jdbc",
+      "hbase",
+      "bigquery",
+      "pig",
+      "groovy",
+      "sap"
+    ],
     "2EXB3TVAE": [
       "neo4j",
       "spark",
@@ -1879,7 +1982,8 @@
       "groovy",
       "sap"
     ],
-    "2DHCVSHV5": [
+    "2EXP8M845": [
+      "neo4j",
       "spark",
       "md",
       "angular",
@@ -1899,7 +2003,32 @@
       "bigquery",
       "pig",
       "groovy",
+      "sap"
+    ],
+    "2EY4J4EKU": [
+      "spark"
+    ],
+    "2EXZ2FFEG": [
       "neo4j",
+      "spark",
+      "md",
+      "angular",
+      "sh",
+      "livy",
+      "alluxio",
+      "file",
+      "flink",
+      "python",
+      "ignite",
+      "lens",
+      "cassandra",
+      "kylin",
+      "elasticsearch",
+      "jdbc",
+      "hbase",
+      "bigquery",
+      "pig",
+      "groovy",
       "sap"
     ],
     "2EW6YXEM1": [
@@ -1949,7 +2078,39 @@
       "sap"
     ],
     "2DNC8PD4M": [],
-    "2EWBPX3F9": []
+    "2EWBPX3F9": [],
+    "2EVK2MZ36": [
+      "spark"
+    ],
+    "2EX73418D": [
+      "spark"
+    ],
+    "2EYCYMWJJ": [
+      "neo4j",
+      "spark",
+      "md",
+      "angular",
+      "sh",
+      "livy",
+      "alluxio",
+      "file",
+      "flink",
+      "python",
+      "ignite",
+      "lens",
+      "cassandra",
+      "kylin",
+      "elasticsearch",
+      "jdbc",
+      "hbase",
+      "bigquery",
+      "pig",
+      "groovy",
+      "sap"
+    ],
+    "2EY9G1KBV": [
+      "spark"
+    ]
   },
   "interpreterRepositories": [
     {

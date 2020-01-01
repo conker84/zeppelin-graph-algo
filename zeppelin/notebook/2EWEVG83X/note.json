@@ -439,7 +439,7 @@
       "progressUpdateIntervalMs": 500
     }
   ],
-  "name": "Centrality/Closeness",
+  "name": "Centrality/Closeness/Neo4j",
   "id": "2EWEVG83X",
   "noteParams": {},
   "noteForms": {},

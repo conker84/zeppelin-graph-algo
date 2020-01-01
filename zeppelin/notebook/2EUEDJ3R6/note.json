@@ -333,7 +333,7 @@
       "progressUpdateIntervalMs": 500
     }
   ],
-  "name": "Centrality/Betweenness",
+  "name": "Centrality/Betweenness/Neo4j",
   "id": "2EUEDJ3R6",
   "noteParams": {},
   "noteForms": {},

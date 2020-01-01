@@ -1,0 +1,189 @@
+{
+  "paragraphs": [
+    {
+      "text": "%pyspark\n# // tag::imports[]\nfrom graphframes import GraphFrame\n# // end::imports[]\n\n\n# // tag::load-graph-frame[]\ndef create_software_graph():\n    nodes \u003d spark.read.csv(\"spark-warehouse/sw-nodes.csv\", header\u003dTrue)\n    relationships \u003d spark.read.csv(\"spark-warehouse/sw-relationships.csv\", header\u003dTrue)\n    return GraphFrame(nodes, relationships)\n# // end::load-graph-frame[]\n",
+      "user": "anonymous",
+      "dateUpdated": "2020-01-01 15:41:11.698",
+      "config": {
+        "editorSetting": {
+          "language": "python",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "colWidth": 12.0,
+        "editorMode": "ace/mode/python",
+        "fontSize": 9.0,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": []
+      },
+      "apps": [],
+      "jobName": "paragraph_1577893271697_1319317277",
+      "id": "20200101-112344_1237781185",
+      "dateCreated": "2020-01-01 15:41:11.697",
+      "status": "READY",
+      "errorMessage": "",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%pyspark\nfrom pyspark.sql import functions as F",
+      "user": "anonymous",
+      "dateUpdated": "2020-01-01 15:41:11.699",
+      "config": {
+        "editorSetting": {
+          "language": "python",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "colWidth": 12.0,
+        "editorMode": "ace/mode/python",
+        "fontSize": 9.0,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": []
+      },
+      "apps": [],
+      "jobName": "paragraph_1577893271698_1909914402",
+      "id": "20200101-112347_55482158",
+      "dateCreated": "2020-01-01 15:41:11.698",
+      "status": "READY",
+      "errorMessage": "",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%pyspark\ng \u003d create_software_graph()",
+      "user": "anonymous",
+      "dateUpdated": "2020-01-01 15:41:11.700",
+      "config": {
+        "editorSetting": {
+          "language": "python",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "colWidth": 12.0,
+        "editorMode": "ace/mode/python",
+        "fontSize": 9.0,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": []
+      },
+      "apps": [],
+      "jobName": "paragraph_1577893271699_2048306199",
+      "id": "20200101-112422_199127971",
+      "dateCreated": "2020-01-01 15:41:11.699",
+      "status": "READY",
+      "errorMessage": "",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%pyspark\nresult \u003d g.triangleCount()\n(result.sort(\"count\", ascending\u003dFalse)\n .filter(\u0027count \u003e 0\u0027)\n .show())\n\n\n",
+      "user": "anonymous",
+      "dateUpdated": "2020-01-01 15:41:28.866",
+      "config": {
+        "editorSetting": {
+          "language": "python",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "colWidth": 12.0,
+        "editorMode": "ace/mode/python",
+        "fontSize": 9.0,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "+-----+---------------+\n|count|             id|\n+-----+---------------+\n|    1|            six|\n|    1|      ipykernel|\n|    1|        jupyter|\n|    1|python-dateutil|\n|    1|     matplotlib|\n|    1|    jpy-console|\n+-----+---------------+\n\n"
+          }
+        ]
+      },
+      "runtimeInfos": {
+        "jobUrl": {
+          "propertyName": "jobUrl",
+          "label": "SPARK JOB",
+          "tooltip": "View in Spark web UI",
+          "group": "spark",
+          "values": [
+            "http://172.25.0.3:4040/jobs/job?id\u003d68",
+            "http://172.25.0.3:4040/jobs/job?id\u003d69",
+            "http://172.25.0.3:4040/jobs/job?id\u003d70",
+            "http://172.25.0.3:4040/jobs/job?id\u003d71",
+            "http://172.25.0.3:4040/jobs/job?id\u003d72",
+            "http://172.25.0.3:4040/jobs/job?id\u003d73",
+            "http://172.25.0.3:4040/jobs/job?id\u003d74",
+            "http://172.25.0.3:4040/jobs/job?id\u003d75"
+          ],
+          "interpreterSettingId": "spark"
+        }
+      },
+      "apps": [],
+      "jobName": "paragraph_1577893271700_507662395",
+      "id": "20200101-112443_1061570403",
+      "dateCreated": "2020-01-01 15:41:11.700",
+      "dateStarted": "2020-01-01 15:41:28.904",
+      "dateFinished": "2020-01-01 15:41:36.045",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%pyspark\n",
+      "user": "anonymous",
+      "dateUpdated": "2020-01-01 15:41:11.701",
+      "config": {},
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "jobName": "paragraph_1577893271701_-994010307",
+      "id": "20200101-153518_1153514066",
+      "dateCreated": "2020-01-01 15:41:11.701",
+      "status": "READY",
+      "errorMessage": "",
+      "progressUpdateIntervalMs": 500
+    }
+  ],
+  "name": "Community detection/Triangles/Spark",
+  "id": "2EWK7AKFQ",
+  "noteParams": {},
+  "noteForms": {},
+  "angularObjects": {
+    "spark:shared_process": []
+  },
+  "config": {
+    "isZeppelinNotebookCronEnable": false
+  },
+  "info": {}
+}

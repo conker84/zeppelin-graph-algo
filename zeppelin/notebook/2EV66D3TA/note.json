@@ -225,7 +225,7 @@
       "progressUpdateIntervalMs": 500
     }
   ],
-  "name": "Centrality/Pagerank",
+  "name": "Centrality/Pagerank/Neo4j",
   "id": "2EV66D3TA",
   "noteParams": {},
   "noteForms": {},

@@ -1,0 +1,200 @@
+{
+  "paragraphs": [
+    {
+      "text": "%spark.pyspark\nimport networkx as nx\nimport community\n",
+      "user": "anonymous",
+      "dateUpdated": "2020-01-01 11:18:31.587",
+      "config": {
+        "editorSetting": {
+          "editOnDblClick": false,
+          "language": "python",
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "colWidth": 12.0,
+        "editorMode": "ace/mode/python",
+        "fontSize": 9.0,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": []
+      },
+      "apps": [],
+      "jobName": "paragraph_1577877511586_-1400613408",
+      "id": "20191207-114958_2002234398",
+      "dateCreated": "2020-01-01 11:18:31.586",
+      "status": "READY",
+      "errorMessage": "",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%spark.pyspark\n\nG \u003d nx.Graph()\n\nG.add_nodes_from([\n    \"six\",\n    \"pandas\",\n    \"numpy\",\n    \"python-dateutil\",\n    \"pytz\",\n    \"pyspark\",\n    \"matplotlib\",\n    \"spacy\",\n    \"py4j\",\n    \"jupyter\",\n    \"jpy-console\",\n    \"nbconvert\",\n    \"ipykernel\",\n    \"jpy-client\",\n    \"jpy-core\"\n])\n\nG.add_edges_from([\n    (\"pandas\", \"numpy\"),\n    (\"pandas\", \"pytz\"),\n    (\"pandas\", \"python-dateutil\"),\n    (\"python-dateutil\", \"six\"),\n    (\"pyspark\", \"py4j\"),\n    (\"matplotlib\", \"numpy\"),\n    (\"matplotlib\", \"python-dateutil\"),\n    (\"matplotlib\", \"six\"),\n    (\"matplotlib\", \"pytz\"),\n    (\"spacy\", \"six\"),\n    (\"spacy\", \"numpy\"),\n    (\"jupyter\", \"nbconvert\"),\n    (\"jupyter\", \"ipykernel\"),\n    (\"jupyter\", \"jpy-console\"),\n    (\"jpy-console\", \"jpy-client\"),\n    (\"jpy-console\", \"ipykernel\"),\n    (\"jpy-client\", \"jpy-core\"),\n    (\"nbconvert\", \"jpy-core\"),\n])\n",
+      "user": "anonymous",
+      "dateUpdated": "2020-01-01 11:18:31.589",
+      "config": {
+        "editorSetting": {
+          "editOnDblClick": false,
+          "language": "python",
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "colWidth": 12.0,
+        "editorMode": "ace/mode/python",
+        "fontSize": 9.0,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": []
+      },
+      "apps": [],
+      "jobName": "paragraph_1577877511588_-398776769",
+      "id": "20191231-150059_698932612",
+      "dateCreated": "2020-01-01 11:18:31.588",
+      "status": "READY",
+      "errorMessage": "",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%spark.pyspark\nd \u003d community.generate_dendrogram(G)",
+      "user": "anonymous",
+      "dateUpdated": "2020-01-01 11:18:31.590",
+      "config": {
+        "editorSetting": {
+          "editOnDblClick": false
+        },
+        "colWidth": 12.0,
+        "editorMode": "ace/mode/undefined",
+        "fontSize": 9.0,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": []
+      },
+      "apps": [],
+      "jobName": "paragraph_1577877511589_-1698307095",
+      "id": "20191231-150312_797171085",
+      "dateCreated": "2020-01-01 11:18:31.589",
+      "status": "READY",
+      "errorMessage": "",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%spark.pyspark\nl0 \u003d community.partition_at_level(d, 0)\nprint(l0)\nprint(\"l0 modularity: \" + str(community.modularity(l0, G)))\n",
+      "user": "anonymous",
+      "dateUpdated": "2020-01-01 11:18:31.590",
+      "config": {
+        "editorSetting": {
+          "editOnDblClick": false
+        },
+        "colWidth": 12.0,
+        "editorMode": "ace/mode/undefined",
+        "fontSize": 9.0,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "{\u0027spacy\u0027: 0, \u0027six\u0027: 0, \u0027jupyter\u0027: 1, \u0027jpy-core\u0027: 2, \u0027matplotlib\u0027: 0, \u0027python-dateutil\u0027: 0, \u0027jpy-client\u0027: 2, \u0027ipykernel\u0027: 1, \u0027jpy-console\u0027: 1, \u0027numpy\u0027: 0, \u0027nbconvert\u0027: 2, \u0027pyspark\u0027: 3, \u0027pandas\u0027: 4, \u0027pytz\u0027: 4, \u0027py4j\u0027: 3}\nl0 modularity: 0.449074074074074\n"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1577877511590_1055020055",
+      "id": "20191231-150323_1427426760",
+      "dateCreated": "2020-01-01 11:18:31.590",
+      "status": "READY",
+      "errorMessage": "",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%spark.pyspark\nl1 \u003d community.partition_at_level(d, 1)\nprint(l1)\nprint(\"l1 modularity: \" + str(community.modularity(l1, G)))\n",
+      "user": "anonymous",
+      "dateUpdated": "2020-01-01 11:18:31.592",
+      "config": {
+        "editorSetting": {
+          "editOnDblClick": false
+        },
+        "colWidth": 12.0,
+        "editorMode": "ace/mode/undefined",
+        "fontSize": 9.0,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "{\u0027spacy\u0027: 0, \u0027six\u0027: 0, \u0027jupyter\u0027: 1, \u0027jpy-core\u0027: 1, \u0027matplotlib\u0027: 0, \u0027python-dateutil\u0027: 0, \u0027jpy-client\u0027: 1, \u0027ipykernel\u0027: 1, \u0027jpy-console\u0027: 1, \u0027numpy\u0027: 0, \u0027nbconvert\u0027: 1, \u0027pyspark\u0027: 2, \u0027pandas\u0027: 0, \u0027pytz\u0027: 0, \u0027py4j\u0027: 2}\nl1 modularity: 0.537037037037037\n"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1577877511591_-1155870381",
+      "id": "20191231-150336_1453403831",
+      "dateCreated": "2020-01-01 11:18:31.591",
+      "status": "READY",
+      "errorMessage": "",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%spark.pyspark\n",
+      "user": "anonymous",
+      "dateUpdated": "2020-01-01 11:18:31.593",
+      "config": {},
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "jobName": "paragraph_1577877511592_476418284",
+      "id": "20191231-150352_2108728583",
+      "dateCreated": "2020-01-01 11:18:31.592",
+      "status": "READY",
+      "errorMessage": "",
+      "progressUpdateIntervalMs": 500
+    }
+  ],
+  "name": "Community detection/Louvain/Spark",
+  "id": "2EYECKESC",
+  "noteParams": {},
+  "noteForms": {},
+  "angularObjects": {
+    "md:shared_process": [],
+    "neo4j:shared_process": [],
+    "spark:shared_process": []
+  },
+  "config": {
+    "isZeppelinNotebookCronEnable": false
+  },
+  "info": {}
+}

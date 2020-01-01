@@ -1,0 +1,67 @@
+{
+  "paragraphs": [
+    {
+      "text": "%pyspark\n# // tag::imports[]\nfrom pyspark.sql.types import *\nfrom graphframes import *\n# // end::imports[]\n\n\n# // tag::load-graph-frame[]\ndef create_transport_graph():\n    node_fields \u003d [\n        StructField(\"id\", StringType(), True),\n        StructField(\"latitude\", FloatType(), True),\n        StructField(\"longitude\", FloatType(), True),\n        StructField(\"population\", IntegerType(), True)\n    ]\n    nodes \u003d spark.read.csv(\"spark-warehouse/transport-nodes.csv\", header\u003dTrue,\n                           schema\u003dStructType(node_fields))\n\n    rels \u003d spark.read.csv(\"spark-warehouse/transport-relationships.csv\", header\u003dTrue)\n    reversed_rels \u003d (rels.withColumn(\"newSrc\", rels.dst)\n                     .withColumn(\"newDst\", rels.src)\n                     .drop(\"dst\", \"src\")\n                     .withColumnRenamed(\"newSrc\", \"src\")\n                     .withColumnRenamed(\"newDst\", \"dst\")\n                     .select(\"src\", \"dst\", \"relationship\", \"cost\"))\n\n    relationships \u003d rels.union(reversed_rels)\n\n    return GraphFrame(nodes, relationships)\n# // end::load-graph-frame[]\n",
+      "user": "anonymous",
+      "dateUpdated": "2020-01-01 19:10:04.532",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "python",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "editorMode": "ace/mode/python"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": []
+      },
+      "apps": [],
+      "jobName": "paragraph_1577905631436_-1236416817",
+      "id": "20200101-190711_1325655505",
+      "dateCreated": "2020-01-01 19:07:11.436",
+      "dateStarted": "2020-01-01 19:10:04.552",
+      "dateFinished": "2020-01-01 19:10:04.563",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%pyspark\n",
+      "user": "anonymous",
+      "dateUpdated": "2020-01-01 19:07:16.395",
+      "config": {},
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "jobName": "paragraph_1577905636390_1626526243",
+      "id": "20200101-190716_1681126268",
+      "dateCreated": "2020-01-01 19:07:16.391",
+      "status": "READY",
+      "progressUpdateIntervalMs": 500
+    }
+  ],
+  "name": "Path finding/Spark import",
+  "id": "2EWCD4Q9X",
+  "noteParams": {},
+  "noteForms": {},
+  "angularObjects": {
+    "md:shared_process": [],
+    "neo4j:shared_process": [],
+    "spark:shared_process": []
+  },
+  "config": {
+    "isZeppelinNotebookCronEnable": false
+  },
+  "info": {}
+}

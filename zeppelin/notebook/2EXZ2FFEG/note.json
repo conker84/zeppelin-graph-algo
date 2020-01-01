@@ -1,0 +1,97 @@
+{
+  "paragraphs": [
+    {
+      "text": "MATCH (source:Place {id: \"London\"})\nCALL algo.randomWalk.stream(id(source), 5, 1)\nYIELD nodeIds\nUNWIND algo.getNodesById(nodeIds) AS place\nRETURN place.id AS place\n\n\n",
+      "user": "anonymous",
+      "dateUpdated": "2020-01-01 19:02:05.846",
+      "config": {
+        "editorSetting": {
+          "editOnDblClick": false
+        },
+        "colWidth": 12.0,
+        "editorMode": "ace/mode/undefined",
+        "fontSize": 9.0,
+        "results": {
+          "0": {
+            "graph": {
+              "mode": "table",
+              "height": 300.0,
+              "optionOpen": false,
+              "setting": {
+                "table": {
+                  "tableGridState": {},
+                  "tableColumnTypeState": {
+                    "names": {
+                      "place": "string"
+                    },
+                    "updated": false
+                  },
+                  "tableOptionSpecHash": "[{\"name\":\"useFilter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable filter for columns\"},{\"name\":\"showPagination\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable pagination for better navigation\"},{\"name\":\"showAggregationFooter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable a footer for displaying aggregated values\"}]",
+                  "tableOptionValue": {
+                    "useFilter": false,
+                    "showPagination": false,
+                    "showAggregationFooter": false
+                  },
+                  "updated": false,
+                  "initialized": false
+                }
+              },
+              "commonSetting": {}
+            }
+          }
+        },
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TABLE",
+            "data": "place\n\"London\"\n\"Doncaster\"\n\"Immingham\"\n\"Amsterdam\"\n\"Utrecht\"\n\"Amsterdam\"\n"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1577905321437_483895676",
+      "id": "20200101-190009_1220471711",
+      "dateCreated": "2020-01-01 19:02:01.437",
+      "dateStarted": "2020-01-01 19:02:05.550",
+      "dateFinished": "2020-01-01 19:02:05.733",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "user": "anonymous",
+      "dateUpdated": "2020-01-01 19:02:01.439",
+      "config": {},
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "jobName": "paragraph_1577905321438_-771728294",
+      "id": "20200101-190028_1585661323",
+      "dateCreated": "2020-01-01 19:02:01.438",
+      "status": "READY",
+      "errorMessage": "",
+      "progressUpdateIntervalMs": 500
+    }
+  ],
+  "name": "Path finding/Randomwalk/Neo4j",
+  "id": "2EXZ2FFEG",
+  "noteParams": {},
+  "noteForms": {},
+  "angularObjects": {
+    "md:shared_process": [],
+    "neo4j:shared_process": [],
+    "spark:shared_process": []
+  },
+  "config": {
+    "isZeppelinNotebookCronEnable": false
+  },
+  "info": {}
+}

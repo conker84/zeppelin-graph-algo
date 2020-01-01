@@ -1,0 +1,184 @@
+{
+  "paragraphs": [
+    {
+      "text": "%pyspark\nfrom graphframes import *",
+      "user": "anonymous",
+      "dateUpdated": "2020-01-01 19:07:59.988",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "python",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "editorMode": "ace/mode/python"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": []
+      },
+      "apps": [],
+      "jobName": "paragraph_1577905659929_34971362",
+      "id": "20200101-190739_803724851",
+      "dateCreated": "2020-01-01 19:07:39.929",
+      "dateStarted": "2020-01-01 19:08:00.014",
+      "dateFinished": "2020-01-01 19:08:00.022",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%pyspark\ng \u003d create_transport_graph()",
+      "user": "anonymous",
+      "dateUpdated": "2020-01-01 19:10:12.757",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "python",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "editorMode": "ace/mode/python"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": []
+      },
+      "runtimeInfos": {
+        "jobUrl": {
+          "propertyName": "jobUrl",
+          "label": "SPARK JOB",
+          "tooltip": "View in Spark web UI",
+          "group": "spark",
+          "values": [
+            "http://172.25.0.3:4040/jobs/job?id\u003d18"
+          ],
+          "interpreterSettingId": "spark"
+        }
+      },
+      "apps": [],
+      "jobName": "paragraph_1577905673141_1952546536",
+      "id": "20200101-190753_129637672",
+      "dateCreated": "2020-01-01 19:07:53.141",
+      "dateStarted": "2020-01-01 19:10:12.784",
+      "dateFinished": "2020-01-01 19:10:12.963",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%pyspark\nresult \u003d g.shortestPaths([\"Colchester\", \"Immingham\", \"Hoek van Holland\"])\nresult.sort([\"id\"]).select(\"id\", \"distances\").show(truncate\u003dFalse)\n",
+      "user": "anonymous",
+      "dateUpdated": "2020-01-01 19:10:36.916",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "python",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "editorMode": "ace/mode/python"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "+----------------+-----------------------------------------------------------+\n|id              |distances                                                  |\n+----------------+-----------------------------------------------------------+\n|Amsterdam       |Map(Immingham -\u003e 1, Hoek van Holland -\u003e 2, Colchester -\u003e 4)|\n|Colchester      |Map(Colchester -\u003e 0, Hoek van Holland -\u003e 3, Immingham -\u003e 3)|\n|Den Haag        |Map(Hoek van Holland -\u003e 1, Immingham -\u003e 2, Colchester -\u003e 4)|\n|Doncaster       |Map(Immingham -\u003e 1, Colchester -\u003e 2, Hoek van Holland -\u003e 4)|\n|Felixstowe      |Map(Hoek van Holland -\u003e 1, Colchester -\u003e 2, Immingham -\u003e 4)|\n|Gouda           |Map(Hoek van Holland -\u003e 2, Immingham -\u003e 3, Colchester -\u003e 5)|\n|Hoek van Holland|Map(Hoek van Holland -\u003e 0, Immingham -\u003e 3, Colchester -\u003e 3)|\n|Immingham       |Map(Immingham -\u003e 0, Colchester -\u003e 3, Hoek van Holland -\u003e 3)|\n|Ipswich         |Map(Colchester -\u003e 1, Hoek van Holland -\u003e 2, Immingham -\u003e 4)|\n|London          |Map(Colchester -\u003e 1, Immingham -\u003e 2, Hoek van Holland -\u003e 4)|\n|Rotterdam       |Map(Hoek van Holland -\u003e 1, Immingham -\u003e 3, Colchester -\u003e 4)|\n|Utrecht         |Map(Immingham -\u003e 2, Hoek van Holland -\u003e 3, Colchester -\u003e 5)|\n+----------------+-----------------------------------------------------------+\n\n"
+          }
+        ]
+      },
+      "runtimeInfos": {
+        "jobUrl": {
+          "propertyName": "jobUrl",
+          "label": "SPARK JOB",
+          "tooltip": "View in Spark web UI",
+          "group": "spark",
+          "values": [
+            "http://172.25.0.3:4040/jobs/job?id\u003d19",
+            "http://172.25.0.3:4040/jobs/job?id\u003d20",
+            "http://172.25.0.3:4040/jobs/job?id\u003d21",
+            "http://172.25.0.3:4040/jobs/job?id\u003d22",
+            "http://172.25.0.3:4040/jobs/job?id\u003d23",
+            "http://172.25.0.3:4040/jobs/job?id\u003d24",
+            "http://172.25.0.3:4040/jobs/job?id\u003d25",
+            "http://172.25.0.3:4040/jobs/job?id\u003d26",
+            "http://172.25.0.3:4040/jobs/job?id\u003d27",
+            "http://172.25.0.3:4040/jobs/job?id\u003d28",
+            "http://172.25.0.3:4040/jobs/job?id\u003d29",
+            "http://172.25.0.3:4040/jobs/job?id\u003d30",
+            "http://172.25.0.3:4040/jobs/job?id\u003d31",
+            "http://172.25.0.3:4040/jobs/job?id\u003d32",
+            "http://172.25.0.3:4040/jobs/job?id\u003d33",
+            "http://172.25.0.3:4040/jobs/job?id\u003d34",
+            "http://172.25.0.3:4040/jobs/job?id\u003d35",
+            "http://172.25.0.3:4040/jobs/job?id\u003d36",
+            "http://172.25.0.3:4040/jobs/job?id\u003d37",
+            "http://172.25.0.3:4040/jobs/job?id\u003d38",
+            "http://172.25.0.3:4040/jobs/job?id\u003d39",
+            "http://172.25.0.3:4040/jobs/job?id\u003d40",
+            "http://172.25.0.3:4040/jobs/job?id\u003d41"
+          ],
+          "interpreterSettingId": "spark"
+        }
+      },
+      "apps": [],
+      "jobName": "paragraph_1577905692148_-286952541",
+      "id": "20200101-190812_321541252",
+      "dateCreated": "2020-01-01 19:08:12.148",
+      "dateStarted": "2020-01-01 19:10:36.950",
+      "dateFinished": "2020-01-01 19:11:04.922",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "user": "anonymous",
+      "config": {},
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "jobName": "paragraph_1577905827540_-32055",
+      "id": "20200101-191027_1999772571",
+      "dateCreated": "2020-01-01 19:10:27.540",
+      "status": "READY",
+      "progressUpdateIntervalMs": 500
+    }
+  ],
+  "name": "Path finding/All shortest paths/Spark",
+  "id": "2EYQBRAT1",
+  "noteParams": {},
+  "noteForms": {},
+  "angularObjects": {
+    "md:shared_process": [],
+    "neo4j:shared_process": [],
+    "spark:shared_process": []
+  },
+  "config": {
+    "isZeppelinNotebookCronEnable": false
+  },
+  "info": {}
+}

@@ -246,13 +246,14 @@
       "progressUpdateIntervalMs": 500
     }
   ],
-  "name": "Community detection/Connected components",
+  "name": "Community detection/Connected components/Neo4j",
   "id": "2EU4ZXFE3",
   "noteParams": {},
   "noteForms": {},
   "angularObjects": {
     "md:shared_process": [],
-    "neo4j:shared_process": []
+    "neo4j:shared_process": [],
+    "spark:shared_process": []
   },
   "config": {
     "isZeppelinNotebookCronEnable": false

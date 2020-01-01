@@ -77,7 +77,7 @@
       "progressUpdateIntervalMs": 500
     }
   ],
-  "name": "Centrality/Import",
+  "name": "Centrality/Neo4j Import",
   "id": "2EW6YXEM1",
   "noteParams": {},
   "noteForms": {},

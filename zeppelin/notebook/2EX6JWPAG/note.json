@@ -1,0 +1,163 @@
+{
+  "paragraphs": [
+    {
+      "text": "CALL algo.allShortestPaths.stream(null)\nYIELD sourceNodeId, targetNodeId, distance\nWHERE sourceNodeId \u003c targetNodeId\nRETURN algo.getNodeById(sourceNodeId).id AS source,\n       algo.getNodeById(targetNodeId).id AS target,\n       distance\nORDER BY distance DESC\nLIMIT 10\n",
+      "user": "anonymous",
+      "dateUpdated": "2020-01-01 19:00:22.107",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {
+          "0": {
+            "graph": {
+              "mode": "table",
+              "height": 300.0,
+              "optionOpen": false,
+              "setting": {
+                "table": {
+                  "tableGridState": {},
+                  "tableColumnTypeState": {
+                    "names": {
+                      "source": "string",
+                      "target": "string",
+                      "distance": "string"
+                    },
+                    "updated": false
+                  },
+                  "tableOptionSpecHash": "[{\"name\":\"useFilter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable filter for columns\"},{\"name\":\"showPagination\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable pagination for better navigation\"},{\"name\":\"showAggregationFooter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable a footer for displaying aggregated values\"}]",
+                  "tableOptionValue": {
+                    "useFilter": false,
+                    "showPagination": false,
+                    "showAggregationFooter": false
+                  },
+                  "updated": false,
+                  "initialized": false
+                }
+              },
+              "commonSetting": {}
+            }
+          }
+        },
+        "editorSetting": {
+          "editOnDblClick": false
+        },
+        "editorMode": "ace/mode/undefined"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TABLE",
+            "data": "source\ttarget\tdistance\n\"London\"\t\"Gouda\"\t5.0\n\"Utrecht\"\t\"Ipswich\"\t5.0\n\"London\"\t\"Rotterdam\"\t5.0\n\"Colchester\"\t\"Gouda\"\t5.0\n\"Utrecht\"\t\"Colchester\"\t5.0\n\"Amsterdam\"\t\"Colchester\"\t4.0\n\"Immingham\"\t\"Ipswich\"\t4.0\n\"Den Haag\"\t\"Colchester\"\t4.0\n\"Doncaster\"\t\"Felixstowe\"\t4.0\n\"Utrecht\"\t\"Felixstowe\"\t4.0\n"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1577905209007_69526644",
+      "id": "20200101-190009_1220471711",
+      "dateCreated": "2020-01-01 19:00:09.007",
+      "dateStarted": "2020-01-01 19:00:21.315",
+      "dateFinished": "2020-01-01 19:00:21.626",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "CALL algo.allShortestPaths.stream(\"distance\")\nYIELD sourceNodeId, targetNodeId, distance\nWHERE sourceNodeId \u003c targetNodeId\nRETURN algo.getNodeById(sourceNodeId).id AS source,\n       algo.getNodeById(targetNodeId).id AS target,\n       distance\nORDER BY distance DESC\nLIMIT 10\n",
+      "user": "anonymous",
+      "dateUpdated": "2020-01-01 19:00:29.342",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {
+          "0": {
+            "graph": {
+              "mode": "table",
+              "height": 300.0,
+              "optionOpen": false,
+              "setting": {
+                "table": {
+                  "tableGridState": {},
+                  "tableColumnTypeState": {
+                    "names": {
+                      "source": "string",
+                      "target": "string",
+                      "distance": "string"
+                    },
+                    "updated": false
+                  },
+                  "tableOptionSpecHash": "[{\"name\":\"useFilter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable filter for columns\"},{\"name\":\"showPagination\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable pagination for better navigation\"},{\"name\":\"showAggregationFooter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable a footer for displaying aggregated values\"}]",
+                  "tableOptionValue": {
+                    "useFilter": false,
+                    "showPagination": false,
+                    "showAggregationFooter": false
+                  },
+                  "updated": false,
+                  "initialized": false
+                }
+              },
+              "commonSetting": {}
+            }
+          }
+        },
+        "editorSetting": {
+          "editOnDblClick": false
+        },
+        "editorMode": "ace/mode/undefined"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TABLE",
+            "data": "source\ttarget\tdistance\n\"Doncaster\"\t\"Hoek van Holland\"\t529.0\n\"Doncaster\"\t\"Rotterdam\"\t528.0\n\"Doncaster\"\t\"Gouda\"\t524.0\n\"Immingham\"\t\"Felixstowe\"\t511.0\n\"Den Haag\"\t\"Doncaster\"\t502.0\n\"Immingham\"\t\"Ipswich\"\t489.0\n\"Utrecht\"\t\"Doncaster\"\t489.0\n\"Utrecht\"\t\"London\"\t460.0\n\"Immingham\"\t\"Colchester\"\t457.0\n\"Immingham\"\t\"Hoek van Holland\"\t455.0\n"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1577905221300_-1443780074",
+      "id": "20200101-190021_1090575036",
+      "dateCreated": "2020-01-01 19:00:21.300",
+      "dateStarted": "2020-01-01 19:00:28.463",
+      "dateFinished": "2020-01-01 19:00:28.658",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "user": "anonymous",
+      "config": {},
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "jobName": "paragraph_1577905228454_292642731",
+      "id": "20200101-190028_1585661323",
+      "dateCreated": "2020-01-01 19:00:28.454",
+      "status": "READY",
+      "progressUpdateIntervalMs": 500
+    }
+  ],
+  "name": "Path finding/All shortest paths/Neo4j",
+  "id": "2EX6JWPAG",
+  "noteParams": {},
+  "noteForms": {},
+  "angularObjects": {
+    "md:shared_process": [],
+    "neo4j:shared_process": [],
+    "spark:shared_process": []
+  },
+  "config": {
+    "isZeppelinNotebookCronEnable": false
+  },
+  "info": {}
+}

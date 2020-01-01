@@ -1,0 +1,340 @@
+{
+  "paragraphs": [
+    {
+      "text": "%pyspark\n# // tag::imports[]\nfrom graphframes import GraphFrame\nfrom pyspark import SparkContext\n# // end::imports[]\n\n\n# // tag::load-graph-frame[]\ndef create_social_graph():\n    nodes \u003d spark.read.csv(\"spark-warehouse/social-nodes.csv\", header\u003dTrue)\n    relationships \u003d spark.read.csv(\"spark-warehouse/social-relationships.csv\", header\u003dTrue)\n    return GraphFrame(nodes, relationships)\n# // end::load-graph-frame[]\n",
+      "user": "anonymous",
+      "dateUpdated": "2020-01-01 17:25:51.599",
+      "config": {
+        "editorSetting": {
+          "language": "python",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "colWidth": 12.0,
+        "editorMode": "ace/mode/python",
+        "fontSize": 9.0,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": []
+      },
+      "apps": [],
+      "jobName": "paragraph_1577897523612_1182628329",
+      "id": "20200101-112344_1237781185",
+      "dateCreated": "2020-01-01 16:52:03.612",
+      "dateStarted": "2020-01-01 17:25:51.628",
+      "dateFinished": "2020-01-01 17:25:51.644",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%pyspark\ng \u003d create_social_graph()",
+      "user": "anonymous",
+      "dateUpdated": "2020-01-01 16:56:09.215",
+      "config": {
+        "editorSetting": {
+          "language": "python",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "colWidth": 12.0,
+        "editorMode": "ace/mode/python",
+        "fontSize": 9.0,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": []
+      },
+      "runtimeInfos": {
+        "jobUrl": {
+          "propertyName": "jobUrl",
+          "label": "SPARK JOB",
+          "tooltip": "View in Spark web UI",
+          "group": "spark",
+          "values": [
+            "http://172.25.0.3:4040/jobs/job?id\u003d121",
+            "http://172.25.0.3:4040/jobs/job?id\u003d122"
+          ],
+          "interpreterSettingId": "spark"
+        }
+      },
+      "apps": [],
+      "jobName": "paragraph_1577897523613_1971813985",
+      "id": "20200101-112422_199127971",
+      "dateCreated": "2020-01-01 16:52:03.613",
+      "dateStarted": "2020-01-01 16:56:09.256",
+      "dateFinished": "2020-01-01 16:56:09.402",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%pyspark\nresults \u003d g.pageRank(resetProbability\u003d0.15, maxIter\u003d20)\nresults.vertices.sort(\"pagerank\", ascending\u003dFalse).show()\n",
+      "user": "anonymous",
+      "dateUpdated": "2020-01-01 16:56:11.107",
+      "config": {
+        "editorSetting": {
+          "language": "python",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "colWidth": 12.0,
+        "editorMode": "ace/mode/python",
+        "fontSize": 9.0,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "+-------+-------------------+\n|     id|           pagerank|\n+-------+-------------------+\n|   Doug| 2.2865372087512252|\n|   Mark| 2.1424484186137263|\n|  Alice|  1.520330830262095|\n|Michael| 0.7274429252585624|\n|Bridget| 0.7274429252585624|\n|Charles| 0.5213852310709753|\n|    Amy| 0.5097143486157744|\n|  David|0.36655842368870073|\n|  James| 0.1981396884803788|\n+-------+-------------------+\n\n"
+          }
+        ]
+      },
+      "runtimeInfos": {
+        "jobUrl": {
+          "propertyName": "jobUrl",
+          "label": "SPARK JOB",
+          "tooltip": "View in Spark web UI",
+          "group": "spark",
+          "values": [
+            "http://172.25.0.3:4040/jobs/job?id\u003d123",
+            "http://172.25.0.3:4040/jobs/job?id\u003d124",
+            "http://172.25.0.3:4040/jobs/job?id\u003d125",
+            "http://172.25.0.3:4040/jobs/job?id\u003d126",
+            "http://172.25.0.3:4040/jobs/job?id\u003d127",
+            "http://172.25.0.3:4040/jobs/job?id\u003d128",
+            "http://172.25.0.3:4040/jobs/job?id\u003d129",
+            "http://172.25.0.3:4040/jobs/job?id\u003d130",
+            "http://172.25.0.3:4040/jobs/job?id\u003d131",
+            "http://172.25.0.3:4040/jobs/job?id\u003d132",
+            "http://172.25.0.3:4040/jobs/job?id\u003d133",
+            "http://172.25.0.3:4040/jobs/job?id\u003d134",
+            "http://172.25.0.3:4040/jobs/job?id\u003d135",
+            "http://172.25.0.3:4040/jobs/job?id\u003d136",
+            "http://172.25.0.3:4040/jobs/job?id\u003d137",
+            "http://172.25.0.3:4040/jobs/job?id\u003d138",
+            "http://172.25.0.3:4040/jobs/job?id\u003d139",
+            "http://172.25.0.3:4040/jobs/job?id\u003d140",
+            "http://172.25.0.3:4040/jobs/job?id\u003d141",
+            "http://172.25.0.3:4040/jobs/job?id\u003d142",
+            "http://172.25.0.3:4040/jobs/job?id\u003d143",
+            "http://172.25.0.3:4040/jobs/job?id\u003d144",
+            "http://172.25.0.3:4040/jobs/job?id\u003d145",
+            "http://172.25.0.3:4040/jobs/job?id\u003d146",
+            "http://172.25.0.3:4040/jobs/job?id\u003d147",
+            "http://172.25.0.3:4040/jobs/job?id\u003d148",
+            "http://172.25.0.3:4040/jobs/job?id\u003d149",
+            "http://172.25.0.3:4040/jobs/job?id\u003d150",
+            "http://172.25.0.3:4040/jobs/job?id\u003d151"
+          ],
+          "interpreterSettingId": "spark"
+        }
+      },
+      "apps": [],
+      "jobName": "paragraph_1577897523614_319339002",
+      "id": "20200101-112443_1061570403",
+      "dateCreated": "2020-01-01 16:52:03.614",
+      "dateStarted": "2020-01-01 16:56:11.124",
+      "dateFinished": "2020-01-01 16:59:14.499",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%pyspark\nresults \u003d g.pageRank(resetProbability\u003d0.15, tol\u003d0.01)\nresults.vertices.sort(\"pagerank\", ascending\u003dFalse).show()\n",
+      "user": "anonymous",
+      "dateUpdated": "2020-01-01 16:59:18.792",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "results": {},
+        "enabled": true,
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "editorMode": "ace/mode/scala"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "+-------+-------------------+\n|     id|           pagerank|\n+-------+-------------------+\n|   Doug|  2.223318885998975|\n|   Mark| 2.0904511883369326|\n|  Alice| 1.5056291439101064|\n|Michael| 0.7337387851096241|\n|Bridget| 0.7337387851096241|\n|    Amy| 0.5594468072450262|\n|Charles| 0.5338811076334146|\n|  David| 0.4023232627418069|\n|  James|0.21747203391449024|\n+-------+-------------------+\n\n"
+          }
+        ]
+      },
+      "runtimeInfos": {
+        "jobUrl": {
+          "propertyName": "jobUrl",
+          "label": "SPARK JOB",
+          "tooltip": "View in Spark web UI",
+          "group": "spark",
+          "values": [
+            "http://172.25.0.3:4040/jobs/job?id\u003d152",
+            "http://172.25.0.3:4040/jobs/job?id\u003d153",
+            "http://172.25.0.3:4040/jobs/job?id\u003d154",
+            "http://172.25.0.3:4040/jobs/job?id\u003d155",
+            "http://172.25.0.3:4040/jobs/job?id\u003d156",
+            "http://172.25.0.3:4040/jobs/job?id\u003d157",
+            "http://172.25.0.3:4040/jobs/job?id\u003d158",
+            "http://172.25.0.3:4040/jobs/job?id\u003d159",
+            "http://172.25.0.3:4040/jobs/job?id\u003d160",
+            "http://172.25.0.3:4040/jobs/job?id\u003d161",
+            "http://172.25.0.3:4040/jobs/job?id\u003d162",
+            "http://172.25.0.3:4040/jobs/job?id\u003d163",
+            "http://172.25.0.3:4040/jobs/job?id\u003d164",
+            "http://172.25.0.3:4040/jobs/job?id\u003d165",
+            "http://172.25.0.3:4040/jobs/job?id\u003d166",
+            "http://172.25.0.3:4040/jobs/job?id\u003d167",
+            "http://172.25.0.3:4040/jobs/job?id\u003d168",
+            "http://172.25.0.3:4040/jobs/job?id\u003d169",
+            "http://172.25.0.3:4040/jobs/job?id\u003d170",
+            "http://172.25.0.3:4040/jobs/job?id\u003d171",
+            "http://172.25.0.3:4040/jobs/job?id\u003d172",
+            "http://172.25.0.3:4040/jobs/job?id\u003d173"
+          ],
+          "interpreterSettingId": "spark"
+        }
+      },
+      "apps": [],
+      "jobName": "paragraph_1577897523614_-504837184",
+      "id": "20200101-113146_991400049",
+      "dateCreated": "2020-01-01 16:52:03.614",
+      "dateStarted": "2020-01-01 16:59:18.814",
+      "dateFinished": "2020-01-01 17:07:08.270",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%pyspark\nme \u003d \"Doug\"\nresults \u003d g.pageRank(resetProbability\u003d0.15, maxIter\u003d20, sourceId\u003dme)\npeople_to_follow \u003d results.vertices.sort(\"pagerank\", ascending\u003dFalse)\n\nalready_follows \u003d list(g.edges.filter(\"src \u003d \u0027{me}\u0027\").toPandas()[\"dst\"])\npeople_to_exclude \u003d already_follows + [me]\n\npeople_to_follow[~people_to_follow.id.isin(people_to_exclude)].show()\n",
+      "user": "anonymous",
+      "dateUpdated": "2020-01-01 17:07:41.542",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "editorMode": "ace/mode/scala"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "+-------+-------------------+\n|     id|           pagerank|\n+-------+-------------------+\n|   Mark| 0.3224818041454851|\n|  Alice| 0.1650183746272782|\n|Michael|  0.048842467744892|\n|Bridget|  0.048842467744892|\n|Charles|0.03497796119878669|\n|  James|                0.0|\n|    Amy|                0.0|\n|  David|                0.0|\n+-------+-------------------+\n\n"
+          }
+        ]
+      },
+      "runtimeInfos": {
+        "jobUrl": {
+          "propertyName": "jobUrl",
+          "label": "SPARK JOB",
+          "tooltip": "View in Spark web UI",
+          "group": "spark",
+          "values": [
+            "http://172.25.0.3:4040/jobs/job?id\u003d174",
+            "http://172.25.0.3:4040/jobs/job?id\u003d175",
+            "http://172.25.0.3:4040/jobs/job?id\u003d176",
+            "http://172.25.0.3:4040/jobs/job?id\u003d177",
+            "http://172.25.0.3:4040/jobs/job?id\u003d178",
+            "http://172.25.0.3:4040/jobs/job?id\u003d179",
+            "http://172.25.0.3:4040/jobs/job?id\u003d180",
+            "http://172.25.0.3:4040/jobs/job?id\u003d181",
+            "http://172.25.0.3:4040/jobs/job?id\u003d182",
+            "http://172.25.0.3:4040/jobs/job?id\u003d183",
+            "http://172.25.0.3:4040/jobs/job?id\u003d184",
+            "http://172.25.0.3:4040/jobs/job?id\u003d185",
+            "http://172.25.0.3:4040/jobs/job?id\u003d186",
+            "http://172.25.0.3:4040/jobs/job?id\u003d187",
+            "http://172.25.0.3:4040/jobs/job?id\u003d188",
+            "http://172.25.0.3:4040/jobs/job?id\u003d189",
+            "http://172.25.0.3:4040/jobs/job?id\u003d190",
+            "http://172.25.0.3:4040/jobs/job?id\u003d191",
+            "http://172.25.0.3:4040/jobs/job?id\u003d192",
+            "http://172.25.0.3:4040/jobs/job?id\u003d193",
+            "http://172.25.0.3:4040/jobs/job?id\u003d194",
+            "http://172.25.0.3:4040/jobs/job?id\u003d195",
+            "http://172.25.0.3:4040/jobs/job?id\u003d196",
+            "http://172.25.0.3:4040/jobs/job?id\u003d197",
+            "http://172.25.0.3:4040/jobs/job?id\u003d198",
+            "http://172.25.0.3:4040/jobs/job?id\u003d199",
+            "http://172.25.0.3:4040/jobs/job?id\u003d200"
+          ],
+          "interpreterSettingId": "spark"
+        }
+      },
+      "apps": [],
+      "jobName": "paragraph_1577897523615_1193860366",
+      "id": "20200101-153518_1153514066",
+      "dateCreated": "2020-01-01 16:52:03.615",
+      "dateStarted": "2020-01-01 17:07:41.572",
+      "dateFinished": "2020-01-01 17:10:40.294",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%pyspark\n",
+      "user": "anonymous",
+      "dateUpdated": "2020-01-01 16:53:46.358",
+      "config": {},
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "jobName": "paragraph_1577897626352_-717900952",
+      "id": "20200101-165346_2145706540",
+      "dateCreated": "2020-01-01 16:53:46.352",
+      "status": "READY",
+      "progressUpdateIntervalMs": 500
+    }
+  ],
+  "name": "Centrality/Pagerank/Spark",
+  "id": "2EVMJ5PJC",
+  "noteParams": {},
+  "noteForms": {},
+  "angularObjects": {
+    "spark:shared_process": []
+  },
+  "config": {
+    "isZeppelinNotebookCronEnable": false
+  },
+  "info": {}
+}

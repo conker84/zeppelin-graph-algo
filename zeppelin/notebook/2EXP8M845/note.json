@@ -1,0 +1,226 @@
+{
+  "paragraphs": [
+    {
+      "text": "MATCH (source:Place {id: \"Amsterdam\"}),\n      (destination:Place {id: \"London\"})\nCALL algo.shortestPath.stream(source, destination,  \"distance\")\nYIELD nodeId, cost\nRETURN algo.getNodeById(nodeId).id AS place, cost",
+      "user": "anonymous",
+      "dateUpdated": "2020-01-01 19:02:42.266",
+      "config": {
+        "editorSetting": {
+          "editOnDblClick": false
+        },
+        "colWidth": 12.0,
+        "editorMode": "ace/mode/undefined",
+        "fontSize": 9.0,
+        "results": {
+          "0": {
+            "graph": {
+              "mode": "table",
+              "height": 300.0,
+              "optionOpen": false,
+              "setting": {
+                "table": {
+                  "tableGridState": {},
+                  "tableColumnTypeState": {
+                    "names": {
+                      "place": "string",
+                      "cost": "string"
+                    },
+                    "updated": false
+                  },
+                  "tableOptionSpecHash": "[{\"name\":\"useFilter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable filter for columns\"},{\"name\":\"showPagination\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable pagination for better navigation\"},{\"name\":\"showAggregationFooter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable a footer for displaying aggregated values\"}]",
+                  "tableOptionValue": {
+                    "useFilter": false,
+                    "showPagination": false,
+                    "showAggregationFooter": false
+                  },
+                  "updated": false,
+                  "initialized": false
+                }
+              },
+              "commonSetting": {}
+            }
+          }
+        },
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TABLE",
+            "data": "place\tcost\n\"Amsterdam\"\t0.0\n\"Den Haag\"\t59.0\n\"Hoek van Holland\"\t86.0\n\"Felixstowe\"\t293.0\n\"Ipswich\"\t315.0\n\"Colchester\"\t347.0\n\"London\"\t453.0\n"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1577905354836_-958505578",
+      "id": "20200101-190009_1220471711",
+      "dateCreated": "2020-01-01 19:02:34.836",
+      "dateStarted": "2020-01-01 19:02:42.067",
+      "dateFinished": "2020-01-01 19:02:42.176",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "MATCH (source:Place {id: \"Amsterdam\"}),\n      (destination:Place {id: \"London\"})\nCALL algo.shortestPath.stream(source, destination, null)\nYIELD nodeId, cost\nRETURN algo.getNodeById(nodeId).id AS place, cost\n",
+      "user": "anonymous",
+      "dateUpdated": "2020-01-01 19:02:51.637",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {
+          "0": {
+            "graph": {
+              "mode": "table",
+              "height": 300.0,
+              "optionOpen": false,
+              "setting": {
+                "table": {
+                  "tableGridState": {},
+                  "tableColumnTypeState": {
+                    "names": {
+                      "place": "string",
+                      "cost": "string"
+                    },
+                    "updated": false
+                  },
+                  "tableOptionSpecHash": "[{\"name\":\"useFilter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable filter for columns\"},{\"name\":\"showPagination\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable pagination for better navigation\"},{\"name\":\"showAggregationFooter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable a footer for displaying aggregated values\"}]",
+                  "tableOptionValue": {
+                    "useFilter": false,
+                    "showPagination": false,
+                    "showAggregationFooter": false
+                  },
+                  "updated": false,
+                  "initialized": false
+                }
+              },
+              "commonSetting": {}
+            }
+          }
+        },
+        "editorSetting": {
+          "editOnDblClick": false
+        },
+        "editorMode": "ace/mode/undefined"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TABLE",
+            "data": "place\tcost\n\"Amsterdam\"\t0.0\n\"Immingham\"\t1.0\n\"Doncaster\"\t2.0\n\"London\"\t3.0\n"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1577905354837_1016917406",
+      "id": "20200101-190028_1585661323",
+      "dateCreated": "2020-01-01 19:02:34.837",
+      "dateStarted": "2020-01-01 19:02:51.094",
+      "dateFinished": "2020-01-01 19:02:51.199",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "MATCH (source:Place {id: \"Amsterdam\"}),\n      (destination:Place {id: \"London\"})\nCALL algo.shortestPath.stream(source, destination, null)\nYIELD nodeId, cost\n\nWITH collect(algo.getNodeById(nodeId)) AS path\nUNWIND range(0, size(path)-1) AS index\nWITH path[index] AS current, path[index+1] AS next\nWITH current, next, [(current)-[r:EROAD]-(next) | r.distance][0] AS distance\n\nWITH collect({current: current, next:next, distance: distance}) AS stops\nUNWIND range(0, size(stops)-1) AS index\nWITH stops[index] AS location, stops, index\nRETURN location.current.id AS place,\n       reduce(acc\u003d0.0,\n              distance in [stop in stops[0..index] | stop.distance] |\n              acc + distance) AS cost\n",
+      "user": "anonymous",
+      "dateUpdated": "2020-01-01 19:03:05.291",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {
+          "0": {
+            "graph": {
+              "mode": "table",
+              "height": 300.0,
+              "optionOpen": false,
+              "setting": {
+                "table": {
+                  "tableGridState": {},
+                  "tableColumnTypeState": {
+                    "names": {
+                      "place": "string",
+                      "cost": "string"
+                    },
+                    "updated": false
+                  },
+                  "tableOptionSpecHash": "[{\"name\":\"useFilter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable filter for columns\"},{\"name\":\"showPagination\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable pagination for better navigation\"},{\"name\":\"showAggregationFooter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable a footer for displaying aggregated values\"}]",
+                  "tableOptionValue": {
+                    "useFilter": false,
+                    "showPagination": false,
+                    "showAggregationFooter": false
+                  },
+                  "updated": false,
+                  "initialized": false
+                }
+              },
+              "commonSetting": {}
+            }
+          }
+        },
+        "editorSetting": {
+          "editOnDblClick": false
+        },
+        "editorMode": "ace/mode/undefined"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TABLE",
+            "data": "place\tcost\n\"Amsterdam\"\t0.0\n\"Immingham\"\t369.0\n\"Doncaster\"\t443.0\n\"London\"\t720.0\n"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1577905371067_-1410446213",
+      "id": "20200101-190251_1003831668",
+      "dateCreated": "2020-01-01 19:02:51.067",
+      "dateStarted": "2020-01-01 19:03:04.485",
+      "dateFinished": "2020-01-01 19:03:04.831",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "user": "anonymous",
+      "config": {},
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "jobName": "paragraph_1577905384463_-295615717",
+      "id": "20200101-190304_1101702216",
+      "dateCreated": "2020-01-01 19:03:04.463",
+      "status": "READY",
+      "progressUpdateIntervalMs": 500
+    }
+  ],
+  "name": "Path finding/Shortest path/Neo4j",
+  "id": "2EXP8M845",
+  "noteParams": {},
+  "noteForms": {},
+  "angularObjects": {
+    "md:shared_process": [],
+    "neo4j:shared_process": [],
+    "spark:shared_process": []
+  },
+  "config": {
+    "isZeppelinNotebookCronEnable": false
+  },
+  "info": {}
+}
