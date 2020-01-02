@@ -1,6 +1,46 @@
 {
   "paragraphs": [
     {
+      "text": "%md\n### Please make sure that you have previously executed [this notebook](/#/notebook/2EZ4GSKAZ)",
+      "user": "anonymous",
+      "dateUpdated": "2020-01-02 16:50:16.129",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "editOnDblClick": true,
+          "language": "markdown",
+          "completionSupport": false
+        },
+        "editorMode": "ace/mode/markdown",
+        "editorHide": true,
+        "tableHide": false
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003ch3\u003ePlease make sure that you have previously executed \u003ca href\u003d\"/#/notebook/2EZ4GSKAZ\"\u003ethis notebook\u003c/a\u003e\u003c/h3\u003e\n\u003c/div\u003e"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1577983813473_-1033064249",
+      "id": "20200102-165013_1885970695",
+      "dateCreated": "2020-01-02 16:50:13.473",
+      "dateStarted": "2020-01-02 16:50:16.131",
+      "dateFinished": "2020-01-02 16:50:16.169",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
       "text": "MATCH (source:Place {id: \"Den Haag\"}),\n      (destination:Place {id: \"London\"})\nCALL algo.shortestPath.astar.stream(source, destination, \"distance\", \"latitude\", \"longitude\")\nYIELD nodeId, cost\nRETURN algo.getNodeById(nodeId).id AS place, cost\n\n",
       "user": "anonymous",
       "dateUpdated": "2020-01-01 19:01:10.905",
@@ -88,8 +128,7 @@
   "noteForms": {},
   "angularObjects": {
     "md:shared_process": [],
-    "neo4j:shared_process": [],
-    "spark:shared_process": []
+    "neo4j:shared_process": []
   },
   "config": {
     "isZeppelinNotebookCronEnable": false

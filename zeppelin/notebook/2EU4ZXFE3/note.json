@@ -1,6 +1,86 @@
 {
   "paragraphs": [
     {
+      "text": "%md\n### Please make sure that you have previously executed [this notebook](/#/notebook/2EXB3TVAE)",
+      "user": "anonymous",
+      "dateUpdated": "2020-01-02 17:00:15.357",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "editOnDblClick": true,
+          "language": "markdown",
+          "completionSupport": false
+        },
+        "editorMode": "ace/mode/markdown",
+        "editorHide": true,
+        "tableHide": false
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003ch3\u003ePlease make sure that you have previously executed \u003ca href\u003d\"/#/notebook/2EXB3TVAE\"\u003ethis notebook\u003c/a\u003e\u003c/h3\u003e\n\u003c/div\u003e"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1577984412048_716644931",
+      "id": "20200102-170012_1738758143",
+      "dateCreated": "2020-01-02 17:00:12.048",
+      "dateStarted": "2020-01-02 17:00:15.363",
+      "dateFinished": "2020-01-02 17:00:15.399",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%md\n# (Weakly) Connected components\nhttps://neo4j.com/docs/graph-algorithms/current/algorithms/wcc/",
+      "user": "anonymous",
+      "dateUpdated": "2020-01-02 17:10:15.769",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "editOnDblClick": true,
+          "language": "markdown",
+          "completionSupport": false
+        },
+        "editorMode": "ace/mode/markdown",
+        "editorHide": true,
+        "tableHide": false
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003ch1\u003e(Weakly) Connected components\u003c/h1\u003e\n\u003cp\u003e\u003ca href\u003d\"https://neo4j.com/docs/graph-algorithms/current/algorithms/wcc/\"\u003ehttps://neo4j.com/docs/graph-algorithms/current/algorithms/wcc/\u003c/a\u003e\u003c/p\u003e\n\u003c/div\u003e"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1577984992461_1648025780",
+      "id": "20200102-170952_67441565",
+      "dateCreated": "2020-01-02 17:09:52.462",
+      "dateStarted": "2020-01-02 17:10:15.783",
+      "dateFinished": "2020-01-02 17:10:15.804",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
       "text": "%md\n## Stream connected components",
       "user": "anonymous",
       "dateUpdated": "2019-12-07 11:56:44.856",
@@ -252,8 +332,7 @@
   "noteForms": {},
   "angularObjects": {
     "md:shared_process": [],
-    "neo4j:shared_process": [],
-    "spark:shared_process": []
+    "neo4j:shared_process": []
   },
   "config": {
     "isZeppelinNotebookCronEnable": false

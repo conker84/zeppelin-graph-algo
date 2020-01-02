@@ -1,6 +1,87 @@
 {
   "paragraphs": [
     {
+      "text": "%md\n### Please make sure that you have previously executed [this notebook](/#/notebook/2EW6YXEM1)",
+      "user": "anonymous",
+      "dateUpdated": "2020-01-02 16:56:07.279",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "markdown",
+          "editOnDblClick": true,
+          "completionKey": "TAB",
+          "completionSupport": false
+        },
+        "editorMode": "ace/mode/markdown",
+        "editorHide": true,
+        "tableHide": false
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003ch3\u003ePlease make sure that you have previously executed \u003ca href\u003d\"/#/notebook/2EW6YXEM1\"\u003ethis notebook\u003c/a\u003e\u003c/h3\u003e\n\u003c/div\u003e"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1577984162948_824090713",
+      "id": "20200102-165602_1083371467",
+      "dateCreated": "2020-01-02 16:56:02.948",
+      "dateStarted": "2020-01-02 16:56:07.286",
+      "dateFinished": "2020-01-02 16:56:07.328",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%md\n# Closeness centrality\nhttps://neo4j.com/docs/graph-algorithms/current/labs-algorithms/closeness-centrality/",
+      "user": "anonymous",
+      "dateUpdated": "2020-01-02 17:07:55.324",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "editOnDblClick": true,
+          "language": "markdown",
+          "completionSupport": false
+        },
+        "editorMode": "ace/mode/markdown",
+        "editorHide": true,
+        "tableHide": false
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003ch1\u003eCloseness centrality\u003c/h1\u003e\n\u003cp\u003e\u003ca href\u003d\"https://neo4j.com/docs/graph-algorithms/current/labs-algorithms/closeness-centrality/\"\u003ehttps://neo4j.com/docs/graph-algorithms/current/labs-algorithms/closeness-centrality/\u003c/a\u003e\u003c/p\u003e\n\u003c/div\u003e"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1577984867638_-1017298659",
+      "id": "20200102-170747_340826499",
+      "dateCreated": "2020-01-02 17:07:47.639",
+      "dateStarted": "2020-01-02 17:07:55.331",
+      "dateFinished": "2020-01-02 17:07:55.346",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
       "text": "%md\n## Streaming closeness centrality",
       "user": "anonymous",
       "dateUpdated": "2019-12-07 11:28:34.051",
@@ -445,8 +526,7 @@
   "noteForms": {},
   "angularObjects": {
     "md:shared_process": [],
-    "neo4j:shared_process": [],
-    "spark:shared_process": []
+    "neo4j:shared_process": []
   },
   "config": {
     "isZeppelinNotebookCronEnable": false

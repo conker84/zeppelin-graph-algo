@@ -1,6 +1,86 @@
 {
   "paragraphs": [
     {
+      "text": "%md\n### Please make sure that you have previously executed [this notebook](/#/notebook/2EXB3TVAE)",
+      "user": "anonymous",
+      "dateUpdated": "2020-01-02 17:03:27.865",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "editOnDblClick": true,
+          "language": "markdown",
+          "completionSupport": false
+        },
+        "editorMode": "ace/mode/markdown",
+        "editorHide": true,
+        "tableHide": false
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003ch3\u003ePlease make sure that you have previously executed \u003ca href\u003d\"/#/notebook/2EXB3TVAE\"\u003ethis notebook\u003c/a\u003e\u003c/h3\u003e\n\u003c/div\u003e"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1577984605366_1538513871",
+      "id": "20200102-170325_1527739908",
+      "dateCreated": "2020-01-02 17:03:25.366",
+      "dateStarted": "2020-01-02 17:03:27.882",
+      "dateFinished": "2020-01-02 17:03:27.898",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%md\n# Strongly connected components\nhttps://neo4j.com/docs/graph-algorithms/current/labs-algorithms/strongly-connected-components/",
+      "user": "anonymous",
+      "dateUpdated": "2020-01-02 17:11:52.515",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "editOnDblClick": true,
+          "language": "markdown",
+          "completionSupport": false
+        },
+        "editorMode": "ace/mode/markdown",
+        "editorHide": true,
+        "tableHide": false
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003ch1\u003eStrongly connected components\u003c/h1\u003e\n\u003cp\u003e\u003ca href\u003d\"https://neo4j.com/docs/graph-algorithms/current/labs-algorithms/strongly-connected-components/\"\u003ehttps://neo4j.com/docs/graph-algorithms/current/labs-algorithms/strongly-connected-components/\u003c/a\u003e\u003c/p\u003e\n\u003c/div\u003e"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1577985078554_-438302449",
+      "id": "20200102-171118_877373806",
+      "dateCreated": "2020-01-02 17:11:18.554",
+      "dateStarted": "2020-01-02 17:11:52.515",
+      "dateFinished": "2020-01-02 17:11:52.523",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
       "text": "%md\n## Stream Strongly connected components",
       "user": "anonymous",
       "dateUpdated": "2019-12-07 11:53:28.328",
@@ -293,8 +373,7 @@
   "noteForms": {},
   "angularObjects": {
     "md:shared_process": [],
-    "neo4j:shared_process": [],
-    "spark:shared_process": []
+    "neo4j:shared_process": []
   },
   "config": {
     "isZeppelinNotebookCronEnable": false
