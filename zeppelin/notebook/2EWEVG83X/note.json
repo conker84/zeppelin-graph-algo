@@ -1,0 +1,455 @@
+{
+  "paragraphs": [
+    {
+      "text": "%md\n## Streaming closeness centrality",
+      "user": "anonymous",
+      "dateUpdated": "2019-12-07 11:28:34.051",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "markdown",
+          "editOnDblClick": true,
+          "completionKey": "TAB",
+          "completionSupport": false
+        },
+        "editorMode": "ace/mode/markdown",
+        "editorHide": true,
+        "tableHide": false
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003ch2\u003eStreaming closeness centrality\u003c/h2\u003e\n\u003c/div\u003e"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1575718048369_1685479278",
+      "id": "20191207-112728_2069065216",
+      "dateCreated": "2019-12-07 11:27:28.369",
+      "dateStarted": "2019-12-07 11:28:34.063",
+      "dateFinished": "2019-12-07 11:28:34.078",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%neo4j\nCALL algo.closeness.stream(\"User\", \"FOLLOWS\")\nYIELD nodeId, centrality\nRETURN algo.getNodeById(nodeId).id as id, centrality\nORDER BY centrality DESC\n",
+      "user": "anonymous",
+      "dateUpdated": "2019-12-07 11:26:32.213",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {
+          "0": {
+            "graph": {
+              "mode": "table",
+              "height": 300.0,
+              "optionOpen": false,
+              "setting": {
+                "table": {
+                  "tableGridState": {},
+                  "tableColumnTypeState": {
+                    "names": {
+                      "id": "string",
+                      "centrality": "string"
+                    },
+                    "updated": false
+                  },
+                  "tableOptionSpecHash": "[{\"name\":\"useFilter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable filter for columns\"},{\"name\":\"showPagination\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable pagination for better navigation\"},{\"name\":\"showAggregationFooter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable a footer for displaying aggregated values\"}]",
+                  "tableOptionValue": {
+                    "useFilter": false,
+                    "showPagination": false,
+                    "showAggregationFooter": false
+                  },
+                  "updated": false,
+                  "initialized": false
+                }
+              },
+              "commonSetting": {}
+            }
+          }
+        },
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "editorMode": "ace/mode/undefined"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TABLE",
+            "data": "id\tcentrality\n\"Alice\"\t1.0\n\"Doug\"\t1.0\n\"David\"\t1.0\n\"Bridget\"\t0.7142857142857143\n\"Michael\"\t0.7142857142857143\n\"Amy\"\t0.6666666666666666\n\"James\"\t0.6666666666666666\n\"Charles\"\t0.625\n\"Mark\"\t0.625\n"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1575717895844_-902604898",
+      "id": "20191207-112455_1660358477",
+      "dateCreated": "2019-12-07 11:24:55.844",
+      "dateStarted": "2019-12-07 11:26:32.043",
+      "dateFinished": "2019-12-07 11:26:32.105",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%md\n## Write back closeness centrality\n",
+      "user": "anonymous",
+      "dateUpdated": "2019-12-07 11:28:51.888",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "markdown",
+          "editOnDblClick": true,
+          "completionKey": "TAB",
+          "completionSupport": false
+        },
+        "editorMode": "ace/mode/markdown",
+        "editorHide": true,
+        "tableHide": false
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003ch2\u003eWrite back closeness centrality\u003c/h2\u003e\n\u003c/div\u003e"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1575718119159_-1191599217",
+      "id": "20191207-112839_1421236737",
+      "dateCreated": "2019-12-07 11:28:39.159",
+      "dateStarted": "2019-12-07 11:28:51.888",
+      "dateFinished": "2019-12-07 11:28:51.951",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%neo4j\nCALL algo.closeness(\"User\", \"FOLLOWS\")",
+      "user": "anonymous",
+      "dateUpdated": "2019-12-07 11:27:05.963",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {
+          "0": {
+            "graph": {
+              "mode": "table",
+              "height": 300.0,
+              "optionOpen": false,
+              "setting": {
+                "table": {
+                  "tableGridState": {},
+                  "tableColumnTypeState": {
+                    "names": {
+                      "loadMillis": "string",
+                      "computeMillis": "string",
+                      "writeMillis": "string",
+                      "nodes": "string"
+                    },
+                    "updated": false
+                  },
+                  "tableOptionSpecHash": "[{\"name\":\"useFilter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable filter for columns\"},{\"name\":\"showPagination\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable pagination for better navigation\"},{\"name\":\"showAggregationFooter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable a footer for displaying aggregated values\"}]",
+                  "tableOptionValue": {
+                    "useFilter": false,
+                    "showPagination": false,
+                    "showAggregationFooter": false
+                  },
+                  "updated": false,
+                  "initialized": false
+                }
+              },
+              "commonSetting": {}
+            }
+          }
+        },
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "editorMode": "ace/mode/undefined"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TABLE",
+            "data": "loadMillis\tcomputeMillis\twriteMillis\tnodes\n5\t0\t7\t9\n"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1575717954370_540887618",
+      "id": "20191207-112554_511336751",
+      "dateCreated": "2019-12-07 11:25:54.371",
+      "dateStarted": "2019-12-07 11:27:05.417",
+      "dateFinished": "2019-12-07 11:27:05.471",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%md\n## Wasserman-faust implementation",
+      "user": "anonymous",
+      "dateUpdated": "2019-12-07 11:29:26.975",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "markdown",
+          "editOnDblClick": true,
+          "completionKey": "TAB",
+          "completionSupport": false
+        },
+        "editorMode": "ace/mode/markdown",
+        "editorHide": true,
+        "tableHide": false
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003ch2\u003eWasserman-faust implementation\u003c/h2\u003e\n\u003c/div\u003e"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1575718137960_1176841915",
+      "id": "20191207-112857_1196936773",
+      "dateCreated": "2019-12-07 11:28:57.960",
+      "dateStarted": "2019-12-07 11:29:26.981",
+      "dateFinished": "2019-12-07 11:29:27.015",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%neo4j\nCALL algo.closeness.stream(\"User\", \"FOLLOWS\", {improved: true})\nYIELD nodeId, centrality\nRETURN algo.getNodeById(nodeId).id AS user, centrality\nORDER BY centrality DESC\n",
+      "user": "anonymous",
+      "dateUpdated": "2019-12-07 11:27:13.843",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {
+          "0": {
+            "graph": {
+              "mode": "table",
+              "height": 300.0,
+              "optionOpen": false,
+              "setting": {
+                "table": {
+                  "tableGridState": {},
+                  "tableColumnTypeState": {
+                    "names": {
+                      "user": "string",
+                      "centrality": "string"
+                    },
+                    "updated": false
+                  },
+                  "tableOptionSpecHash": "[{\"name\":\"useFilter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable filter for columns\"},{\"name\":\"showPagination\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable pagination for better navigation\"},{\"name\":\"showAggregationFooter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable a footer for displaying aggregated values\"}]",
+                  "tableOptionValue": {
+                    "useFilter": false,
+                    "showPagination": false,
+                    "showAggregationFooter": false
+                  },
+                  "updated": false,
+                  "initialized": false
+                }
+              },
+              "commonSetting": {}
+            }
+          }
+        },
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "editorMode": "ace/mode/undefined"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TABLE",
+            "data": "user\tcentrality\n\"Alice\"\t0.5\n\"Doug\"\t0.5\n\"Bridget\"\t0.35714285714285715\n\"Michael\"\t0.35714285714285715\n\"Charles\"\t0.3125\n\"Mark\"\t0.3125\n\"David\"\t0.125\n\"Amy\"\t0.08333333333333333\n\"James\"\t0.08333333333333333\n"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1575718018894_-925771656",
+      "id": "20191207-112658_1960728024",
+      "dateCreated": "2019-12-07 11:26:58.894",
+      "dateStarted": "2019-12-07 11:27:13.152",
+      "dateFinished": "2019-12-07 11:27:13.212",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%md\n## Harmonic centrality",
+      "user": "anonymous",
+      "dateUpdated": "2019-12-07 11:29:43.866",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "markdown",
+          "editOnDblClick": true,
+          "completionKey": "TAB",
+          "completionSupport": false
+        },
+        "editorMode": "ace/mode/markdown",
+        "editorHide": true,
+        "tableHide": false
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003ch2\u003eHarmonic centrality\u003c/h2\u003e\n\u003c/div\u003e"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1575718172568_1835037071",
+      "id": "20191207-112932_534293801",
+      "dateCreated": "2019-12-07 11:29:32.568",
+      "dateStarted": "2019-12-07 11:29:43.868",
+      "dateFinished": "2019-12-07 11:29:43.906",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%neo4j\nCALL algo.closeness.harmonic.stream(\"User\", \"FOLLOWS\")\nYIELD nodeId, centrality\nRETURN algo.getNodeById(nodeId).id AS user, centrality\nORDER BY centrality DESC\n",
+      "user": "anonymous",
+      "dateUpdated": "2019-12-07 11:27:22.948",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {
+          "0": {
+            "graph": {
+              "mode": "table",
+              "height": 300.0,
+              "optionOpen": false,
+              "setting": {
+                "table": {
+                  "tableGridState": {},
+                  "tableColumnTypeState": {
+                    "names": {
+                      "user": "string",
+                      "centrality": "string"
+                    },
+                    "updated": false
+                  },
+                  "tableOptionSpecHash": "[{\"name\":\"useFilter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable filter for columns\"},{\"name\":\"showPagination\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable pagination for better navigation\"},{\"name\":\"showAggregationFooter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable a footer for displaying aggregated values\"}]",
+                  "tableOptionValue": {
+                    "useFilter": false,
+                    "showPagination": false,
+                    "showAggregationFooter": false
+                  },
+                  "updated": false,
+                  "initialized": false
+                }
+              },
+              "commonSetting": {}
+            }
+          }
+        },
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "editorMode": "ace/mode/undefined"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TABLE",
+            "data": "user\tcentrality\n\"Alice\"\t0.625\n\"Doug\"\t0.625\n\"Bridget\"\t0.5\n\"Michael\"\t0.5\n\"Charles\"\t0.4375\n\"Mark\"\t0.4375\n\"David\"\t0.25\n\"Amy\"\t0.1875\n\"James\"\t0.1875\n"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1575718033110_2049842479",
+      "id": "20191207-112713_1247662406",
+      "dateCreated": "2019-12-07 11:27:13.111",
+      "dateStarted": "2019-12-07 11:27:22.205",
+      "dateFinished": "2019-12-07 11:27:22.261",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    }
+  ],
+  "name": "Centrality/Closeness/Neo4j",
+  "id": "2EWEVG83X",
+  "noteParams": {},
+  "noteForms": {},
+  "angularObjects": {
+    "md:shared_process": [],
+    "neo4j:shared_process": [],
+    "spark:shared_process": []
+  },
+  "config": {
+    "isZeppelinNotebookCronEnable": false
+  },
+  "info": {}
+}

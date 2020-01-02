@@ -1,0 +1,303 @@
+{
+  "paragraphs": [
+    {
+      "text": "%md\n## Stream Strongly connected components",
+      "user": "anonymous",
+      "dateUpdated": "2019-12-07 11:53:28.328",
+      "config": {
+        "tableHide": false,
+        "editorSetting": {
+          "editOnDblClick": true,
+          "language": "markdown",
+          "completionSupport": false
+        },
+        "colWidth": 12.0,
+        "editorMode": "ace/mode/markdown",
+        "fontSize": 9.0,
+        "editorHide": true,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003ch2\u003eStream Strongly connected components\u003c/h2\u003e\n\u003c/div\u003e"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1575719589871_-466958692",
+      "id": "20191207-114641_1084520692",
+      "dateCreated": "2019-12-07 11:53:09.871",
+      "dateStarted": "2019-12-07 11:53:28.354",
+      "dateFinished": "2019-12-07 11:53:28.394",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%neo4j\nCALL algo.scc.stream(\"Library\", \"DEPENDS_ON\")\nYIELD nodeId, partition\nRETURN partition, collect(algo.getNodeById(nodeId).id) AS libraries\nORDER BY size(libraries) DESC\n\n\n\n",
+      "user": "anonymous",
+      "dateUpdated": "2019-12-07 12:01:03.423",
+      "config": {
+        "editorSetting": {
+          "editOnDblClick": false
+        },
+        "colWidth": 12.0,
+        "editorMode": "ace/mode/undefined",
+        "fontSize": 9.0,
+        "results": {
+          "0": {
+            "graph": {
+              "mode": "table",
+              "height": 300.0,
+              "optionOpen": false,
+              "setting": {
+                "table": {
+                  "tableGridState": {},
+                  "tableColumnTypeState": {
+                    "names": {
+                      "partition": "string",
+                      "libraries": "string"
+                    },
+                    "updated": false
+                  },
+                  "tableOptionSpecHash": "[{\"name\":\"useFilter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable filter for columns\"},{\"name\":\"showPagination\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable pagination for better navigation\"},{\"name\":\"showAggregationFooter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable a footer for displaying aggregated values\"}]",
+                  "tableOptionValue": {
+                    "useFilter": false,
+                    "showPagination": false,
+                    "showAggregationFooter": false
+                  },
+                  "updated": false,
+                  "initialized": false
+                }
+              },
+              "commonSetting": {}
+            }
+          }
+        },
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TABLE",
+            "data": "partition\tlibraries\n0\t[\"six\"]\n1\t[\"pandas\"]\n2\t[\"numpy\"]\n3\t[\"python-dateutil\"]\n4\t[\"pytz\"]\n5\t[\"pyspark\"]\n6\t[\"matplotlib\"]\n7\t[\"spacy\"]\n8\t[\"py4j\"]\n9\t[\"jupyter\"]\n10\t[\"jpy-console\"]\n11\t[\"nbconvert\"]\n12\t[\"ipykernel\"]\n13\t[\"jpy-client\"]\n14\t[\"jpy-core\"]\n"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1575719589875_1499097025",
+      "id": "20191207-114720_18204489",
+      "dateCreated": "2019-12-07 11:53:09.875",
+      "dateStarted": "2019-12-07 12:01:03.447",
+      "dateFinished": "2019-12-07 12:01:03.620",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%md\n## Write back Strongly connected components",
+      "user": "anonymous",
+      "dateUpdated": "2019-12-07 11:55:49.739",
+      "config": {
+        "tableHide": false,
+        "editorSetting": {
+          "editOnDblClick": true,
+          "language": "markdown",
+          "completionSupport": false
+        },
+        "colWidth": 12.0,
+        "editorMode": "ace/mode/markdown",
+        "fontSize": 9.0,
+        "editorHide": true,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003ch2\u003eWrite back Strongly connected components\u003c/h2\u003e\n\u003c/div\u003e"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1575719589875_259460054",
+      "id": "20191207-114843_887180679",
+      "dateCreated": "2019-12-07 11:53:09.875",
+      "dateStarted": "2019-12-07 11:55:49.738",
+      "dateFinished": "2019-12-07 11:55:49.754",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%neo4j\nCALL algo.scc(\"Library\", \"DEPENDS_ON\")\n",
+      "user": "anonymous",
+      "dateUpdated": "2019-12-07 11:53:58.052",
+      "config": {
+        "editorSetting": {
+          "editOnDblClick": false
+        },
+        "colWidth": 12.0,
+        "editorMode": "ace/mode/undefined",
+        "fontSize": 9.0,
+        "results": {
+          "0": {
+            "graph": {
+              "mode": "table",
+              "height": 300.0,
+              "optionOpen": false,
+              "setting": {
+                "table": {
+                  "tableGridState": {},
+                  "tableColumnTypeState": {
+                    "names": {
+                      "loadMillis": "string",
+                      "computeMillis": "string",
+                      "writeMillis": "string",
+                      "postProcessingMillis": "string",
+                      "nodes": "string",
+                      "communityCount": "string",
+                      "setCount": "string",
+                      "minSetSize": "string",
+                      "maxSetSize": "string",
+                      "p1": "string",
+                      "p5": "string",
+                      "p10": "string",
+                      "p25": "string",
+                      "p50": "string",
+                      "p75": "string",
+                      "p90": "string",
+                      "p95": "string",
+                      "p99": "string",
+                      "p100": "string",
+                      "write": "string",
+                      "partitionProperty": "string",
+                      "writeProperty": "string"
+                    },
+                    "updated": false
+                  },
+                  "tableOptionSpecHash": "[{\"name\":\"useFilter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable filter for columns\"},{\"name\":\"showPagination\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable pagination for better navigation\"},{\"name\":\"showAggregationFooter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable a footer for displaying aggregated values\"}]",
+                  "tableOptionValue": {
+                    "useFilter": false,
+                    "showPagination": false,
+                    "showAggregationFooter": false
+                  },
+                  "updated": false,
+                  "initialized": false
+                }
+              },
+              "commonSetting": {}
+            }
+          }
+        },
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TABLE",
+            "data": "loadMillis\tcomputeMillis\twriteMillis\tpostProcessingMillis\tnodes\tcommunityCount\tsetCount\tminSetSize\tmaxSetSize\tp1\tp5\tp10\tp25\tp50\tp75\tp90\tp95\tp99\tp100\twrite\tpartitionProperty\twriteProperty\n11\t0\t0\t5\t15\t15\t15\t1\t1\t1\t1\t1\t1\t1\t1\t1\t1\t1\t1\tTRUE\t\"partition\"\t\"partition\"\n"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1575719589876_-525726838",
+      "id": "20191207-114728_61427870",
+      "dateCreated": "2019-12-07 11:53:09.876",
+      "dateStarted": "2019-12-07 11:53:57.731",
+      "dateFinished": "2019-12-07 11:53:57.813",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%md\n## Read second layer",
+      "user": "anonymous",
+      "dateUpdated": "2019-12-07 11:53:09.882",
+      "config": {
+        "tableHide": false,
+        "editorSetting": {
+          "editOnDblClick": true,
+          "language": "markdown",
+          "completionSupport": false
+        },
+        "colWidth": 12.0,
+        "editorMode": "ace/mode/markdown",
+        "fontSize": 9.0,
+        "editorHide": true,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003ch2\u003eRead second layer\u003c/h2\u003e\n\u003c/div\u003e"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1575719589881_770030439",
+      "id": "20191207-115043_741993173",
+      "dateCreated": "2019-12-07 11:53:09.881",
+      "status": "READY",
+      "errorMessage": "",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%neo4j\n",
+      "user": "anonymous",
+      "dateUpdated": "2019-12-07 11:53:09.883",
+      "config": {},
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "jobName": "paragraph_1575719589883_1483333415",
+      "id": "20191207-114958_2002234398",
+      "dateCreated": "2019-12-07 11:53:09.883",
+      "status": "READY",
+      "errorMessage": "",
+      "progressUpdateIntervalMs": 500
+    }
+  ],
+  "name": "Community detection/Strongly connected components/Neo4j",
+  "id": "2EW8M6FY9",
+  "noteParams": {},
+  "noteForms": {},
+  "angularObjects": {
+    "md:shared_process": [],
+    "neo4j:shared_process": [],
+    "spark:shared_process": []
+  },
+  "config": {
+    "isZeppelinNotebookCronEnable": false
+  },
+  "info": {}
+}

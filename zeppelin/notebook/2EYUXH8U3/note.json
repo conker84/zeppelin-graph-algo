@@ -1,0 +1,338 @@
+{
+  "paragraphs": [
+    {
+      "text": "%pyspark\nfrom graphframes import *\nfrom pyspark.sql.types import *\nimport pandas as pd\n",
+      "user": "anonymous",
+      "dateUpdated": "2020-01-01 19:12:03.561",
+      "config": {
+        "editorSetting": {
+          "language": "python",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "colWidth": 12.0,
+        "editorMode": "ace/mode/python",
+        "fontSize": 9.0,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": []
+      },
+      "apps": [],
+      "jobName": "paragraph_1577905916297_293577565",
+      "id": "20200101-190739_803724851",
+      "dateCreated": "2020-01-01 19:11:56.297",
+      "dateStarted": "2020-01-01 19:12:03.583",
+      "dateFinished": "2020-01-01 19:12:03.830",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%pyspark\nfields \u003d [\n    StructField(\"id\", StringType(), True),\n    StructField(\"latitude\", FloatType(), True),\n    StructField(\"longitude\", FloatType(), True),\n    StructField(\"population\", IntegerType(), True)\n]\nv \u003d spark.read.csv(\"spark-warehouse/transport-nodes.csv\", header\u003dTrue, schema\u003dStructType(fields))\n\nsrc_dst \u003d spark.read.csv(\"spark-warehouse/transport-relationships.csv\", header\u003dTrue)\ndf_src_dst \u003d src_dst.toPandas()\ndf_dst_src \u003d src_dst.toPandas()\ndf_dst_src.columns \u003d [\"dst\", \"src\", \"relationship\", \"cost\"]\n\ne \u003d spark.createDataFrame(pd.concat([df_src_dst, df_dst_src]))\n\ng \u003d GraphFrame(v, e)\n",
+      "user": "anonymous",
+      "dateUpdated": "2020-01-01 19:12:39.956",
+      "config": {
+        "editorSetting": {
+          "language": "python",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "colWidth": 12.0,
+        "editorMode": "ace/mode/python",
+        "fontSize": 9.0,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "\u003cstring\u003e:14: FutureWarning: Sorting because non-concatenation axis is not aligned. A future version\nof pandas will change to not sort by default.\n\nTo accept the future behavior, pass \u0027sort\u003dFalse\u0027.\n\nTo retain the current behavior and silence the warning, pass \u0027sort\u003dTrue\u0027.\n\n"
+          }
+        ]
+      },
+      "runtimeInfos": {
+        "jobUrl": {
+          "propertyName": "jobUrl",
+          "label": "SPARK JOB",
+          "tooltip": "View in Spark web UI",
+          "group": "spark",
+          "values": [
+            "http://172.25.0.3:4040/jobs/job?id\u003d42",
+            "http://172.25.0.3:4040/jobs/job?id\u003d43",
+            "http://172.25.0.3:4040/jobs/job?id\u003d44"
+          ],
+          "interpreterSettingId": "spark"
+        }
+      },
+      "apps": [],
+      "jobName": "paragraph_1577905916298_115020128",
+      "id": "20200101-190753_129637672",
+      "dateCreated": "2020-01-01 19:11:56.298",
+      "dateStarted": "2020-01-01 19:12:39.985",
+      "dateFinished": "2020-01-01 19:12:41.740",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%pyspark\n(g.vertices\n .filter(\"population \u003e 100000 and population \u003c 300000\")\n .sort(\"population\")\n .show())\n\n",
+      "user": "anonymous",
+      "dateUpdated": "2020-01-01 19:13:03.556",
+      "config": {
+        "editorSetting": {
+          "language": "python",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "colWidth": 12.0,
+        "editorMode": "ace/mode/python",
+        "fontSize": 9.0,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "+----------+--------+---------+----------+\n|        id|latitude|longitude|population|\n+----------+--------+---------+----------+\n|Colchester|51.88921|  0.90421|    104390|\n|   Ipswich|52.05917|  1.15545|    133384|\n+----------+--------+---------+----------+\n\n"
+          }
+        ]
+      },
+      "runtimeInfos": {
+        "jobUrl": {
+          "propertyName": "jobUrl",
+          "label": "SPARK JOB",
+          "tooltip": "View in Spark web UI",
+          "group": "spark",
+          "values": [
+            "http://172.25.0.3:4040/jobs/job?id\u003d45"
+          ],
+          "interpreterSettingId": "spark"
+        }
+      },
+      "apps": [],
+      "jobName": "paragraph_1577905916299_1940372002",
+      "id": "20200101-190812_321541252",
+      "dateCreated": "2020-01-01 19:11:56.299",
+      "dateStarted": "2020-01-01 19:13:03.583",
+      "dateFinished": "2020-01-01 19:13:03.769",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%pyspark\nfrom_expr \u003d \"id\u003d\u0027Den Haag\u0027\"\nto_expr \u003d \"population \u003e 100000 and population \u003c 300000 and id \u003c\u003e \u0027Den Haag\u0027\"\nresult \u003d g.bfs(from_expr, to_expr)\n",
+      "user": "anonymous",
+      "dateUpdated": "2020-01-01 19:13:24.100",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "python",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "editorMode": "ace/mode/python"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": []
+      },
+      "runtimeInfos": {
+        "jobUrl": {
+          "propertyName": "jobUrl",
+          "label": "SPARK JOB",
+          "tooltip": "View in Spark web UI",
+          "group": "spark",
+          "values": [
+            "http://172.25.0.3:4040/jobs/job?id\u003d46",
+            "http://172.25.0.3:4040/jobs/job?id\u003d47",
+            "http://172.25.0.3:4040/jobs/job?id\u003d48",
+            "http://172.25.0.3:4040/jobs/job?id\u003d49",
+            "http://172.25.0.3:4040/jobs/job?id\u003d50",
+            "http://172.25.0.3:4040/jobs/job?id\u003d51",
+            "http://172.25.0.3:4040/jobs/job?id\u003d52",
+            "http://172.25.0.3:4040/jobs/job?id\u003d53",
+            "http://172.25.0.3:4040/jobs/job?id\u003d54",
+            "http://172.25.0.3:4040/jobs/job?id\u003d55",
+            "http://172.25.0.3:4040/jobs/job?id\u003d56",
+            "http://172.25.0.3:4040/jobs/job?id\u003d57",
+            "http://172.25.0.3:4040/jobs/job?id\u003d58",
+            "http://172.25.0.3:4040/jobs/job?id\u003d59",
+            "http://172.25.0.3:4040/jobs/job?id\u003d60",
+            "http://172.25.0.3:4040/jobs/job?id\u003d61",
+            "http://172.25.0.3:4040/jobs/job?id\u003d62",
+            "http://172.25.0.3:4040/jobs/job?id\u003d63",
+            "http://172.25.0.3:4040/jobs/job?id\u003d64",
+            "http://172.25.0.3:4040/jobs/job?id\u003d65",
+            "http://172.25.0.3:4040/jobs/job?id\u003d66",
+            "http://172.25.0.3:4040/jobs/job?id\u003d67",
+            "http://172.25.0.3:4040/jobs/job?id\u003d68",
+            "http://172.25.0.3:4040/jobs/job?id\u003d69"
+          ],
+          "interpreterSettingId": "spark"
+        }
+      },
+      "apps": [],
+      "jobName": "paragraph_1577905916300_105970424",
+      "id": "20200101-191027_1999772571",
+      "dateCreated": "2020-01-01 19:11:56.300",
+      "dateStarted": "2020-01-01 19:13:24.125",
+      "dateFinished": "2020-01-01 19:14:15.523",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%pyspark\nprint(result.columns)",
+      "user": "anonymous",
+      "dateUpdated": "2020-01-01 19:13:43.823",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "python",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "editorMode": "ace/mode/python"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "[\u0027from\u0027, \u0027e0\u0027, \u0027v1\u0027, \u0027e1\u0027, \u0027v2\u0027, \u0027e2\u0027, \u0027to\u0027]\n"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1577905997356_-348368514",
+      "id": "20200101-191317_2078551320",
+      "dateCreated": "2020-01-01 19:13:17.356",
+      "dateStarted": "2020-01-01 19:13:43.841",
+      "dateFinished": "2020-01-01 19:14:15.540",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%pyspark\ncolumns \u003d [column for column in result.columns if not column.startswith(\"e\")]\nresult.select(columns).show()\n",
+      "user": "anonymous",
+      "dateUpdated": "2020-01-01 19:13:50.808",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "python",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "editorMode": "ace/mode/python"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "+--------------------+--------------------+--------------------+--------------------+\n|                from|                  v1|                  v2|                  to|\n+--------------------+--------------------+--------------------+--------------------+\n|[Den Haag,52.0786...|[Hoek van Holland...|[Felixstowe,51.96...|[Ipswich,52.05917...|\n+--------------------+--------------------+--------------------+--------------------+\n\n"
+          }
+        ]
+      },
+      "runtimeInfos": {
+        "jobUrl": {
+          "propertyName": "jobUrl",
+          "label": "SPARK JOB",
+          "tooltip": "View in Spark web UI",
+          "group": "spark",
+          "values": [
+            "http://172.25.0.3:4040/jobs/job?id\u003d70",
+            "http://172.25.0.3:4040/jobs/job?id\u003d71",
+            "http://172.25.0.3:4040/jobs/job?id\u003d72",
+            "http://172.25.0.3:4040/jobs/job?id\u003d73",
+            "http://172.25.0.3:4040/jobs/job?id\u003d74",
+            "http://172.25.0.3:4040/jobs/job?id\u003d75",
+            "http://172.25.0.3:4040/jobs/job?id\u003d76",
+            "http://172.25.0.3:4040/jobs/job?id\u003d77",
+            "http://172.25.0.3:4040/jobs/job?id\u003d78"
+          ],
+          "interpreterSettingId": "spark"
+        }
+      },
+      "apps": [],
+      "jobName": "paragraph_1577906023823_-1305197573",
+      "id": "20200101-191343_557652051",
+      "dateCreated": "2020-01-01 19:13:43.823",
+      "dateStarted": "2020-01-01 19:14:15.575",
+      "dateFinished": "2020-01-01 19:14:49.661",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%pyspark\n",
+      "user": "anonymous",
+      "dateUpdated": "2020-01-01 19:13:50.809",
+      "config": {},
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "jobName": "paragraph_1577906030808_-1567234721",
+      "id": "20200101-191350_942770780",
+      "dateCreated": "2020-01-01 19:13:50.808",
+      "status": "READY",
+      "progressUpdateIntervalMs": 500
+    }
+  ],
+  "name": "Path finding/Bfs/Spark",
+  "id": "2EYUXH8U3",
+  "noteParams": {},
+  "noteForms": {},
+  "angularObjects": {
+    "md:shared_process": [],
+    "neo4j:shared_process": [],
+    "spark:shared_process": []
+  },
+  "config": {
+    "isZeppelinNotebookCronEnable": false
+  },
+  "info": {}
+}

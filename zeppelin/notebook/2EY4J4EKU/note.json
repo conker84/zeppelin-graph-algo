@@ -1,0 +1,166 @@
+{
+  "paragraphs": [
+    {
+      "text": "%pyspark\n# // tag::imports[]\nfrom graphframes import GraphFrame\nfrom pyspark import SparkContext\n# // end::imports[]\n\n\n# // tag::load-graph-frame[]\ndef create_social_graph():\n    nodes \u003d spark.read.csv(\"spark-warehouse/social-nodes.csv\", header\u003dTrue)\n    relationships \u003d spark.read.csv(\"spark-warehouse/social-relationships.csv\", header\u003dTrue)\n    return GraphFrame(nodes, relationships)\n# // end::load-graph-frame[]\n",
+      "user": "anonymous",
+      "dateUpdated": "2020-01-01 18:52:42.168",
+      "config": {
+        "editorSetting": {
+          "language": "python",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "colWidth": 12.0,
+        "editorMode": "ace/mode/python",
+        "fontSize": 9.0,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": []
+      },
+      "apps": [],
+      "jobName": "paragraph_1577904754438_-1101582627",
+      "id": "20200101-112344_1237781185",
+      "dateCreated": "2020-01-01 18:52:34.438",
+      "dateStarted": "2020-01-01 18:52:42.198",
+      "dateFinished": "2020-01-01 18:52:42.217",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%pyspark\ng \u003d create_social_graph()",
+      "user": "anonymous",
+      "dateUpdated": "2020-01-01 18:52:44.534",
+      "config": {
+        "editorSetting": {
+          "language": "python",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "colWidth": 12.0,
+        "editorMode": "ace/mode/python",
+        "fontSize": 9.0,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": []
+      },
+      "runtimeInfos": {
+        "jobUrl": {
+          "propertyName": "jobUrl",
+          "label": "SPARK JOB",
+          "tooltip": "View in Spark web UI",
+          "group": "spark",
+          "values": [
+            "http://172.25.0.3:4040/jobs/job?id\u003d13",
+            "http://172.25.0.3:4040/jobs/job?id\u003d14"
+          ],
+          "interpreterSettingId": "spark"
+        }
+      },
+      "apps": [],
+      "jobName": "paragraph_1577904754442_-1314763455",
+      "id": "20200101-112422_199127971",
+      "dateCreated": "2020-01-01 18:52:34.442",
+      "dateStarted": "2020-01-01 18:52:44.575",
+      "dateFinished": "2020-01-01 18:52:44.839",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%pyspark\ntotal_degree \u003d g.degrees\nin_degree \u003d g.inDegrees\nout_degree \u003d g.outDegrees\n\n(total_degree.join(in_degree, \"id\", how\u003d\"left\")\n .join(out_degree, \"id\", how\u003d\"left\")\n .fillna(0)\n .sort(\"inDegree\", ascending\u003dFalse)\n .show())\n",
+      "user": "anonymous",
+      "dateUpdated": "2020-01-01 18:52:57.230",
+      "config": {
+        "editorSetting": {
+          "language": "python",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "colWidth": 12.0,
+        "editorMode": "ace/mode/python",
+        "fontSize": 9.0,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "+-------+------+--------+---------+\n|     id|degree|inDegree|outDegree|\n+-------+------+--------+---------+\n|   Doug|     6|       5|        1|\n|  Alice|     7|       3|        4|\n|Michael|     5|       2|        3|\n|Bridget|     5|       2|        3|\n|Charles|     2|       1|        1|\n|    Amy|     1|       1|        0|\n|  David|     2|       1|        1|\n|   Mark|     3|       1|        2|\n|  James|     1|       0|        1|\n+-------+------+--------+---------+\n\n"
+          }
+        ]
+      },
+      "runtimeInfos": {
+        "jobUrl": {
+          "propertyName": "jobUrl",
+          "label": "SPARK JOB",
+          "tooltip": "View in Spark web UI",
+          "group": "spark",
+          "values": [
+            "http://172.25.0.3:4040/jobs/job?id\u003d15",
+            "http://172.25.0.3:4040/jobs/job?id\u003d16",
+            "http://172.25.0.3:4040/jobs/job?id\u003d17"
+          ],
+          "interpreterSettingId": "spark"
+        }
+      },
+      "apps": [],
+      "jobName": "paragraph_1577904754443_-872166498",
+      "id": "20200101-112443_1061570403",
+      "dateCreated": "2020-01-01 18:52:34.443",
+      "dateStarted": "2020-01-01 18:52:57.265",
+      "dateFinished": "2020-01-01 18:53:07.623",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%pyspark\n",
+      "user": "anonymous",
+      "dateUpdated": "2020-01-01 18:52:34.447",
+      "config": {},
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "jobName": "paragraph_1577904754447_-37947289",
+      "id": "20200101-165346_2145706540",
+      "dateCreated": "2020-01-01 18:52:34.447",
+      "status": "READY",
+      "errorMessage": "",
+      "progressUpdateIntervalMs": 500
+    }
+  ],
+  "name": "Centrality/Degree/Spark",
+  "id": "2EY4J4EKU",
+  "noteParams": {},
+  "noteForms": {},
+  "angularObjects": {
+    "spark:shared_process": []
+  },
+  "config": {
+    "isZeppelinNotebookCronEnable": false
+  },
+  "info": {}
+}

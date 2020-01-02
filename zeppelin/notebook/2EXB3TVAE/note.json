@@ -1,0 +1,95 @@
+{
+  "paragraphs": [
+    {
+      "text": "%neo4j\nWITH \"https://raw.githubusercontent.com/neo4j-graph-analytics/book/master/data/sw-nodes.csv\"\nAS uri\nLOAD CSV WITH HEADERS FROM uri AS row\nMERGE (:Library {id: row.id})\n",
+      "user": "anonymous",
+      "dateUpdated": "2019-12-07 11:45:36.887",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "editOnDblClick": false
+        },
+        "editorMode": "ace/mode/undefined"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": []
+      },
+      "apps": [],
+      "jobName": "paragraph_1575719102277_-1889175482",
+      "id": "20191207-114502_1424053454",
+      "dateCreated": "2019-12-07 11:45:02.277",
+      "dateStarted": "2019-12-07 11:45:36.950",
+      "dateFinished": "2019-12-07 11:45:39.028",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%neo4j\nWITH \"https://raw.githubusercontent.com/neo4j-graph-analytics/book/master/data/sw-relationships.csv\"\nAS uri\nLOAD CSV WITH HEADERS FROM uri AS row\nMATCH (source:Library {id: row.src})\nMATCH (destination:Library {id: row.dst})\nMERGE (source)-[:DEPENDS_ON]-\u003e(destination)\n",
+      "user": "anonymous",
+      "dateUpdated": "2019-12-07 11:46:07.023",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "editOnDblClick": false
+        },
+        "editorMode": "ace/mode/undefined"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": []
+      },
+      "apps": [],
+      "jobName": "paragraph_1575719136896_1371842291",
+      "id": "20191207-114536_382611086",
+      "dateCreated": "2019-12-07 11:45:36.896",
+      "dateStarted": "2019-12-07 11:46:07.084",
+      "dateFinished": "2019-12-07 11:46:07.696",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%neo4j\n",
+      "user": "anonymous",
+      "dateUpdated": "2019-12-07 11:46:07.034",
+      "config": {},
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "jobName": "paragraph_1575719167024_-61974955",
+      "id": "20191207-114607_916840536",
+      "dateCreated": "2019-12-07 11:46:07.024",
+      "status": "READY",
+      "progressUpdateIntervalMs": 500
+    }
+  ],
+  "name": "Community detection/Neo4j Import",
+  "id": "2EXB3TVAE",
+  "noteParams": {},
+  "noteForms": {},
+  "angularObjects": {
+    "md:shared_process": [],
+    "neo4j:shared_process": [],
+    "spark:shared_process": []
+  },
+  "config": {
+    "isZeppelinNotebookCronEnable": false
+  },
+  "info": {}
+}
