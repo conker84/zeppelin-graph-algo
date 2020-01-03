@@ -1,6 +1,46 @@
 {
   "paragraphs": [
     {
+      "text": "%md\n### Please make sure that you have previously executed [this notebook](/#/notebook/2EZ4GSKAZ)",
+      "user": "anonymous",
+      "dateUpdated": "2020-01-02 16:51:16.371",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "editOnDblClick": true,
+          "language": "markdown",
+          "completionSupport": false
+        },
+        "editorMode": "ace/mode/markdown",
+        "editorHide": true,
+        "tableHide": false
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003ch3\u003ePlease make sure that you have previously executed \u003ca href\u003d\"/#/notebook/2EZ4GSKAZ\"\u003ethis notebook\u003c/a\u003e\u003c/h3\u003e\n\u003c/div\u003e"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1577983868042_2001534358",
+      "id": "20200102-165108_448579247",
+      "dateCreated": "2020-01-02 16:51:08.042",
+      "dateStarted": "2020-01-02 16:51:16.371",
+      "dateFinished": "2020-01-02 16:51:16.389",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
       "text": "MATCH (start:Place {id:\"Gouda\"}),\n      (end:Place {id:\"Felixstowe\"})\nCALL algo.kShortestPaths.stream(start, end, 5, \"distance\")\nYIELD index, nodeIds, path, costs\nRETURN index,\n       [node in algo.getNodesById(nodeIds[1..-1]) | node.id] AS via,\n       reduce(acc\u003d0.0, cost in costs | acc + cost) AS totalCost\n",
       "user": "anonymous",
       "dateUpdated": "2020-01-01 19:06:10.909",
@@ -89,8 +129,7 @@
   "noteForms": {},
   "angularObjects": {
     "md:shared_process": [],
-    "neo4j:shared_process": [],
-    "spark:shared_process": []
+    "neo4j:shared_process": []
   },
   "config": {
     "isZeppelinNotebookCronEnable": false

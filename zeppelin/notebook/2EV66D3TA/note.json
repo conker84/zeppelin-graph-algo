@@ -1,9 +1,90 @@
 {
   "paragraphs": [
     {
-      "text": "%md\n## Streaming pagerank centrality",
+      "text": "%md\n### Please make sure that you have previously executed [this notebook](/#/notebook/2EW6YXEM1)",
       "user": "anonymous",
-      "dateUpdated": "2019-12-07 11:30:42.848",
+      "dateUpdated": "2020-01-02 16:57:47.497",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "markdown",
+          "editOnDblClick": true,
+          "completionKey": "TAB",
+          "completionSupport": false
+        },
+        "editorMode": "ace/mode/markdown",
+        "editorHide": true,
+        "tableHide": false
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003ch3\u003ePlease make sure that you have previously executed \u003ca href\u003d\"/#/notebook/2EW6YXEM1\"\u003ethis notebook\u003c/a\u003e\u003c/h3\u003e\n\u003c/div\u003e"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1577984264609_-1405880882",
+      "id": "20200102-165744_1242591389",
+      "dateCreated": "2020-01-02 16:57:44.609",
+      "dateStarted": "2020-01-02 16:57:47.499",
+      "dateFinished": "2020-01-02 16:57:47.516",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%md\n# PageRank\nhttps://neo4j.com/docs/graph-algorithms/current/algorithms/page-rank/\n",
+      "user": "anonymous",
+      "dateUpdated": "2020-01-02 17:09:18.059",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "editOnDblClick": true,
+          "language": "markdown",
+          "completionSupport": false
+        },
+        "editorMode": "ace/mode/markdown",
+        "editorHide": true,
+        "tableHide": false
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003ch1\u003ePageRank\u003c/h1\u003e\n\u003cp\u003e\u003ca href\u003d\"https://neo4j.com/docs/graph-algorithms/current/algorithms/page-rank/\"\u003ehttps://neo4j.com/docs/graph-algorithms/current/algorithms/page-rank/\u003c/a\u003e\u003c/p\u003e\n\u003c/div\u003e"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1577984933048_828394210",
+      "id": "20200102-170853_1997624530",
+      "dateCreated": "2020-01-02 17:08:53.048",
+      "dateStarted": "2020-01-02 17:09:18.066",
+      "dateFinished": "2020-01-02 17:09:18.111",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%md\n## Streaming PageRank centrality",
+      "user": "anonymous",
+      "dateUpdated": "2020-01-02 17:09:26.632",
       "config": {
         "tableHide": false,
         "editorSetting": {
@@ -28,7 +109,7 @@
         "msg": [
           {
             "type": "HTML",
-            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003ch2\u003eStreaming pagerank centrality\u003c/h2\u003e\n\u003c/div\u003e"
+            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003ch2\u003eStreaming PageRank centrality\u003c/h2\u003e\n\u003c/div\u003e"
           }
         ]
       },
@@ -36,8 +117,8 @@
       "jobName": "paragraph_1575718233536_-1291284381",
       "id": "20191207-112728_2069065216",
       "dateCreated": "2019-12-07 11:30:33.536",
-      "dateStarted": "2019-12-07 11:30:42.854",
-      "dateFinished": "2019-12-07 11:30:42.873",
+      "dateStarted": "2020-01-02 17:09:26.636",
+      "dateFinished": "2020-01-02 17:09:26.661",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
@@ -110,9 +191,9 @@
       "progressUpdateIntervalMs": 500
     },
     {
-      "text": "%md\n## Write back pagerank centrality\n",
+      "text": "%md\n## Write back PageRank centrality\n",
       "user": "anonymous",
-      "dateUpdated": "2019-12-07 11:30:58.690",
+      "dateUpdated": "2020-01-02 17:09:34.616",
       "config": {
         "tableHide": false,
         "editorSetting": {
@@ -137,7 +218,7 @@
         "msg": [
           {
             "type": "HTML",
-            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003ch2\u003eWrite back pagerank centrality\u003c/h2\u003e\n\u003c/div\u003e"
+            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003ch2\u003eWrite back PageRank centrality\u003c/h2\u003e\n\u003c/div\u003e"
           }
         ]
       },
@@ -145,8 +226,8 @@
       "jobName": "paragraph_1575718233544_756286542",
       "id": "20191207-112839_1421236737",
       "dateCreated": "2019-12-07 11:30:33.544",
-      "dateStarted": "2019-12-07 11:30:58.698",
-      "dateFinished": "2019-12-07 11:30:58.715",
+      "dateStarted": "2020-01-02 17:09:34.623",
+      "dateFinished": "2020-01-02 17:09:34.642",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
@@ -231,8 +312,7 @@
   "noteForms": {},
   "angularObjects": {
     "md:shared_process": [],
-    "neo4j:shared_process": [],
-    "spark:shared_process": []
+    "neo4j:shared_process": []
   },
   "config": {
     "isZeppelinNotebookCronEnable": false

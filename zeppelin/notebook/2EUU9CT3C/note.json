@@ -1,6 +1,86 @@
 {
   "paragraphs": [
     {
+      "text": "%md\n### Please make sure that you have previously executed [this notebook](/#/notebook/2EXB3TVAE)\n",
+      "user": "anonymous",
+      "dateUpdated": "2020-01-02 17:04:10.146",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "editOnDblClick": true,
+          "language": "markdown",
+          "completionSupport": false
+        },
+        "editorMode": "ace/mode/markdown",
+        "editorHide": true,
+        "tableHide": false
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003ch3\u003ePlease make sure that you have previously executed \u003ca href\u003d\"/#/notebook/2EXB3TVAE\"\u003ethis notebook\u003c/a\u003e\u003c/h3\u003e\n\u003c/div\u003e"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1577984647930_-1717131299",
+      "id": "20200102-170407_1162937078",
+      "dateCreated": "2020-01-02 17:04:07.930",
+      "dateStarted": "2020-01-02 17:04:10.148",
+      "dateFinished": "2020-01-02 17:04:10.168",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%md\n# The Triangle Counting / Clustering Coefficient algorithm \nhttps://neo4j.com/docs/graph-algorithms/current/labs-algorithms/triangle-counting-clustering-coefficient/",
+      "user": "anonymous",
+      "dateUpdated": "2020-01-02 17:12:29.995",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "editOnDblClick": true,
+          "language": "markdown",
+          "completionSupport": false
+        },
+        "editorMode": "ace/mode/markdown",
+        "editorHide": true,
+        "tableHide": false
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003ch1\u003eThe Triangle Counting / Clustering Coefficient algorithm\u003c/h1\u003e\n\u003cp\u003e\u003ca href\u003d\"https://neo4j.com/docs/graph-algorithms/current/labs-algorithms/triangle-counting-clustering-coefficient/\"\u003ehttps://neo4j.com/docs/graph-algorithms/current/labs-algorithms/triangle-counting-clustering-coefficient/\u003c/a\u003e\u003c/p\u003e\n\u003c/div\u003e"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1577985136428_1822405389",
+      "id": "20200102-171216_692196906",
+      "dateCreated": "2020-01-02 17:12:16.428",
+      "dateStarted": "2020-01-02 17:12:29.997",
+      "dateFinished": "2020-01-02 17:12:30.017",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
       "text": "%md\n## Stream local clustering coefficient",
       "user": "anonymous",
       "dateUpdated": "2019-12-07 11:59:17.874",
@@ -235,8 +315,7 @@
   "noteForms": {},
   "angularObjects": {
     "md:shared_process": [],
-    "neo4j:shared_process": [],
-    "spark:shared_process": []
+    "neo4j:shared_process": []
   },
   "config": {
     "isZeppelinNotebookCronEnable": false

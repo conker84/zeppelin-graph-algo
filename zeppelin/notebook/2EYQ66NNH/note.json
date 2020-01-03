@@ -1,6 +1,46 @@
 {
   "paragraphs": [
     {
+      "text": "%md\n### Please make sure that you have previously executed [this notebook](/#/notebook/2EZ4GSKAZ)",
+      "user": "anonymous",
+      "dateUpdated": "2020-01-02 16:50:59.404",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "editOnDblClick": true,
+          "language": "markdown",
+          "completionSupport": false
+        },
+        "editorMode": "ace/mode/markdown",
+        "editorHide": true,
+        "tableHide": false
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003ch3\u003ePlease make sure that you have previously executed \u003ca href\u003d\"/#/notebook/2EZ4GSKAZ\"\u003ethis notebook\u003c/a\u003e\u003c/h3\u003e\n\u003c/div\u003e"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1577983857844_-1174436502",
+      "id": "20200102-165057_1545889267",
+      "dateCreated": "2020-01-02 16:50:57.844",
+      "dateStarted": "2020-01-02 16:50:59.407",
+      "dateFinished": "2020-01-02 16:50:59.443",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
       "text": "MATCH (n:Place {id:\"Amsterdam\"})\nCALL algo.spanningTree.minimum(\"Place\", \"EROAD\", \"distance\", id(n),\n  {write:true, writeProperty:\"MINST\"})\nYIELD loadMillis, computeMillis, writeMillis, effectiveNodeCount\nRETURN loadMillis, computeMillis, writeMillis, effectiveNodeCount",
       "user": "anonymous",
       "dateUpdated": "2020-01-01 19:03:48.724",
@@ -220,8 +260,7 @@
   "noteForms": {},
   "angularObjects": {
     "md:shared_process": [],
-    "neo4j:shared_process": [],
-    "spark:shared_process": []
+    "neo4j:shared_process": []
   },
   "config": {
     "isZeppelinNotebookCronEnable": false
