@@ -43,7 +43,7 @@
     {
       "text": "%neo4j\n// import nodes\nWITH \"https://raw.githubusercontent.com/neo4j-graph-analytics/book/master/data/sw-nodes.csv\"\nAS uri\nLOAD CSV WITH HEADERS FROM uri AS row\nMERGE (:Library {id: row.id})\n",
       "user": "anonymous",
-      "dateUpdated": "2020-01-02 17:02:40.080",
+      "dateUpdated": "2020-01-19 20:08:46.373",
       "config": {
         "colWidth": 12.0,
         "fontSize": 9.0,
@@ -66,15 +66,15 @@
       "jobName": "paragraph_1575719102277_-1889175482",
       "id": "20191207-114502_1424053454",
       "dateCreated": "2019-12-07 11:45:02.277",
-      "dateStarted": "2020-01-02 17:02:40.109",
-      "dateFinished": "2020-01-02 17:02:41.027",
+      "dateStarted": "2020-01-19 20:08:46.478",
+      "dateFinished": "2020-01-19 20:08:46.953",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
     {
       "text": "%neo4j\n// import relationships\nWITH \"https://raw.githubusercontent.com/neo4j-graph-analytics/book/master/data/sw-relationships.csv\"\nAS uri\nLOAD CSV WITH HEADERS FROM uri AS row\nMATCH (source:Library {id: row.src})\nMATCH (destination:Library {id: row.dst})\nMERGE (source)-[:DEPENDS_ON]-\u003e(destination)\n",
       "user": "anonymous",
-      "dateUpdated": "2020-01-02 17:02:42.818",
+      "dateUpdated": "2020-01-19 20:08:48.575",
       "config": {
         "colWidth": 12.0,
         "fontSize": 9.0,
@@ -97,8 +97,8 @@
       "jobName": "paragraph_1575719136896_1371842291",
       "id": "20191207-114536_382611086",
       "dateCreated": "2019-12-07 11:45:36.896",
-      "dateStarted": "2020-01-02 17:02:42.829",
-      "dateFinished": "2020-01-02 17:02:43.311",
+      "dateStarted": "2020-01-19 20:08:48.627",
+      "dateFinished": "2020-01-19 20:08:49.210",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
@@ -125,8 +125,7 @@
   "noteForms": {},
   "angularObjects": {
     "md:shared_process": [],
-    "neo4j:shared_process": [],
-    "spark:shared_process": []
+    "neo4j:shared_process": []
   },
   "config": {
     "isZeppelinNotebookCronEnable": false

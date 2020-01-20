@@ -3,7 +3,7 @@
     {
       "text": "%md\n## Import social graph to Neo4j",
       "user": "anonymous",
-      "dateUpdated": "2020-01-02 16:58:26.043",
+      "dateUpdated": "2020-01-19 19:22:23.354",
       "config": {
         "colWidth": 12.0,
         "fontSize": 9.0,
@@ -15,8 +15,8 @@
           "completionSupport": false
         },
         "editorMode": "ace/mode/markdown",
-        "editorHide": false,
-        "tableHide": true
+        "editorHide": true,
+        "tableHide": false
       },
       "settings": {
         "params": {},
@@ -35,15 +35,15 @@
       "jobName": "paragraph_1577984068012_840732035",
       "id": "20200102-165428_1530215617",
       "dateCreated": "2020-01-02 16:54:28.012",
-      "dateStarted": "2020-01-02 16:54:36.200",
-      "dateFinished": "2020-01-02 16:54:36.218",
+      "dateStarted": "2020-01-19 19:22:23.371",
+      "dateFinished": "2020-01-19 19:22:25.130",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
     {
       "text": "// import nodes\nWITH \"https://raw.githubusercontent.com/neo4j-graph-analytics/book/master/data/social-nodes.csv\"\nAS uri\nLOAD CSV WITH HEADERS FROM uri AS row\nMERGE (:User {id: row.id})\n",
       "user": "anonymous",
-      "dateUpdated": "2020-01-02 16:54:43.419",
+      "dateUpdated": "2020-01-19 19:22:26.470",
       "config": {
         "colWidth": 12.0,
         "fontSize": 9.0,
@@ -66,15 +66,15 @@
       "jobName": "paragraph_1575717341970_-1273236391",
       "id": "20191207-111541_1437265370",
       "dateCreated": "2019-12-07 11:15:41.970",
-      "dateStarted": "2019-12-07 11:19:11.394",
-      "dateFinished": "2019-12-07 11:19:12.180",
+      "dateStarted": "2020-01-19 19:22:26.495",
+      "dateFinished": "2020-01-19 19:22:29.201",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
     {
       "text": "// import relationships\nWITH \"https://raw.githubusercontent.com/neo4j-graph-analytics/book/master/data/social-relationships.csv\"\nAS uri\nLOAD CSV WITH HEADERS FROM uri AS row\nMATCH (source:User {id: row.src})\nMATCH (destination:User {id: row.dst})\nMERGE (source)-[:FOLLOWS]-\u003e(destination)\n",
       "user": "anonymous",
-      "dateUpdated": "2020-01-02 16:54:55.187",
+      "dateUpdated": "2020-01-19 19:22:58.431",
       "config": {
         "colWidth": 12.0,
         "fontSize": 9.0,
@@ -97,8 +97,8 @@
       "jobName": "paragraph_1575717470757_235724351",
       "id": "20191207-111750_1475912359",
       "dateCreated": "2019-12-07 11:17:50.757",
-      "dateStarted": "2019-12-07 11:19:47.036",
-      "dateFinished": "2019-12-07 11:19:47.680",
+      "dateStarted": "2020-01-19 19:22:58.542",
+      "dateFinished": "2020-01-19 19:22:59.344",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
@@ -123,8 +123,7 @@
   "noteForms": {},
   "angularObjects": {
     "md:shared_process": [],
-    "neo4j:shared_process": [],
-    "spark:shared_process": []
+    "neo4j:shared_process": []
   },
   "config": {
     "isZeppelinNotebookCronEnable": false

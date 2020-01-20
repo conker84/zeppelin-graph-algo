@@ -1,9 +1,9 @@
 {
   "paragraphs": [
     {
-      "text": "%md\n### Please make sure that you have previously executed [this notebook](/#/notebook/2EXB3TVAE)",
+      "text": "%md\n\n###  Example taken from \"Graph Algorithms: Practical Examples in Apache Spark and Neo4j\" (https://neo4j.com/graph-algorithms-book/)\n\n### Please make sure that you have previously executed [this notebook](/#/notebook/2EXB3TVAE)",
       "user": "anonymous",
-      "dateUpdated": "2020-01-02 17:00:15.357",
+      "dateUpdated": "2020-01-19 19:44:22.090",
       "config": {
         "colWidth": 12.0,
         "fontSize": 9.0,
@@ -27,7 +27,7 @@
         "msg": [
           {
             "type": "HTML",
-            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003ch3\u003ePlease make sure that you have previously executed \u003ca href\u003d\"/#/notebook/2EXB3TVAE\"\u003ethis notebook\u003c/a\u003e\u003c/h3\u003e\n\u003c/div\u003e"
+            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003ch3\u003eExample taken from \u0026ldquo;Graph Algorithms: Practical Examples in Apache Spark and Neo4j\u0026rdquo; (\u003ca href\u003d\"https://neo4j.com/graph-algorithms-book/\"\u003ehttps://neo4j.com/graph-algorithms-book/\u003c/a\u003e)\u003c/h3\u003e\n\u003ch3\u003ePlease make sure that you have previously executed \u003ca href\u003d\"/#/notebook/2EXB3TVAE\"\u003ethis notebook\u003c/a\u003e\u003c/h3\u003e\n\u003c/div\u003e"
           }
         ]
       },
@@ -35,8 +35,8 @@
       "jobName": "paragraph_1577984412048_716644931",
       "id": "20200102-170012_1738758143",
       "dateCreated": "2020-01-02 17:00:12.048",
-      "dateStarted": "2020-01-02 17:00:15.363",
-      "dateFinished": "2020-01-02 17:00:15.399",
+      "dateStarted": "2020-01-19 19:44:22.092",
+      "dateFinished": "2020-01-19 19:44:22.185",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
@@ -77,6 +77,95 @@
       "dateCreated": "2020-01-02 17:09:52.462",
       "dateStarted": "2020-01-02 17:10:15.783",
       "dateFinished": "2020-01-02 17:10:15.804",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%neo4j\nMATCH p\u003d(:Library)-[:DEPENDS_ON]-\u003e(:Library)\nRETURN p",
+      "user": "anonymous",
+      "dateUpdated": "2020-01-19 17:25:34.818",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {
+          "0": {
+            "graph": {
+              "mode": "network",
+              "height": 300.0,
+              "optionOpen": false,
+              "setting": {
+                "table": {
+                  "tableGridState": {},
+                  "tableColumnTypeState": {
+                    "names": {
+                      "id": "string",
+                      "label": "string"
+                    },
+                    "updated": false
+                  },
+                  "tableOptionSpecHash": "[{\"name\":\"useFilter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable filter for columns\"},{\"name\":\"showPagination\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable pagination for better navigation\"},{\"name\":\"showAggregationFooter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable a footer for displaying aggregated values\"}]",
+                  "tableOptionValue": {
+                    "useFilter": false,
+                    "showPagination": false,
+                    "showAggregationFooter": false
+                  },
+                  "updated": false,
+                  "initialized": false
+                },
+                "network": {
+                  "properties": {
+                    "Library": {
+                      "selected": "id",
+                      "keys": [
+                        "id",
+                        "label"
+                      ]
+                    }
+                  },
+                  "d3Graph": {
+                    "forceLayout": {
+                      "timeout": 10000.0,
+                      "charge": -120.0,
+                      "linkDistance": 80.0
+                    },
+                    "zoom": {
+                      "minScale": 1.3
+                    }
+                  }
+                }
+              },
+              "commonSetting": {}
+            },
+            "helium": {}
+          }
+        },
+        "editorSetting": {
+          "editOnDblClick": false,
+          "language": "markdown",
+          "completionSupport": false
+        },
+        "editorMode": "ace/mode/undefined"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "NETWORK",
+            "data": "{\"nodes\":[{\"id\":9,\"data\":{\"id\":\"six\"},\"label\":\"Library\"},{\"id\":10,\"data\":{\"id\":\"pandas\"},\"label\":\"Library\"},{\"id\":11,\"data\":{\"id\":\"numpy\"},\"label\":\"Library\"},{\"id\":12,\"data\":{\"id\":\"python-dateutil\"},\"label\":\"Library\"},{\"id\":13,\"data\":{\"id\":\"pytz\"},\"label\":\"Library\"},{\"id\":14,\"data\":{\"id\":\"pyspark\"},\"label\":\"Library\"},{\"id\":15,\"data\":{\"id\":\"matplotlib\"},\"label\":\"Library\"},{\"id\":16,\"data\":{\"id\":\"spacy\"},\"label\":\"Library\"},{\"id\":17,\"data\":{\"id\":\"py4j\"},\"label\":\"Library\"},{\"id\":18,\"data\":{\"id\":\"jupyter\"},\"label\":\"Library\"},{\"id\":19,\"data\":{\"id\":\"jpy-console\"},\"label\":\"Library\"},{\"id\":20,\"data\":{\"id\":\"nbconvert\"},\"label\":\"Library\"},{\"id\":21,\"data\":{\"id\":\"ipykernel\"},\"label\":\"Library\"},{\"id\":22,\"data\":{\"id\":\"jpy-client\"},\"label\":\"Library\"},{\"id\":23,\"data\":{\"id\":\"jpy-core\"},\"label\":\"Library\"}],\"edges\":[{\"source\":22,\"target\":23,\"id\":32,\"data\":{},\"label\":\"DEPENDS_ON\"},{\"source\":20,\"target\":23,\"id\":33,\"data\":{},\"label\":\"DEPENDS_ON\"},{\"source\":10,\"target\":11,\"id\":16,\"data\":{},\"label\":\"DEPENDS_ON\"},{\"source\":10,\"target\":13,\"id\":17,\"data\":{},\"label\":\"DEPENDS_ON\"},{\"source\":10,\"target\":12,\"id\":18,\"data\":{},\"label\":\"DEPENDS_ON\"},{\"source\":12,\"target\":9,\"id\":19,\"data\":{},\"label\":\"DEPENDS_ON\"},{\"source\":14,\"target\":17,\"id\":20,\"data\":{},\"label\":\"DEPENDS_ON\"},{\"source\":15,\"target\":11,\"id\":21,\"data\":{},\"label\":\"DEPENDS_ON\"},{\"source\":15,\"target\":12,\"id\":22,\"data\":{},\"label\":\"DEPENDS_ON\"},{\"source\":15,\"target\":9,\"id\":23,\"data\":{},\"label\":\"DEPENDS_ON\"},{\"source\":15,\"target\":13,\"id\":24,\"data\":{},\"label\":\"DEPENDS_ON\"},{\"source\":16,\"target\":9,\"id\":25,\"data\":{},\"label\":\"DEPENDS_ON\"},{\"source\":16,\"target\":11,\"id\":26,\"data\":{},\"label\":\"DEPENDS_ON\"},{\"source\":18,\"target\":20,\"id\":27,\"data\":{},\"label\":\"DEPENDS_ON\"},{\"source\":18,\"target\":21,\"id\":28,\"data\":{},\"label\":\"DEPENDS_ON\"},{\"source\":18,\"target\":19,\"id\":29,\"data\":{},\"label\":\"DEPENDS_ON\"},{\"source\":19,\"target\":22,\"id\":30,\"data\":{},\"label\":\"DEPENDS_ON\"},{\"source\":19,\"target\":21,\"id\":31,\"data\":{},\"label\":\"DEPENDS_ON\"}],\"labels\":{\"User\":\"#67AD48\",\"Library\":\"#2B0671\"},\"types\":[\"FOLLOWS\",\"DEPENDS_ON\"],\"directed\":true}"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1579454689628_-2125341374",
+      "id": "20200119-172449_638415466",
+      "dateCreated": "2020-01-19 17:24:49.628",
+      "dateStarted": "2020-01-19 17:25:26.435",
+      "dateFinished": "2020-01-19 17:25:26.499",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },

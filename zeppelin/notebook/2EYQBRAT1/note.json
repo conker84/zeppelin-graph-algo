@@ -1,6 +1,88 @@
 {
   "paragraphs": [
     {
+      "text": "%md\n\n###  Example taken from \"Graph Algorithms: Practical Examples in Apache Spark and Neo4j\" (https://neo4j.com/graph-algorithms-book/)\n\n### Please make sure that you have previously executed [this notebook](/#/notebook/2EWCD4Q9X)",
+      "user": "anonymous",
+      "dateUpdated": "2020-01-19 18:46:10.151",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "markdown",
+          "editOnDblClick": true,
+          "completionKey": "TAB",
+          "completionSupport": false
+        },
+        "editorMode": "ace/mode/markdown",
+        "editorHide": true,
+        "tableHide": false
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003ch3\u003eExample taken from \u0026ldquo;Graph Algorithms: Practical Examples in Apache Spark and Neo4j\u0026rdquo; (\u003ca href\u003d\"https://neo4j.com/graph-algorithms-book/\"\u003ehttps://neo4j.com/graph-algorithms-book/\u003c/a\u003e)\u003c/h3\u003e\n\u003ch3\u003ePlease make sure that you have previously executed \u003ca href\u003d\"/#/notebook/2EWCD4Q9X\"\u003ethis notebook\u003c/a\u003e\u003c/h3\u003e\n\u003c/div\u003e"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1579459567822_1997876834",
+      "id": "20200119-184607_633735453",
+      "dateCreated": "2020-01-19 18:46:07.822",
+      "dateStarted": "2020-01-19 18:46:10.157",
+      "dateFinished": "2020-01-19 18:46:10.220",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%md\n# All pairs shortest paths",
+      "user": "anonymous",
+      "dateUpdated": "2020-01-19 18:46:27.960",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "markdown",
+          "editOnDblClick": true,
+          "completionKey": "TAB",
+          "completionSupport": false
+        },
+        "editorMode": "ace/mode/markdown",
+        "editorHide": true,
+        "tableHide": false
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003ch1\u003eAll pairs shortest paths\u003c/h1\u003e\n\u003c/div\u003e"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1579459572629_789860907",
+      "id": "20200119-184612_1600905887",
+      "dateCreated": "2020-01-19 18:46:12.629",
+      "dateStarted": "2020-01-19 18:46:27.995",
+      "dateFinished": "2020-01-19 18:46:28.040",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
       "text": "%pyspark\nfrom graphframes import *",
       "user": "anonymous",
       "dateUpdated": "2020-01-01 19:07:59.988",
@@ -37,7 +119,7 @@
     {
       "text": "%pyspark\ng \u003d create_transport_graph()",
       "user": "anonymous",
-      "dateUpdated": "2020-01-01 19:10:12.757",
+      "dateUpdated": "2020-01-19 18:46:36.820",
       "config": {
         "colWidth": 12.0,
         "fontSize": 9.0,
@@ -66,7 +148,7 @@
           "tooltip": "View in Spark web UI",
           "group": "spark",
           "values": [
-            "http://172.25.0.3:4040/jobs/job?id\u003d18"
+            "http://172.18.0.3:4040/jobs/job?id\u003d48"
           ],
           "interpreterSettingId": "spark"
         }
@@ -75,8 +157,8 @@
       "jobName": "paragraph_1577905673141_1952546536",
       "id": "20200101-190753_129637672",
       "dateCreated": "2020-01-01 19:07:53.141",
-      "dateStarted": "2020-01-01 19:10:12.784",
-      "dateFinished": "2020-01-01 19:10:12.963",
+      "dateStarted": "2020-01-19 18:55:55.588",
+      "dateFinished": "2020-01-19 18:55:55.752",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
@@ -109,40 +191,6 @@
             "data": "+----------------+-----------------------------------------------------------+\n|id              |distances                                                  |\n+----------------+-----------------------------------------------------------+\n|Amsterdam       |Map(Immingham -\u003e 1, Hoek van Holland -\u003e 2, Colchester -\u003e 4)|\n|Colchester      |Map(Colchester -\u003e 0, Hoek van Holland -\u003e 3, Immingham -\u003e 3)|\n|Den Haag        |Map(Hoek van Holland -\u003e 1, Immingham -\u003e 2, Colchester -\u003e 4)|\n|Doncaster       |Map(Immingham -\u003e 1, Colchester -\u003e 2, Hoek van Holland -\u003e 4)|\n|Felixstowe      |Map(Hoek van Holland -\u003e 1, Colchester -\u003e 2, Immingham -\u003e 4)|\n|Gouda           |Map(Hoek van Holland -\u003e 2, Immingham -\u003e 3, Colchester -\u003e 5)|\n|Hoek van Holland|Map(Hoek van Holland -\u003e 0, Immingham -\u003e 3, Colchester -\u003e 3)|\n|Immingham       |Map(Immingham -\u003e 0, Colchester -\u003e 3, Hoek van Holland -\u003e 3)|\n|Ipswich         |Map(Colchester -\u003e 1, Hoek van Holland -\u003e 2, Immingham -\u003e 4)|\n|London          |Map(Colchester -\u003e 1, Immingham -\u003e 2, Hoek van Holland -\u003e 4)|\n|Rotterdam       |Map(Hoek van Holland -\u003e 1, Immingham -\u003e 3, Colchester -\u003e 4)|\n|Utrecht         |Map(Immingham -\u003e 2, Hoek van Holland -\u003e 3, Colchester -\u003e 5)|\n+----------------+-----------------------------------------------------------+\n\n"
           }
         ]
-      },
-      "runtimeInfos": {
-        "jobUrl": {
-          "propertyName": "jobUrl",
-          "label": "SPARK JOB",
-          "tooltip": "View in Spark web UI",
-          "group": "spark",
-          "values": [
-            "http://172.25.0.3:4040/jobs/job?id\u003d19",
-            "http://172.25.0.3:4040/jobs/job?id\u003d20",
-            "http://172.25.0.3:4040/jobs/job?id\u003d21",
-            "http://172.25.0.3:4040/jobs/job?id\u003d22",
-            "http://172.25.0.3:4040/jobs/job?id\u003d23",
-            "http://172.25.0.3:4040/jobs/job?id\u003d24",
-            "http://172.25.0.3:4040/jobs/job?id\u003d25",
-            "http://172.25.0.3:4040/jobs/job?id\u003d26",
-            "http://172.25.0.3:4040/jobs/job?id\u003d27",
-            "http://172.25.0.3:4040/jobs/job?id\u003d28",
-            "http://172.25.0.3:4040/jobs/job?id\u003d29",
-            "http://172.25.0.3:4040/jobs/job?id\u003d30",
-            "http://172.25.0.3:4040/jobs/job?id\u003d31",
-            "http://172.25.0.3:4040/jobs/job?id\u003d32",
-            "http://172.25.0.3:4040/jobs/job?id\u003d33",
-            "http://172.25.0.3:4040/jobs/job?id\u003d34",
-            "http://172.25.0.3:4040/jobs/job?id\u003d35",
-            "http://172.25.0.3:4040/jobs/job?id\u003d36",
-            "http://172.25.0.3:4040/jobs/job?id\u003d37",
-            "http://172.25.0.3:4040/jobs/job?id\u003d38",
-            "http://172.25.0.3:4040/jobs/job?id\u003d39",
-            "http://172.25.0.3:4040/jobs/job?id\u003d40",
-            "http://172.25.0.3:4040/jobs/job?id\u003d41"
-          ],
-          "interpreterSettingId": "spark"
-        }
       },
       "apps": [],
       "jobName": "paragraph_1577905692148_-286952541",
