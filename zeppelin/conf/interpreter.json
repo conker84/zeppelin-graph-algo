@@ -1631,14 +1631,43 @@
       "md"
     ],
     "2EVMJ5PJC": [
-      "spark"
+      "spark",
+      "md"
+    ],
+    "2EYECKESC": [
+      "spark",
+      "md"
+    ],
+    "2EYGMDMY2": [
+      "spark",
+      "md",
+      "angular",
+      "sh",
+      "livy",
+      "alluxio",
+      "file",
+      "flink",
+      "python",
+      "ignite",
+      "lens",
+      "cassandra",
+      "kylin",
+      "elasticsearch",
+      "jdbc",
+      "hbase",
+      "bigquery",
+      "pig",
+      "groovy",
+      "neo4j",
+      "sap"
     ],
     "2EUEDJ3R6": [
       "neo4j",
       "md"
     ],
     "2EXTYPK53": [
-      "spark"
+      "spark",
+      "md"
     ],
     "2EXEQC8RJ": [
       "neo4j",
@@ -1712,14 +1741,16 @@
       "md"
     ],
     "2EY4J4EKU": [
-      "spark"
+      "spark",
+      "md"
     ],
     "2EXZ2FFEG": [
       "neo4j",
       "md"
     ],
     "2EX73418D": [
-      "spark"
+      "spark",
+      "md"
     ],
     "2EYCYMWJJ": [
       "neo4j",
@@ -1735,7 +1766,31 @@
     ],
     "2DMJBRQPS": [],
     "2EWK7AKFQ": [
-      "spark"
+      "spark",
+      "md"
+    ],
+    "2EY8PRHJ8": [
+      "spark",
+      "md",
+      "angular",
+      "sh",
+      "livy",
+      "alluxio",
+      "file",
+      "flink",
+      "python",
+      "ignite",
+      "lens",
+      "cassandra",
+      "kylin",
+      "elasticsearch",
+      "jdbc",
+      "hbase",
+      "bigquery",
+      "pig",
+      "groovy",
+      "neo4j",
+      "sap"
     ],
     "2EYQBRAT1": [
       "spark",
@@ -1770,26 +1825,7 @@
     ],
     "2EYUXH8U3": [
       "spark",
-      "md",
-      "angular",
-      "sh",
-      "livy",
-      "alluxio",
-      "file",
-      "flink",
-      "python",
-      "ignite",
-      "lens",
-      "cassandra",
-      "kylin",
-      "elasticsearch",
-      "jdbc",
-      "hbase",
-      "bigquery",
-      "pig",
-      "groovy",
-      "neo4j",
-      "sap"
+      "md"
     ],
     "2EVJ1P6NU": [
       "neo4j",
@@ -1797,26 +1833,7 @@
     ],
     "2EW6YXEM1": [
       "neo4j",
-      "spark",
-      "md",
-      "angular",
-      "sh",
-      "livy",
-      "alluxio",
-      "file",
-      "flink",
-      "python",
-      "ignite",
-      "lens",
-      "cassandra",
-      "kylin",
-      "elasticsearch",
-      "jdbc",
-      "hbase",
-      "bigquery",
-      "pig",
-      "groovy",
-      "sap"
+      "md"
     ],
     "2EW8M6FY9": [
       "neo4j",
@@ -1825,10 +1842,12 @@
     "2DNC8PD4M": [],
     "2EWBPX3F9": [],
     "2EVK2MZ36": [
-      "spark"
+      "spark",
+      "md"
     ],
     "2EY9G1KBV": [
-      "spark"
+      "spark",
+      "md"
     ]
   },
   "interpreterRepositories": [

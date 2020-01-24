@@ -1,9 +1,9 @@
 {
   "paragraphs": [
     {
-      "text": "%md\n### Please make sure that you have previously executed [this notebook](/#/notebook/2EW6YXEM1)",
+      "text": "%md\n\n###  Example taken from \"Graph Algorithms: Practical Examples in Apache Spark and Neo4j\" (https://neo4j.com/graph-algorithms-book/)\n\n### Please make sure that you have previously executed [this notebook](/#/notebook/2EW6YXEM1)",
       "user": "anonymous",
-      "dateUpdated": "2020-01-02 16:55:09.337",
+      "dateUpdated": "2020-01-19 18:11:59.773",
       "config": {
         "colWidth": 12.0,
         "fontSize": 9.0,
@@ -28,7 +28,7 @@
         "msg": [
           {
             "type": "HTML",
-            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003ch3\u003ePlease make sure that you have previously executed \u003ca href\u003d\"/#/notebook/2EW6YXEM1\"\u003ethis notebook\u003c/a\u003e\u003c/h3\u003e\n\u003c/div\u003e"
+            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003ch3\u003eExample taken from \u0026ldquo;Graph Algorithms: Practical Examples in Apache Spark and Neo4j\u0026rdquo; (\u003ca href\u003d\"https://neo4j.com/graph-algorithms-book/\"\u003ehttps://neo4j.com/graph-algorithms-book/\u003c/a\u003e)\u003c/h3\u003e\n\u003ch3\u003ePlease make sure that you have previously executed \u003ca href\u003d\"/#/notebook/2EW6YXEM1\"\u003ethis notebook\u003c/a\u003e\u003c/h3\u003e\n\u003c/div\u003e"
           }
         ]
       },
@@ -36,8 +36,8 @@
       "jobName": "paragraph_1577984106045_1688990764",
       "id": "20200102-165506_39980812",
       "dateCreated": "2020-01-02 16:55:06.045",
-      "dateStarted": "2020-01-02 16:55:09.354",
-      "dateFinished": "2020-01-02 16:55:09.374",
+      "dateStarted": "2020-01-19 18:11:59.775",
+      "dateFinished": "2020-01-19 18:11:59.799",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
@@ -78,6 +78,95 @@
       "dateCreated": "2020-01-02 17:07:02.129",
       "dateStarted": "2020-01-02 17:07:10.563",
       "dateFinished": "2020-01-02 17:07:10.582",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%neo4j\nMATCH p\u003d(:User)-[:FOLLOWS]-\u003e(:User)\nreturn p",
+      "user": "anonymous",
+      "dateUpdated": "2020-01-19 19:23:19.712",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {
+          "0": {
+            "graph": {
+              "mode": "network",
+              "height": 300.0,
+              "optionOpen": false,
+              "setting": {
+                "table": {
+                  "tableGridState": {},
+                  "tableColumnTypeState": {
+                    "names": {
+                      "id": "string",
+                      "label": "string"
+                    },
+                    "updated": false
+                  },
+                  "tableOptionSpecHash": "[{\"name\":\"useFilter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable filter for columns\"},{\"name\":\"showPagination\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable pagination for better navigation\"},{\"name\":\"showAggregationFooter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable a footer for displaying aggregated values\"}]",
+                  "tableOptionValue": {
+                    "useFilter": false,
+                    "showPagination": false,
+                    "showAggregationFooter": false
+                  },
+                  "updated": false,
+                  "initialized": false
+                },
+                "network": {
+                  "properties": {
+                    "User": {
+                      "selected": "id",
+                      "keys": [
+                        "id",
+                        "label"
+                      ]
+                    }
+                  },
+                  "d3Graph": {
+                    "forceLayout": {
+                      "timeout": 10000.0,
+                      "charge": -120.0,
+                      "linkDistance": 80.0
+                    },
+                    "zoom": {
+                      "minScale": 1.3
+                    }
+                  }
+                }
+              },
+              "commonSetting": {}
+            },
+            "helium": {}
+          }
+        },
+        "editorSetting": {
+          "editOnDblClick": false,
+          "language": "markdown",
+          "completionSupport": false
+        },
+        "editorMode": "ace/mode/undefined"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "NETWORK",
+            "data": "{\"nodes\":[{\"id\":0,\"data\":{\"id\":\"Alice\"},\"label\":\"User\"},{\"id\":1,\"data\":{\"id\":\"Bridget\"},\"label\":\"User\"},{\"id\":2,\"data\":{\"id\":\"Charles\"},\"label\":\"User\"},{\"id\":3,\"data\":{\"id\":\"Doug\"},\"label\":\"User\"},{\"id\":4,\"data\":{\"id\":\"Mark\"},\"label\":\"User\"},{\"id\":5,\"data\":{\"id\":\"Michael\"},\"label\":\"User\"},{\"id\":6,\"data\":{\"id\":\"David\"},\"label\":\"User\"},{\"id\":7,\"data\":{\"id\":\"Amy\"},\"label\":\"User\"},{\"id\":8,\"data\":{\"id\":\"James\"},\"label\":\"User\"}],\"edges\":[{\"source\":0,\"target\":1,\"id\":0,\"data\":{},\"label\":\"FOLLOWS\"},{\"source\":0,\"target\":2,\"id\":1,\"data\":{},\"label\":\"FOLLOWS\"},{\"source\":4,\"target\":3,\"id\":2,\"data\":{},\"label\":\"FOLLOWS\"},{\"source\":1,\"target\":5,\"id\":3,\"data\":{},\"label\":\"FOLLOWS\"},{\"source\":3,\"target\":4,\"id\":4,\"data\":{},\"label\":\"FOLLOWS\"},{\"source\":5,\"target\":0,\"id\":5,\"data\":{},\"label\":\"FOLLOWS\"},{\"source\":0,\"target\":5,\"id\":6,\"data\":{},\"label\":\"FOLLOWS\"},{\"source\":1,\"target\":0,\"id\":7,\"data\":{},\"label\":\"FOLLOWS\"},{\"source\":5,\"target\":1,\"id\":8,\"data\":{},\"label\":\"FOLLOWS\"},{\"source\":2,\"target\":3,\"id\":9,\"data\":{},\"label\":\"FOLLOWS\"},{\"source\":1,\"target\":3,\"id\":10,\"data\":{},\"label\":\"FOLLOWS\"},{\"source\":5,\"target\":3,\"id\":11,\"data\":{},\"label\":\"FOLLOWS\"},{\"source\":0,\"target\":3,\"id\":12,\"data\":{},\"label\":\"FOLLOWS\"},{\"source\":4,\"target\":0,\"id\":13,\"data\":{},\"label\":\"FOLLOWS\"},{\"source\":6,\"target\":7,\"id\":14,\"data\":{},\"label\":\"FOLLOWS\"},{\"source\":8,\"target\":6,\"id\":15,\"data\":{},\"label\":\"FOLLOWS\"}],\"labels\":{\"User\":\"#E82A27\"},\"types\":[\"FOLLOWS\"],\"directed\":true}"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1579454244644_280127710",
+      "id": "20200119-171724_513834356",
+      "dateCreated": "2020-01-19 17:17:24.644",
+      "dateStarted": "2020-01-19 19:23:19.831",
+      "dateFinished": "2020-01-19 19:23:20.097",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
@@ -125,7 +214,7 @@
     {
       "text": "%neo4j\nCALL algo.betweenness.stream(\"User\", \"FOLLOWS\")\nYIELD nodeId, centrality\nRETURN algo.getNodeById(nodeId).id  AS user, centrality\nORDER BY centrality DESC\n",
       "user": "anonymous",
-      "dateUpdated": "2019-12-07 11:33:47.919",
+      "dateUpdated": "2020-01-19 19:24:44.612",
       "config": {
         "editorSetting": {
           "language": "scala",
@@ -160,10 +249,38 @@
                   },
                   "updated": false,
                   "initialized": false
+                },
+                "lineChart": {
+                  "rotate": {
+                    "degree": "-45"
+                  },
+                  "xLabelStatus": "default"
+                },
+                "stackedAreaChart": {
+                  "rotate": {
+                    "degree": "-45"
+                  },
+                  "xLabelStatus": "default"
                 }
               },
-              "commonSetting": {}
-            }
+              "commonSetting": {},
+              "keys": [
+                {
+                  "name": "user",
+                  "index": 0.0,
+                  "aggr": "sum"
+                }
+              ],
+              "groups": [],
+              "values": [
+                {
+                  "name": "centrality",
+                  "index": 1.0,
+                  "aggr": "sum"
+                }
+              ]
+            },
+            "helium": {}
           }
         },
         "enabled": true
@@ -185,8 +302,8 @@
       "jobName": "paragraph_1575718417139_929098113",
       "id": "20191207-112455_1660358477",
       "dateCreated": "2019-12-07 11:33:37.139",
-      "dateStarted": "2019-12-07 11:33:47.746",
-      "dateFinished": "2019-12-07 11:33:47.824",
+      "dateStarted": "2020-01-19 19:24:44.651",
+      "dateFinished": "2020-01-19 19:24:44.687",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
@@ -234,7 +351,7 @@
     {
       "text": "%neo4j\nCALL algo.betweenness(\u0027User\u0027, \u0027FOLLOWS\u0027)",
       "user": "anonymous",
-      "dateUpdated": "2019-12-07 11:34:19.501",
+      "dateUpdated": "2020-01-19 19:24:50.916",
       "config": {
         "editorSetting": {
           "language": "scala",
@@ -291,7 +408,7 @@
         "msg": [
           {
             "type": "TABLE",
-            "data": "loadMillis\tcomputeMillis\twriteMillis\tnodes\tminCentrality\tmaxCentrality\tsumCentrality\n6\t12\t4\t9\t-1.0\t-1.0\t-1.0\n"
+            "data": "loadMillis\tcomputeMillis\twriteMillis\tnodes\tminCentrality\tmaxCentrality\tsumCentrality\n18\t4\t39\t9\t-1.0\t-1.0\t-1.0\n"
           }
         ]
       },
@@ -299,8 +416,8 @@
       "jobName": "paragraph_1575718417140_146659566",
       "id": "20191207-112554_511336751",
       "dateCreated": "2019-12-07 11:33:37.140",
-      "dateStarted": "2019-12-07 11:34:19.181",
-      "dateFinished": "2019-12-07 11:34:19.240",
+      "dateStarted": "2020-01-19 19:24:51.034",
+      "dateFinished": "2020-01-19 19:24:51.180",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
@@ -348,7 +465,7 @@
     {
       "text": "%neo4j\nCALL algo.betweenness.sampled.stream(\"User\", \"FOLLOWS\", {strategy:\"degree\"})\nYIELD nodeId, centrality\nRETURN algo.getNodeById(nodeId).id AS user, centrality\nORDER BY centrality DESC\n",
       "user": "anonymous",
-      "dateUpdated": "2019-12-07 11:34:50.831",
+      "dateUpdated": "2020-01-19 19:24:55.622",
       "config": {
         "colWidth": 12.0,
         "fontSize": 9.0,
@@ -400,7 +517,7 @@
         "msg": [
           {
             "type": "TABLE",
-            "data": "user\tcentrality\n\"Doug\"\t6.0\n\"Alice\"\t3.0\n\"Bridget\"\t0.0\n\"Charles\"\t0.0\n\"Mark\"\t0.0\n\"Michael\"\t0.0\n\"David\"\t0.0\n\"Amy\"\t0.0\n\"James\"\t0.0\n"
+            "data": "user\tcentrality\n\"Doug\"\t9.0\n\"Alice\"\t0.0\n\"Bridget\"\t0.0\n\"Charles\"\t0.0\n\"Mark\"\t0.0\n\"Michael\"\t0.0\n\"David\"\t0.0\n\"Amy\"\t0.0\n\"James\"\t0.0\n"
           }
         ]
       },
@@ -408,9 +525,25 @@
       "jobName": "paragraph_1575718474692_-2062144139",
       "id": "20191207-113434_913302487",
       "dateCreated": "2019-12-07 11:34:34.692",
-      "dateStarted": "2019-12-07 11:34:50.259",
-      "dateFinished": "2019-12-07 11:34:50.350",
+      "dateStarted": "2020-01-19 19:24:55.758",
+      "dateFinished": "2020-01-19 19:24:55.844",
       "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%neo4j\n",
+      "user": "anonymous",
+      "dateUpdated": "2020-01-19 19:24:55.633",
+      "config": {},
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "jobName": "paragraph_1579461895624_1077283437",
+      "id": "20200119-192455_1947109107",
+      "dateCreated": "2020-01-19 19:24:55.624",
+      "status": "READY",
       "progressUpdateIntervalMs": 500
     }
   ],

@@ -1,9 +1,9 @@
 {
   "paragraphs": [
     {
-      "text": "%md\n### Please make sure that you have previously executed [this notebook](/#/notebook/2EZ4GSKAZ)",
+      "text": "%md\n\n###  Example taken from \"Graph Algorithms: Practical Examples in Apache Spark and Neo4j\" (https://neo4j.com/graph-algorithms-book/)\n\n### Please make sure that you have previously executed [this notebook](/#/notebook/2EZ4GSKAZ)",
       "user": "anonymous",
-      "dateUpdated": "2020-01-02 16:50:16.129",
+      "dateUpdated": "2020-01-19 17:32:15.220",
       "config": {
         "colWidth": 12.0,
         "fontSize": 9.0,
@@ -27,7 +27,7 @@
         "msg": [
           {
             "type": "HTML",
-            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003ch3\u003ePlease make sure that you have previously executed \u003ca href\u003d\"/#/notebook/2EZ4GSKAZ\"\u003ethis notebook\u003c/a\u003e\u003c/h3\u003e\n\u003c/div\u003e"
+            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003ch3\u003eExample taken from \u0026ldquo;Graph Algorithms: Practical Examples in Apache Spark and Neo4j\u0026rdquo; (\u003ca href\u003d\"https://neo4j.com/graph-algorithms-book/\"\u003ehttps://neo4j.com/graph-algorithms-book/\u003c/a\u003e)\u003c/h3\u003e\n\u003ch3\u003ePlease make sure that you have previously executed \u003ca href\u003d\"/#/notebook/2EZ4GSKAZ\"\u003ethis notebook\u003c/a\u003e\u003c/h3\u003e\n\u003c/div\u003e"
           }
         ]
       },
@@ -35,15 +35,95 @@
       "jobName": "paragraph_1577983813473_-1033064249",
       "id": "20200102-165013_1885970695",
       "dateCreated": "2020-01-02 16:50:13.473",
-      "dateStarted": "2020-01-02 16:50:16.131",
-      "dateFinished": "2020-01-02 16:50:16.169",
+      "dateStarted": "2020-01-19 17:32:15.224",
+      "dateFinished": "2020-01-19 17:32:15.247",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%md\n# The A* algorithm\n\nhttps://neo4j.com/docs/graph-algorithms/current/labs-algorithms/a_star/",
+      "user": "anonymous",
+      "dateUpdated": "2020-01-19 17:32:54.163",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "editOnDblClick": true,
+          "language": "markdown",
+          "completionSupport": false
+        },
+        "editorMode": "ace/mode/markdown",
+        "editorHide": true,
+        "tableHide": false
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003ch1\u003eThe A* algorithm\u003c/h1\u003e\n\u003cp\u003e\u003ca href\u003d\"https://neo4j.com/docs/graph-algorithms/current/labs-algorithms/a_star/\"\u003ehttps://neo4j.com/docs/graph-algorithms/current/labs-algorithms/a_star/\u003c/a\u003e\u003c/p\u003e\n\u003c/div\u003e"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1579455136815_1486703282",
+      "id": "20200119-173216_1214067370",
+      "dateCreated": "2020-01-19 17:32:16.815",
+      "dateStarted": "2020-01-19 17:32:54.163",
+      "dateFinished": "2020-01-19 17:32:54.180",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%md\n### Stream A* shortest path",
+      "user": "anonymous",
+      "dateUpdated": "2020-01-19 17:33:18.968",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "editOnDblClick": true,
+          "language": "markdown",
+          "completionSupport": false
+        },
+        "editorMode": "ace/mode/markdown",
+        "editorHide": true,
+        "tableHide": false
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003ch3\u003eStream A* shortest path\u003c/h3\u003e\n\u003c/div\u003e"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1579455185170_418793210",
+      "id": "20200119-173305_203623910",
+      "dateCreated": "2020-01-19 17:33:05.170",
+      "dateStarted": "2020-01-19 17:33:18.968",
+      "dateFinished": "2020-01-19 17:33:18.983",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
     {
       "text": "MATCH (source:Place {id: \"Den Haag\"}),\n      (destination:Place {id: \"London\"})\nCALL algo.shortestPath.astar.stream(source, destination, \"distance\", \"latitude\", \"longitude\")\nYIELD nodeId, cost\nRETURN algo.getNodeById(nodeId).id AS place, cost\n\n",
       "user": "anonymous",
-      "dateUpdated": "2020-01-01 19:01:10.905",
+      "dateUpdated": "2020-01-19 17:32:57.225",
       "config": {
         "editorSetting": {
           "editOnDblClick": false
@@ -100,8 +180,8 @@
       "jobName": "paragraph_1577905262717_1957168895",
       "id": "20200101-190009_1220471711",
       "dateCreated": "2020-01-01 19:01:02.717",
-      "dateStarted": "2020-01-01 19:01:10.627",
-      "dateFinished": "2020-01-01 19:01:10.796",
+      "dateStarted": "2020-01-19 17:32:57.252",
+      "dateFinished": "2020-01-19 17:32:57.464",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },

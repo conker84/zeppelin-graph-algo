@@ -1,0 +1,108 @@
+{
+  "paragraphs": [
+    {
+      "text": "%md\n## Import social graph to Spark\n",
+      "user": "anonymous",
+      "dateUpdated": "2020-01-20 18:41:03.810",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "markdown",
+          "editOnDblClick": true,
+          "completionKey": "TAB",
+          "completionSupport": false
+        },
+        "editorMode": "ace/mode/markdown",
+        "editorHide": true,
+        "tableHide": false
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003ch2\u003eImport social graph to Spark\u003c/h2\u003e\n\u003c/div\u003e"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1579457362044_-1188761285",
+      "id": "20200119-180922_776969622",
+      "dateCreated": "2020-01-19 18:09:22.044",
+      "dateStarted": "2020-01-20 18:41:03.815",
+      "dateFinished": "2020-01-20 18:41:03.832",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%pyspark\nfrom graphframes import GraphFrame\n\n\ndef create_social_graph():\n    nodes \u003d spark.read.csv(\"spark-warehouse/social-nodes.csv\", header\u003dTrue)\n    relationships \u003d spark.read.csv(\"spark-warehouse/social-relationships.csv\", header\u003dTrue)\n    return GraphFrame(nodes, relationships)",
+      "user": "anonymous",
+      "dateUpdated": "2020-01-19 19:30:21.790",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "python",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "editorMode": "ace/mode/python"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": []
+      },
+      "apps": [],
+      "jobName": "paragraph_1579457336439_-1929294183",
+      "id": "20200119-180856_1150371867",
+      "dateCreated": "2020-01-19 18:08:56.439",
+      "dateStarted": "2020-01-19 19:30:21.843",
+      "dateFinished": "2020-01-19 19:30:21.895",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%pyspark\n",
+      "user": "anonymous",
+      "dateUpdated": "2020-01-19 18:09:00.463",
+      "config": {},
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "jobName": "paragraph_1579457340458_2063069238",
+      "id": "20200119-180900_1827343628",
+      "dateCreated": "2020-01-19 18:09:00.458",
+      "status": "READY",
+      "progressUpdateIntervalMs": 500
+    }
+  ],
+  "name": "Centrality/Spark import",
+  "id": "2EYGMDMY2",
+  "noteParams": {},
+  "noteForms": {},
+  "angularObjects": {
+    "md:shared_process": [],
+    "neo4j:shared_process": [],
+    "spark:shared_process": []
+  },
+  "config": {
+    "isZeppelinNotebookCronEnable": false
+  },
+  "info": {}
+}

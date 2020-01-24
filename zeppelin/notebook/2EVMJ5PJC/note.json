@@ -1,9 +1,91 @@
 {
   "paragraphs": [
     {
-      "text": "%pyspark\n# // tag::imports[]\nfrom graphframes import GraphFrame\nfrom pyspark import SparkContext\n# // end::imports[]\n\n\n# // tag::load-graph-frame[]\ndef create_social_graph():\n    nodes \u003d spark.read.csv(\"spark-warehouse/social-nodes.csv\", header\u003dTrue)\n    relationships \u003d spark.read.csv(\"spark-warehouse/social-relationships.csv\", header\u003dTrue)\n    return GraphFrame(nodes, relationships)\n# // end::load-graph-frame[]\n",
+      "text": "%md\n\n###  Example taken from \"Graph Algorithms: Practical Examples in Apache Spark and Neo4j\" (https://neo4j.com/graph-algorithms-book/)\n\n### Please make sure that you have previously executed [this notebook](/#/notebook/2EYGMDMY2)",
       "user": "anonymous",
-      "dateUpdated": "2020-01-01 17:25:51.599",
+      "dateUpdated": "2020-01-19 18:17:08.629",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "markdown",
+          "editOnDblClick": true,
+          "completionKey": "TAB",
+          "completionSupport": false
+        },
+        "editorMode": "ace/mode/markdown",
+        "editorHide": true,
+        "tableHide": false
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003ch3\u003eExample taken from \u0026ldquo;Graph Algorithms: Practical Examples in Apache Spark and Neo4j\u0026rdquo; (\u003ca href\u003d\"https://neo4j.com/graph-algorithms-book/\"\u003ehttps://neo4j.com/graph-algorithms-book/\u003c/a\u003e)\u003c/h3\u003e\n\u003ch3\u003ePlease make sure that you have previously executed \u003ca href\u003d\"/#/notebook/2EYGMDMY2\"\u003ethis notebook\u003c/a\u003e\u003c/h3\u003e\n\u003c/div\u003e"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1579457810755_-486334885",
+      "id": "20200119-181650_2102014974",
+      "dateCreated": "2020-01-19 18:16:50.755",
+      "dateStarted": "2020-01-19 18:17:08.643",
+      "dateFinished": "2020-01-19 18:17:08.663",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%md\n# Pagerank",
+      "user": "anonymous",
+      "dateUpdated": "2020-01-19 18:17:18.640",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "markdown",
+          "editOnDblClick": true,
+          "completionKey": "TAB",
+          "completionSupport": false
+        },
+        "editorMode": "ace/mode/markdown",
+        "editorHide": true,
+        "tableHide": false
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003ch1\u003ePagerank\u003c/h1\u003e\n\u003c/div\u003e"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1579457831336_-563321059",
+      "id": "20200119-181711_534438973",
+      "dateCreated": "2020-01-19 18:17:11.336",
+      "dateStarted": "2020-01-19 18:17:18.643",
+      "dateFinished": "2020-01-19 18:17:18.692",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%pyspark\nfrom graphframes import GraphFrame\nfrom pyspark import SparkContext\n",
+      "user": "anonymous",
+      "dateUpdated": "2020-01-19 19:31:23.678",
       "config": {
         "editorSetting": {
           "language": "python",
@@ -29,15 +111,15 @@
       "jobName": "paragraph_1577897523612_1182628329",
       "id": "20200101-112344_1237781185",
       "dateCreated": "2020-01-01 16:52:03.612",
-      "dateStarted": "2020-01-01 17:25:51.628",
-      "dateFinished": "2020-01-01 17:25:51.644",
+      "dateStarted": "2020-01-19 19:31:23.721",
+      "dateFinished": "2020-01-19 19:31:23.738",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
     {
       "text": "%pyspark\ng \u003d create_social_graph()",
       "user": "anonymous",
-      "dateUpdated": "2020-01-01 16:56:09.215",
+      "dateUpdated": "2020-01-19 19:31:31.301",
       "config": {
         "editorSetting": {
           "language": "python",
@@ -59,32 +141,60 @@
         "code": "SUCCESS",
         "msg": []
       },
-      "runtimeInfos": {
-        "jobUrl": {
-          "propertyName": "jobUrl",
-          "label": "SPARK JOB",
-          "tooltip": "View in Spark web UI",
-          "group": "spark",
-          "values": [
-            "http://172.25.0.3:4040/jobs/job?id\u003d121",
-            "http://172.25.0.3:4040/jobs/job?id\u003d122"
-          ],
-          "interpreterSettingId": "spark"
-        }
-      },
       "apps": [],
       "jobName": "paragraph_1577897523613_1971813985",
       "id": "20200101-112422_199127971",
       "dateCreated": "2020-01-01 16:52:03.613",
-      "dateStarted": "2020-01-01 16:56:09.256",
-      "dateFinished": "2020-01-01 16:56:09.402",
+      "dateStarted": "2020-01-19 19:31:31.361",
+      "dateFinished": "2020-01-19 19:31:31.872",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%md\n### PageRank with a fixed number of iterations\n",
+      "user": "anonymous",
+      "dateUpdated": "2020-01-20 18:39:37.413",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "markdown",
+          "editOnDblClick": true,
+          "completionKey": "TAB",
+          "completionSupport": false
+        },
+        "editorMode": "ace/mode/markdown",
+        "editorHide": true,
+        "tableHide": false
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003ch3\u003ePageRank with a fixed number of iterations\u003c/h3\u003e\n\u003c/div\u003e"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1579545463958_296960533",
+      "id": "20200120-183743_288167189",
+      "dateCreated": "2020-01-20 18:37:43.958",
+      "dateStarted": "2020-01-20 18:39:37.425",
+      "dateFinished": "2020-01-20 18:39:37.448",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
     {
       "text": "%pyspark\nresults \u003d g.pageRank(resetProbability\u003d0.15, maxIter\u003d20)\nresults.vertices.sort(\"pagerank\", ascending\u003dFalse).show()\n",
       "user": "anonymous",
-      "dateUpdated": "2020-01-01 16:56:11.107",
+      "dateUpdated": "2020-01-19 19:31:34.419",
       "config": {
         "editorSetting": {
           "language": "python",
@@ -111,71 +221,72 @@
           }
         ]
       },
-      "runtimeInfos": {
-        "jobUrl": {
-          "propertyName": "jobUrl",
-          "label": "SPARK JOB",
-          "tooltip": "View in Spark web UI",
-          "group": "spark",
-          "values": [
-            "http://172.25.0.3:4040/jobs/job?id\u003d123",
-            "http://172.25.0.3:4040/jobs/job?id\u003d124",
-            "http://172.25.0.3:4040/jobs/job?id\u003d125",
-            "http://172.25.0.3:4040/jobs/job?id\u003d126",
-            "http://172.25.0.3:4040/jobs/job?id\u003d127",
-            "http://172.25.0.3:4040/jobs/job?id\u003d128",
-            "http://172.25.0.3:4040/jobs/job?id\u003d129",
-            "http://172.25.0.3:4040/jobs/job?id\u003d130",
-            "http://172.25.0.3:4040/jobs/job?id\u003d131",
-            "http://172.25.0.3:4040/jobs/job?id\u003d132",
-            "http://172.25.0.3:4040/jobs/job?id\u003d133",
-            "http://172.25.0.3:4040/jobs/job?id\u003d134",
-            "http://172.25.0.3:4040/jobs/job?id\u003d135",
-            "http://172.25.0.3:4040/jobs/job?id\u003d136",
-            "http://172.25.0.3:4040/jobs/job?id\u003d137",
-            "http://172.25.0.3:4040/jobs/job?id\u003d138",
-            "http://172.25.0.3:4040/jobs/job?id\u003d139",
-            "http://172.25.0.3:4040/jobs/job?id\u003d140",
-            "http://172.25.0.3:4040/jobs/job?id\u003d141",
-            "http://172.25.0.3:4040/jobs/job?id\u003d142",
-            "http://172.25.0.3:4040/jobs/job?id\u003d143",
-            "http://172.25.0.3:4040/jobs/job?id\u003d144",
-            "http://172.25.0.3:4040/jobs/job?id\u003d145",
-            "http://172.25.0.3:4040/jobs/job?id\u003d146",
-            "http://172.25.0.3:4040/jobs/job?id\u003d147",
-            "http://172.25.0.3:4040/jobs/job?id\u003d148",
-            "http://172.25.0.3:4040/jobs/job?id\u003d149",
-            "http://172.25.0.3:4040/jobs/job?id\u003d150",
-            "http://172.25.0.3:4040/jobs/job?id\u003d151"
-          ],
-          "interpreterSettingId": "spark"
-        }
-      },
       "apps": [],
       "jobName": "paragraph_1577897523614_319339002",
       "id": "20200101-112443_1061570403",
       "dateCreated": "2020-01-01 16:52:03.614",
-      "dateStarted": "2020-01-01 16:56:11.124",
-      "dateFinished": "2020-01-01 16:59:14.499",
+      "dateStarted": "2020-01-19 19:31:34.467",
+      "dateFinished": "2020-01-19 19:35:41.146",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%md\n### PageRank until convergence\n",
+      "user": "anonymous",
+      "dateUpdated": "2020-01-20 18:39:51.500",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "markdown",
+          "editOnDblClick": true,
+          "completionKey": "TAB",
+          "completionSupport": false
+        },
+        "editorMode": "ace/mode/markdown",
+        "editorHide": true,
+        "tableHide": false
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003ch3\u003ePageRank until convergence\u003c/h3\u003e\n\u003c/div\u003e"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1579545505962_1135383306",
+      "id": "20200120-183825_1043158984",
+      "dateCreated": "2020-01-20 18:38:25.962",
+      "dateStarted": "2020-01-20 18:39:51.502",
+      "dateFinished": "2020-01-20 18:39:51.524",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
     {
       "text": "%pyspark\nresults \u003d g.pageRank(resetProbability\u003d0.15, tol\u003d0.01)\nresults.vertices.sort(\"pagerank\", ascending\u003dFalse).show()\n",
       "user": "anonymous",
-      "dateUpdated": "2020-01-01 16:59:18.792",
+      "dateUpdated": "2020-01-19 19:35:33.008",
       "config": {
         "colWidth": 12.0,
         "fontSize": 9.0,
         "results": {},
         "enabled": true,
         "editorSetting": {
-          "language": "scala",
+          "language": "python",
           "editOnDblClick": false,
           "completionKey": "TAB",
           "completionSupport": true
         },
-        "editorMode": "ace/mode/scala"
+        "editorMode": "ace/mode/python"
       },
       "settings": {
         "params": {},
@@ -190,64 +301,72 @@
           }
         ]
       },
-      "runtimeInfos": {
-        "jobUrl": {
-          "propertyName": "jobUrl",
-          "label": "SPARK JOB",
-          "tooltip": "View in Spark web UI",
-          "group": "spark",
-          "values": [
-            "http://172.25.0.3:4040/jobs/job?id\u003d152",
-            "http://172.25.0.3:4040/jobs/job?id\u003d153",
-            "http://172.25.0.3:4040/jobs/job?id\u003d154",
-            "http://172.25.0.3:4040/jobs/job?id\u003d155",
-            "http://172.25.0.3:4040/jobs/job?id\u003d156",
-            "http://172.25.0.3:4040/jobs/job?id\u003d157",
-            "http://172.25.0.3:4040/jobs/job?id\u003d158",
-            "http://172.25.0.3:4040/jobs/job?id\u003d159",
-            "http://172.25.0.3:4040/jobs/job?id\u003d160",
-            "http://172.25.0.3:4040/jobs/job?id\u003d161",
-            "http://172.25.0.3:4040/jobs/job?id\u003d162",
-            "http://172.25.0.3:4040/jobs/job?id\u003d163",
-            "http://172.25.0.3:4040/jobs/job?id\u003d164",
-            "http://172.25.0.3:4040/jobs/job?id\u003d165",
-            "http://172.25.0.3:4040/jobs/job?id\u003d166",
-            "http://172.25.0.3:4040/jobs/job?id\u003d167",
-            "http://172.25.0.3:4040/jobs/job?id\u003d168",
-            "http://172.25.0.3:4040/jobs/job?id\u003d169",
-            "http://172.25.0.3:4040/jobs/job?id\u003d170",
-            "http://172.25.0.3:4040/jobs/job?id\u003d171",
-            "http://172.25.0.3:4040/jobs/job?id\u003d172",
-            "http://172.25.0.3:4040/jobs/job?id\u003d173"
-          ],
-          "interpreterSettingId": "spark"
-        }
-      },
       "apps": [],
       "jobName": "paragraph_1577897523614_-504837184",
       "id": "20200101-113146_991400049",
       "dateCreated": "2020-01-01 16:52:03.614",
-      "dateStarted": "2020-01-01 16:59:18.814",
-      "dateFinished": "2020-01-01 17:07:08.270",
+      "dateStarted": "2020-01-19 19:35:33.038",
+      "dateFinished": "2020-01-19 19:42:37.390",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
     {
-      "text": "%pyspark\nme \u003d \"Doug\"\nresults \u003d g.pageRank(resetProbability\u003d0.15, maxIter\u003d20, sourceId\u003dme)\npeople_to_follow \u003d results.vertices.sort(\"pagerank\", ascending\u003dFalse)\n\nalready_follows \u003d list(g.edges.filter(\"src \u003d \u0027{me}\u0027\").toPandas()[\"dst\"])\npeople_to_exclude \u003d already_follows + [me]\n\npeople_to_follow[~people_to_follow.id.isin(people_to_exclude)].show()\n",
+      "text": "%md\n### Personalized PageRank\n",
       "user": "anonymous",
-      "dateUpdated": "2020-01-01 17:07:41.542",
+      "dateUpdated": "2020-01-20 18:40:25.396",
       "config": {
         "colWidth": 12.0,
         "fontSize": 9.0,
         "enabled": true,
         "results": {},
         "editorSetting": {
-          "language": "scala",
+          "language": "markdown",
+          "editOnDblClick": true,
+          "completionKey": "TAB",
+          "completionSupport": false
+        },
+        "editorMode": "ace/mode/markdown",
+        "editorHide": true,
+        "tableHide": false
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003ch3\u003ePersonalized PageRank\u003c/h3\u003e\n\u003c/div\u003e"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1579545614420_-127746281",
+      "id": "20200120-184014_824329656",
+      "dateCreated": "2020-01-20 18:40:14.420",
+      "dateStarted": "2020-01-20 18:40:25.405",
+      "dateFinished": "2020-01-20 18:40:25.446",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%pyspark\nme \u003d \"Doug\"\nresults \u003d g.pageRank(resetProbability\u003d0.15, maxIter\u003d20, sourceId\u003dme)\npeople_to_follow \u003d results.vertices.sort(\"pagerank\", ascending\u003dFalse)\n\nalready_follows \u003d list(g.edges.filter(\"src \u003d \u0027{me}\u0027\").toPandas()[\"dst\"])\npeople_to_exclude \u003d already_follows + [me]\n\npeople_to_follow[~people_to_follow.id.isin(people_to_exclude)].show()\n",
+      "user": "anonymous",
+      "dateUpdated": "2020-01-19 19:35:35.105",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "python",
           "editOnDblClick": false,
           "completionKey": "TAB",
           "completionSupport": true
         },
-        "editorMode": "ace/mode/scala"
+        "editorMode": "ace/mode/python"
       },
       "settings": {
         "params": {},
@@ -262,50 +381,12 @@
           }
         ]
       },
-      "runtimeInfos": {
-        "jobUrl": {
-          "propertyName": "jobUrl",
-          "label": "SPARK JOB",
-          "tooltip": "View in Spark web UI",
-          "group": "spark",
-          "values": [
-            "http://172.25.0.3:4040/jobs/job?id\u003d174",
-            "http://172.25.0.3:4040/jobs/job?id\u003d175",
-            "http://172.25.0.3:4040/jobs/job?id\u003d176",
-            "http://172.25.0.3:4040/jobs/job?id\u003d177",
-            "http://172.25.0.3:4040/jobs/job?id\u003d178",
-            "http://172.25.0.3:4040/jobs/job?id\u003d179",
-            "http://172.25.0.3:4040/jobs/job?id\u003d180",
-            "http://172.25.0.3:4040/jobs/job?id\u003d181",
-            "http://172.25.0.3:4040/jobs/job?id\u003d182",
-            "http://172.25.0.3:4040/jobs/job?id\u003d183",
-            "http://172.25.0.3:4040/jobs/job?id\u003d184",
-            "http://172.25.0.3:4040/jobs/job?id\u003d185",
-            "http://172.25.0.3:4040/jobs/job?id\u003d186",
-            "http://172.25.0.3:4040/jobs/job?id\u003d187",
-            "http://172.25.0.3:4040/jobs/job?id\u003d188",
-            "http://172.25.0.3:4040/jobs/job?id\u003d189",
-            "http://172.25.0.3:4040/jobs/job?id\u003d190",
-            "http://172.25.0.3:4040/jobs/job?id\u003d191",
-            "http://172.25.0.3:4040/jobs/job?id\u003d192",
-            "http://172.25.0.3:4040/jobs/job?id\u003d193",
-            "http://172.25.0.3:4040/jobs/job?id\u003d194",
-            "http://172.25.0.3:4040/jobs/job?id\u003d195",
-            "http://172.25.0.3:4040/jobs/job?id\u003d196",
-            "http://172.25.0.3:4040/jobs/job?id\u003d197",
-            "http://172.25.0.3:4040/jobs/job?id\u003d198",
-            "http://172.25.0.3:4040/jobs/job?id\u003d199",
-            "http://172.25.0.3:4040/jobs/job?id\u003d200"
-          ],
-          "interpreterSettingId": "spark"
-        }
-      },
       "apps": [],
       "jobName": "paragraph_1577897523615_1193860366",
       "id": "20200101-153518_1153514066",
       "dateCreated": "2020-01-01 16:52:03.615",
-      "dateStarted": "2020-01-01 17:07:41.572",
-      "dateFinished": "2020-01-01 17:10:40.294",
+      "dateStarted": "2020-01-19 19:35:41.683",
+      "dateFinished": "2020-01-19 19:45:22.754",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
@@ -331,6 +412,7 @@
   "noteParams": {},
   "noteForms": {},
   "angularObjects": {
+    "md:shared_process": [],
     "spark:shared_process": []
   },
   "config": {

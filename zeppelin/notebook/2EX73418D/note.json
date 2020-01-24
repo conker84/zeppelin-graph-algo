@@ -1,21 +1,23 @@
 {
   "paragraphs": [
     {
-      "text": "%pyspark\n# // tag::imports[]\nfrom graphframes import GraphFrame\n# // end::imports[]\n\n\n# // tag::load-graph-frame[]\ndef create_software_graph():\n    nodes \u003d spark.read.csv(\"spark-warehouse/sw-nodes.csv\", header\u003dTrue)\n    relationships \u003d spark.read.csv(\"spark-warehouse/sw-relationships.csv\", header\u003dTrue)\n    return GraphFrame(nodes, relationships)\n# // end::load-graph-frame[]\n",
+      "text": "%md\n\n###  Example taken from \"Graph Algorithms: Practical Examples in Apache Spark and Neo4j\" (https://neo4j.com/graph-algorithms-book/)\n\n### Please make sure that you have previously executed [this notebook](/#/notebook/2EY8PRHJ8)",
       "user": "anonymous",
-      "dateUpdated": "2020-01-01 15:38:02.775",
+      "dateUpdated": "2020-01-19 18:38:25.397",
       "config": {
         "editorSetting": {
-          "language": "python",
-          "editOnDblClick": false,
+          "language": "markdown",
+          "editOnDblClick": true,
           "completionKey": "TAB",
-          "completionSupport": true
+          "completionSupport": false
         },
         "colWidth": 12.0,
-        "editorMode": "ace/mode/python",
+        "editorMode": "ace/mode/markdown",
         "fontSize": 9.0,
         "results": {},
-        "enabled": true
+        "enabled": true,
+        "editorHide": true,
+        "tableHide": false
       },
       "settings": {
         "params": {},
@@ -23,20 +25,67 @@
       },
       "results": {
         "code": "SUCCESS",
-        "msg": []
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003ch3\u003eExample taken from \u0026ldquo;Graph Algorithms: Practical Examples in Apache Spark and Neo4j\u0026rdquo; (\u003ca href\u003d\"https://neo4j.com/graph-algorithms-book/\"\u003ehttps://neo4j.com/graph-algorithms-book/\u003c/a\u003e)\u003c/h3\u003e\n\u003ch3\u003ePlease make sure that you have previously executed \u003ca href\u003d\"/#/notebook/2EY8PRHJ8\"\u003ethis notebook\u003c/a\u003e\u003c/h3\u003e\n\u003c/div\u003e"
+          }
+        ]
       },
       "apps": [],
       "jobName": "paragraph_1577893082774_760029153",
       "id": "20200101-112344_1237781185",
       "dateCreated": "2020-01-01 15:38:02.774",
-      "status": "READY",
-      "errorMessage": "",
+      "dateStarted": "2020-01-19 18:38:25.397",
+      "dateFinished": "2020-01-19 18:38:25.419",
+      "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
     {
-      "text": "%pyspark\nfrom pyspark.sql import functions as F",
+      "text": "%md\n# Label propagation",
       "user": "anonymous",
-      "dateUpdated": "2020-01-01 15:38:02.777",
+      "dateUpdated": "2020-01-19 18:38:41.793",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "markdown",
+          "editOnDblClick": true,
+          "completionKey": "TAB",
+          "completionSupport": false
+        },
+        "editorMode": "ace/mode/markdown",
+        "editorHide": true,
+        "tableHide": false
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003ch1\u003eLabel propagation\u003c/h1\u003e\n\u003c/div\u003e"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1579459114969_1546774101",
+      "id": "20200119-183834_134171922",
+      "dateCreated": "2020-01-19 18:38:34.969",
+      "dateStarted": "2020-01-19 18:38:41.793",
+      "dateFinished": "2020-01-19 18:38:41.804",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%pyspark\nfrom pyspark.sql import functions as F\nfrom graphframes import GraphFrame\n",
+      "user": "anonymous",
+      "dateUpdated": "2020-01-19 18:38:27.720",
       "config": {
         "editorSetting": {
           "language": "python",
@@ -62,14 +111,15 @@
       "jobName": "paragraph_1577893082776_953947123",
       "id": "20200101-112347_55482158",
       "dateCreated": "2020-01-01 15:38:02.776",
-      "status": "READY",
-      "errorMessage": "",
+      "dateStarted": "2020-01-19 18:38:27.746",
+      "dateFinished": "2020-01-19 18:38:27.761",
+      "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
     {
       "text": "%pyspark\ng \u003d create_software_graph()",
       "user": "anonymous",
-      "dateUpdated": "2020-01-01 15:38:02.778",
+      "dateUpdated": "2020-01-19 18:38:30.582",
       "config": {
         "editorSetting": {
           "language": "python",
@@ -91,12 +141,26 @@
         "code": "SUCCESS",
         "msg": []
       },
+      "runtimeInfos": {
+        "jobUrl": {
+          "propertyName": "jobUrl",
+          "label": "SPARK JOB",
+          "tooltip": "View in Spark web UI",
+          "group": "spark",
+          "values": [
+            "http://172.18.0.3:4040/jobs/job?id\u003d25",
+            "http://172.18.0.3:4040/jobs/job?id\u003d26"
+          ],
+          "interpreterSettingId": "spark"
+        }
+      },
       "apps": [],
       "jobName": "paragraph_1577893082778_1639762069",
       "id": "20200101-112422_199127971",
       "dateCreated": "2020-01-01 15:38:02.778",
-      "status": "READY",
-      "errorMessage": "",
+      "dateStarted": "2020-01-19 18:38:30.604",
+      "dateFinished": "2020-01-19 18:38:30.778",
+      "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
     {
@@ -128,38 +192,6 @@
             "data": "+-------------+-----------------------------------+\n|label        |collect_list(id)                   |\n+-------------+-----------------------------------+\n|180388626432 |[jpy-core, jpy-console, jupyter]   |\n|223338299392 |[spacy, matplotlib]                |\n|498216206336 |[six, numpy, pytz, python-dateutil]|\n|549755813888 |[pandas]                           |\n|558345748480 |[nbconvert, ipykernel, jpy-client] |\n|936302870528 |[pyspark]                          |\n|1279900254208|[py4j]                             |\n+-------------+-----------------------------------+\n\n"
           }
         ]
-      },
-      "runtimeInfos": {
-        "jobUrl": {
-          "propertyName": "jobUrl",
-          "label": "SPARK JOB",
-          "tooltip": "View in Spark web UI",
-          "group": "spark",
-          "values": [
-            "http://172.25.0.3:4040/jobs/job?id\u003d28",
-            "http://172.25.0.3:4040/jobs/job?id\u003d29",
-            "http://172.25.0.3:4040/jobs/job?id\u003d30",
-            "http://172.25.0.3:4040/jobs/job?id\u003d31",
-            "http://172.25.0.3:4040/jobs/job?id\u003d32",
-            "http://172.25.0.3:4040/jobs/job?id\u003d33",
-            "http://172.25.0.3:4040/jobs/job?id\u003d34",
-            "http://172.25.0.3:4040/jobs/job?id\u003d35",
-            "http://172.25.0.3:4040/jobs/job?id\u003d36",
-            "http://172.25.0.3:4040/jobs/job?id\u003d37",
-            "http://172.25.0.3:4040/jobs/job?id\u003d38",
-            "http://172.25.0.3:4040/jobs/job?id\u003d39",
-            "http://172.25.0.3:4040/jobs/job?id\u003d40",
-            "http://172.25.0.3:4040/jobs/job?id\u003d41",
-            "http://172.25.0.3:4040/jobs/job?id\u003d42",
-            "http://172.25.0.3:4040/jobs/job?id\u003d43",
-            "http://172.25.0.3:4040/jobs/job?id\u003d44",
-            "http://172.25.0.3:4040/jobs/job?id\u003d45",
-            "http://172.25.0.3:4040/jobs/job?id\u003d46",
-            "http://172.25.0.3:4040/jobs/job?id\u003d47",
-            "http://172.25.0.3:4040/jobs/job?id\u003d48"
-          ],
-          "interpreterSettingId": "spark"
-        }
       },
       "apps": [],
       "jobName": "paragraph_1577893082779_-526376294",
@@ -193,6 +225,7 @@
   "noteParams": {},
   "noteForms": {},
   "angularObjects": {
+    "md:shared_process": [],
     "spark:shared_process": []
   },
   "config": {

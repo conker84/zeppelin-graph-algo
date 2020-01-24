@@ -1,9 +1,91 @@
 {
   "paragraphs": [
     {
-      "text": "%pyspark\nfrom graphframes import *\n\n# // tag::imports[]\nfrom graphframes.lib import AggregateMessages as AM\nfrom pyspark.sql import functions as F\nfrom pyspark.sql.types import *\nfrom operator import itemgetter\n\n\n# // tag::load-graph-frame[]\ndef create_social_graph():\n    nodes \u003d spark.read.csv(\"spark-warehouse/social-nodes.csv\", header\u003dTrue)\n    relationships \u003d spark.read.csv(\"spark-warehouse/social-relationships.csv\", header\u003dTrue)\n    return GraphFrame(nodes, relationships)\n# // end::load-graph-frame[]\n",
+      "text": "%md\n\n###  Example taken from \"Graph Algorithms: Practical Examples in Apache Spark and Neo4j\" (https://neo4j.com/graph-algorithms-book/)\n\n### Please make sure that you have previously executed [this notebook](/#/notebook/2EYGMDMY2)",
       "user": "anonymous",
-      "dateUpdated": "2020-01-01 17:33:33.765",
+      "dateUpdated": "2020-01-19 18:13:32.252",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "markdown",
+          "editOnDblClick": true,
+          "completionKey": "TAB",
+          "completionSupport": false
+        },
+        "editorMode": "ace/mode/markdown",
+        "editorHide": true,
+        "tableHide": false
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003ch3\u003eExample taken from \u0026ldquo;Graph Algorithms: Practical Examples in Apache Spark and Neo4j\u0026rdquo; (\u003ca href\u003d\"https://neo4j.com/graph-algorithms-book/\"\u003ehttps://neo4j.com/graph-algorithms-book/\u003c/a\u003e)\u003c/h3\u003e\n\u003ch3\u003ePlease make sure that you have previously executed \u003ca href\u003d\"/#/notebook/2EYGMDMY2\"\u003ethis notebook\u003c/a\u003e\u003c/h3\u003e\n\u003c/div\u003e"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1579457542273_-2003313120",
+      "id": "20200119-181222_275967806",
+      "dateCreated": "2020-01-19 18:12:22.273",
+      "dateStarted": "2020-01-19 18:13:32.260",
+      "dateFinished": "2020-01-19 18:13:32.279",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%md\n# Closeness centrality",
+      "user": "anonymous",
+      "dateUpdated": "2020-01-19 18:13:03.699",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "markdown",
+          "editOnDblClick": true,
+          "completionKey": "TAB",
+          "completionSupport": false
+        },
+        "editorMode": "ace/mode/markdown",
+        "editorHide": true,
+        "tableHide": false
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003ch1\u003eCloseness centrality\u003c/h1\u003e\n\u003c/div\u003e"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1579457578225_-1937874162",
+      "id": "20200119-181258_851927702",
+      "dateCreated": "2020-01-19 18:12:58.225",
+      "dateStarted": "2020-01-19 18:13:03.703",
+      "dateFinished": "2020-01-19 18:13:03.756",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%pyspark\nfrom graphframes import *\nfrom graphframes.lib import AggregateMessages as AM\nfrom pyspark.sql import functions as F\nfrom pyspark.sql.types import *\nfrom operator import itemgetter",
+      "user": "anonymous",
+      "dateUpdated": "2020-01-19 18:13:35.582",
       "config": {
         "editorSetting": {
           "language": "python",
@@ -29,15 +111,15 @@
       "jobName": "paragraph_1577898758918_1863761156",
       "id": "20200101-112344_1237781185",
       "dateCreated": "2020-01-01 17:12:38.918",
-      "dateStarted": "2020-01-01 17:33:33.923",
-      "dateFinished": "2020-01-01 17:33:47.955",
+      "dateStarted": "2020-01-19 18:13:12.687",
+      "dateFinished": "2020-01-19 18:22:32.029",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
     {
       "text": "%pyspark\ndef collect_paths(paths):\n    return F.collect_set(paths)\n\n\ncollect_paths_udf \u003d F.udf(collect_paths, ArrayType(StringType()))\n\npaths_type \u003d ArrayType(\n    StructType([StructField(\"id\", StringType()), StructField(\"distance\", IntegerType())]))\n",
       "user": "anonymous",
-      "dateUpdated": "2020-01-01 17:33:47.963",
+      "dateUpdated": "2020-01-19 18:10:12.176",
       "config": {
         "colWidth": 12.0,
         "fontSize": 9.0,
@@ -63,15 +145,15 @@
       "jobName": "paragraph_1577898810401_-57544950",
       "id": "20200101-171330_1722941153",
       "dateCreated": "2020-01-01 17:13:30.401",
-      "dateStarted": "2020-01-01 17:33:48.071",
-      "dateFinished": "2020-01-01 17:33:48.082",
+      "dateStarted": "2020-01-19 18:10:12.188",
+      "dateFinished": "2020-01-19 18:10:12.195",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
     {
       "text": "%pyspark\ndef flatten(ids):\n    flat_list \u003d [item for sublist in ids for item in sublist]\n    return list(dict(sorted(flat_list, key\u003ditemgetter(0))).items())\n\n\nflatten_udf \u003d F.udf(flatten, paths_type)\n",
       "user": "anonymous",
-      "dateUpdated": "2020-01-01 17:33:48.165",
+      "dateUpdated": "2020-01-19 18:10:14.006",
       "config": {
         "colWidth": 12.0,
         "fontSize": 9.0,
@@ -97,15 +179,15 @@
       "jobName": "paragraph_1577898817814_1286585316",
       "id": "20200101-171337_559107504",
       "dateCreated": "2020-01-01 17:13:37.814",
-      "dateStarted": "2020-01-01 17:33:48.234",
-      "dateFinished": "2020-01-01 17:33:48.273",
+      "dateStarted": "2020-01-19 18:10:14.016",
+      "dateFinished": "2020-01-19 18:10:14.021",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
     {
       "text": "%pyspark\ndef new_paths(paths, id):\n    paths \u003d [{\"id\": col1, \"distance\": col2 + 1} for col1, col2 in paths if col1 !\u003d id]\n    paths.append({\"id\": id, \"distance\": 1})\n    return paths\n\n\nnew_paths_udf \u003d F.udf(new_paths, paths_type)\n",
       "user": "anonymous",
-      "dateUpdated": "2020-01-01 17:33:48.320",
+      "dateUpdated": "2020-01-19 18:10:15.794",
       "config": {
         "colWidth": 12.0,
         "fontSize": 9.0,
@@ -131,15 +213,15 @@
       "jobName": "paragraph_1577898834643_766824371",
       "id": "20200101-171354_1350292755",
       "dateCreated": "2020-01-01 17:13:54.643",
-      "dateStarted": "2020-01-01 17:33:48.402",
-      "dateFinished": "2020-01-01 17:33:48.435",
+      "dateStarted": "2020-01-19 18:10:15.808",
+      "dateFinished": "2020-01-19 18:10:15.822",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
     {
       "text": "%pyspark\ndef merge_paths(ids, new_ids, id):\n    joined_ids \u003d ids + (new_ids if new_ids else [])\n    merged_ids \u003d [(col1, col2) for col1, col2 in joined_ids if col1 !\u003d id]\n    best_ids \u003d dict(sorted(merged_ids, key\u003ditemgetter(1), reverse\u003dTrue))\n    return [{\"id\": col1, \"distance\": col2} for col1, col2 in best_ids.items()]\n\n\nmerge_paths_udf \u003d F.udf(merge_paths, paths_type)\n",
       "user": "anonymous",
-      "dateUpdated": "2020-01-01 17:33:48.501",
+      "dateUpdated": "2020-01-19 18:10:17.572",
       "config": {
         "colWidth": 12.0,
         "fontSize": 9.0,
@@ -165,15 +247,15 @@
       "jobName": "paragraph_1577898841166_693072570",
       "id": "20200101-171401_953277830",
       "dateCreated": "2020-01-01 17:14:01.167",
-      "dateStarted": "2020-01-01 17:33:48.558",
-      "dateFinished": "2020-01-01 17:33:48.577",
+      "dateStarted": "2020-01-19 18:10:17.593",
+      "dateFinished": "2020-01-19 18:10:17.607",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
     {
       "text": "%pyspark\ndef calculate_closeness(ids):\n    nodes \u003d len(ids)\n    total_distance \u003d sum([col2 for col1, col2 in ids])\n    return 0 if total_distance \u003d\u003d 0 else nodes * 1.0 / total_distance\n\n\ncloseness_udf \u003d F.udf(calculate_closeness, DoubleType())\n",
       "user": "anonymous",
-      "dateUpdated": "2020-01-01 17:33:48.657",
+      "dateUpdated": "2020-01-19 18:10:19.586",
       "config": {
         "colWidth": 12.0,
         "fontSize": 9.0,
@@ -199,15 +281,15 @@
       "jobName": "paragraph_1577898860024_-1055128335",
       "id": "20200101-171420_1755424301",
       "dateCreated": "2020-01-01 17:14:20.024",
-      "dateStarted": "2020-01-01 17:33:48.706",
-      "dateFinished": "2020-01-01 17:33:48.722",
+      "dateStarted": "2020-01-19 18:10:19.603",
+      "dateFinished": "2020-01-19 18:10:19.616",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
     {
-      "text": "%pyspark\ndef create_social_graph():\n    nodes \u003d spark.read.csv(\"spark-warehouse/social-nodes.csv\", header\u003dTrue)\n    relationships \u003d spark.read.csv(\"spark-warehouse/social-relationships.csv\", header\u003dTrue)\n    return GraphFrame(nodes, relationships)\n    \ng \u003d create_social_graph()",
+      "text": "%pyspark\ng \u003d create_social_graph()",
       "user": "anonymous",
-      "dateUpdated": "2020-01-01 17:34:03.234",
+      "dateUpdated": "2020-01-19 18:10:28.225",
       "config": {
         "editorSetting": {
           "language": "python",
@@ -236,8 +318,8 @@
           "tooltip": "View in Spark web UI",
           "group": "spark",
           "values": [
-            "http://172.25.0.3:4040/jobs/job?id\u003d0",
-            "http://172.25.0.3:4040/jobs/job?id\u003d1"
+            "http://172.18.0.3:4040/jobs/job?id\u003d0",
+            "http://172.18.0.3:4040/jobs/job?id\u003d1"
           ],
           "interpreterSettingId": "spark"
         }
@@ -246,15 +328,15 @@
       "jobName": "paragraph_1577898758923_-1305865509",
       "id": "20200101-112422_199127971",
       "dateCreated": "2020-01-01 17:12:38.924",
-      "dateStarted": "2020-01-01 17:34:03.315",
-      "dateFinished": "2020-01-01 17:34:06.210",
+      "dateStarted": "2020-01-19 18:10:28.238",
+      "dateFinished": "2020-01-19 18:10:31.505",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
     {
       "text": "%pyspark\nvertices \u003d g.vertices.withColumn(\"ids\", F.array())\ncached_vertices \u003d AM.getCachedDataFrame(vertices)\ng2 \u003d GraphFrame(cached_vertices, g.edges)\n\nfor i in range(0, g2.vertices.count()):\n    msg_dst \u003d new_paths_udf(AM.src[\"ids\"], AM.src[\"id\"])\n    msg_src \u003d new_paths_udf(AM.dst[\"ids\"], AM.dst[\"id\"])\n    agg \u003d g2.aggregateMessages(F.collect_set(AM.msg).alias(\"agg\"),\n                               sendToSrc\u003dmsg_src, sendToDst\u003dmsg_dst)\n    res \u003d agg.withColumn(\"newIds\", flatten_udf(\"agg\")).drop(\"agg\")\n    new_vertices \u003d (g2.vertices.join(res, on\u003d\"id\", how\u003d\"left_outer\")\n                    .withColumn(\"mergedIds\", merge_paths_udf(\"ids\", \"newIds\", \"id\"))\n                    .drop(\"ids\", \"newIds\")\n                    .withColumnRenamed(\"mergedIds\", \"ids\"))\n    cached_new_vertices \u003d AM.getCachedDataFrame(new_vertices)\n    g2 \u003d GraphFrame(cached_new_vertices, g2.edges)\n\n(g2.vertices\n .withColumn(\"closeness\", closeness_udf(\"ids\"))\n .sort(\"closeness\", ascending\u003dFalse)\n .show(truncate\u003dFalse))\n",
       "user": "anonymous",
-      "dateUpdated": "2020-01-01 17:34:08.233",
+      "dateUpdated": "2020-01-19 18:10:33.858",
       "config": {
         "colWidth": 12.0,
         "fontSize": 9.0,
@@ -288,17 +370,17 @@
           "tooltip": "View in Spark web UI",
           "group": "spark",
           "values": [
-            "http://172.25.0.3:4040/jobs/job?id\u003d2",
-            "http://172.25.0.3:4040/jobs/job?id\u003d3",
-            "http://172.25.0.3:4040/jobs/job?id\u003d4",
-            "http://172.25.0.3:4040/jobs/job?id\u003d5",
-            "http://172.25.0.3:4040/jobs/job?id\u003d6",
-            "http://172.25.0.3:4040/jobs/job?id\u003d7",
-            "http://172.25.0.3:4040/jobs/job?id\u003d8",
-            "http://172.25.0.3:4040/jobs/job?id\u003d9",
-            "http://172.25.0.3:4040/jobs/job?id\u003d10",
-            "http://172.25.0.3:4040/jobs/job?id\u003d11",
-            "http://172.25.0.3:4040/jobs/job?id\u003d12"
+            "http://172.18.0.3:4040/jobs/job?id\u003d2",
+            "http://172.18.0.3:4040/jobs/job?id\u003d3",
+            "http://172.18.0.3:4040/jobs/job?id\u003d4",
+            "http://172.18.0.3:4040/jobs/job?id\u003d5",
+            "http://172.18.0.3:4040/jobs/job?id\u003d6",
+            "http://172.18.0.3:4040/jobs/job?id\u003d7",
+            "http://172.18.0.3:4040/jobs/job?id\u003d8",
+            "http://172.18.0.3:4040/jobs/job?id\u003d9",
+            "http://172.18.0.3:4040/jobs/job?id\u003d10",
+            "http://172.18.0.3:4040/jobs/job?id\u003d11",
+            "http://172.18.0.3:4040/jobs/job?id\u003d12"
           ],
           "interpreterSettingId": "spark"
         }
@@ -307,8 +389,8 @@
       "jobName": "paragraph_1577898878374_1854226027",
       "id": "20200101-171438_937517174",
       "dateCreated": "2020-01-01 17:14:38.374",
-      "dateStarted": "2020-01-01 17:34:08.303",
-      "dateFinished": "2020-01-01 17:46:04.941",
+      "dateStarted": "2020-01-19 18:10:33.869",
+      "dateFinished": "2020-01-19 18:22:32.024",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
@@ -334,6 +416,7 @@
   "noteParams": {},
   "noteForms": {},
   "angularObjects": {
+    "md:shared_process": [],
     "spark:shared_process": []
   },
   "config": {

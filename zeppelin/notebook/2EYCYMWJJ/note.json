@@ -1,9 +1,9 @@
 {
   "paragraphs": [
     {
-      "text": "%md\n### Please make sure that you have previously executed [this notebook](/#/notebook/2EZ4GSKAZ)",
+      "text": "%md\n\n###  Example taken from \"Graph Algorithms: Practical Examples in Apache Spark and Neo4j\" (https://neo4j.com/graph-algorithms-book/)\n\n### Please make sure that you have previously executed [this notebook](/#/notebook/2EZ4GSKAZ)",
       "user": "anonymous",
-      "dateUpdated": "2020-01-02 16:51:16.371",
+      "dateUpdated": "2020-01-19 17:39:50.886",
       "config": {
         "colWidth": 12.0,
         "fontSize": 9.0,
@@ -27,7 +27,7 @@
         "msg": [
           {
             "type": "HTML",
-            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003ch3\u003ePlease make sure that you have previously executed \u003ca href\u003d\"/#/notebook/2EZ4GSKAZ\"\u003ethis notebook\u003c/a\u003e\u003c/h3\u003e\n\u003c/div\u003e"
+            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003ch3\u003eExample taken from \u0026ldquo;Graph Algorithms: Practical Examples in Apache Spark and Neo4j\u0026rdquo; (\u003ca href\u003d\"https://neo4j.com/graph-algorithms-book/\"\u003ehttps://neo4j.com/graph-algorithms-book/\u003c/a\u003e)\u003c/h3\u003e\n\u003ch3\u003ePlease make sure that you have previously executed \u003ca href\u003d\"/#/notebook/2EZ4GSKAZ\"\u003ethis notebook\u003c/a\u003e\u003c/h3\u003e\n\u003c/div\u003e"
           }
         ]
       },
@@ -35,15 +35,191 @@
       "jobName": "paragraph_1577983868042_2001534358",
       "id": "20200102-165108_448579247",
       "dateCreated": "2020-01-02 16:51:08.042",
-      "dateStarted": "2020-01-02 16:51:16.371",
-      "dateFinished": "2020-01-02 16:51:16.389",
+      "dateStarted": "2020-01-19 17:39:50.891",
+      "dateFinished": "2020-01-19 17:39:50.927",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%md\n# The Yen’s K-shortest paths algorithm\n\nhttps://neo4j.com/docs/graph-algorithms/current/labs-algorithms/yen-s-k-shortest-path/",
+      "user": "anonymous",
+      "dateUpdated": "2020-01-19 17:40:07.241",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "editOnDblClick": true,
+          "language": "markdown",
+          "completionSupport": false
+        },
+        "editorMode": "ace/mode/markdown",
+        "editorHide": true,
+        "tableHide": false
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003ch1\u003eThe Yen’s K-shortest paths algorithm\u003c/h1\u003e\n\u003cp\u003e\u003ca href\u003d\"https://neo4j.com/docs/graph-algorithms/current/labs-algorithms/yen-s-k-shortest-path/\"\u003ehttps://neo4j.com/docs/graph-algorithms/current/labs-algorithms/yen-s-k-shortest-path/\u003c/a\u003e\u003c/p\u003e\n\u003c/div\u003e"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1579455594529_-1896560486",
+      "id": "20200119-173954_29193482",
+      "dateCreated": "2020-01-19 17:39:54.529",
+      "dateStarted": "2020-01-19 17:40:07.240",
+      "dateFinished": "2020-01-19 17:40:07.284",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%neo4j\nMATCH p\u003d(:Place)-[:EROAD]-\u003e(:Place)\nRETURN p",
+      "user": "anonymous",
+      "dateUpdated": "2020-01-19 17:40:23.515",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {
+          "0": {
+            "graph": {
+              "mode": "network",
+              "height": 300.0,
+              "optionOpen": false,
+              "setting": {
+                "table": {
+                  "tableGridState": {},
+                  "tableColumnTypeState": {
+                    "names": {
+                      "id": "string",
+                      "label": "string",
+                      "latitude": "string",
+                      "longitude": "string",
+                      "population": "string",
+                      "distance": "string"
+                    },
+                    "updated": false
+                  },
+                  "tableOptionSpecHash": "[{\"name\":\"useFilter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable filter for columns\"},{\"name\":\"showPagination\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable pagination for better navigation\"},{\"name\":\"showAggregationFooter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable a footer for displaying aggregated values\"}]",
+                  "tableOptionValue": {
+                    "useFilter": false,
+                    "showPagination": false,
+                    "showAggregationFooter": false
+                  },
+                  "updated": false,
+                  "initialized": false
+                },
+                "network": {
+                  "properties": {
+                    "Place": {
+                      "selected": "id",
+                      "keys": [
+                        "latitude",
+                        "id",
+                        "longitude",
+                        "population",
+                        "label"
+                      ]
+                    }
+                  },
+                  "d3Graph": {
+                    "forceLayout": {
+                      "timeout": 10000.0,
+                      "charge": -120.0,
+                      "linkDistance": 80.0
+                    },
+                    "zoom": {
+                      "minScale": 1.3
+                    }
+                  }
+                }
+              },
+              "commonSetting": {}
+            },
+            "helium": {}
+          }
+        },
+        "editorSetting": {
+          "editOnDblClick": false,
+          "language": "markdown",
+          "completionSupport": false
+        },
+        "editorMode": "ace/mode/undefined"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "NETWORK",
+            "data": "{\"nodes\":[{\"id\":48,\"data\":{\"latitude\":51.88921,\"id\":\"Colchester\",\"longitude\":51.88921,\"population\":104390},\"label\":\"Place\"},{\"id\":49,\"data\":{\"latitude\":51.509865,\"id\":\"London\",\"longitude\":51.509865,\"population\":8787892},\"label\":\"Place\"},{\"id\":50,\"data\":{\"latitude\":51.9225,\"id\":\"Rotterdam\",\"longitude\":51.9225,\"population\":623652},\"label\":\"Place\"},{\"id\":51,\"data\":{\"latitude\":52.01667,\"id\":\"Gouda\",\"longitude\":52.01667,\"population\":70939},\"label\":\"Place\"},{\"id\":40,\"data\":{\"latitude\":52.379189,\"id\":\"Amsterdam\",\"longitude\":52.379189,\"population\":821752},\"label\":\"Place\"},{\"id\":41,\"data\":{\"latitude\":52.092876,\"id\":\"Utrecht\",\"longitude\":52.092876,\"population\":334176},\"label\":\"Place\"},{\"id\":42,\"data\":{\"latitude\":52.078663,\"id\":\"Den Haag\",\"longitude\":52.078663,\"population\":514861},\"label\":\"Place\"},{\"id\":43,\"data\":{\"latitude\":53.61239,\"id\":\"Immingham\",\"longitude\":53.61239,\"population\":9642},\"label\":\"Place\"},{\"id\":44,\"data\":{\"latitude\":53.52285,\"id\":\"Doncaster\",\"longitude\":53.52285,\"population\":302400},\"label\":\"Place\"},{\"id\":45,\"data\":{\"latitude\":51.9775,\"id\":\"Hoek van Holland\",\"longitude\":51.9775,\"population\":9382},\"label\":\"Place\"},{\"id\":46,\"data\":{\"latitude\":51.96375,\"id\":\"Felixstowe\",\"longitude\":51.96375,\"population\":23689},\"label\":\"Place\"},{\"id\":47,\"data\":{\"latitude\":52.05917,\"id\":\"Ipswich\",\"longitude\":52.05917,\"population\":133384},\"label\":\"Place\"}],\"edges\":[{\"source\":40,\"target\":41,\"id\":34,\"data\":{\"distance\":46},\"label\":\"EROAD\"},{\"source\":40,\"target\":42,\"id\":35,\"data\":{\"distance\":59},\"label\":\"EROAD\"},{\"source\":42,\"target\":50,\"id\":36,\"data\":{\"distance\":26},\"label\":\"EROAD\"},{\"source\":40,\"target\":43,\"id\":37,\"data\":{\"distance\":369},\"label\":\"EROAD\"},{\"source\":43,\"target\":44,\"id\":38,\"data\":{\"distance\":74},\"label\":\"EROAD\"},{\"source\":44,\"target\":49,\"id\":39,\"data\":{\"distance\":277},\"label\":\"EROAD\"},{\"source\":45,\"target\":42,\"id\":40,\"data\":{\"distance\":27},\"label\":\"EROAD\"},{\"source\":46,\"target\":45,\"id\":41,\"data\":{\"distance\":207},\"label\":\"EROAD\"},{\"source\":47,\"target\":46,\"id\":42,\"data\":{\"distance\":22},\"label\":\"EROAD\"},{\"source\":48,\"target\":47,\"id\":43,\"data\":{\"distance\":32},\"label\":\"EROAD\"},{\"source\":49,\"target\":48,\"id\":44,\"data\":{\"distance\":106},\"label\":\"EROAD\"},{\"source\":51,\"target\":50,\"id\":45,\"data\":{\"distance\":25},\"label\":\"EROAD\"},{\"source\":51,\"target\":41,\"id\":46,\"data\":{\"distance\":35},\"label\":\"EROAD\"},{\"source\":42,\"target\":51,\"id\":47,\"data\":{\"distance\":32},\"label\":\"EROAD\"},{\"source\":45,\"target\":50,\"id\":48,\"data\":{\"distance\":33},\"label\":\"EROAD\"}],\"labels\":{\"User\":\"#67AD48\",\"Library\":\"#2B0671\",\"Place\":\"#78B189\"},\"types\":[\"FOLLOWS\",\"EROAD\",\"DEPENDS_ON\"],\"directed\":true}"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1579455610561_1952644736",
+      "id": "20200119-174010_1936366527",
+      "dateCreated": "2020-01-19 17:40:10.561",
+      "dateStarted": "2020-01-19 17:40:16.307",
+      "dateFinished": "2020-01-19 17:40:16.342",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%md\n\n### Stream Yens k-shortest path algorithm",
+      "user": "anonymous",
+      "dateUpdated": "2020-01-19 17:40:55.914",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "editOnDblClick": true,
+          "language": "markdown",
+          "completionSupport": false
+        },
+        "editorMode": "ace/mode/markdown",
+        "editorHide": true,
+        "tableHide": false
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003ch3\u003eStream Yens k-shortest path algorithm\u003c/h3\u003e\n\u003c/div\u003e"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1579455636734_746128941",
+      "id": "20200119-174036_855537310",
+      "dateCreated": "2020-01-19 17:40:36.734",
+      "dateStarted": "2020-01-19 17:40:55.914",
+      "dateFinished": "2020-01-19 17:40:55.923",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
     {
       "text": "MATCH (start:Place {id:\"Gouda\"}),\n      (end:Place {id:\"Felixstowe\"})\nCALL algo.kShortestPaths.stream(start, end, 5, \"distance\")\nYIELD index, nodeIds, path, costs\nRETURN index,\n       [node in algo.getNodesById(nodeIds[1..-1]) | node.id] AS via,\n       reduce(acc\u003d0.0, cost in costs | acc + cost) AS totalCost\n",
       "user": "anonymous",
-      "dateUpdated": "2020-01-01 19:06:10.909",
+      "dateUpdated": "2020-01-20 19:04:01.509",
       "config": {
         "editorSetting": {
           "editOnDblClick": false
@@ -101,8 +277,8 @@
       "jobName": "paragraph_1577905566923_505519176",
       "id": "20200101-190009_1220471711",
       "dateCreated": "2020-01-01 19:06:06.923",
-      "dateStarted": "2020-01-01 19:06:10.647",
-      "dateFinished": "2020-01-01 19:06:10.798",
+      "dateStarted": "2020-01-20 19:04:01.523",
+      "dateFinished": "2020-01-20 19:04:01.731",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },

@@ -1,9 +1,91 @@
 {
   "paragraphs": [
     {
-      "text": "%spark.pyspark\nimport networkx as nx\nimport community\n",
+      "text": "%md\n\n###  Example taken from \"Graph Algorithms: Practical Examples in Apache Spark and Neo4j\" (https://neo4j.com/graph-algorithms-book/)",
       "user": "anonymous",
-      "dateUpdated": "2020-01-01 11:18:31.587",
+      "dateUpdated": "2020-01-19 18:39:28.689",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "markdown",
+          "editOnDblClick": true,
+          "completionKey": "TAB",
+          "completionSupport": false
+        },
+        "editorMode": "ace/mode/markdown",
+        "editorHide": true,
+        "tableHide": false
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003ch3\u003eExample taken from \u0026ldquo;Graph Algorithms: Practical Examples in Apache Spark and Neo4j\u0026rdquo; (\u003ca href\u003d\"https://neo4j.com/graph-algorithms-book/\"\u003ehttps://neo4j.com/graph-algorithms-book/\u003c/a\u003e)\u003c/h3\u003e\n\u003c/div\u003e"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1579459165235_876848184",
+      "id": "20200119-183925_586709385",
+      "dateCreated": "2020-01-19 18:39:25.235",
+      "dateStarted": "2020-01-19 18:39:28.689",
+      "dateFinished": "2020-01-19 18:39:28.705",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%md\n# Louvain algorithm",
+      "user": "anonymous",
+      "dateUpdated": "2020-01-19 18:39:43.849",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "markdown",
+          "editOnDblClick": true,
+          "completionKey": "TAB",
+          "completionSupport": false
+        },
+        "editorMode": "ace/mode/markdown",
+        "editorHide": true,
+        "tableHide": false
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003ch1\u003eLouvain algorithm\u003c/h1\u003e\n\u003c/div\u003e"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1579459177429_343859351",
+      "id": "20200119-183937_684370847",
+      "dateCreated": "2020-01-19 18:39:37.429",
+      "dateStarted": "2020-01-19 18:39:43.849",
+      "dateFinished": "2020-01-19 18:39:43.873",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%pyspark\nimport networkx as nx\nimport community\n",
+      "user": "anonymous",
+      "dateUpdated": "2020-01-20 18:45:01.665",
       "config": {
         "editorSetting": {
           "editOnDblClick": false,
@@ -29,14 +111,15 @@
       "jobName": "paragraph_1577877511586_-1400613408",
       "id": "20191207-114958_2002234398",
       "dateCreated": "2020-01-01 11:18:31.586",
-      "status": "READY",
-      "errorMessage": "",
+      "dateStarted": "2020-01-20 18:45:01.732",
+      "dateFinished": "2020-01-20 18:45:01.986",
+      "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
     {
-      "text": "%spark.pyspark\n\nG \u003d nx.Graph()\n\nG.add_nodes_from([\n    \"six\",\n    \"pandas\",\n    \"numpy\",\n    \"python-dateutil\",\n    \"pytz\",\n    \"pyspark\",\n    \"matplotlib\",\n    \"spacy\",\n    \"py4j\",\n    \"jupyter\",\n    \"jpy-console\",\n    \"nbconvert\",\n    \"ipykernel\",\n    \"jpy-client\",\n    \"jpy-core\"\n])\n\nG.add_edges_from([\n    (\"pandas\", \"numpy\"),\n    (\"pandas\", \"pytz\"),\n    (\"pandas\", \"python-dateutil\"),\n    (\"python-dateutil\", \"six\"),\n    (\"pyspark\", \"py4j\"),\n    (\"matplotlib\", \"numpy\"),\n    (\"matplotlib\", \"python-dateutil\"),\n    (\"matplotlib\", \"six\"),\n    (\"matplotlib\", \"pytz\"),\n    (\"spacy\", \"six\"),\n    (\"spacy\", \"numpy\"),\n    (\"jupyter\", \"nbconvert\"),\n    (\"jupyter\", \"ipykernel\"),\n    (\"jupyter\", \"jpy-console\"),\n    (\"jpy-console\", \"jpy-client\"),\n    (\"jpy-console\", \"ipykernel\"),\n    (\"jpy-client\", \"jpy-core\"),\n    (\"nbconvert\", \"jpy-core\"),\n])\n",
+      "text": "%pyspark\n\nG \u003d nx.Graph()\n\nG.add_nodes_from([\n    \"six\",\n    \"pandas\",\n    \"numpy\",\n    \"python-dateutil\",\n    \"pytz\",\n    \"pyspark\",\n    \"matplotlib\",\n    \"spacy\",\n    \"py4j\",\n    \"jupyter\",\n    \"jpy-console\",\n    \"nbconvert\",\n    \"ipykernel\",\n    \"jpy-client\",\n    \"jpy-core\"\n])\n\nG.add_edges_from([\n    (\"pandas\", \"numpy\"),\n    (\"pandas\", \"pytz\"),\n    (\"pandas\", \"python-dateutil\"),\n    (\"python-dateutil\", \"six\"),\n    (\"pyspark\", \"py4j\"),\n    (\"matplotlib\", \"numpy\"),\n    (\"matplotlib\", \"python-dateutil\"),\n    (\"matplotlib\", \"six\"),\n    (\"matplotlib\", \"pytz\"),\n    (\"spacy\", \"six\"),\n    (\"spacy\", \"numpy\"),\n    (\"jupyter\", \"nbconvert\"),\n    (\"jupyter\", \"ipykernel\"),\n    (\"jupyter\", \"jpy-console\"),\n    (\"jpy-console\", \"jpy-client\"),\n    (\"jpy-console\", \"ipykernel\"),\n    (\"jpy-client\", \"jpy-core\"),\n    (\"nbconvert\", \"jpy-core\"),\n])\n",
       "user": "anonymous",
-      "dateUpdated": "2020-01-01 11:18:31.589",
+      "dateUpdated": "2020-01-20 18:45:04.010",
       "config": {
         "editorSetting": {
           "editOnDblClick": false,
@@ -62,50 +145,24 @@
       "jobName": "paragraph_1577877511588_-398776769",
       "id": "20191231-150059_698932612",
       "dateCreated": "2020-01-01 11:18:31.588",
-      "status": "READY",
-      "errorMessage": "",
+      "dateStarted": "2020-01-20 18:45:04.129",
+      "dateFinished": "2020-01-20 18:45:04.147",
+      "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
     {
-      "text": "%spark.pyspark\nd \u003d community.generate_dendrogram(G)",
+      "text": "%pyspark\n\nd \u003d community.generate_dendrogram(G)\n\nl0 \u003d community.partition_at_level(d, 0)\nprint(l0)\nprint(\"l0 modularity: \" + str(community.modularity(l0, G)))\n",
       "user": "anonymous",
-      "dateUpdated": "2020-01-01 11:18:31.590",
+      "dateUpdated": "2020-01-20 18:45:27.559",
       "config": {
         "editorSetting": {
-          "editOnDblClick": false
+          "editOnDblClick": false,
+          "language": "python",
+          "completionKey": "TAB",
+          "completionSupport": true
         },
         "colWidth": 12.0,
-        "editorMode": "ace/mode/undefined",
-        "fontSize": 9.0,
-        "results": {},
-        "enabled": true
-      },
-      "settings": {
-        "params": {},
-        "forms": {}
-      },
-      "results": {
-        "code": "SUCCESS",
-        "msg": []
-      },
-      "apps": [],
-      "jobName": "paragraph_1577877511589_-1698307095",
-      "id": "20191231-150312_797171085",
-      "dateCreated": "2020-01-01 11:18:31.589",
-      "status": "READY",
-      "errorMessage": "",
-      "progressUpdateIntervalMs": 500
-    },
-    {
-      "text": "%spark.pyspark\nl0 \u003d community.partition_at_level(d, 0)\nprint(l0)\nprint(\"l0 modularity: \" + str(community.modularity(l0, G)))\n",
-      "user": "anonymous",
-      "dateUpdated": "2020-01-01 11:18:31.590",
-      "config": {
-        "editorSetting": {
-          "editOnDblClick": false
-        },
-        "colWidth": 12.0,
-        "editorMode": "ace/mode/undefined",
+        "editorMode": "ace/mode/python",
         "fontSize": 9.0,
         "results": {},
         "enabled": true
@@ -119,7 +176,7 @@
         "msg": [
           {
             "type": "TEXT",
-            "data": "{\u0027spacy\u0027: 0, \u0027six\u0027: 0, \u0027jupyter\u0027: 1, \u0027jpy-core\u0027: 2, \u0027matplotlib\u0027: 0, \u0027python-dateutil\u0027: 0, \u0027jpy-client\u0027: 2, \u0027ipykernel\u0027: 1, \u0027jpy-console\u0027: 1, \u0027numpy\u0027: 0, \u0027nbconvert\u0027: 2, \u0027pyspark\u0027: 3, \u0027pandas\u0027: 4, \u0027pytz\u0027: 4, \u0027py4j\u0027: 3}\nl0 modularity: 0.449074074074074\n"
+            "data": "{\u0027pandas\u0027: 0, \u0027jupyter\u0027: 1, \u0027py4j\u0027: 2, \u0027ipykernel\u0027: 1, \u0027pytz\u0027: 0, \u0027jpy-client\u0027: 3, \u0027pyspark\u0027: 2, \u0027nbconvert\u0027: 3, \u0027matplotlib\u0027: 4, \u0027spacy\u0027: 5, \u0027six\u0027: 4, \u0027python-dateutil\u0027: 4, \u0027jpy-core\u0027: 3, \u0027numpy\u0027: 5, \u0027jpy-console\u0027: 1}\nl0 modularity: 0.4151234567901234\n"
           }
         ]
       },
@@ -127,20 +184,24 @@
       "jobName": "paragraph_1577877511590_1055020055",
       "id": "20191231-150323_1427426760",
       "dateCreated": "2020-01-01 11:18:31.590",
-      "status": "READY",
-      "errorMessage": "",
+      "dateStarted": "2020-01-20 18:45:27.578",
+      "dateFinished": "2020-01-20 18:45:27.608",
+      "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
     {
-      "text": "%spark.pyspark\nl1 \u003d community.partition_at_level(d, 1)\nprint(l1)\nprint(\"l1 modularity: \" + str(community.modularity(l1, G)))\n",
+      "text": "%pyspark\nl1 \u003d community.partition_at_level(d, 1)\nprint(l1)\nprint(\"l1 modularity: \" + str(community.modularity(l1, G)))\n",
       "user": "anonymous",
-      "dateUpdated": "2020-01-01 11:18:31.592",
+      "dateUpdated": "2020-01-20 18:45:30.641",
       "config": {
         "editorSetting": {
-          "editOnDblClick": false
+          "editOnDblClick": false,
+          "language": "python",
+          "completionKey": "TAB",
+          "completionSupport": true
         },
         "colWidth": 12.0,
-        "editorMode": "ace/mode/undefined",
+        "editorMode": "ace/mode/python",
         "fontSize": 9.0,
         "results": {},
         "enabled": true
@@ -154,7 +215,7 @@
         "msg": [
           {
             "type": "TEXT",
-            "data": "{\u0027spacy\u0027: 0, \u0027six\u0027: 0, \u0027jupyter\u0027: 1, \u0027jpy-core\u0027: 1, \u0027matplotlib\u0027: 0, \u0027python-dateutil\u0027: 0, \u0027jpy-client\u0027: 1, \u0027ipykernel\u0027: 1, \u0027jpy-console\u0027: 1, \u0027numpy\u0027: 0, \u0027nbconvert\u0027: 1, \u0027pyspark\u0027: 2, \u0027pandas\u0027: 0, \u0027pytz\u0027: 0, \u0027py4j\u0027: 2}\nl1 modularity: 0.537037037037037\n"
+            "data": "{\u0027pandas\u0027: 0, \u0027jupyter\u0027: 1, \u0027py4j\u0027: 2, \u0027ipykernel\u0027: 1, \u0027pytz\u0027: 0, \u0027jpy-client\u0027: 1, \u0027pyspark\u0027: 2, \u0027nbconvert\u0027: 1, \u0027matplotlib\u0027: 0, \u0027spacy\u0027: 0, \u0027six\u0027: 0, \u0027python-dateutil\u0027: 0, \u0027jpy-core\u0027: 1, \u0027numpy\u0027: 0, \u0027jpy-console\u0027: 1}\nl1 modularity: 0.537037037037037\n"
           }
         ]
       },
@@ -162,8 +223,9 @@
       "jobName": "paragraph_1577877511591_-1155870381",
       "id": "20191231-150336_1453403831",
       "dateCreated": "2020-01-01 11:18:31.591",
-      "status": "READY",
-      "errorMessage": "",
+      "dateStarted": "2020-01-20 18:45:30.682",
+      "dateFinished": "2020-01-20 18:45:30.701",
+      "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
     {
@@ -190,7 +252,6 @@
   "noteForms": {},
   "angularObjects": {
     "md:shared_process": [],
-    "neo4j:shared_process": [],
     "spark:shared_process": []
   },
   "config": {
