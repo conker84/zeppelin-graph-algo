@@ -5,7 +5,6 @@ services:
         hostname: zeppelin
         container_name: zeppelin
         build: .
-            
         depends_on:
             - neo4j
         ports:
@@ -16,6 +15,8 @@ services:
         - ./zeppelin/data:/zeppelin/spark-warehouse
         environment:
             - PYSPARK_PYTHON=python3
+            - ZEPPELIN_NOTEBOOK_HOMESCREEN=2EYYCADG3
+            - ZEPPELIN_NOTEBOOK_HOMESCREEN_HIDE=true
     neo4j:
         hostname: neo4j
         container_name: neo4j
