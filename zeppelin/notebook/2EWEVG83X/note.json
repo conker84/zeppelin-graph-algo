@@ -3,7 +3,7 @@
     {
       "text": "%md\n\n###  Example taken from \"Graph Algorithms: Practical Examples in Apache Spark and Neo4j\" (https://neo4j.com/graph-algorithms-book/)\n\n### Please make sure that you have previously executed [this notebook](/#/notebook/2EW6YXEM1)",
       "user": "anonymous",
-      "dateUpdated": "2020-01-19 17:19:48.534",
+      "dateUpdated": "2020-01-28 08:28:51.714",
       "config": {
         "colWidth": 12.0,
         "fontSize": 9.0,
@@ -16,8 +16,8 @@
           "completionSupport": false
         },
         "editorMode": "ace/mode/markdown",
-        "editorHide": true,
-        "tableHide": false
+        "editorHide": false,
+        "tableHide": true
       },
       "settings": {
         "params": {},
@@ -44,7 +44,7 @@
     {
       "text": "%md\n# Closeness centrality\nhttps://neo4j.com/docs/graph-algorithms/current/labs-algorithms/closeness-centrality/",
       "user": "anonymous",
-      "dateUpdated": "2020-01-02 17:07:55.324",
+      "dateUpdated": "2020-01-28 08:23:22.000",
       "config": {
         "colWidth": 12.0,
         "fontSize": 9.0,
@@ -56,8 +56,8 @@
           "completionSupport": false
         },
         "editorMode": "ace/mode/markdown",
-        "editorHide": true,
-        "tableHide": false
+        "editorHide": false,
+        "tableHide": true
       },
       "settings": {
         "params": {},
@@ -76,8 +76,8 @@
       "jobName": "paragraph_1577984867638_-1017298659",
       "id": "20200102-170747_340826499",
       "dateCreated": "2020-01-02 17:07:47.639",
-      "dateStarted": "2020-01-02 17:07:55.331",
-      "dateFinished": "2020-01-02 17:07:55.346",
+      "dateStarted": "2020-01-28 08:22:50.717",
+      "dateFinished": "2020-01-28 08:22:53.110",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
@@ -276,6 +276,46 @@
       "dateCreated": "2019-12-07 11:24:55.844",
       "dateStarted": "2020-01-19 19:26:12.875",
       "dateFinished": "2020-01-19 19:26:12.983",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%md\n*Alice*, *Doug*, and *David* are the most closely connected nodes in the graph with a 1.0 score, which means each directly connects to all nodes in their part of the graph. David has only a few connections, within his group of friends that’s significant. In other words, this score represents the closeness of each user to others within their subgraph but not the entire graph.",
+      "user": "anonymous",
+      "dateUpdated": "2020-01-28 08:28:06.383",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "editOnDblClick": true,
+          "language": "markdown",
+          "completionSupport": false
+        },
+        "editorMode": "ace/mode/markdown",
+        "editorHide": true,
+        "tableHide": false
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003cp\u003e\u003cem\u003eAlice\u003c/em\u003e, \u003cem\u003eDoug\u003c/em\u003e, and \u003cem\u003eDavid\u003c/em\u003e are the most closely connected nodes in the graph with a 1.0 score, which means each directly connects to all nodes in their part of the graph. David has only a few connections, within his group of friends that’s significant. In other words, this score represents the closeness of each user to others within their subgraph but not the entire graph.\u003c/p\u003e\n\u003c/div\u003e"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1580200063796_-439340962",
+      "id": "20200128-082743_1953130964",
+      "dateCreated": "2020-01-28 08:27:43.796",
+      "dateStarted": "2020-01-28 08:28:06.384",
+      "dateFinished": "2020-01-28 08:28:06.406",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },

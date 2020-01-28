@@ -1,0 +1,155 @@
+{
+  "paragraphs": [
+    {
+      "text": "%md\n# Closeness centrality\nhttps://neo4j.com/docs/graph-algorithms/current/labs-algorithms/closeness-centrality/",
+      "user": "anonymous",
+      "dateUpdated": "2020-01-28 08:25:18.740",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "markdown",
+          "editOnDblClick": true,
+          "completionKey": "TAB",
+          "completionSupport": false
+        },
+        "editorMode": "ace/mode/markdown",
+        "editorHide": true,
+        "tableHide": false
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003ch1\u003eCloseness centrality\u003c/h1\u003e\n\u003cp\u003e\u003ca href\u003d\"https://neo4j.com/docs/graph-algorithms/current/labs-algorithms/closeness-centrality/\"\u003ehttps://neo4j.com/docs/graph-algorithms/current/labs-algorithms/closeness-centrality/\u003c/a\u003e\u003c/p\u003e\n\u003c/div\u003e"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1580199886007_-1924648764",
+      "id": "20200128-082446_626593832",
+      "dateCreated": "2020-01-28 08:24:46.007",
+      "dateStarted": "2020-01-28 08:25:18.742",
+      "dateFinished": "2020-01-28 08:25:18.758",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%md\n# When you can use it?\n\nApply Closeness Centrality when you need to know which nodes disseminate things the fastest. Using weighted relationships can be especially helpful in evaluating interaction speeds in communication and behavioral analyses.\n\nCloseness Centrality works best on connected graphs. When the original formula is applied to an unconnected graph, we end up with an infinite distance between two nodes where there is no path between them. This means that we’ll end up with an infinite close‐ ness centrality score when we sum up all the distances from that node. To avoid this issue, a variation on the original formula will be shown after the next example.",
+      "user": "anonymous",
+      "dateUpdated": "2020-01-28 08:28:34.963",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "editorMode": "ace/mode/scala",
+        "editorHide": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003ch1\u003eWhen you can use it?\u003c/h1\u003e\n\u003cp\u003eApply Closeness Centrality when you need to know which nodes disseminate things the fastest. Using weighted relationships can be especially helpful in evaluating interaction speeds in communication and behavioral analyses.\u003c/p\u003e\n\u003cp\u003eCloseness Centrality works best on connected graphs. When the original formula is applied to an unconnected graph, we end up with an infinite distance between two nodes where there is no path between them. This means that we’ll end up with an infinite close‐ ness centrality score when we sum up all the distances from that node. To avoid this issue, a variation on the original formula will be shown after the next example.\u003c/p\u003e\n\u003c/div\u003e"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1580199918703_78865548",
+      "id": "20200128-082518_341828040",
+      "dateCreated": "2020-01-28 08:25:18.703",
+      "dateStarted": "2020-01-28 08:28:33.136",
+      "dateFinished": "2020-01-28 08:28:33.162",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%md\n\nYou can find the algorithm implemented in:\n\n* [Neo4j](/#/notebook/2EWEVG83X)\n* [Spark](/#/notebook/2EY9G1KBV)",
+      "user": "anonymous",
+      "dateUpdated": "2020-01-28 08:30:16.084",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "markdown",
+          "editOnDblClick": true,
+          "completionKey": "TAB",
+          "completionSupport": false
+        },
+        "editorMode": "ace/mode/markdown",
+        "editorHide": true,
+        "tableHide": false
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003cp\u003eYou can find the algorithm implemented in:\u003c/p\u003e\n\u003cul\u003e\n  \u003cli\u003e\u003ca href\u003d\"/#/notebook/2EWEVG83X\"\u003eNeo4j\u003c/a\u003e\u003c/li\u003e\n  \u003cli\u003e\u003ca href\u003d\"/#/notebook/2EY9G1KBV\"\u003eSpark\u003c/a\u003e\u003c/li\u003e\n\u003c/ul\u003e\n\u003c/div\u003e"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1580199921245_-1824286748",
+      "id": "20200128-082521_853675343",
+      "dateCreated": "2020-01-28 08:25:21.245",
+      "dateStarted": "2020-01-28 08:30:16.084",
+      "dateFinished": "2020-01-28 08:30:16.096",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%md\n",
+      "user": "anonymous",
+      "dateUpdated": "2020-01-28 08:30:03.844",
+      "config": {},
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "jobName": "paragraph_1580200203842_1580056363",
+      "id": "20200128-083003_347629143",
+      "dateCreated": "2020-01-28 08:30:03.842",
+      "status": "READY",
+      "progressUpdateIntervalMs": 500
+    }
+  ],
+  "name": "Centrality/Closeness/Closeness",
+  "id": "2EYQR9WE6",
+  "noteParams": {},
+  "noteForms": {},
+  "angularObjects": {
+    "md:shared_process": [],
+    "neo4j:shared_process": [],
+    "spark:shared_process": []
+  },
+  "config": {
+    "isZeppelinNotebookCronEnable": false
+  },
+  "info": {}
+}
