@@ -117,6 +117,47 @@
       "progressUpdateIntervalMs": 500
     },
     {
+      "text": "%md\n\n### Import graph\n",
+      "user": "anonymous",
+      "dateUpdated": "2020-01-28 18:50:12.696",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "markdown",
+          "editOnDblClick": true,
+          "completionKey": "TAB",
+          "completionSupport": false
+        },
+        "editorMode": "ace/mode/markdown",
+        "editorHide": true,
+        "tableHide": false
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003ch3\u003eImport graph\u003c/h3\u003e\n\u003c/div\u003e"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1580237406820_-700250442",
+      "id": "20200128-185006_1059240638",
+      "dateCreated": "2020-01-28 18:50:06.820",
+      "dateStarted": "2020-01-28 18:50:12.695",
+      "dateFinished": "2020-01-28 18:50:12.706",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
       "text": "%pyspark\ng \u003d create_software_graph()",
       "user": "anonymous",
       "dateUpdated": "2020-01-20 18:46:15.888",
@@ -141,25 +182,53 @@
         "code": "SUCCESS",
         "msg": []
       },
-      "runtimeInfos": {
-        "jobUrl": {
-          "propertyName": "jobUrl",
-          "label": "SPARK JOB",
-          "tooltip": "View in Spark web UI",
-          "group": "spark",
-          "values": [
-            "http://172.20.0.3:4040/jobs/job?id\u003d28",
-            "http://172.20.0.3:4040/jobs/job?id\u003d29"
-          ],
-          "interpreterSettingId": "spark"
-        }
-      },
       "apps": [],
       "jobName": "paragraph_1577893158884_-255239792",
       "id": "20200101-112422_199127971",
       "dateCreated": "2020-01-01 15:39:18.884",
       "dateStarted": "2020-01-20 18:46:15.943",
       "dateFinished": "2020-01-20 18:46:16.128",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%md\n\n### Stream results\n\nNow we’re ready to execute the Strongly Connected Components algorithm. We’ll use\nit to work out whether there are any circular dependencies in our graph.",
+      "user": "anonymous",
+      "dateUpdated": "2020-01-28 18:50:54.279",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "markdown",
+          "editOnDblClick": true,
+          "completionKey": "TAB",
+          "completionSupport": false
+        },
+        "editorMode": "ace/mode/markdown",
+        "editorHide": true,
+        "tableHide": false
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003ch3\u003eStream results\u003c/h3\u003e\n\u003cp\u003eNow we’re ready to execute the Strongly Connected Components algorithm. We’ll use\u003cbr/\u003eit to work out whether there are any circular dependencies in our graph.\u003c/p\u003e\n\u003c/div\u003e"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1580237419665_1032224261",
+      "id": "20200128-185019_127619917",
+      "dateCreated": "2020-01-28 18:50:19.666",
+      "dateStarted": "2020-01-28 18:50:54.279",
+      "dateFinished": "2020-01-28 18:50:54.310",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
@@ -193,41 +262,6 @@
           }
         ]
       },
-      "runtimeInfos": {
-        "jobUrl": {
-          "propertyName": "jobUrl",
-          "label": "SPARK JOB",
-          "tooltip": "View in Spark web UI",
-          "group": "spark",
-          "values": [
-            "http://172.20.0.3:4040/jobs/job?id\u003d30",
-            "http://172.20.0.3:4040/jobs/job?id\u003d31",
-            "http://172.20.0.3:4040/jobs/job?id\u003d32",
-            "http://172.20.0.3:4040/jobs/job?id\u003d33",
-            "http://172.20.0.3:4040/jobs/job?id\u003d34",
-            "http://172.20.0.3:4040/jobs/job?id\u003d35",
-            "http://172.20.0.3:4040/jobs/job?id\u003d36",
-            "http://172.20.0.3:4040/jobs/job?id\u003d37",
-            "http://172.20.0.3:4040/jobs/job?id\u003d38",
-            "http://172.20.0.3:4040/jobs/job?id\u003d39",
-            "http://172.20.0.3:4040/jobs/job?id\u003d40",
-            "http://172.20.0.3:4040/jobs/job?id\u003d41",
-            "http://172.20.0.3:4040/jobs/job?id\u003d42",
-            "http://172.20.0.3:4040/jobs/job?id\u003d43",
-            "http://172.20.0.3:4040/jobs/job?id\u003d44",
-            "http://172.20.0.3:4040/jobs/job?id\u003d45",
-            "http://172.20.0.3:4040/jobs/job?id\u003d46",
-            "http://172.20.0.3:4040/jobs/job?id\u003d47",
-            "http://172.20.0.3:4040/jobs/job?id\u003d48",
-            "http://172.20.0.3:4040/jobs/job?id\u003d49",
-            "http://172.20.0.3:4040/jobs/job?id\u003d50",
-            "http://172.20.0.3:4040/jobs/job?id\u003d51",
-            "http://172.20.0.3:4040/jobs/job?id\u003d52",
-            "http://172.20.0.3:4040/jobs/job?id\u003d53"
-          ],
-          "interpreterSettingId": "spark"
-        }
-      },
       "apps": [],
       "jobName": "paragraph_1577893158885_-1118483315",
       "id": "20200101-112443_1061570403",
@@ -238,20 +272,60 @@
       "progressUpdateIntervalMs": 500
     },
     {
-      "text": "%pyspark\n",
+      "text": "%md\n\nYou might notice that every library node is assigned to a unique component. This is\nthe partition or subgroup it belongs to, and as we (hopefully!) expected, every node is\nin its own partition. This means our software project has no circular dependencies\namongst these libraries.\n",
       "user": "anonymous",
-      "dateUpdated": "2020-01-01 15:39:18.888",
+      "dateUpdated": "2020-01-28 18:51:12.164",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "markdown",
+          "editOnDblClick": true,
+          "completionKey": "TAB",
+          "completionSupport": false
+        },
+        "editorMode": "ace/mode/markdown",
+        "editorHide": true,
+        "tableHide": false
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003cp\u003eYou might notice that every library node is assigned to a unique component. This is\u003cbr/\u003ethe partition or subgroup it belongs to, and as we (hopefully!) expected, every node is\u003cbr/\u003ein its own partition. This means our software project has no circular dependencies\u003cbr/\u003eamongst these libraries.\u003c/p\u003e\n\u003c/div\u003e"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1577893158887_-974165382",
+      "id": "20200101-153518_1153514066",
+      "dateCreated": "2020-01-01 15:39:18.887",
+      "dateStarted": "2020-01-28 18:51:12.164",
+      "dateFinished": "2020-01-28 18:51:12.196",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%md\n",
+      "user": "anonymous",
+      "dateUpdated": "2020-01-28 18:51:12.123",
       "config": {},
       "settings": {
         "params": {},
         "forms": {}
       },
       "apps": [],
-      "jobName": "paragraph_1577893158887_-974165382",
-      "id": "20200101-153518_1153514066",
-      "dateCreated": "2020-01-01 15:39:18.887",
+      "jobName": "paragraph_1580237472116_-574870975",
+      "id": "20200128-185112_944740248",
+      "dateCreated": "2020-01-28 18:51:12.116",
       "status": "READY",
-      "errorMessage": "",
       "progressUpdateIntervalMs": 500
     }
   ],

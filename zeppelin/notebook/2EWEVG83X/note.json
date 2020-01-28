@@ -3,7 +3,7 @@
     {
       "text": "%md\n\n###  Example taken from \"Graph Algorithms: Practical Examples in Apache Spark and Neo4j\" (https://neo4j.com/graph-algorithms-book/)\n\n### Please make sure that you have previously executed [this notebook](/#/notebook/2EW6YXEM1)",
       "user": "anonymous",
-      "dateUpdated": "2020-01-28 08:28:51.714",
+      "dateUpdated": "2020-01-28 18:11:02.588",
       "config": {
         "colWidth": 12.0,
         "fontSize": 9.0,
@@ -16,8 +16,8 @@
           "completionSupport": false
         },
         "editorMode": "ace/mode/markdown",
-        "editorHide": false,
-        "tableHide": true
+        "editorHide": true,
+        "tableHide": false
       },
       "settings": {
         "params": {},
@@ -36,15 +36,15 @@
       "jobName": "paragraph_1577984162948_824090713",
       "id": "20200102-165602_1083371467",
       "dateCreated": "2020-01-02 16:56:02.948",
-      "dateStarted": "2020-01-19 17:19:48.533",
-      "dateFinished": "2020-01-19 17:19:48.553",
+      "dateStarted": "2020-01-28 18:11:02.589",
+      "dateFinished": "2020-01-28 18:11:02.603",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
     {
       "text": "%md\n# Closeness centrality\nhttps://neo4j.com/docs/graph-algorithms/current/labs-algorithms/closeness-centrality/",
       "user": "anonymous",
-      "dateUpdated": "2020-01-28 08:23:22.000",
+      "dateUpdated": "2020-01-28 18:11:04.692",
       "config": {
         "colWidth": 12.0,
         "fontSize": 9.0,
@@ -56,8 +56,8 @@
           "completionSupport": false
         },
         "editorMode": "ace/mode/markdown",
-        "editorHide": false,
-        "tableHide": true
+        "editorHide": true,
+        "tableHide": false
       },
       "settings": {
         "params": {},
@@ -76,8 +76,8 @@
       "jobName": "paragraph_1577984867638_-1017298659",
       "id": "20200102-170747_340826499",
       "dateCreated": "2020-01-02 17:07:47.639",
-      "dateStarted": "2020-01-28 08:22:50.717",
-      "dateFinished": "2020-01-28 08:22:53.110",
+      "dateStarted": "2020-01-28 18:11:04.692",
+      "dateFinished": "2020-01-28 18:11:04.698",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
@@ -171,9 +171,9 @@
       "progressUpdateIntervalMs": 500
     },
     {
-      "text": "%md\n## Streaming closeness centrality",
+      "text": "%md\n## Streaming closeness centrality\n\nA call to the following procedure will calculate the closeness centrality for each of the\nnodes in our graph:",
       "user": "anonymous",
-      "dateUpdated": "2019-12-07 11:28:34.051",
+      "dateUpdated": "2020-01-28 18:15:54.938",
       "config": {
         "colWidth": 12.0,
         "fontSize": 9.0,
@@ -186,8 +186,8 @@
           "completionSupport": false
         },
         "editorMode": "ace/mode/markdown",
-        "editorHide": true,
-        "tableHide": false
+        "editorHide": false,
+        "tableHide": true
       },
       "settings": {
         "params": {},
@@ -198,7 +198,7 @@
         "msg": [
           {
             "type": "HTML",
-            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003ch2\u003eStreaming closeness centrality\u003c/h2\u003e\n\u003c/div\u003e"
+            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003ch2\u003eStreaming closeness centrality\u003c/h2\u003e\n\u003cp\u003eA call to the following procedure will calculate the closeness centrality for each of the\u003cbr/\u003enodes in our graph:\u003c/p\u003e\n\u003c/div\u003e"
           }
         ]
       },
@@ -206,8 +206,8 @@
       "jobName": "paragraph_1575718048369_1685479278",
       "id": "20191207-112728_2069065216",
       "dateCreated": "2019-12-07 11:27:28.369",
-      "dateStarted": "2019-12-07 11:28:34.063",
-      "dateFinished": "2019-12-07 11:28:34.078",
+      "dateStarted": "2020-01-28 18:15:27.063",
+      "dateFinished": "2020-01-28 18:15:27.071",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
@@ -282,7 +282,7 @@
     {
       "text": "%md\n*Alice*, *Doug*, and *David* are the most closely connected nodes in the graph with a 1.0 score, which means each directly connects to all nodes in their part of the graph. David has only a few connections, within his group of friends that’s significant. In other words, this score represents the closeness of each user to others within their subgraph but not the entire graph.",
       "user": "anonymous",
-      "dateUpdated": "2020-01-28 08:28:06.383",
+      "dateUpdated": "2020-01-28 18:15:11.993",
       "config": {
         "colWidth": 12.0,
         "fontSize": 9.0,
@@ -314,15 +314,15 @@
       "jobName": "paragraph_1580200063796_-439340962",
       "id": "20200128-082743_1953130964",
       "dateCreated": "2020-01-28 08:27:43.796",
-      "dateStarted": "2020-01-28 08:28:06.384",
-      "dateFinished": "2020-01-28 08:28:06.406",
+      "dateStarted": "2020-01-28 18:15:11.999",
+      "dateFinished": "2020-01-28 18:15:12.026",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
     {
       "text": "%md\n## Write back closeness centrality\n",
       "user": "anonymous",
-      "dateUpdated": "2019-12-07 11:28:51.888",
+      "dateUpdated": "2020-01-28 18:16:10.891",
       "config": {
         "colWidth": 12.0,
         "fontSize": 9.0,
@@ -355,8 +355,8 @@
       "jobName": "paragraph_1575718119159_-1191599217",
       "id": "20191207-112839_1421236737",
       "dateCreated": "2019-12-07 11:28:39.159",
-      "dateStarted": "2019-12-07 11:28:51.888",
-      "dateFinished": "2019-12-07 11:28:51.951",
+      "dateStarted": "2020-01-28 18:16:10.890",
+      "dateFinished": "2020-01-28 18:16:10.906",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
@@ -431,9 +431,9 @@
       "progressUpdateIntervalMs": 500
     },
     {
-      "text": "%md\n## Wasserman-Faust implementation",
+      "text": "%md\n## Wasserman-Faust implementation\n\nStanley Wasserman and Katherine Faust came up with an improved formula for cal‐\nculating closeness for graphs with multiple subgraphs without connections between\nthose groups.",
       "user": "anonymous",
-      "dateUpdated": "2020-01-20 18:34:30.086",
+      "dateUpdated": "2020-01-28 18:17:06.133",
       "config": {
         "colWidth": 12.0,
         "fontSize": 9.0,
@@ -458,7 +458,7 @@
         "msg": [
           {
             "type": "HTML",
-            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003ch2\u003eWasserman-Faust implementation\u003c/h2\u003e\n\u003c/div\u003e"
+            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003ch2\u003eWasserman-Faust implementation\u003c/h2\u003e\n\u003cp\u003eStanley Wasserman and Katherine Faust came up with an improved formula for cal‐\u003cbr/\u003eculating closeness for graphs with multiple subgraphs without connections between\u003cbr/\u003ethose groups.\u003c/p\u003e\n\u003c/div\u003e"
           }
         ]
       },
@@ -466,8 +466,8 @@
       "jobName": "paragraph_1575718137960_1176841915",
       "id": "20191207-112857_1196936773",
       "dateCreated": "2019-12-07 11:28:57.960",
-      "dateStarted": "2020-01-20 18:34:30.125",
-      "dateFinished": "2020-01-20 18:34:31.757",
+      "dateStarted": "2020-01-28 18:17:06.137",
+      "dateFinished": "2020-01-28 18:17:06.154",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
@@ -540,9 +540,49 @@
       "progressUpdateIntervalMs": 500
     },
     {
-      "text": "%md\n## Harmonic centrality",
+      "text": "%md\n\nAs Results shows, the results are now more representative of the closeness of\nnodes to the entire graph. The scores for the members of the smaller subgraph\n(David, Amy, and James) have been dampened, and they now have the lowest scores\nof all users. This makes sense as they are the most isolated nodes. This formula is\nmore useful for detecting the importance of a node across the entire graph rather\nthan within its own subgraph.\n",
       "user": "anonymous",
-      "dateUpdated": "2019-12-07 11:29:43.866",
+      "dateUpdated": "2020-01-28 18:18:52.884",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "editOnDblClick": true,
+          "language": "markdown",
+          "completionSupport": false
+        },
+        "editorMode": "ace/mode/markdown",
+        "editorHide": true,
+        "tableHide": false
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003cp\u003eAs Results shows, the results are now more representative of the closeness of\u003cbr/\u003enodes to the entire graph. The scores for the members of the smaller subgraph\u003cbr/\u003e(David, Amy, and James) have been dampened, and they now have the lowest scores\u003cbr/\u003eof all users. This makes sense as they are the most isolated nodes. This formula is\u003cbr/\u003emore useful for detecting the importance of a node across the entire graph rather\u003cbr/\u003ethan within its own subgraph.\u003c/p\u003e\n\u003c/div\u003e"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1580235522395_829762722",
+      "id": "20200128-181842_1613938795",
+      "dateCreated": "2020-01-28 18:18:42.395",
+      "dateStarted": "2020-01-28 18:18:52.886",
+      "dateFinished": "2020-01-28 18:18:52.922",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%md\n## Harmonic centrality\n\nHarmonic Centrality (also known as Valued Centrality) is a variant of Closeness Cen‐\ntrality, invented to solve the original problem with unconnected graphs. In “Harmony\nin a Small World”, M. Marchiori and V. Latora proposed this concept as a practical\nrepresentation of an average shortest path.\nWhen calculating the closeness score for each node, rather than summing the distances\nof a node to all other nodes, it sums the inverse of those distances. This means\nthat infinite values become irrelevant.",
+      "user": "anonymous",
+      "dateUpdated": "2020-01-28 18:17:51.825",
       "config": {
         "colWidth": 12.0,
         "fontSize": 9.0,
@@ -567,7 +607,7 @@
         "msg": [
           {
             "type": "HTML",
-            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003ch2\u003eHarmonic centrality\u003c/h2\u003e\n\u003c/div\u003e"
+            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003ch2\u003eHarmonic centrality\u003c/h2\u003e\n\u003cp\u003eHarmonic Centrality (also known as Valued Centrality) is a variant of Closeness Cen‐\u003cbr/\u003etrality, invented to solve the original problem with unconnected graphs. In “Harmony\u003cbr/\u003ein a Small World”, M. Marchiori and V. Latora proposed this concept as a practical\u003cbr/\u003erepresentation of an average shortest path.\u003cbr/\u003eWhen calculating the closeness score for each node, rather than summing the distances\u003cbr/\u003eof a node to all other nodes, it sums the inverse of those distances. This means\u003cbr/\u003ethat infinite values become irrelevant.\u003c/p\u003e\n\u003c/div\u003e"
           }
         ]
       },
@@ -575,8 +615,8 @@
       "jobName": "paragraph_1575718172568_1835037071",
       "id": "20191207-112932_534293801",
       "dateCreated": "2019-12-07 11:29:32.568",
-      "dateStarted": "2019-12-07 11:29:43.868",
-      "dateFinished": "2019-12-07 11:29:43.906",
+      "dateStarted": "2020-01-28 18:17:51.825",
+      "dateFinished": "2020-01-28 18:17:51.853",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
@@ -649,18 +689,58 @@
       "progressUpdateIntervalMs": 500
     },
     {
-      "text": "%neo4j\n",
+      "text": "%md\n\nThe results from this algorithm differ from those of the original Closeness Centrality\nalgorithm but are similar to those from the Wasserman and Faust improvement.\nEither algorithm can be used when working with graphs with more than one connec‐\nted component.\n",
       "user": "anonymous",
-      "dateUpdated": "2020-01-19 19:26:54.047",
+      "dateUpdated": "2020-01-28 18:18:11.423",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "editOnDblClick": true,
+          "language": "markdown",
+          "completionSupport": false
+        },
+        "editorMode": "ace/mode/markdown",
+        "editorHide": true,
+        "tableHide": false
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003cp\u003eThe results from this algorithm differ from those of the original Closeness Centrality\u003cbr/\u003ealgorithm but are similar to those from the Wasserman and Faust improvement.\u003cbr/\u003eEither algorithm can be used when working with graphs with more than one connec‐\u003cbr/\u003eted component.\u003c/p\u003e\n\u003c/div\u003e"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1579462014037_254887328",
+      "id": "20200119-192654_1257387163",
+      "dateCreated": "2020-01-19 19:26:54.038",
+      "dateStarted": "2020-01-28 18:18:11.425",
+      "dateFinished": "2020-01-28 18:18:11.450",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%md\n",
+      "user": "anonymous",
+      "dateUpdated": "2020-01-28 18:18:11.388",
       "config": {},
       "settings": {
         "params": {},
         "forms": {}
       },
       "apps": [],
-      "jobName": "paragraph_1579462014037_254887328",
-      "id": "20200119-192654_1257387163",
-      "dateCreated": "2020-01-19 19:26:54.038",
+      "jobName": "paragraph_1580235491381_28752463",
+      "id": "20200128-181811_1200329026",
+      "dateCreated": "2020-01-28 18:18:11.381",
       "status": "READY",
       "progressUpdateIntervalMs": 500
     }

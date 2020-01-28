@@ -83,9 +83,9 @@
       "progressUpdateIntervalMs": 500
     },
     {
-      "text": "%pyspark\nfrom pyspark.sql import functions as F\nfrom graphframes import GraphFrame\n",
+      "text": "%pyspark\nfrom pyspark.sql import functions as F\n",
       "user": "anonymous",
-      "dateUpdated": "2020-01-19 18:38:27.720",
+      "dateUpdated": "2020-01-28 18:39:40.440",
       "config": {
         "editorSetting": {
           "language": "python",
@@ -111,15 +111,56 @@
       "jobName": "paragraph_1577893082776_953947123",
       "id": "20200101-112347_55482158",
       "dateCreated": "2020-01-01 15:38:02.776",
-      "dateStarted": "2020-01-19 18:38:27.746",
-      "dateFinished": "2020-01-19 18:38:27.761",
+      "dateStarted": "2020-01-28 18:39:40.483",
+      "dateFinished": "2020-01-28 18:39:40.499",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%md\n\n### Import graph\n",
+      "user": "anonymous",
+      "dateUpdated": "2020-01-28 18:39:54.612",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "markdown",
+          "editOnDblClick": true,
+          "completionKey": "TAB",
+          "completionSupport": false
+        },
+        "editorMode": "ace/mode/markdown",
+        "editorHide": true,
+        "tableHide": false
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003ch3\u003eImport graph\u003c/h3\u003e\n\u003c/div\u003e"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1580236785304_-1328187316",
+      "id": "20200128-183945_763171555",
+      "dateCreated": "2020-01-28 18:39:45.304",
+      "dateStarted": "2020-01-28 18:39:54.611",
+      "dateFinished": "2020-01-28 18:39:54.625",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
     {
       "text": "%pyspark\ng \u003d create_software_graph()",
       "user": "anonymous",
-      "dateUpdated": "2020-01-19 18:38:30.582",
+      "dateUpdated": "2020-01-28 18:39:42.789",
       "config": {
         "editorSetting": {
           "language": "python",
@@ -148,8 +189,8 @@
           "tooltip": "View in Spark web UI",
           "group": "spark",
           "values": [
-            "http://172.18.0.3:4040/jobs/job?id\u003d25",
-            "http://172.18.0.3:4040/jobs/job?id\u003d26"
+            "http://172.27.0.3:4040/jobs/job?id\u003d124",
+            "http://172.27.0.3:4040/jobs/job?id\u003d125"
           ],
           "interpreterSettingId": "spark"
         }
@@ -158,8 +199,49 @@
       "jobName": "paragraph_1577893082778_1639762069",
       "id": "20200101-112422_199127971",
       "dateCreated": "2020-01-01 15:38:02.778",
-      "dateStarted": "2020-01-19 18:38:30.604",
-      "dateFinished": "2020-01-19 18:38:30.778",
+      "dateStarted": "2020-01-28 18:39:42.805",
+      "dateFinished": "2020-01-28 18:39:43.096",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%md\n\n### Stream results\n",
+      "user": "anonymous",
+      "dateUpdated": "2020-01-28 18:40:17.957",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "markdown",
+          "editOnDblClick": true,
+          "completionKey": "TAB",
+          "completionSupport": false
+        },
+        "editorMode": "ace/mode/markdown",
+        "editorHide": true,
+        "tableHide": false
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003ch3\u003eStream results\u003c/h3\u003e\n\u003c/div\u003e"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1580236797003_1283129864",
+      "id": "20200128-183957_913067482",
+      "dateCreated": "2020-01-28 18:39:57.003",
+      "dateStarted": "2020-01-28 18:40:17.956",
+      "dateFinished": "2020-01-28 18:40:17.979",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
@@ -203,20 +285,60 @@
       "progressUpdateIntervalMs": 500
     },
     {
-      "text": "%pyspark\n",
+      "text": "%md\n\nWe get back 6 clusters.\nLPA is less strict than Connected Components with respect to how it determines clusters.\nTwo neighbors (directly connected nodes) may be found to be in different clusters using Label Propagation.\n",
       "user": "anonymous",
-      "dateUpdated": "2020-01-01 15:38:02.784",
+      "dateUpdated": "2020-01-28 18:46:01.671",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "markdown",
+          "editOnDblClick": true,
+          "completionKey": "TAB",
+          "completionSupport": false
+        },
+        "editorMode": "ace/mode/markdown",
+        "editorHide": true,
+        "tableHide": false
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003cp\u003eWe get back 6 clusters.\u003cbr/\u003eLPA is less strict than Connected Components with respect to how it determines clusters.\u003cbr/\u003eTwo neighbors (directly connected nodes) may be found to be in different clusters using Label Propagation.\u003c/p\u003e\n\u003c/div\u003e"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1577893082783_1426546259",
+      "id": "20200101-153518_1153514066",
+      "dateCreated": "2020-01-01 15:38:02.783",
+      "dateStarted": "2020-01-28 18:46:01.672",
+      "dateFinished": "2020-01-28 18:46:01.690",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%md\n",
+      "user": "anonymous",
+      "dateUpdated": "2020-01-28 18:44:58.892",
       "config": {},
       "settings": {
         "params": {},
         "forms": {}
       },
       "apps": [],
-      "jobName": "paragraph_1577893082783_1426546259",
-      "id": "20200101-153518_1153514066",
-      "dateCreated": "2020-01-01 15:38:02.783",
+      "jobName": "paragraph_1580237098888_1258544033",
+      "id": "20200128-184458_1438773757",
+      "dateCreated": "2020-01-28 18:44:58.888",
       "status": "READY",
-      "errorMessage": "",
       "progressUpdateIntervalMs": 500
     }
   ],

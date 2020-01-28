@@ -83,21 +83,23 @@
       "progressUpdateIntervalMs": 500
     },
     {
-      "text": "%pyspark\nfrom graphframes import *",
+      "text": "%md\n### Import graph",
       "user": "anonymous",
-      "dateUpdated": "2020-01-01 19:07:59.988",
+      "dateUpdated": "2020-01-28 18:14:10.638",
       "config": {
         "colWidth": 12.0,
         "fontSize": 9.0,
         "enabled": true,
         "results": {},
         "editorSetting": {
-          "language": "python",
-          "editOnDblClick": false,
+          "language": "markdown",
+          "editOnDblClick": true,
           "completionKey": "TAB",
-          "completionSupport": true
+          "completionSupport": false
         },
-        "editorMode": "ace/mode/python"
+        "editorMode": "ace/mode/markdown",
+        "editorHide": true,
+        "tableHide": false
       },
       "settings": {
         "params": {},
@@ -105,21 +107,26 @@
       },
       "results": {
         "code": "SUCCESS",
-        "msg": []
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003ch3\u003eImport graph\u003c/h3\u003e\n\u003c/div\u003e"
+          }
+        ]
       },
       "apps": [],
-      "jobName": "paragraph_1577905659929_34971362",
-      "id": "20200101-190739_803724851",
-      "dateCreated": "2020-01-01 19:07:39.929",
-      "dateStarted": "2020-01-01 19:08:00.014",
-      "dateFinished": "2020-01-01 19:08:00.022",
+      "jobName": "paragraph_1580235245525_-1678040743",
+      "id": "20200128-181405_1196835715",
+      "dateCreated": "2020-01-28 18:14:05.525",
+      "dateStarted": "2020-01-28 18:14:10.638",
+      "dateFinished": "2020-01-28 18:14:10.646",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
     {
       "text": "%pyspark\ng \u003d create_transport_graph()",
       "user": "anonymous",
-      "dateUpdated": "2020-01-19 18:46:36.820",
+      "dateUpdated": "2020-01-28 17:37:44.732",
       "config": {
         "colWidth": 12.0,
         "fontSize": 9.0,
@@ -148,7 +155,7 @@
           "tooltip": "View in Spark web UI",
           "group": "spark",
           "values": [
-            "http://172.18.0.3:4040/jobs/job?id\u003d48"
+            "http://172.27.0.3:4040/jobs/job?id\u003d0"
           ],
           "interpreterSettingId": "spark"
         }
@@ -157,15 +164,56 @@
       "jobName": "paragraph_1577905673141_1952546536",
       "id": "20200101-190753_129637672",
       "dateCreated": "2020-01-01 19:07:53.141",
-      "dateStarted": "2020-01-19 18:55:55.588",
-      "dateFinished": "2020-01-19 18:55:55.752",
+      "dateStarted": "2020-01-28 17:37:44.859",
+      "dateFinished": "2020-01-28 17:37:49.131",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%md\nIf we wanted to find the shortest path from\nevery location to Colchester, Immingham, and Hoek van Holland, we would write the\nfollowing query:\n",
+      "user": "anonymous",
+      "dateUpdated": "2020-01-28 17:38:26.088",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "markdown",
+          "editOnDblClick": true,
+          "completionKey": "TAB",
+          "completionSupport": false
+        },
+        "editorMode": "ace/mode/markdown",
+        "editorHide": true,
+        "tableHide": false
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003cp\u003eIf we wanted to find the shortest path from\u003cbr/\u003eevery location to Colchester, Immingham, and Hoek van Holland, we would write the\u003cbr/\u003efollowing query:\u003c/p\u003e\n\u003c/div\u003e"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1580233098205_1613013988",
+      "id": "20200128-173818_1000463160",
+      "dateCreated": "2020-01-28 17:38:18.205",
+      "dateStarted": "2020-01-28 17:38:26.091",
+      "dateFinished": "2020-01-28 17:38:26.162",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
     {
       "text": "%pyspark\nresult \u003d g.shortestPaths([\"Colchester\", \"Immingham\", \"Hoek van Holland\"])\nresult.sort([\"id\"]).select(\"id\", \"distances\").show(truncate\u003dFalse)\n",
       "user": "anonymous",
-      "dateUpdated": "2020-01-01 19:10:36.916",
+      "dateUpdated": "2020-01-28 17:37:51.570",
       "config": {
         "colWidth": 12.0,
         "fontSize": 9.0,
@@ -192,12 +240,87 @@
           }
         ]
       },
+      "runtimeInfos": {
+        "jobUrl": {
+          "propertyName": "jobUrl",
+          "label": "SPARK JOB",
+          "tooltip": "View in Spark web UI",
+          "group": "spark",
+          "values": [
+            "http://172.27.0.3:4040/jobs/job?id\u003d1",
+            "http://172.27.0.3:4040/jobs/job?id\u003d2",
+            "http://172.27.0.3:4040/jobs/job?id\u003d3",
+            "http://172.27.0.3:4040/jobs/job?id\u003d4",
+            "http://172.27.0.3:4040/jobs/job?id\u003d5",
+            "http://172.27.0.3:4040/jobs/job?id\u003d6",
+            "http://172.27.0.3:4040/jobs/job?id\u003d7",
+            "http://172.27.0.3:4040/jobs/job?id\u003d8",
+            "http://172.27.0.3:4040/jobs/job?id\u003d9",
+            "http://172.27.0.3:4040/jobs/job?id\u003d10",
+            "http://172.27.0.3:4040/jobs/job?id\u003d11",
+            "http://172.27.0.3:4040/jobs/job?id\u003d12",
+            "http://172.27.0.3:4040/jobs/job?id\u003d13",
+            "http://172.27.0.3:4040/jobs/job?id\u003d14",
+            "http://172.27.0.3:4040/jobs/job?id\u003d15",
+            "http://172.27.0.3:4040/jobs/job?id\u003d16",
+            "http://172.27.0.3:4040/jobs/job?id\u003d17",
+            "http://172.27.0.3:4040/jobs/job?id\u003d18",
+            "http://172.27.0.3:4040/jobs/job?id\u003d19",
+            "http://172.27.0.3:4040/jobs/job?id\u003d20",
+            "http://172.27.0.3:4040/jobs/job?id\u003d21",
+            "http://172.27.0.3:4040/jobs/job?id\u003d22",
+            "http://172.27.0.3:4040/jobs/job?id\u003d23"
+          ],
+          "interpreterSettingId": "spark"
+        }
+      },
       "apps": [],
       "jobName": "paragraph_1577905692148_-286952541",
       "id": "20200101-190812_321541252",
       "dateCreated": "2020-01-01 19:08:12.148",
-      "dateStarted": "2020-01-01 19:10:36.950",
-      "dateFinished": "2020-01-01 19:11:04.922",
+      "dateStarted": "2020-01-28 17:37:51.617",
+      "dateFinished": "2020-01-28 17:38:08.969",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%md\n\nThe number next to each location in the distances column is the number of rela‐\ntionships (roads) between cities we need to traverse to get there from the source\nnode. In our example, Colchester is one of our destination cities and you can see it\nhas 0 nodes to traverse to get to itself but 3 hops to make from Immingham and Hoek\nvan Holland. If we were planning a trip, we could use this information to help maxi‐\nmize our time at our chosen destinations.",
+      "user": "anonymous",
+      "dateUpdated": "2020-01-28 17:36:41.009",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "markdown",
+          "editOnDblClick": true,
+          "completionKey": "TAB",
+          "completionSupport": false
+        },
+        "editorMode": "ace/mode/markdown",
+        "editorHide": true,
+        "tableHide": false
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003cp\u003eThe number next to each location in the distances column is the number of rela‐\u003cbr/\u003etionships (roads) between cities we need to traverse to get there from the source\u003cbr/\u003enode. In our example, Colchester is one of our destination cities and you can see it\u003cbr/\u003ehas 0 nodes to traverse to get to itself but 3 hops to make from Immingham and Hoek\u003cbr/\u003evan Holland. If we were planning a trip, we could use this information to help maxi‐\u003cbr/\u003emize our time at our chosen destinations.\u003c/p\u003e\n\u003c/div\u003e"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1577905827540_-32055",
+      "id": "20200101-191027_1999772571",
+      "dateCreated": "2020-01-01 19:10:27.540",
+      "dateStarted": "2020-01-28 17:36:41.028",
+      "dateFinished": "2020-01-28 17:36:42.872",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
@@ -209,9 +332,9 @@
         "forms": {}
       },
       "apps": [],
-      "jobName": "paragraph_1577905827540_-32055",
-      "id": "20200101-191027_1999772571",
-      "dateCreated": "2020-01-01 19:10:27.540",
+      "jobName": "paragraph_1580232967441_-1650194742",
+      "id": "20200128-173607_121868061",
+      "dateCreated": "2020-01-28 17:36:07.441",
       "status": "READY",
       "progressUpdateIntervalMs": 500
     }

@@ -44,7 +44,7 @@
     {
       "text": "%pyspark\nfrom graphframes import GraphFrame\n\n\ndef create_social_graph():\n    nodes \u003d spark.read.csv(\"spark-warehouse/social-nodes.csv\", header\u003dTrue)\n    relationships \u003d spark.read.csv(\"spark-warehouse/social-relationships.csv\", header\u003dTrue)\n    return GraphFrame(nodes, relationships)",
       "user": "anonymous",
-      "dateUpdated": "2020-01-19 19:30:21.790",
+      "dateUpdated": "2020-01-28 18:29:32.598",
       "config": {
         "colWidth": 12.0,
         "fontSize": 9.0,
@@ -70,8 +70,8 @@
       "jobName": "paragraph_1579457336439_-1929294183",
       "id": "20200119-180856_1150371867",
       "dateCreated": "2020-01-19 18:08:56.439",
-      "dateStarted": "2020-01-19 19:30:21.843",
-      "dateFinished": "2020-01-19 19:30:21.895",
+      "dateStarted": "2020-01-28 18:29:32.618",
+      "dateFinished": "2020-01-28 18:29:32.637",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },

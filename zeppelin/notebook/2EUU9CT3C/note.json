@@ -170,9 +170,9 @@
       "progressUpdateIntervalMs": 500
     },
     {
-      "text": "%md\n## Stream local clustering coefficient",
+      "text": "%md\n## Stream local clustering coefficient\n\nWe can also work out the local clustering coefficient. The following query will calcu‐\nlate this for each node:",
       "user": "anonymous",
-      "dateUpdated": "2019-12-07 11:59:17.874",
+      "dateUpdated": "2020-01-28 18:54:48.622",
       "config": {
         "tableHide": false,
         "editorSetting": {
@@ -196,7 +196,7 @@
         "msg": [
           {
             "type": "HTML",
-            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003ch2\u003eStream local clustering coefficient\u003c/h2\u003e\n\u003c/div\u003e"
+            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003ch2\u003eStream local clustering coefficient\u003c/h2\u003e\n\u003cp\u003eWe can also work out the local clustering coefficient. The following query will calcu‐\u003cbr/\u003elate this for each node:\u003c/p\u003e\n\u003c/div\u003e"
           }
         ]
       },
@@ -204,8 +204,8 @@
       "jobName": "paragraph_1575719928127_1429386788",
       "id": "20191207-114641_1084520692",
       "dateCreated": "2019-12-07 11:58:48.127",
-      "dateStarted": "2019-12-07 11:59:17.889",
-      "dateFinished": "2019-12-07 11:59:17.902",
+      "dateStarted": "2020-01-28 18:54:48.623",
+      "dateFinished": "2020-01-28 18:54:48.641",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
@@ -275,9 +275,65 @@
       "progressUpdateIntervalMs": 500
     },
     {
-      "text": "%md\n## Stream triangles",
+      "text": "%md\n\nipykernel has a score of 1, which means that all ipykernel’s neighbors are neighbors of\neach other. This tells us that the community directly around ipykernel is very cohesive.\n\nWe’ve filtered out nodes with a coefficient score of 0 in this code sample, but nodes\nwith low coefficients may also be interesting. A low score can be an indicator that a\nnode is a structural hole—a node that is well connected to nodes in different com‐\nmunities that aren’t otherwise connected to each other.",
       "user": "anonymous",
-      "dateUpdated": "2019-12-07 11:59:34.707",
+      "dateUpdated": "2020-01-28 18:55:36.389",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "editOnDblClick": true,
+          "language": "markdown",
+          "completionSupport": false
+        },
+        "editorMode": "ace/mode/markdown",
+        "editorHide": true,
+        "tableHide": false
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003cp\u003eipykernel has a score of 1, which means that all ipykernel’s neighbors are neighbors of\u003cbr/\u003eeach other. This tells us that the community directly around ipykernel is very cohesive.\u003c/p\u003e\n\u003cp\u003eWe’ve filtered out nodes with a coefficient score of 0 in this code sample, but nodes\u003cbr/\u003ewith low coefficients may also be interesting. A low score can be an indicator that a\u003cbr/\u003enode is a structural hole—a node that is well connected to nodes in different com‐\u003cbr/\u003emunities that aren’t otherwise connected to each other.\u003c/p\u003e\n\u003c/div\u003e"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1580237704460_1976508902",
+      "id": "20200128-185504_317342572",
+      "dateCreated": "2020-01-28 18:55:04.460",
+      "dateStarted": "2020-01-28 18:55:36.388",
+      "dateFinished": "2020-01-28 18:55:36.402",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%md\n",
+      "user": "anonymous",
+      "dateUpdated": "2020-01-28 18:55:33.608",
+      "config": {},
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "jobName": "paragraph_1580237733607_134090388",
+      "id": "20200128-185533_45028068",
+      "dateCreated": "2020-01-28 18:55:33.607",
+      "status": "READY",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%md\n## Stream triangles\n\nGet a stream of the triangles",
+      "user": "anonymous",
+      "dateUpdated": "2020-01-28 18:56:11.806",
       "config": {
         "tableHide": false,
         "editorSetting": {
@@ -301,7 +357,7 @@
         "msg": [
           {
             "type": "HTML",
-            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003ch2\u003eStream triangles\u003c/h2\u003e\n\u003c/div\u003e"
+            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003ch2\u003eStream triangles\u003c/h2\u003e\n\u003cp\u003eGet a stream of the triangles\u003c/p\u003e\n\u003c/div\u003e"
           }
         ]
       },
@@ -309,8 +365,8 @@
       "jobName": "paragraph_1575719928129_1541559103",
       "id": "20191207-114843_887180679",
       "dateCreated": "2019-12-07 11:58:48.129",
-      "dateStarted": "2019-12-07 11:59:34.707",
-      "dateFinished": "2019-12-07 11:59:34.722",
+      "dateStarted": "2020-01-28 18:56:11.801",
+      "dateFinished": "2020-01-28 18:56:11.816",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },

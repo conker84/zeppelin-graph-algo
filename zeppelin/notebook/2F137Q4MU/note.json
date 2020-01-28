@@ -1,0 +1,157 @@
+{
+  "paragraphs": [
+    {
+      "text": "%md\n# Random Walk\n\nThe Random Walk algorithm provides a set of nodes on a random path in a graph.\nThe term was first mentioned by Karl Pearson in 1905 in a letter to Nature magazine\ntitled “The Problem of the Random Walk”. Although the concept goes back even fur‐\nther, it’s only more recently that random walks have been applied to network science.\nA random walk, in general, is sometimes described as being similar to how a drunk\nperson traverses a city. They know what direc\n",
+      "user": "anonymous",
+      "dateUpdated": "2020-01-28 16:51:59.242",
+      "config": {
+        "tableHide": false,
+        "editorSetting": {
+          "language": "markdown",
+          "editOnDblClick": true,
+          "completionKey": "TAB",
+          "completionSupport": false
+        },
+        "colWidth": 12.0,
+        "editorMode": "ace/mode/markdown",
+        "fontSize": 9.0,
+        "editorHide": true,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003ch1\u003eRandom Walk\u003c/h1\u003e\n\u003cp\u003eThe Random Walk algorithm provides a set of nodes on a random path in a graph.\u003cbr/\u003eThe term was first mentioned by Karl Pearson in 1905 in a letter to Nature magazine\u003cbr/\u003etitled “The Problem of the Random Walk”. Although the concept goes back even fur‐\u003cbr/\u003ether, it’s only more recently that random walks have been applied to network science.\u003cbr/\u003eA random walk, in general, is sometimes described as being similar to how a drunk\u003cbr/\u003eperson traverses a city. They know what direc\u003c/p\u003e\n\u003c/div\u003e"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1580230278614_-673170443",
+      "id": "20200128-082446_626593832",
+      "dateCreated": "2020-01-28 16:51:18.614",
+      "dateStarted": "2020-01-28 16:51:59.221",
+      "dateFinished": "2020-01-28 16:51:59.296",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%md\n\n# When you can use it?\n\nUse the Random Walk algorithm as part of other algorithms or data pipelines when\nyou need to generate a mostly random set of connected nodes.\n\nExample use cases include:\n\n- As part of the node2vec and graph2vec algorithms, that create node embeddings\n- As part of the Walktrap and Infomap community detection\n- As part of the training process of machine learning models\n",
+      "user": "anonymous",
+      "dateUpdated": "2020-01-28 16:52:52.834",
+      "config": {
+        "tableHide": false,
+        "editorSetting": {
+          "language": "markdown",
+          "editOnDblClick": true,
+          "completionKey": "TAB",
+          "completionSupport": false
+        },
+        "colWidth": 12.0,
+        "editorMode": "ace/mode/markdown",
+        "fontSize": 9.0,
+        "editorHide": true,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003ch1\u003eWhen you can use it?\u003c/h1\u003e\n\u003cp\u003eUse the Random Walk algorithm as part of other algorithms or data pipelines when\u003cbr/\u003eyou need to generate a mostly random set of connected nodes.\u003c/p\u003e\n\u003cp\u003eExample use cases include:\u003c/p\u003e\n\u003cul\u003e\n  \u003cli\u003eAs part of the node2vec and graph2vec algorithms, that create node embeddings\u003c/li\u003e\n  \u003cli\u003eAs part of the Walktrap and Infomap community detection\u003c/li\u003e\n  \u003cli\u003eAs part of the training process of machine learning models\u003c/li\u003e\n\u003c/ul\u003e\n\u003c/div\u003e"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1580230278616_181057645",
+      "id": "20200128-082518_341828040",
+      "dateCreated": "2020-01-28 16:51:18.616",
+      "dateStarted": "2020-01-28 16:52:52.846",
+      "dateFinished": "2020-01-28 16:52:52.891",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%md\n\nYou can find the algorithm implemented in:\n\n* [Neo4j](/#/notebook/2EXZ2FFEG)",
+      "user": "anonymous",
+      "dateUpdated": "2020-01-28 16:53:36.561",
+      "config": {
+        "tableHide": false,
+        "editorSetting": {
+          "language": "markdown",
+          "editOnDblClick": true,
+          "completionKey": "TAB",
+          "completionSupport": false
+        },
+        "colWidth": 12.0,
+        "editorMode": "ace/mode/markdown",
+        "fontSize": 9.0,
+        "editorHide": true,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003cp\u003eYou can find the algorithm implemented in:\u003c/p\u003e\n\u003cul\u003e\n  \u003cli\u003e\u003ca href\u003d\"/#/notebook/2EXZ2FFEG\"\u003eNeo4j\u003c/a\u003e\u003c/li\u003e\n\u003c/ul\u003e\n\u003c/div\u003e"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1580230278616_653107620",
+      "id": "20200128-082521_853675343",
+      "dateCreated": "2020-01-28 16:51:18.616",
+      "dateStarted": "2020-01-28 16:53:36.565",
+      "dateFinished": "2020-01-28 16:53:36.605",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%md\n",
+      "user": "anonymous",
+      "dateUpdated": "2020-01-28 16:51:18.617",
+      "config": {},
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "jobName": "paragraph_1580230278617_567966299",
+      "id": "20200128-083003_347629143",
+      "dateCreated": "2020-01-28 16:51:18.617",
+      "status": "READY",
+      "errorMessage": "",
+      "progressUpdateIntervalMs": 500
+    }
+  ],
+  "name": "Path finding/Randomwalk/Randomwalk",
+  "id": "2F137Q4MU",
+  "noteParams": {},
+  "noteForms": {},
+  "angularObjects": {
+    "md:shared_process": [],
+    "neo4j:shared_process": [],
+    "spark:shared_process": []
+  },
+  "config": {
+    "isZeppelinNotebookCronEnable": false
+  },
+  "info": {}
+}

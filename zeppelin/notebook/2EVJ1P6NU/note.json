@@ -170,9 +170,9 @@
       "progressUpdateIntervalMs": 500
     },
     {
-      "text": "%md\n## Stream Louvain",
+      "text": "%md\n## Stream Louvain\n\nLet’s see the Louvain algorithm in action. We can execute the following query to run\nthe algorithm over our graph:",
       "user": "anonymous",
-      "dateUpdated": "2020-01-01 11:19:45.064",
+      "dateUpdated": "2020-01-28 18:37:04.370",
       "config": {
         "tableHide": false,
         "editorSetting": {
@@ -196,7 +196,7 @@
         "msg": [
           {
             "type": "HTML",
-            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003ch2\u003eStream Louvain\u003c/h2\u003e\n\u003c/div\u003e"
+            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003ch2\u003eStream Louvain\u003c/h2\u003e\n\u003cp\u003eLet’s see the Louvain algorithm in action. We can execute the following query to run\u003cbr/\u003ethe algorithm over our graph:\u003c/p\u003e\n\u003c/div\u003e"
           }
         ]
       },
@@ -204,8 +204,9 @@
       "jobName": "paragraph_1577877585064_1143178536",
       "id": "20191207-114641_1084520692",
       "dateCreated": "2020-01-01 11:19:45.064",
-      "status": "READY",
-      "errorMessage": "",
+      "dateStarted": "2020-01-28 18:37:04.373",
+      "dateFinished": "2020-01-28 18:37:04.400",
+      "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
     {
@@ -271,6 +272,46 @@
       "dateCreated": "2020-01-01 11:19:45.071",
       "dateStarted": "2020-01-20 18:43:49.036",
       "dateFinished": "2020-01-20 18:43:49.395",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%md\n\nThe communities column describes the community that nodes fall into at two levels.\nThe last value in the array is the final community and the other one is an intermediate community.\nThe numbers assigned to the intermediate and final communities are simply labels\nwith no measurable meaning. Treat these as labels that indicate which community\nnodes belong to such as “belongs to a community labeled 0”, “a community labeled 4”,\nand so forth.\n",
+      "user": "anonymous",
+      "dateUpdated": "2020-01-28 18:37:47.359",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "editOnDblClick": true,
+          "language": "markdown",
+          "completionSupport": false
+        },
+        "editorMode": "ace/mode/markdown",
+        "editorHide": true,
+        "tableHide": false
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003cp\u003eThe communities column describes the community that nodes fall into at two levels.\u003cbr/\u003eThe last value in the array is the final community and the other one is an intermediate community.\u003cbr/\u003eThe numbers assigned to the intermediate and final communities are simply labels\u003cbr/\u003ewith no measurable meaning. Treat these as labels that indicate which community\u003cbr/\u003enodes belong to such as “belongs to a community labeled 0”, “a community labeled 4”,\u003cbr/\u003eand so forth.\u003c/p\u003e\n\u003c/div\u003e"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1580236657474_2125602508",
+      "id": "20200128-183737_1723461005",
+      "dateCreated": "2020-01-28 18:37:37.474",
+      "dateStarted": "2020-01-28 18:37:47.362",
+      "dateFinished": "2020-01-28 18:37:47.382",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
@@ -400,9 +441,9 @@
       "progressUpdateIntervalMs": 500
     },
     {
-      "text": "%md\n## Read first layer",
+      "text": "%md\n## Read first layer\n\nAn additional feature of the Louvain algorithm is that we can see the intermediate\nclustering as well. This will show us finer-grained clusters than the final layer did:",
       "user": "anonymous",
-      "dateUpdated": "2020-01-01 11:19:45.073",
+      "dateUpdated": "2020-01-28 18:38:38.595",
       "config": {
         "tableHide": false,
         "editorSetting": {
@@ -426,7 +467,7 @@
         "msg": [
           {
             "type": "HTML",
-            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003ch2\u003eRead first layer\u003c/h2\u003e\n\u003c/div\u003e"
+            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003ch2\u003eRead first layer\u003c/h2\u003e\n\u003cp\u003eAn additional feature of the Louvain algorithm is that we can see the intermediate\u003cbr/\u003eclustering as well. This will show us finer-grained clusters than the final layer did:\u003c/p\u003e\n\u003c/div\u003e"
           }
         ]
       },
@@ -434,8 +475,9 @@
       "jobName": "paragraph_1577877585073_885040226",
       "id": "20191207-115027_1484743918",
       "dateCreated": "2020-01-01 11:19:45.073",
-      "status": "READY",
-      "errorMessage": "",
+      "dateStarted": "2020-01-28 18:38:38.596",
+      "dateFinished": "2020-01-28 18:38:38.610",
+      "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
     {
@@ -504,9 +546,9 @@
       "progressUpdateIntervalMs": 500
     },
     {
-      "text": "%md\n## Read second layer",
+      "text": "%md\n## Read second layer\nLook at the final communities",
       "user": "anonymous",
-      "dateUpdated": "2020-01-01 11:19:45.074",
+      "dateUpdated": "2020-01-28 18:47:41.180",
       "config": {
         "tableHide": false,
         "editorSetting": {
@@ -530,7 +572,7 @@
         "msg": [
           {
             "type": "HTML",
-            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003ch2\u003eRead second layer\u003c/h2\u003e\n\u003c/div\u003e"
+            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003ch2\u003eRead second layer\u003c/h2\u003e\n\u003cp\u003eLook at the final communities\u003c/p\u003e\n\u003c/div\u003e"
           }
         ]
       },
@@ -538,8 +580,9 @@
       "jobName": "paragraph_1577877585074_-927938125",
       "id": "20191207-115043_741993173",
       "dateCreated": "2020-01-01 11:19:45.074",
-      "status": "READY",
-      "errorMessage": "",
+      "dateStarted": "2020-01-28 18:47:41.180",
+      "dateFinished": "2020-01-28 18:47:41.186",
+      "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
     {

@@ -177,9 +177,9 @@
       "progressUpdateIntervalMs": 500
     },
     {
-      "text": "%md\n### Stream random walk algorithm\n",
+      "text": "%md\n### Stream random walk algorithm\n\nThe parameters passed to this algorithm are:\n\n - The internal node id of the starting point for our random walk: id(source)\n - The number of hops our random walk should take : 5\n - The number of random walks we want to compute : 1",
       "user": "anonymous",
-      "dateUpdated": "2020-01-19 17:34:57.549",
+      "dateUpdated": "2020-01-28 17:50:07.043",
       "config": {
         "colWidth": 12.0,
         "fontSize": 9.0,
@@ -203,7 +203,7 @@
         "msg": [
           {
             "type": "HTML",
-            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003ch3\u003eStream random walk algorithm\u003c/h3\u003e\n\u003c/div\u003e"
+            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003ch3\u003eStream random walk algorithm\u003c/h3\u003e\n\u003cp\u003eThe parameters passed to this algorithm are:\u003c/p\u003e\n\u003cul\u003e\n  \u003cli\u003eThe internal node id of the starting point for our random walk: id(source)\u003c/li\u003e\n  \u003cli\u003eThe number of hops our random walk should take : 5\u003c/li\u003e\n  \u003cli\u003eThe number of random walks we want to compute : 1\u003c/li\u003e\n\u003c/ul\u003e\n\u003c/div\u003e"
           }
         ]
       },
@@ -211,8 +211,8 @@
       "jobName": "paragraph_1579455282808_387998470",
       "id": "20200119-173442_904465059",
       "dateCreated": "2020-01-19 17:34:42.808",
-      "dateStarted": "2020-01-19 17:34:57.546",
-      "dateFinished": "2020-01-19 17:34:57.559",
+      "dateStarted": "2020-01-28 17:50:07.043",
+      "dateFinished": "2020-01-28 17:50:07.076",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
@@ -281,19 +281,59 @@
       "progressUpdateIntervalMs": 500
     },
     {
+      "text": "%md\n\nAt each stage of the random walk the next relationship is chosen randomly. This\nmeans that if we rerun the algorithm, even with the same parameters, we likely won’t\nget the same result. It’s also possible for a walk to go back on itself, as we can see in\nresults where we go from Amsterdam to Utrecht and back.",
       "user": "anonymous",
-      "dateUpdated": "2020-01-01 19:02:01.439",
+      "dateUpdated": "2020-01-28 17:51:09.656",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "editOnDblClick": true,
+          "language": "markdown",
+          "completionSupport": false
+        },
+        "editorMode": "ace/mode/markdown",
+        "editorHide": true,
+        "tableHide": false
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003cp\u003eAt each stage of the random walk the next relationship is chosen randomly. This\u003cbr/\u003emeans that if we rerun the algorithm, even with the same parameters, we likely won’t\u003cbr/\u003eget the same result. It’s also possible for a walk to go back on itself, as we can see in\u003cbr/\u003eresults where we go from Amsterdam to Utrecht and back.\u003c/p\u003e\n\u003c/div\u003e"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1577905321438_-771728294",
+      "id": "20200101-190028_1585661323",
+      "dateCreated": "2020-01-01 19:02:01.438",
+      "dateStarted": "2020-01-28 17:51:09.661",
+      "dateFinished": "2020-01-28 17:51:09.695",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%md\n",
+      "user": "anonymous",
+      "dateUpdated": "2020-01-28 17:51:09.631",
       "config": {},
       "settings": {
         "params": {},
         "forms": {}
       },
       "apps": [],
-      "jobName": "paragraph_1577905321438_-771728294",
-      "id": "20200101-190028_1585661323",
-      "dateCreated": "2020-01-01 19:02:01.438",
+      "jobName": "paragraph_1580233869625_1615641074",
+      "id": "20200128-175109_1741413551",
+      "dateCreated": "2020-01-28 17:51:09.625",
       "status": "READY",
-      "errorMessage": "",
       "progressUpdateIntervalMs": 500
     }
   ],

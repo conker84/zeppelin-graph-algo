@@ -177,9 +177,9 @@
       "progressUpdateIntervalMs": 500
     },
     {
-      "text": "%md\n### Stream weighted shortest-path algorithm",
+      "text": "%md\n### Stream weighted shortest-path algorithm\n\nWe can execute the Weighted Shortest Path algorithm to find the shortest path\nbetween Amsterdam and London like this",
       "user": "anonymous",
-      "dateUpdated": "2020-01-19 17:36:54.685",
+      "dateUpdated": "2020-01-28 17:54:28.268",
       "config": {
         "colWidth": 12.0,
         "fontSize": 9.0,
@@ -203,7 +203,7 @@
         "msg": [
           {
             "type": "HTML",
-            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003ch3\u003eStream weighted shortest-path algorithm\u003c/h3\u003e\n\u003c/div\u003e"
+            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003ch3\u003eStream weighted shortest-path algorithm\u003c/h3\u003e\n\u003cp\u003eWe can execute the Weighted Shortest Path algorithm to find the shortest path\u003cbr/\u003ebetween Amsterdam and London like this\u003c/p\u003e\n\u003c/div\u003e"
           }
         ]
       },
@@ -211,8 +211,8 @@
       "jobName": "paragraph_1579455396217_-306193771",
       "id": "20200119-173636_77792805",
       "dateCreated": "2020-01-19 17:36:36.218",
-      "dateStarted": "2020-01-19 17:36:54.687",
-      "dateFinished": "2020-01-19 17:36:54.697",
+      "dateStarted": "2020-01-28 17:54:28.269",
+      "dateFinished": "2020-01-28 17:54:28.290",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
@@ -282,9 +282,9 @@
       "progressUpdateIntervalMs": 500
     },
     {
-      "text": "%md\n### Stream un-weighted shortest-path",
+      "text": "%md\n\nThe quickest route takes us via Den Haag, Hoek van Holland, Felixstowe, Ipswich,\nand Colchester! The cost shown is the cumulative total as we progress through the\ncities. First we go from Amsterdam to Den Haag, at a cost of 59. Then we go from\nDen Haag to Hoek van Holland, at a cumulative cost of 86—and so on. Finally, we\narrive in London, from Colchester, for a total cost of 453 km.",
       "user": "anonymous",
-      "dateUpdated": "2020-01-19 17:37:05.803",
+      "dateUpdated": "2020-01-28 17:54:09.618",
       "config": {
         "colWidth": 12.0,
         "fontSize": 9.0,
@@ -308,7 +308,47 @@
         "msg": [
           {
             "type": "HTML",
-            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003ch3\u003eStream un-weighted shortest-path\u003c/h3\u003e\n\u003c/div\u003e"
+            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003cp\u003eThe quickest route takes us via Den Haag, Hoek van Holland, Felixstowe, Ipswich,\u003cbr/\u003eand Colchester! The cost shown is the cumulative total as we progress through the\u003cbr/\u003ecities. First we go from Amsterdam to Den Haag, at a cost of 59. Then we go from\u003cbr/\u003eDen Haag to Hoek van Holland, at a cumulative cost of 86—and so on. Finally, we\u003cbr/\u003earrive in London, from Colchester, for a total cost of 453 km.\u003c/p\u003e\n\u003c/div\u003e"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1580234046787_-460958076",
+      "id": "20200128-175406_150360115",
+      "dateCreated": "2020-01-28 17:54:06.787",
+      "dateStarted": "2020-01-28 17:54:09.635",
+      "dateFinished": "2020-01-28 17:54:09.721",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%md\n### Stream un-weighted shortest-path\n\nTo have Neo4j’s Shortest Path algorithm ignore weights we need to pass null as the\nthird parameter to the procedure, which indicates that we don’t want to consider a\nweight property when executing the algorithm. The algorithm will then assume a\ndefault weight of 1.0 for each relationship",
+      "user": "anonymous",
+      "dateUpdated": "2020-01-28 17:52:11.387",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "editOnDblClick": true,
+          "language": "markdown",
+          "completionSupport": false
+        },
+        "editorMode": "ace/mode/markdown",
+        "editorHide": true,
+        "tableHide": false
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003ch3\u003eStream un-weighted shortest-path\u003c/h3\u003e\n\u003cp\u003eTo have Neo4j’s Shortest Path algorithm ignore weights we need to pass null as the\u003cbr/\u003ethird parameter to the procedure, which indicates that we don’t want to consider a\u003cbr/\u003eweight property when executing the algorithm. The algorithm will then assume a\u003cbr/\u003edefault weight of 1.0 for each relationship\u003c/p\u003e\n\u003c/div\u003e"
           }
         ]
       },
@@ -316,8 +356,8 @@
       "jobName": "paragraph_1579455417808_-1649056098",
       "id": "20200119-173657_1051699637",
       "dateCreated": "2020-01-19 17:36:57.808",
-      "dateStarted": "2020-01-19 17:37:05.803",
-      "dateFinished": "2020-01-19 17:37:05.808",
+      "dateStarted": "2020-01-28 17:52:11.398",
+      "dateFinished": "2020-01-28 17:52:11.428",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
@@ -387,9 +427,9 @@
       "progressUpdateIntervalMs": 500
     },
     {
-      "text": "%md\n\n### Calculate the un-weighted shortest path and work out the cumulative cost (weight) of the path",
+      "text": "%md\n\n### Calculate the un-weighted shortest path and work out the cumulative cost (weight) of the path\n\nWe could even work out the total distance of following this path by writing a bit of\npostprocessing Cypher. The following procedure calculates the shortest unweighted\npath and then works out what the actual cost of that path would be",
       "user": "anonymous",
-      "dateUpdated": "2020-01-19 20:24:41.424",
+      "dateUpdated": "2020-01-28 17:52:35.567",
       "config": {
         "colWidth": 12.0,
         "fontSize": 9.0,
@@ -413,7 +453,7 @@
         "msg": [
           {
             "type": "HTML",
-            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003ch3\u003eCalculate the un-weighted shortest path and work out the cumulative cost (weight) of the path\u003c/h3\u003e\n\u003c/div\u003e"
+            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003ch3\u003eCalculate the un-weighted shortest path and work out the cumulative cost (weight) of the path\u003c/h3\u003e\n\u003cp\u003eWe could even work out the total distance of following this path by writing a bit of\u003cbr/\u003epostprocessing Cypher. The following procedure calculates the shortest unweighted\u003cbr/\u003epath and then works out what the actual cost of that path would be\u003c/p\u003e\n\u003c/div\u003e"
           }
         ]
       },
@@ -421,8 +461,8 @@
       "jobName": "paragraph_1579465356760_-1603407387",
       "id": "20200119-202236_461835569",
       "dateCreated": "2020-01-19 20:22:36.760",
-      "dateStarted": "2020-01-19 20:24:41.424",
-      "dateFinished": "2020-01-19 20:24:41.453",
+      "dateStarted": "2020-01-28 17:52:35.602",
+      "dateFinished": "2020-01-28 17:52:35.626",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
@@ -492,16 +532,55 @@
       "progressUpdateIntervalMs": 500
     },
     {
+      "text": "%md\n\nIf the previous code feels a bit unwieldy, notice that the tricky part is figuring out how\nto massage the data to include the cost over the whole journey. This is helpful to keep\nin mind when we need the cumulative path cost.",
       "user": "anonymous",
+      "dateUpdated": "2020-01-28 17:53:02.634",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "editOnDblClick": false
+        },
+        "editorMode": "ace/mode/undefined",
+        "editorHide": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003cp\u003eIf the previous code feels a bit unwieldy, notice that the tricky part is figuring out how\u003cbr/\u003eto massage the data to include the cost over the whole journey. This is helpful to keep\u003cbr/\u003ein mind when we need the cumulative path cost.\u003c/p\u003e\n\u003c/div\u003e"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1577905384463_-295615717",
+      "id": "20200101-190304_1101702216",
+      "dateCreated": "2020-01-01 19:03:04.463",
+      "dateStarted": "2020-01-28 17:52:59.384",
+      "dateFinished": "2020-01-28 17:52:59.396",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%md\n",
+      "user": "anonymous",
+      "dateUpdated": "2020-01-28 17:52:52.761",
       "config": {},
       "settings": {
         "params": {},
         "forms": {}
       },
       "apps": [],
-      "jobName": "paragraph_1577905384463_-295615717",
-      "id": "20200101-190304_1101702216",
-      "dateCreated": "2020-01-01 19:03:04.463",
+      "jobName": "paragraph_1580233972753_509927554",
+      "id": "20200128-175252_1613497688",
+      "dateCreated": "2020-01-28 17:52:52.753",
       "status": "READY",
       "progressUpdateIntervalMs": 500
     }

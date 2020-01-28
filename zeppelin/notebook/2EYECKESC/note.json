@@ -117,6 +117,47 @@
       "progressUpdateIntervalMs": 500
     },
     {
+      "text": "%md\n\n### Import graph\n",
+      "user": "anonymous",
+      "dateUpdated": "2020-01-28 18:47:59.992",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "markdown",
+          "editOnDblClick": true,
+          "completionKey": "TAB",
+          "completionSupport": false
+        },
+        "editorMode": "ace/mode/markdown",
+        "editorHide": true,
+        "tableHide": false
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003ch3\u003eImport graph\u003c/h3\u003e\n\u003c/div\u003e"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1580237273912_-1617914524",
+      "id": "20200128-184753_622297474",
+      "dateCreated": "2020-01-28 18:47:53.912",
+      "dateStarted": "2020-01-28 18:47:59.993",
+      "dateFinished": "2020-01-28 18:48:00.030",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
       "text": "%pyspark\n\nG \u003d nx.Graph()\n\nG.add_nodes_from([\n    \"six\",\n    \"pandas\",\n    \"numpy\",\n    \"python-dateutil\",\n    \"pytz\",\n    \"pyspark\",\n    \"matplotlib\",\n    \"spacy\",\n    \"py4j\",\n    \"jupyter\",\n    \"jpy-console\",\n    \"nbconvert\",\n    \"ipykernel\",\n    \"jpy-client\",\n    \"jpy-core\"\n])\n\nG.add_edges_from([\n    (\"pandas\", \"numpy\"),\n    (\"pandas\", \"pytz\"),\n    (\"pandas\", \"python-dateutil\"),\n    (\"python-dateutil\", \"six\"),\n    (\"pyspark\", \"py4j\"),\n    (\"matplotlib\", \"numpy\"),\n    (\"matplotlib\", \"python-dateutil\"),\n    (\"matplotlib\", \"six\"),\n    (\"matplotlib\", \"pytz\"),\n    (\"spacy\", \"six\"),\n    (\"spacy\", \"numpy\"),\n    (\"jupyter\", \"nbconvert\"),\n    (\"jupyter\", \"ipykernel\"),\n    (\"jupyter\", \"jpy-console\"),\n    (\"jpy-console\", \"jpy-client\"),\n    (\"jpy-console\", \"ipykernel\"),\n    (\"jpy-client\", \"jpy-core\"),\n    (\"nbconvert\", \"jpy-core\"),\n])\n",
       "user": "anonymous",
       "dateUpdated": "2020-01-20 18:45:04.010",
@@ -147,6 +188,47 @@
       "dateCreated": "2020-01-01 11:18:31.588",
       "dateStarted": "2020-01-20 18:45:04.129",
       "dateFinished": "2020-01-20 18:45:04.147",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%md\n\n### Read first level\n",
+      "user": "anonymous",
+      "dateUpdated": "2020-01-28 18:48:43.733",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "markdown",
+          "editOnDblClick": true,
+          "completionKey": "TAB",
+          "completionSupport": false
+        },
+        "editorMode": "ace/mode/markdown",
+        "editorHide": true,
+        "tableHide": false
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003ch3\u003eRead first level\u003c/h3\u003e\n\u003c/div\u003e"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1580237314089_-2047777751",
+      "id": "20200128-184834_1825339708",
+      "dateCreated": "2020-01-28 18:48:34.089",
+      "dateStarted": "2020-01-28 18:48:43.733",
+      "dateFinished": "2020-01-28 18:48:43.762",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
@@ -190,6 +272,47 @@
       "progressUpdateIntervalMs": 500
     },
     {
+      "text": "%md\n### Read second level",
+      "user": "anonymous",
+      "dateUpdated": "2020-01-28 18:49:19.923",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "markdown",
+          "editOnDblClick": true,
+          "completionKey": "TAB",
+          "completionSupport": false
+        },
+        "editorMode": "ace/mode/markdown",
+        "editorHide": true,
+        "tableHide": false
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003ch3\u003eRead second level\u003c/h3\u003e\n\u003c/div\u003e"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1580237326034_-141351684",
+      "id": "20200128-184846_1204243526",
+      "dateCreated": "2020-01-28 18:48:46.034",
+      "dateStarted": "2020-01-28 18:49:19.923",
+      "dateFinished": "2020-01-28 18:49:19.936",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
       "text": "%pyspark\nl1 \u003d community.partition_at_level(d, 1)\nprint(l1)\nprint(\"l1 modularity: \" + str(community.modularity(l1, G)))\n",
       "user": "anonymous",
       "dateUpdated": "2020-01-20 18:45:30.641",
@@ -229,10 +352,22 @@
       "progressUpdateIntervalMs": 500
     },
     {
-      "text": "%spark.pyspark\n",
+      "text": "",
       "user": "anonymous",
-      "dateUpdated": "2020-01-01 11:18:31.593",
-      "config": {},
+      "dateUpdated": "2020-01-28 18:49:25.330",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "editorMode": "ace/mode/scala"
+      },
       "settings": {
         "params": {},
         "forms": {}

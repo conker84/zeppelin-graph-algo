@@ -44,7 +44,7 @@
     {
       "text": "%pyspark\nfrom pyspark.sql.types import *\nfrom graphframes import *\n\n\ndef create_transport_graph():\n    node_fields \u003d [\n        StructField(\"id\", StringType(), True),\n        StructField(\"latitude\", FloatType(), True),\n        StructField(\"longitude\", FloatType(), True),\n        StructField(\"population\", IntegerType(), True)\n    ]\n    nodes \u003d spark.read.csv(\"spark-warehouse/transport-nodes.csv\", header\u003dTrue,\n                           schema\u003dStructType(node_fields))\n\n    rels \u003d spark.read.csv(\"spark-warehouse/transport-relationships.csv\", header\u003dTrue)\n    reversed_rels \u003d (rels.withColumn(\"newSrc\", rels.dst)\n                     .withColumn(\"newDst\", rels.src)\n                     .drop(\"dst\", \"src\")\n                     .withColumnRenamed(\"newSrc\", \"src\")\n                     .withColumnRenamed(\"newDst\", \"dst\")\n                     .select(\"src\", \"dst\", \"relationship\", \"cost\"))\n\n    relationships \u003d rels.union(reversed_rels)\n\n    return GraphFrame(nodes, relationships)\n",
       "user": "anonymous",
-      "dateUpdated": "2020-01-20 18:53:46.920",
+      "dateUpdated": "2020-01-28 17:37:36.886",
       "config": {
         "colWidth": 12.0,
         "fontSize": 9.0,
@@ -70,8 +70,8 @@
       "jobName": "paragraph_1577905631436_-1236416817",
       "id": "20200101-190711_1325655505",
       "dateCreated": "2020-01-01 19:07:11.436",
-      "dateStarted": "2020-01-20 18:53:46.946",
-      "dateFinished": "2020-01-20 18:53:46.956",
+      "dateStarted": "2020-01-28 17:37:36.949",
+      "dateFinished": "2020-01-28 17:37:36.971",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },

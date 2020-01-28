@@ -1,0 +1,157 @@
+{
+  "paragraphs": [
+    {
+      "text": "%md\n# Louvain modularity\n\nThe Louvain Modularity algorithm finds clusters by comparing community density\nas it assigns nodes to different groups. You can think of this as a “what if ” analysis to\ntry various groupings with the goal of reaching a global optimum.\nProposed in 2008, the Louvain algorithm is one of the fastest modularity-based algo‐\nrithms. As well as detecting communities, it also reveals a hierarchy of communities\nat different scales. This is useful for understanding the structure of a network at dif‐\nferent levels of granularity.\nLouvain quantifies how well a node is assigned to a group by looking at the density of\nconnections within a cluster in comparison to an average or random sample. This\nmeasure of community assignment is called modularity.",
+      "user": "anonymous",
+      "dateUpdated": "2020-01-28 12:40:53.268",
+      "config": {
+        "tableHide": false,
+        "editorSetting": {
+          "language": "markdown",
+          "editOnDblClick": true,
+          "completionKey": "TAB",
+          "completionSupport": false
+        },
+        "colWidth": 12.0,
+        "editorMode": "ace/mode/markdown",
+        "fontSize": 9.0,
+        "editorHide": true,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003ch1\u003eLouvain modularity\u003c/h1\u003e\n\u003cp\u003eThe Louvain Modularity algorithm finds clusters by comparing community density\u003cbr/\u003eas it assigns nodes to different groups. You can think of this as a “what if ” analysis to\u003cbr/\u003etry various groupings with the goal of reaching a global optimum.\u003cbr/\u003eProposed in 2008, the Louvain algorithm is one of the fastest modularity-based algo‐\u003cbr/\u003erithms. As well as detecting communities, it also reveals a hierarchy of communities\u003cbr/\u003eat different scales. This is useful for understanding the structure of a network at dif‐\u003cbr/\u003eferent levels of granularity.\u003cbr/\u003eLouvain quantifies how well a node is assigned to a group by looking at the density of\u003cbr/\u003econnections within a cluster in comparison to an average or random sample. This\u003cbr/\u003emeasure of community assignment is called modularity.\u003c/p\u003e\n\u003c/div\u003e"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1580215050336_528314309",
+      "id": "20200128-082446_626593832",
+      "dateCreated": "2020-01-28 12:37:30.336",
+      "dateStarted": "2020-01-28 12:40:53.268",
+      "dateFinished": "2020-01-28 12:40:53.302",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%md\n\n# When you can use it?\n\nUse Louvain Modularity to find communities in vast networks. This algorithm\napplies a heuristic, as opposed to exact, modularity, which is computationally expensive.\nLouvain can therefore be used on large graphs where standard modularity algorithms may struggle.\n\nExample use cases include:\n\n- Detecting cyberattacks\n- Extracting topics from online social platforms, like Twitter and YouTube, based\non the co-occurence of terms in documents as part of the topic modeling process\n- Finding hierarchical community structures within the brain’s functional network",
+      "user": "anonymous",
+      "dateUpdated": "2020-01-28 12:41:50.762",
+      "config": {
+        "tableHide": false,
+        "editorSetting": {
+          "language": "markdown",
+          "editOnDblClick": true,
+          "completionKey": "TAB",
+          "completionSupport": false
+        },
+        "colWidth": 12.0,
+        "editorMode": "ace/mode/markdown",
+        "fontSize": 9.0,
+        "editorHide": true,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003ch1\u003eWhen you can use it?\u003c/h1\u003e\n\u003cp\u003eUse Louvain Modularity to find communities in vast networks. This algorithm\u003cbr/\u003eapplies a heuristic, as opposed to exact, modularity, which is computationally expensive.\u003cbr/\u003eLouvain can therefore be used on large graphs where standard modularity algorithms may struggle.\u003c/p\u003e\n\u003cp\u003eExample use cases include:\u003c/p\u003e\n\u003cul\u003e\n  \u003cli\u003eDetecting cyberattacks\u003c/li\u003e\n  \u003cli\u003eExtracting topics from online social platforms, like Twitter and YouTube, based\u003cbr/\u003eon the co-occurence of terms in documents as part of the topic modeling process\u003c/li\u003e\n  \u003cli\u003eFinding hierarchical community structures within the brain’s functional network\u003c/li\u003e\n\u003c/ul\u003e\n\u003c/div\u003e"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1580215050341_1058587942",
+      "id": "20200128-082518_341828040",
+      "dateCreated": "2020-01-28 12:37:30.341",
+      "dateStarted": "2020-01-28 12:41:50.762",
+      "dateFinished": "2020-01-28 12:41:50.807",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%md\n\nYou can find the algorithm implemented in:\n\n* [Neo4j](/#/notebook/2EVJ1P6NU)\n* [Spark](/#/notebook/2EYECKESC)",
+      "user": "anonymous",
+      "dateUpdated": "2020-01-28 12:42:19.640",
+      "config": {
+        "tableHide": false,
+        "editorSetting": {
+          "language": "markdown",
+          "editOnDblClick": true,
+          "completionKey": "TAB",
+          "completionSupport": false
+        },
+        "colWidth": 12.0,
+        "editorMode": "ace/mode/markdown",
+        "fontSize": 9.0,
+        "editorHide": true,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003cp\u003eYou can find the algorithm implemented in:\u003c/p\u003e\n\u003cul\u003e\n  \u003cli\u003e\u003ca href\u003d\"/#/notebook/2EVJ1P6NU\"\u003eNeo4j\u003c/a\u003e\u003c/li\u003e\n  \u003cli\u003e\u003ca href\u003d\"/#/notebook/2EYECKESC\"\u003eSpark\u003c/a\u003e\u003c/li\u003e\n\u003c/ul\u003e\n\u003c/div\u003e"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1580215050348_-1447148706",
+      "id": "20200128-082521_853675343",
+      "dateCreated": "2020-01-28 12:37:30.348",
+      "dateStarted": "2020-01-28 12:42:19.656",
+      "dateFinished": "2020-01-28 12:42:19.704",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%md\n",
+      "user": "anonymous",
+      "dateUpdated": "2020-01-28 12:37:30.353",
+      "config": {},
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "jobName": "paragraph_1580215050352_-1882498810",
+      "id": "20200128-083003_347629143",
+      "dateCreated": "2020-01-28 12:37:30.352",
+      "status": "READY",
+      "errorMessage": "",
+      "progressUpdateIntervalMs": 500
+    }
+  ],
+  "name": "Community detection/Louvain/Louvain",
+  "id": "2F2EUFPB6",
+  "noteParams": {},
+  "noteForms": {},
+  "angularObjects": {
+    "md:shared_process": [],
+    "neo4j:shared_process": [],
+    "spark:shared_process": []
+  },
+  "config": {
+    "isZeppelinNotebookCronEnable": false
+  },
+  "info": {}
+}

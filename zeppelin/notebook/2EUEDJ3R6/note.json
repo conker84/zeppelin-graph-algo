@@ -171,9 +171,9 @@
       "progressUpdateIntervalMs": 500
     },
     {
-      "text": "%md\n## Streaming betweenness centrality",
+      "text": "%md\n## Streaming betweenness centrality\n\nA call to the following procedure will calculate the\nbetweenness centrality for each of the nodes in our graph:",
       "user": "anonymous",
-      "dateUpdated": "2019-12-07 11:33:58.007",
+      "dateUpdated": "2020-01-28 18:06:11.421",
       "config": {
         "tableHide": false,
         "editorSetting": {
@@ -198,7 +198,7 @@
         "msg": [
           {
             "type": "HTML",
-            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003ch2\u003eStreaming betweenness centrality\u003c/h2\u003e\n\u003c/div\u003e"
+            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003ch2\u003eStreaming betweenness centrality\u003c/h2\u003e\n\u003cp\u003eA call to the following procedure will calculate the\u003cbr/\u003ebetweenness centrality for each of the nodes in our graph:\u003c/p\u003e\n\u003c/div\u003e"
           }
         ]
       },
@@ -206,8 +206,8 @@
       "jobName": "paragraph_1575718417138_-786578012",
       "id": "20191207-112728_2069065216",
       "dateCreated": "2019-12-07 11:33:37.138",
-      "dateStarted": "2019-12-07 11:33:58.011",
-      "dateFinished": "2019-12-07 11:33:58.036",
+      "dateStarted": "2020-01-28 18:06:11.424",
+      "dateFinished": "2020-01-28 18:06:11.431",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
@@ -304,6 +304,46 @@
       "dateCreated": "2019-12-07 11:33:37.139",
       "dateStarted": "2020-01-19 19:24:44.651",
       "dateFinished": "2020-01-19 19:24:44.687",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%md\n\nAs we can see in results, Alice is the main broker in this network, but Mark and\nDoug aren’t far behind. In the smaller subgraph all shortest paths go through David,\nso he is important for information flow among those nodes.\n",
+      "user": "anonymous",
+      "dateUpdated": "2020-01-28 18:06:41.917",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "editOnDblClick": true,
+          "language": "markdown",
+          "completionSupport": false
+        },
+        "editorMode": "ace/mode/markdown",
+        "editorHide": true,
+        "tableHide": false
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003cp\u003eAs we can see in results, Alice is the main broker in this network, but Mark and\u003cbr/\u003eDoug aren’t far behind. In the smaller subgraph all shortest paths go through David,\u003cbr/\u003eso he is important for information flow among those nodes.\u003c/p\u003e\n\u003c/div\u003e"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1580234790342_1858011081",
+      "id": "20200128-180630_875191064",
+      "dateCreated": "2020-01-28 18:06:30.342",
+      "dateStarted": "2020-01-28 18:06:41.921",
+      "dateFinished": "2020-01-28 18:06:41.948",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
@@ -422,9 +462,9 @@
       "progressUpdateIntervalMs": 500
     },
     {
-      "text": "%md\n## Approximate betweenness centrality",
+      "text": "%md\n## Approximate betweenness centrality\n\nRecall that calculating the exact betweenness centrality on large graphs can be very\nexpensive. We could therefore choose to use an approximation algorithm that runs\nmuch faster but still provides useful (albeit imprecise) information.",
       "user": "anonymous",
-      "dateUpdated": "2019-12-07 11:35:27.579",
+      "dateUpdated": "2020-01-28 18:07:43.835",
       "config": {
         "colWidth": 12.0,
         "fontSize": 9.0,
@@ -449,7 +489,7 @@
         "msg": [
           {
             "type": "HTML",
-            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003ch2\u003eApproximate betweenness centrality\u003c/h2\u003e\n\u003c/div\u003e"
+            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003ch2\u003eApproximate betweenness centrality\u003c/h2\u003e\n\u003cp\u003eRecall that calculating the exact betweenness centrality on large graphs can be very\u003cbr/\u003eexpensive. We could therefore choose to use an approximation algorithm that runs\u003cbr/\u003emuch faster but still provides useful (albeit imprecise) information.\u003c/p\u003e\n\u003c/div\u003e"
           }
         ]
       },
@@ -457,15 +497,15 @@
       "jobName": "paragraph_1575718516225_-1909108411",
       "id": "20191207-113516_619668073",
       "dateCreated": "2019-12-07 11:35:16.225",
-      "dateStarted": "2019-12-07 11:35:27.579",
-      "dateFinished": "2019-12-07 11:35:27.584",
+      "dateStarted": "2020-01-28 18:07:43.835",
+      "dateFinished": "2020-01-28 18:07:43.852",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
     {
       "text": "%neo4j\nCALL algo.betweenness.sampled.stream(\"User\", \"FOLLOWS\", {strategy:\"degree\"})\nYIELD nodeId, centrality\nRETURN algo.getNodeById(nodeId).id AS user, centrality\nORDER BY centrality DESC\n",
       "user": "anonymous",
-      "dateUpdated": "2020-01-19 19:24:55.622",
+      "dateUpdated": "2020-01-28 18:09:07.898",
       "config": {
         "colWidth": 12.0,
         "fontSize": 9.0,
@@ -517,7 +557,7 @@
         "msg": [
           {
             "type": "TABLE",
-            "data": "user\tcentrality\n\"Doug\"\t9.0\n\"Alice\"\t0.0\n\"Bridget\"\t0.0\n\"Charles\"\t0.0\n\"Mark\"\t0.0\n\"Michael\"\t0.0\n\"David\"\t0.0\n\"Amy\"\t0.0\n\"James\"\t0.0\n"
+            "data": "user\tcentrality\n\"Alice\"\t9.000000000000002\n\"Doug\"\t9.000000000000002\n\"Mark\"\t3.8571428571428577\n\"David\"\t1.2857142857142858\n\"Bridget\"\t0.0\n\"Charles\"\t0.0\n\"Michael\"\t0.0\n\"Amy\"\t0.0\n\"James\"\t0.0\n"
           }
         ]
       },
@@ -525,24 +565,80 @@
       "jobName": "paragraph_1575718474692_-2062144139",
       "id": "20191207-113434_913302487",
       "dateCreated": "2019-12-07 11:34:34.692",
-      "dateStarted": "2020-01-19 19:24:55.758",
-      "dateFinished": "2020-01-19 19:24:55.844",
+      "dateStarted": "2020-01-28 18:09:07.918",
+      "dateFinished": "2020-01-28 18:09:07.990",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
     {
-      "text": "%neo4j\n",
+      "text": "%md\n\nOur top influencers are similar to before, although Mark now has a higher ranking\nthan Doug.\nDue to the random nature of this algorithm, we may see different results each time\nthat we run it. On larger graphs this randomness will have less of an impact than it\ndoes on our small sample graph.\n",
       "user": "anonymous",
-      "dateUpdated": "2020-01-19 19:24:55.633",
+      "dateUpdated": "2020-01-28 18:10:03.259",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "editOnDblClick": true,
+          "language": "markdown",
+          "completionSupport": false
+        },
+        "editorMode": "ace/mode/markdown",
+        "editorHide": true,
+        "tableHide": false
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003cp\u003eOur top influencers are similar to before, although Mark now has a higher ranking\u003cbr/\u003ethan Doug.\u003cbr/\u003eDue to the random nature of this algorithm, we may see different results each time\u003cbr/\u003ethat we run it. On larger graphs this randomness will have less of an impact than it\u003cbr/\u003edoes on our small sample graph.\u003c/p\u003e\n\u003c/div\u003e"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1579461895624_1077283437",
+      "id": "20200119-192455_1947109107",
+      "dateCreated": "2020-01-19 19:24:55.624",
+      "dateStarted": "2020-01-28 18:10:03.261",
+      "dateFinished": "2020-01-28 18:10:03.268",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%md\n",
+      "user": "anonymous",
+      "dateUpdated": "2020-01-28 18:09:59.138",
       "config": {},
       "settings": {
         "params": {},
         "forms": {}
       },
       "apps": [],
-      "jobName": "paragraph_1579461895624_1077283437",
-      "id": "20200119-192455_1947109107",
-      "dateCreated": "2020-01-19 19:24:55.624",
+      "jobName": "paragraph_1580234999136_406360066",
+      "id": "20200128-180959_1298769479",
+      "dateCreated": "2020-01-28 18:09:59.136",
+      "status": "READY",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%md\n",
+      "user": "anonymous",
+      "dateUpdated": "2020-01-28 18:09:35.390",
+      "config": {},
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "jobName": "paragraph_1580234975383_-1138436639",
+      "id": "20200128-180935_132037506",
+      "dateCreated": "2020-01-28 18:09:35.383",
       "status": "READY",
       "progressUpdateIntervalMs": 500
     }

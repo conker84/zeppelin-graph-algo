@@ -83,9 +83,9 @@
       "progressUpdateIntervalMs": 500
     },
     {
-      "text": "%pyspark\nfrom graphframes import GraphFrame\nfrom pyspark.sql import functions as F",
+      "text": "%pyspark\nfrom pyspark.sql import functions as F",
       "user": "anonymous",
-      "dateUpdated": "2020-01-20 18:42:06.339",
+      "dateUpdated": "2020-01-28 18:32:41.267",
       "config": {
         "colWidth": 12.0,
         "fontSize": 9.0,
@@ -111,15 +111,56 @@
       "jobName": "paragraph_1577877827209_281831888",
       "id": "20200101-112347_55482158",
       "dateCreated": "2020-01-01 11:23:47.209",
-      "dateStarted": "2020-01-20 18:42:06.382",
-      "dateFinished": "2020-01-20 18:42:06.395",
+      "dateStarted": "2020-01-28 18:32:41.318",
+      "dateFinished": "2020-01-28 18:32:41.341",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%md\n\n### Import graph\n",
+      "user": "anonymous",
+      "dateUpdated": "2020-01-28 18:33:58.397",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "markdown",
+          "editOnDblClick": true,
+          "completionKey": "TAB",
+          "completionSupport": false
+        },
+        "editorMode": "ace/mode/markdown",
+        "editorHide": true,
+        "tableHide": false
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003ch3\u003eImport graph\u003c/h3\u003e\n\u003c/div\u003e"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1580236430800_938206806",
+      "id": "20200128-183350_1033227695",
+      "dateCreated": "2020-01-28 18:33:50.801",
+      "dateStarted": "2020-01-28 18:33:58.403",
+      "dateFinished": "2020-01-28 18:33:58.434",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
     {
       "text": "%pyspark\ng \u003d create_software_graph()",
       "user": "anonymous",
-      "dateUpdated": "2020-01-20 18:42:09.842",
+      "dateUpdated": "2020-01-28 18:32:54.112",
       "config": {
         "colWidth": 12.0,
         "fontSize": 9.0,
@@ -148,8 +189,8 @@
           "tooltip": "View in Spark web UI",
           "group": "spark",
           "values": [
-            "http://172.20.0.3:4040/jobs/job?id\u003d0",
-            "http://172.20.0.3:4040/jobs/job?id\u003d1"
+            "http://172.27.0.3:4040/jobs/job?id\u003d96",
+            "http://172.27.0.3:4040/jobs/job?id\u003d97"
           ],
           "interpreterSettingId": "spark"
         }
@@ -158,15 +199,15 @@
       "jobName": "paragraph_1577877862062_-2107515180",
       "id": "20200101-112422_199127971",
       "dateCreated": "2020-01-01 11:24:22.062",
-      "dateStarted": "2020-01-20 18:42:09.879",
-      "dateFinished": "2020-01-20 18:42:12.692",
+      "dateStarted": "2020-01-28 18:32:54.149",
+      "dateFinished": "2020-01-28 18:32:54.412",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
     {
       "text": "%pyspark\nsc.setCheckpointDir(\"/tmp\")\n",
       "user": "anonymous",
-      "dateUpdated": "2020-01-20 18:42:15.787",
+      "dateUpdated": "2020-01-28 18:33:01.387",
       "config": {
         "colWidth": 12.0,
         "fontSize": 9.0,
@@ -192,15 +233,56 @@
       "jobName": "paragraph_1577877883822_277218229",
       "id": "20200101-112443_1061570403",
       "dateCreated": "2020-01-01 11:24:43.822",
-      "dateStarted": "2020-01-20 18:42:15.827",
-      "dateFinished": "2020-01-20 18:42:15.843",
+      "dateStarted": "2020-01-28 18:33:01.419",
+      "dateFinished": "2020-01-28 18:33:01.432",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%md\n\n### Stream results\n\n\n",
+      "user": "anonymous",
+      "dateUpdated": "2020-01-28 18:35:11.550",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "markdown",
+          "editOnDblClick": true,
+          "completionKey": "TAB",
+          "completionSupport": false
+        },
+        "editorMode": "ace/mode/markdown",
+        "editorHide": true,
+        "tableHide": false
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003ch3\u003eStream results\u003c/h3\u003e\n\u003c/div\u003e"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1580236457614_2006240552",
+      "id": "20200128-183417_1360633676",
+      "dateCreated": "2020-01-28 18:34:17.614",
+      "dateStarted": "2020-01-28 18:35:11.552",
+      "dateFinished": "2020-01-28 18:35:11.564",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
     {
       "text": "%pyspark\nresult \u003d g.connectedComponents()\n(result.sort(\"component\")\n .groupby(\"component\")\n .agg(F.collect_list(\"id\").alias(\"libraries\"))\n .show(truncate\u003dFalse))\n",
       "user": "anonymous",
-      "dateUpdated": "2020-01-20 18:42:17.866",
+      "dateUpdated": "2020-01-28 18:33:02.815",
       "config": {
         "colWidth": 12.0,
         "fontSize": 9.0,
@@ -234,32 +316,32 @@
           "tooltip": "View in Spark web UI",
           "group": "spark",
           "values": [
-            "http://172.20.0.3:4040/jobs/job?id\u003d2",
-            "http://172.20.0.3:4040/jobs/job?id\u003d3",
-            "http://172.20.0.3:4040/jobs/job?id\u003d4",
-            "http://172.20.0.3:4040/jobs/job?id\u003d5",
-            "http://172.20.0.3:4040/jobs/job?id\u003d6",
-            "http://172.20.0.3:4040/jobs/job?id\u003d7",
-            "http://172.20.0.3:4040/jobs/job?id\u003d8",
-            "http://172.20.0.3:4040/jobs/job?id\u003d9",
-            "http://172.20.0.3:4040/jobs/job?id\u003d10",
-            "http://172.20.0.3:4040/jobs/job?id\u003d11",
-            "http://172.20.0.3:4040/jobs/job?id\u003d12",
-            "http://172.20.0.3:4040/jobs/job?id\u003d13",
-            "http://172.20.0.3:4040/jobs/job?id\u003d14",
-            "http://172.20.0.3:4040/jobs/job?id\u003d15",
-            "http://172.20.0.3:4040/jobs/job?id\u003d16",
-            "http://172.20.0.3:4040/jobs/job?id\u003d17",
-            "http://172.20.0.3:4040/jobs/job?id\u003d18",
-            "http://172.20.0.3:4040/jobs/job?id\u003d19",
-            "http://172.20.0.3:4040/jobs/job?id\u003d20",
-            "http://172.20.0.3:4040/jobs/job?id\u003d21",
-            "http://172.20.0.3:4040/jobs/job?id\u003d22",
-            "http://172.20.0.3:4040/jobs/job?id\u003d23",
-            "http://172.20.0.3:4040/jobs/job?id\u003d24",
-            "http://172.20.0.3:4040/jobs/job?id\u003d25",
-            "http://172.20.0.3:4040/jobs/job?id\u003d26",
-            "http://172.20.0.3:4040/jobs/job?id\u003d27"
+            "http://172.27.0.3:4040/jobs/job?id\u003d98",
+            "http://172.27.0.3:4040/jobs/job?id\u003d99",
+            "http://172.27.0.3:4040/jobs/job?id\u003d100",
+            "http://172.27.0.3:4040/jobs/job?id\u003d101",
+            "http://172.27.0.3:4040/jobs/job?id\u003d102",
+            "http://172.27.0.3:4040/jobs/job?id\u003d103",
+            "http://172.27.0.3:4040/jobs/job?id\u003d104",
+            "http://172.27.0.3:4040/jobs/job?id\u003d105",
+            "http://172.27.0.3:4040/jobs/job?id\u003d106",
+            "http://172.27.0.3:4040/jobs/job?id\u003d107",
+            "http://172.27.0.3:4040/jobs/job?id\u003d108",
+            "http://172.27.0.3:4040/jobs/job?id\u003d109",
+            "http://172.27.0.3:4040/jobs/job?id\u003d110",
+            "http://172.27.0.3:4040/jobs/job?id\u003d111",
+            "http://172.27.0.3:4040/jobs/job?id\u003d112",
+            "http://172.27.0.3:4040/jobs/job?id\u003d113",
+            "http://172.27.0.3:4040/jobs/job?id\u003d114",
+            "http://172.27.0.3:4040/jobs/job?id\u003d115",
+            "http://172.27.0.3:4040/jobs/job?id\u003d116",
+            "http://172.27.0.3:4040/jobs/job?id\u003d117",
+            "http://172.27.0.3:4040/jobs/job?id\u003d118",
+            "http://172.27.0.3:4040/jobs/job?id\u003d119",
+            "http://172.27.0.3:4040/jobs/job?id\u003d120",
+            "http://172.27.0.3:4040/jobs/job?id\u003d121",
+            "http://172.27.0.3:4040/jobs/job?id\u003d122",
+            "http://172.27.0.3:4040/jobs/job?id\u003d123"
           ],
           "interpreterSettingId": "spark"
         }
@@ -268,24 +350,65 @@
       "jobName": "paragraph_1577878306584_1810292393",
       "id": "20200101-113146_991400049",
       "dateCreated": "2020-01-01 11:31:46.584",
-      "dateStarted": "2020-01-20 18:42:17.910",
-      "dateFinished": "2020-01-20 18:42:57.030",
+      "dateStarted": "2020-01-28 18:33:02.833",
+      "dateFinished": "2020-01-28 18:33:40.947",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
     {
-      "text": "%pyspark\n",
+      "text": "%md\nThe results show three clusters of nodes.\n",
       "user": "anonymous",
-      "dateUpdated": "2020-01-01 15:35:18.057",
+      "dateUpdated": "2020-01-28 18:35:36.773",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "markdown",
+          "editOnDblClick": true,
+          "completionKey": "TAB",
+          "completionSupport": false
+        },
+        "editorMode": "ace/mode/markdown",
+        "editorHide": true,
+        "tableHide": false
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003cp\u003eThe results show three clusters of nodes.\u003c/p\u003e\n\u003c/div\u003e"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1577892918047_-1399113892",
+      "id": "20200101-153518_1153514066",
+      "dateCreated": "2020-01-01 15:35:18.048",
+      "dateStarted": "2020-01-28 18:35:36.776",
+      "dateFinished": "2020-01-28 18:35:36.787",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%md\n",
+      "user": "anonymous",
+      "dateUpdated": "2020-01-28 18:35:28.224",
       "config": {},
       "settings": {
         "params": {},
         "forms": {}
       },
       "apps": [],
-      "jobName": "paragraph_1577892918047_-1399113892",
-      "id": "20200101-153518_1153514066",
-      "dateCreated": "2020-01-01 15:35:18.048",
+      "jobName": "paragraph_1580236528222_1454092107",
+      "id": "20200128-183528_1196222733",
+      "dateCreated": "2020-01-28 18:35:28.222",
       "status": "READY",
       "progressUpdateIntervalMs": 500
     }

@@ -170,9 +170,9 @@
       "progressUpdateIntervalMs": 500
     },
     {
-      "text": "%md\n## Stream Label propagation",
+      "text": "%md\n## Stream Label propagation\n\nWe can execute LPA by running the following query:",
       "user": "anonymous",
-      "dateUpdated": "2019-12-07 12:00:41.679",
+      "dateUpdated": "2020-01-28 18:41:42.544",
       "config": {
         "tableHide": false,
         "editorSetting": {
@@ -196,7 +196,7 @@
         "msg": [
           {
             "type": "HTML",
-            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003ch2\u003eStream Label propagation\u003c/h2\u003e\n\u003c/div\u003e"
+            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003ch2\u003eStream Label propagation\u003c/h2\u003e\n\u003cp\u003eWe can execute LPA by running the following query:\u003c/p\u003e\n\u003c/div\u003e"
           }
         ]
       },
@@ -204,8 +204,8 @@
       "jobName": "paragraph_1575719494465_-139499170",
       "id": "20191207-114641_1084520692",
       "dateCreated": "2019-12-07 11:51:34.466",
-      "dateStarted": "2019-12-07 12:00:41.678",
-      "dateFinished": "2019-12-07 12:00:41.700",
+      "dateStarted": "2020-01-28 18:41:42.544",
+      "dateFinished": "2020-01-28 18:41:42.556",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
@@ -271,6 +271,151 @@
       "dateCreated": "2019-12-07 11:51:34.467",
       "dateStarted": "2019-12-07 11:51:47.503",
       "dateFinished": "2019-12-07 11:51:47.617",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%md\n\nWe can also run the algorithm assuming that the graph is undirected, which means\nthat nodes will try to adopt labels from the libraries they depend on as well as ones\nthat depend on them.\n\nTo do this, we pass the DIRECTION:BOTH parameter to the algorithm:",
+      "user": "anonymous",
+      "dateUpdated": "2020-01-28 18:43:26.439",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "editOnDblClick": true,
+          "language": "markdown",
+          "completionSupport": false
+        },
+        "editorMode": "ace/mode/markdown",
+        "editorHide": true,
+        "tableHide": false
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003cp\u003eWe can also run the algorithm assuming that the graph is undirected, which means\u003cbr/\u003ethat nodes will try to adopt labels from the libraries they depend on as well as ones\u003cbr/\u003ethat depend on them.\u003c/p\u003e\n\u003cp\u003eTo do this, we pass the DIRECTION:BOTH parameter to the algorithm:\u003c/p\u003e\n\u003c/div\u003e"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1580236986929_170154878",
+      "id": "20200128-184306_872724284",
+      "dateCreated": "2020-01-28 18:43:06.929",
+      "dateStarted": "2020-01-28 18:43:26.439",
+      "dateFinished": "2020-01-28 18:43:26.474",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%neo4j\nCALL algo.labelPropagation.stream(\"Library\", \"DEPENDS_ON\",\n{ iterations: 10, direction: \"BOTH\" })\nYIELD nodeId, label\nRETURN label,\ncollect(algo.getNodeById(nodeId).id) AS libraries\nORDER BY size(libraries) DESC",
+      "user": "anonymous",
+      "dateUpdated": "2020-01-28 18:44:05.045",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {
+          "0": {
+            "graph": {
+              "mode": "table",
+              "height": 300.0,
+              "optionOpen": false,
+              "setting": {
+                "table": {
+                  "tableGridState": {},
+                  "tableColumnTypeState": {
+                    "names": {
+                      "label": "string",
+                      "libraries": "string"
+                    },
+                    "updated": false
+                  },
+                  "tableOptionSpecHash": "[{\"name\":\"useFilter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable filter for columns\"},{\"name\":\"showPagination\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable pagination for better navigation\"},{\"name\":\"showAggregationFooter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable a footer for displaying aggregated values\"}]",
+                  "tableOptionValue": {
+                    "useFilter": false,
+                    "showPagination": false,
+                    "showAggregationFooter": false
+                  },
+                  "updated": false,
+                  "initialized": false
+                }
+              },
+              "commonSetting": {}
+            }
+          }
+        },
+        "editorSetting": {
+          "editOnDblClick": false
+        },
+        "editorMode": "ace/mode/undefined"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TABLE",
+            "data": "label\tlibraries\n22\t[\"six\",\"pandas\",\"numpy\",\"python-dateutil\",\"pytz\",\"matplotlib\",\"spacy\"]\n30\t[\"jupyter\",\"jpy-console\",\"nbconvert\",\"ipykernel\",\"jpy-client\",\"jpy-core\"]\n28\t[\"pyspark\",\"py4j\"]\n"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1580236936415_-1698610224",
+      "id": "20200128-184216_271239034",
+      "dateCreated": "2020-01-28 18:42:16.415",
+      "dateStarted": "2020-01-28 18:44:05.083",
+      "dateFinished": "2020-01-28 18:44:05.160",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%md\n\nThe number of clusters has reduced from six to three, and all the nodes in the matplotlib part of the graph are now grouped together.\n",
+      "user": "anonymous",
+      "dateUpdated": "2020-01-28 18:44:12.801",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "editOnDblClick": true,
+          "language": "markdown",
+          "completionSupport": false
+        },
+        "editorMode": "ace/mode/markdown",
+        "editorHide": true,
+        "tableHide": false
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003cp\u003eThe number of clusters has reduced from six to three, and all the nodes in the matplotlib part of the graph are now grouped together.\u003c/p\u003e\n\u003c/div\u003e"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1580237023169_1419062948",
+      "id": "20200128-184343_630445456",
+      "dateCreated": "2020-01-28 18:43:43.169",
+      "dateStarted": "2020-01-28 18:44:12.805",
+      "dateFinished": "2020-01-28 18:44:12.820",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },

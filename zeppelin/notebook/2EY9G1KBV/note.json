@@ -287,6 +287,47 @@
       "progressUpdateIntervalMs": 500
     },
     {
+      "text": "%md\n\n### Import graph\n",
+      "user": "anonymous",
+      "dateUpdated": "2020-01-28 18:13:31.718",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "markdown",
+          "editOnDblClick": true,
+          "completionKey": "TAB",
+          "completionSupport": false
+        },
+        "editorMode": "ace/mode/markdown",
+        "editorHide": true,
+        "tableHide": false
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003ch3\u003eImport graph\u003c/h3\u003e\n\u003c/div\u003e"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1580235184027_1795083716",
+      "id": "20200128-181304_1138725021",
+      "dateCreated": "2020-01-28 18:13:04.027",
+      "dateStarted": "2020-01-28 18:13:31.724",
+      "dateFinished": "2020-01-28 18:13:31.738",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
       "text": "%pyspark\ng \u003d create_social_graph()",
       "user": "anonymous",
       "dateUpdated": "2020-01-19 18:10:28.225",
@@ -311,25 +352,53 @@
         "code": "SUCCESS",
         "msg": []
       },
-      "runtimeInfos": {
-        "jobUrl": {
-          "propertyName": "jobUrl",
-          "label": "SPARK JOB",
-          "tooltip": "View in Spark web UI",
-          "group": "spark",
-          "values": [
-            "http://172.18.0.3:4040/jobs/job?id\u003d0",
-            "http://172.18.0.3:4040/jobs/job?id\u003d1"
-          ],
-          "interpreterSettingId": "spark"
-        }
-      },
       "apps": [],
       "jobName": "paragraph_1577898758923_-1305865509",
       "id": "20200101-112422_199127971",
       "dateCreated": "2020-01-01 17:12:38.924",
       "dateStarted": "2020-01-19 18:10:28.238",
       "dateFinished": "2020-01-19 18:10:31.505",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%md\n\n### Stream results\n",
+      "user": "anonymous",
+      "dateUpdated": "2020-01-28 18:13:27.959",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "markdown",
+          "editOnDblClick": true,
+          "completionKey": "TAB",
+          "completionSupport": false
+        },
+        "editorMode": "ace/mode/markdown",
+        "editorHide": true,
+        "tableHide": false
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003ch3\u003eStream results\u003c/h3\u003e\n\u003c/div\u003e"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1580235201267_-1357186217",
+      "id": "20200128-181321_1278107859",
+      "dateCreated": "2020-01-28 18:13:21.267",
+      "dateStarted": "2020-01-28 18:13:27.963",
+      "dateFinished": "2020-01-28 18:13:27.971",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
@@ -363,28 +432,6 @@
           }
         ]
       },
-      "runtimeInfos": {
-        "jobUrl": {
-          "propertyName": "jobUrl",
-          "label": "SPARK JOB",
-          "tooltip": "View in Spark web UI",
-          "group": "spark",
-          "values": [
-            "http://172.18.0.3:4040/jobs/job?id\u003d2",
-            "http://172.18.0.3:4040/jobs/job?id\u003d3",
-            "http://172.18.0.3:4040/jobs/job?id\u003d4",
-            "http://172.18.0.3:4040/jobs/job?id\u003d5",
-            "http://172.18.0.3:4040/jobs/job?id\u003d6",
-            "http://172.18.0.3:4040/jobs/job?id\u003d7",
-            "http://172.18.0.3:4040/jobs/job?id\u003d8",
-            "http://172.18.0.3:4040/jobs/job?id\u003d9",
-            "http://172.18.0.3:4040/jobs/job?id\u003d10",
-            "http://172.18.0.3:4040/jobs/job?id\u003d11",
-            "http://172.18.0.3:4040/jobs/job?id\u003d12"
-          ],
-          "interpreterSettingId": "spark"
-        }
-      },
       "apps": [],
       "jobName": "paragraph_1577898878374_1854226027",
       "id": "20200101-171438_937517174",
@@ -395,18 +442,59 @@
       "progressUpdateIntervalMs": 500
     },
     {
-      "text": "%pyspark\n",
+      "text": "%md\n\nAlice, Doug, and David are the most closely connected nodes in the graph with a 1.0\nscore, which means each directly connects to all nodes in their part of the graph.\nResults illustrate that even though David has only a few connections, within his\ngroup of friends that’s significant. In other words, this score represents the closeness\nof each user to others within their subgraph but not the entire graph.\n",
       "user": "anonymous",
-      "dateUpdated": "2020-01-01 17:34:03.239",
+      "dateUpdated": "2020-01-28 18:12:46.061",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "markdown",
+          "editOnDblClick": true,
+          "completionKey": "TAB",
+          "completionSupport": false
+        },
+        "editorMode": "ace/mode/markdown",
+        "editorHide": true,
+        "tableHide": false
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003cp\u003eAlice, Doug, and David are the most closely connected nodes in the graph with a 1.0\u003cbr/\u003escore, which means each directly connects to all nodes in their part of the graph.\u003cbr/\u003eResults illustrate that even though David has only a few connections, within his\u003cbr/\u003egroup of friends that’s significant. In other words, this score represents the closeness\u003cbr/\u003eof each user to others within their subgraph but not the entire graph.\u003c/p\u003e\n\u003c/div\u003e"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1577900043234_-1601049326",
+      "id": "20200101-173403_1355836395",
+      "dateCreated": "2020-01-01 17:34:03.234",
+      "dateStarted": "2020-01-28 18:12:46.061",
+      "dateFinished": "2020-01-28 18:12:46.105",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%md\n",
+      "user": "anonymous",
+      "dateUpdated": "2020-01-28 18:12:46.047",
       "config": {},
       "settings": {
         "params": {},
         "forms": {}
       },
       "apps": [],
-      "jobName": "paragraph_1577900043234_-1601049326",
-      "id": "20200101-173403_1355836395",
-      "dateCreated": "2020-01-01 17:34:03.234",
+      "jobName": "paragraph_1580235166046_-282577899",
+      "id": "20200128-181246_1298024554",
+      "dateCreated": "2020-01-28 18:12:46.046",
       "status": "READY",
       "progressUpdateIntervalMs": 500
     }

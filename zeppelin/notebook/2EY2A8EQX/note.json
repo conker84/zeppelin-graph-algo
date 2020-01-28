@@ -1,0 +1,157 @@
+{
+  "paragraphs": [
+    {
+      "text": "%md\n# Label propagation\n\nThe Label Propagation algorithm (LPA) is a fast algorithm for finding communities\nin a graph. In LPA, nodes select their group based on their direct neighbors. This process \nis well suited to networks where groupings are less clear and weights can be used\nto help a node determine which community to place itself within. It also lends itself\nwell to semisupervised learning because you can seed the process with preassigned,\nindicative node labels.",
+      "user": "anonymous",
+      "dateUpdated": "2020-01-28 12:34:16.367",
+      "config": {
+        "tableHide": false,
+        "editorSetting": {
+          "language": "markdown",
+          "editOnDblClick": true,
+          "completionKey": "TAB",
+          "completionSupport": false
+        },
+        "colWidth": 12.0,
+        "editorMode": "ace/mode/markdown",
+        "fontSize": 9.0,
+        "editorHide": true,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003ch1\u003eLabel propagation\u003c/h1\u003e\n\u003cp\u003eThe Label Propagation algorithm (LPA) is a fast algorithm for finding communities\u003cbr/\u003ein a graph. In LPA, nodes select their group based on their direct neighbors. This process\u003cbr/\u003eis well suited to networks where groupings are less clear and weights can be used\u003cbr/\u003eto help a node determine which community to place itself within. It also lends itself\u003cbr/\u003ewell to semisupervised learning because you can seed the process with preassigned,\u003cbr/\u003eindicative node labels.\u003c/p\u003e\n\u003c/div\u003e"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1580214820276_-624495213",
+      "id": "20200128-082446_626593832",
+      "dateCreated": "2020-01-28 12:33:40.276",
+      "dateStarted": "2020-01-28 12:34:16.376",
+      "dateFinished": "2020-01-28 12:34:16.402",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%md\n\n# When you can use it?\n\nUse Label Propagation in large-scale networks for initial community detection, espe‐\ncially when weights are available. This algorithm can be parallelized and is therefore\nextremely fast at graph partitioning.\n\nExample use cases include:\n\n- Assigning polarity of tweets as a part of semantic analysis\n- Finding potentially dangerous combinations of possible co-prescribed drugs,\nbased on the chemical similarity and side effect profiles\n- Inferring dialogue features and user intention for a machine learning model",
+      "user": "anonymous",
+      "dateUpdated": "2020-01-28 12:35:08.220",
+      "config": {
+        "tableHide": false,
+        "editorSetting": {
+          "language": "markdown",
+          "editOnDblClick": true,
+          "completionKey": "TAB",
+          "completionSupport": false
+        },
+        "colWidth": 12.0,
+        "editorMode": "ace/mode/markdown",
+        "fontSize": 9.0,
+        "editorHide": true,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003ch1\u003eWhen you can use it?\u003c/h1\u003e\n\u003cp\u003eUse Label Propagation in large-scale networks for initial community detection, espe‐\u003cbr/\u003ecially when weights are available. This algorithm can be parallelized and is therefore\u003cbr/\u003eextremely fast at graph partitioning.\u003c/p\u003e\n\u003cp\u003eExample use cases include:\u003c/p\u003e\n\u003cul\u003e\n  \u003cli\u003eAssigning polarity of tweets as a part of semantic analysis\u003c/li\u003e\n  \u003cli\u003eFinding potentially dangerous combinations of possible co-prescribed drugs,\u003cbr/\u003ebased on the chemical similarity and side effect profiles\u003c/li\u003e\n  \u003cli\u003eInferring dialogue features and user intention for a machine learning model\u003c/li\u003e\n\u003c/ul\u003e\n\u003c/div\u003e"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1580214820276_-472331126",
+      "id": "20200128-082518_341828040",
+      "dateCreated": "2020-01-28 12:33:40.276",
+      "dateStarted": "2020-01-28 12:35:08.236",
+      "dateFinished": "2020-01-28 12:35:08.269",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%md\n\nYou can find the algorithm implemented in:\n\n* [Neo4j](/#/notebook/2EVY3PMRJ)\n* [Spark](/#/notebook/2EX73418D)",
+      "user": "anonymous",
+      "dateUpdated": "2020-01-28 18:41:04.268",
+      "config": {
+        "tableHide": false,
+        "editorSetting": {
+          "language": "markdown",
+          "editOnDblClick": true,
+          "completionKey": "TAB",
+          "completionSupport": false
+        },
+        "colWidth": 12.0,
+        "editorMode": "ace/mode/markdown",
+        "fontSize": 9.0,
+        "editorHide": true,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003cp\u003eYou can find the algorithm implemented in:\u003c/p\u003e\n\u003cul\u003e\n  \u003cli\u003e\u003ca href\u003d\"/#/notebook/2EVY3PMRJ\"\u003eNeo4j\u003c/a\u003e\u003c/li\u003e\n  \u003cli\u003e\u003ca href\u003d\"/#/notebook/2EX73418D\"\u003eSpark\u003c/a\u003e\u003c/li\u003e\n\u003c/ul\u003e\n\u003c/div\u003e"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1580214820277_85895342",
+      "id": "20200128-082521_853675343",
+      "dateCreated": "2020-01-28 12:33:40.277",
+      "dateStarted": "2020-01-28 18:41:04.267",
+      "dateFinished": "2020-01-28 18:41:04.277",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%md\n",
+      "user": "anonymous",
+      "dateUpdated": "2020-01-28 12:33:40.280",
+      "config": {},
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "jobName": "paragraph_1580214820279_-896418976",
+      "id": "20200128-083003_347629143",
+      "dateCreated": "2020-01-28 12:33:40.279",
+      "status": "READY",
+      "errorMessage": "",
+      "progressUpdateIntervalMs": 500
+    }
+  ],
+  "name": "Community detection/Label propagation/Label propagation",
+  "id": "2EY2A8EQX",
+  "noteParams": {},
+  "noteForms": {},
+  "angularObjects": {
+    "md:shared_process": [],
+    "neo4j:shared_process": [],
+    "spark:shared_process": []
+  },
+  "config": {
+    "isZeppelinNotebookCronEnable": false
+  },
+  "info": {}
+}

@@ -1,9 +1,9 @@
 {
   "paragraphs": [
     {
-      "text": "%md\n# Closeness centrality\nhttps://neo4j.com/docs/graph-algorithms/current/labs-algorithms/closeness-centrality/",
+      "text": "%md\n# Closeness centrality\n\nCloseness Centrality is a way of detecting nodes that are able to spread information\nefficiently through a subgraph. The measure of a node’s centrality is its average farness (inverse distance) to all other\nnodes. Nodes with a high closeness score have the shortest distances from all other\nnodes.\n\n",
       "user": "anonymous",
-      "dateUpdated": "2020-01-28 08:25:18.740",
+      "dateUpdated": "2020-01-28 12:26:49.345",
       "config": {
         "colWidth": 12.0,
         "fontSize": 9.0,
@@ -28,7 +28,7 @@
         "msg": [
           {
             "type": "HTML",
-            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003ch1\u003eCloseness centrality\u003c/h1\u003e\n\u003cp\u003e\u003ca href\u003d\"https://neo4j.com/docs/graph-algorithms/current/labs-algorithms/closeness-centrality/\"\u003ehttps://neo4j.com/docs/graph-algorithms/current/labs-algorithms/closeness-centrality/\u003c/a\u003e\u003c/p\u003e\n\u003c/div\u003e"
+            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003ch1\u003eCloseness centrality\u003c/h1\u003e\n\u003cp\u003eCloseness Centrality is a way of detecting nodes that are able to spread information\u003cbr/\u003eefficiently through a subgraph. The measure of a node’s centrality is its average farness (inverse distance) to all other\u003cbr/\u003enodes. Nodes with a high closeness score have the shortest distances from all other\u003cbr/\u003enodes.\u003c/p\u003e\n\u003c/div\u003e"
           }
         ]
       },
@@ -36,28 +36,29 @@
       "jobName": "paragraph_1580199886007_-1924648764",
       "id": "20200128-082446_626593832",
       "dateCreated": "2020-01-28 08:24:46.007",
-      "dateStarted": "2020-01-28 08:25:18.742",
-      "dateFinished": "2020-01-28 08:25:18.758",
+      "dateStarted": "2020-01-28 12:26:49.346",
+      "dateFinished": "2020-01-28 12:26:49.353",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
     {
-      "text": "%md\n# When you can use it?\n\nApply Closeness Centrality when you need to know which nodes disseminate things the fastest. Using weighted relationships can be especially helpful in evaluating interaction speeds in communication and behavioral analyses.\n\nCloseness Centrality works best on connected graphs. When the original formula is applied to an unconnected graph, we end up with an infinite distance between two nodes where there is no path between them. This means that we’ll end up with an infinite close‐ ness centrality score when we sum up all the distances from that node. To avoid this issue, a variation on the original formula will be shown after the next example.",
+      "text": "%md\n# When you can use it?\n\nApply Closeness Centrality when you need to know which nodes disseminate things the fastest. Using weighted relationships can be especially helpful in evaluating interaction speeds in communication and behavioral analyses.\n\nExample use cases include:\n\n- Uncovering individuals in very favorable positions to control and acquire vital\ninformation and resources within an organization\n- As a heuristic for estimating arrival time in telecommunications and package\ndelivery, where content flows through the shortest paths to a predefined target\n- Evaluating the importance of words in a document, based on a graph-based key‐\nphrase extraction process",
       "user": "anonymous",
-      "dateUpdated": "2020-01-28 08:28:34.963",
+      "dateUpdated": "2020-01-28 12:17:23.878",
       "config": {
         "colWidth": 12.0,
         "fontSize": 9.0,
         "enabled": true,
         "results": {},
         "editorSetting": {
-          "language": "scala",
-          "editOnDblClick": false,
+          "language": "markdown",
+          "editOnDblClick": true,
           "completionKey": "TAB",
-          "completionSupport": true
+          "completionSupport": false
         },
-        "editorMode": "ace/mode/scala",
-        "editorHide": true
+        "editorMode": "ace/mode/markdown",
+        "editorHide": true,
+        "tableHide": false
       },
       "settings": {
         "params": {},
@@ -68,7 +69,7 @@
         "msg": [
           {
             "type": "HTML",
-            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003ch1\u003eWhen you can use it?\u003c/h1\u003e\n\u003cp\u003eApply Closeness Centrality when you need to know which nodes disseminate things the fastest. Using weighted relationships can be especially helpful in evaluating interaction speeds in communication and behavioral analyses.\u003c/p\u003e\n\u003cp\u003eCloseness Centrality works best on connected graphs. When the original formula is applied to an unconnected graph, we end up with an infinite distance between two nodes where there is no path between them. This means that we’ll end up with an infinite close‐ ness centrality score when we sum up all the distances from that node. To avoid this issue, a variation on the original formula will be shown after the next example.\u003c/p\u003e\n\u003c/div\u003e"
+            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003ch1\u003eWhen you can use it?\u003c/h1\u003e\n\u003cp\u003eApply Closeness Centrality when you need to know which nodes disseminate things the fastest. Using weighted relationships can be especially helpful in evaluating interaction speeds in communication and behavioral analyses.\u003c/p\u003e\n\u003cp\u003eExample use cases include:\u003c/p\u003e\n\u003cul\u003e\n  \u003cli\u003eUncovering individuals in very favorable positions to control and acquire vital\u003cbr/\u003einformation and resources within an organization\u003c/li\u003e\n  \u003cli\u003eAs a heuristic for estimating arrival time in telecommunications and package\u003cbr/\u003edelivery, where content flows through the shortest paths to a predefined target\u003c/li\u003e\n  \u003cli\u003eEvaluating the importance of words in a document, based on a graph-based key‐\u003cbr/\u003ephrase extraction process\u003c/li\u003e\n\u003c/ul\u003e\n\u003c/div\u003e"
           }
         ]
       },
@@ -76,8 +77,8 @@
       "jobName": "paragraph_1580199918703_78865548",
       "id": "20200128-082518_341828040",
       "dateCreated": "2020-01-28 08:25:18.703",
-      "dateStarted": "2020-01-28 08:28:33.136",
-      "dateFinished": "2020-01-28 08:28:33.162",
+      "dateStarted": "2020-01-28 12:17:23.888",
+      "dateFinished": "2020-01-28 12:17:23.907",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },

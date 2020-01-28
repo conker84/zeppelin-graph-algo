@@ -171,9 +171,9 @@
       "progressUpdateIntervalMs": 500
     },
     {
-      "text": "%md\n## Streaming degree centrality",
+      "text": "%md\n## Streaming degree centrality\n\nWe can get the in and out degree using plain cypher.",
       "user": "anonymous",
-      "dateUpdated": "2020-01-02 16:57:00.071",
+      "dateUpdated": "2020-01-28 18:23:57.346",
       "config": {
         "tableHide": false,
         "editorSetting": {
@@ -198,7 +198,7 @@
         "msg": [
           {
             "type": "HTML",
-            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003ch2\u003eStreaming degree centrality\u003c/h2\u003e\n\u003c/div\u003e"
+            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003ch2\u003eStreaming degree centrality\u003c/h2\u003e\n\u003cp\u003eWe can get the in and out degree using plain cypher.\u003c/p\u003e\n\u003c/div\u003e"
           }
         ]
       },
@@ -206,8 +206,8 @@
       "jobName": "paragraph_1575718324870_2049827122",
       "id": "20191207-112728_2069065216",
       "dateCreated": "2019-12-07 11:32:04.870",
-      "dateStarted": "2020-01-02 16:57:00.084",
-      "dateFinished": "2020-01-02 16:57:00.108",
+      "dateStarted": "2020-01-28 18:23:57.350",
+      "dateFinished": "2020-01-28 18:23:57.365",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
@@ -277,6 +277,46 @@
       "dateCreated": "2019-12-07 11:32:04.872",
       "dateStarted": "2019-12-07 11:32:13.258",
       "dateFinished": "2019-12-07 11:32:13.321",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%md\n\nWe can see in results that Doug is the most popular user in our Twitter graph,\nwith five followers (in-links). All other users in that part of the graph follow him and\nhe only follows one person back. In the real Twitter network, celebrities have high\nfollower counts but tend to follow few people. We could therefore consider Doug a\ncelebrity!\n",
+      "user": "anonymous",
+      "dateUpdated": "2020-01-28 18:23:50.349",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "editOnDblClick": true,
+          "language": "markdown",
+          "completionSupport": false
+        },
+        "editorMode": "ace/mode/markdown",
+        "editorHide": true,
+        "tableHide": false
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003cp\u003eWe can see in results that Doug is the most popular user in our Twitter graph,\u003cbr/\u003ewith five followers (in-links). All other users in that part of the graph follow him and\u003cbr/\u003ehe only follows one person back. In the real Twitter network, celebrities have high\u003cbr/\u003efollower counts but tend to follow few people. We could therefore consider Doug a\u003cbr/\u003ecelebrity!\u003c/p\u003e\n\u003c/div\u003e"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1580235813345_1966543197",
+      "id": "20200128-182333_618603597",
+      "dateCreated": "2020-01-28 18:23:33.345",
+      "dateStarted": "2020-01-28 18:23:38.449",
+      "dateFinished": "2020-01-28 18:23:38.477",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },

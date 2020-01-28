@@ -83,77 +83,9 @@
       "progressUpdateIntervalMs": 500
     },
     {
-      "text": "%pyspark\nfrom graphframes import GraphFrame\nfrom pyspark import SparkContext\n",
+      "text": "%md\n### Import graph",
       "user": "anonymous",
-      "dateUpdated": "2020-01-19 19:31:23.678",
-      "config": {
-        "editorSetting": {
-          "language": "python",
-          "editOnDblClick": false,
-          "completionKey": "TAB",
-          "completionSupport": true
-        },
-        "colWidth": 12.0,
-        "editorMode": "ace/mode/python",
-        "fontSize": 9.0,
-        "results": {},
-        "enabled": true
-      },
-      "settings": {
-        "params": {},
-        "forms": {}
-      },
-      "results": {
-        "code": "SUCCESS",
-        "msg": []
-      },
-      "apps": [],
-      "jobName": "paragraph_1577897523612_1182628329",
-      "id": "20200101-112344_1237781185",
-      "dateCreated": "2020-01-01 16:52:03.612",
-      "dateStarted": "2020-01-19 19:31:23.721",
-      "dateFinished": "2020-01-19 19:31:23.738",
-      "status": "FINISHED",
-      "progressUpdateIntervalMs": 500
-    },
-    {
-      "text": "%pyspark\ng \u003d create_social_graph()",
-      "user": "anonymous",
-      "dateUpdated": "2020-01-19 19:31:31.301",
-      "config": {
-        "editorSetting": {
-          "language": "python",
-          "editOnDblClick": false,
-          "completionKey": "TAB",
-          "completionSupport": true
-        },
-        "colWidth": 12.0,
-        "editorMode": "ace/mode/python",
-        "fontSize": 9.0,
-        "results": {},
-        "enabled": true
-      },
-      "settings": {
-        "params": {},
-        "forms": {}
-      },
-      "results": {
-        "code": "SUCCESS",
-        "msg": []
-      },
-      "apps": [],
-      "jobName": "paragraph_1577897523613_1971813985",
-      "id": "20200101-112422_199127971",
-      "dateCreated": "2020-01-01 16:52:03.613",
-      "dateStarted": "2020-01-19 19:31:31.361",
-      "dateFinished": "2020-01-19 19:31:31.872",
-      "status": "FINISHED",
-      "progressUpdateIntervalMs": 500
-    },
-    {
-      "text": "%md\n### PageRank with a fixed number of iterations\n",
-      "user": "anonymous",
-      "dateUpdated": "2020-01-20 18:39:37.413",
+      "dateUpdated": "2020-01-28 18:25:07.755",
       "config": {
         "colWidth": 12.0,
         "fontSize": 9.0,
@@ -178,7 +110,95 @@
         "msg": [
           {
             "type": "HTML",
-            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003ch3\u003ePageRank with a fixed number of iterations\u003c/h3\u003e\n\u003c/div\u003e"
+            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003ch3\u003eImport graph\u003c/h3\u003e\n\u003c/div\u003e"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1580235902549_2135152291",
+      "id": "20200128-182502_342929825",
+      "dateCreated": "2020-01-28 18:25:02.549",
+      "dateStarted": "2020-01-28 18:25:07.775",
+      "dateFinished": "2020-01-28 18:25:07.804",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%pyspark\ng \u003d create_social_graph()",
+      "user": "anonymous",
+      "dateUpdated": "2020-01-28 18:29:34.804",
+      "config": {
+        "editorSetting": {
+          "language": "python",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "colWidth": 12.0,
+        "editorMode": "ace/mode/python",
+        "fontSize": 9.0,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": []
+      },
+      "runtimeInfos": {
+        "jobUrl": {
+          "propertyName": "jobUrl",
+          "label": "SPARK JOB",
+          "tooltip": "View in Spark web UI",
+          "group": "spark",
+          "values": [
+            "http://172.27.0.3:4040/jobs/job?id\u003d60",
+            "http://172.27.0.3:4040/jobs/job?id\u003d61"
+          ],
+          "interpreterSettingId": "spark"
+        }
+      },
+      "apps": [],
+      "jobName": "paragraph_1577897523613_1971813985",
+      "id": "20200101-112422_199127971",
+      "dateCreated": "2020-01-01 16:52:03.613",
+      "dateStarted": "2020-01-28 18:29:34.857",
+      "dateFinished": "2020-01-28 18:29:35.340",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%md\n### PageRank with a fixed number of iterations\n\nLet’s see an example of the fixed iterations approach.\nNotice in Spark that the damping factor is more intuitively called\nthe reset probability, with the inverse value. In other words, reset\nProbability\u003d0.15 in this example is equivalent to dampingFac\ntor:0.85 in Neo4j.\n",
+      "user": "anonymous",
+      "dateUpdated": "2020-01-28 18:25:37.131",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "markdown",
+          "editOnDblClick": true,
+          "completionKey": "TAB",
+          "completionSupport": false
+        },
+        "editorMode": "ace/mode/markdown",
+        "editorHide": true,
+        "tableHide": false
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003ch3\u003ePageRank with a fixed number of iterations\u003c/h3\u003e\n\u003cp\u003eLet’s see an example of the fixed iterations approach.\u003cbr/\u003eNotice in Spark that the damping factor is more intuitively called\u003cbr/\u003ethe reset probability, with the inverse value. In other words, reset\u003cbr/\u003eProbability\u003d0.15 in this example is equivalent to dampingFac\u003cbr/\u003etor:0.85 in Neo4j.\u003c/p\u003e\n\u003c/div\u003e"
           }
         ]
       },
@@ -186,8 +206,8 @@
       "jobName": "paragraph_1579545463958_296960533",
       "id": "20200120-183743_288167189",
       "dateCreated": "2020-01-20 18:37:43.958",
-      "dateStarted": "2020-01-20 18:39:37.425",
-      "dateFinished": "2020-01-20 18:39:37.448",
+      "dateStarted": "2020-01-28 18:25:37.137",
+      "dateFinished": "2020-01-28 18:25:37.172",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
@@ -231,9 +251,9 @@
       "progressUpdateIntervalMs": 500
     },
     {
-      "text": "%md\n### PageRank until convergence\n",
+      "text": "%md\nAs we might expect, Doug has the highest PageRank because he is followed by all\nother users in his subgraph. Although Mark only has one follower, that follower is\nDoug, so Mark is also considered important in this graph. It’s not only the number of\nfollowers that is important, but also the importance of those followers.\n",
       "user": "anonymous",
-      "dateUpdated": "2020-01-20 18:39:51.500",
+      "dateUpdated": "2020-01-28 18:25:53.084",
       "config": {
         "colWidth": 12.0,
         "fontSize": 9.0,
@@ -258,7 +278,48 @@
         "msg": [
           {
             "type": "HTML",
-            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003ch3\u003ePageRank until convergence\u003c/h3\u003e\n\u003c/div\u003e"
+            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003cp\u003eAs we might expect, Doug has the highest PageRank because he is followed by all\u003cbr/\u003eother users in his subgraph. Although Mark only has one follower, that follower is\u003cbr/\u003eDoug, so Mark is also considered important in this graph. It’s not only the number of\u003cbr/\u003efollowers that is important, but also the importance of those followers.\u003c/p\u003e\n\u003c/div\u003e"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1580235949387_491995856",
+      "id": "20200128-182549_1359511701",
+      "dateCreated": "2020-01-28 18:25:49.387",
+      "dateStarted": "2020-01-28 18:25:53.083",
+      "dateFinished": "2020-01-28 18:25:53.109",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%md\n### PageRank until convergence\nAnd now let’s try the convergence implementation that will run PageRank until it\ncloses in on a solution within the set tolerance:",
+      "user": "anonymous",
+      "dateUpdated": "2020-01-28 18:26:04.120",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "markdown",
+          "editOnDblClick": true,
+          "completionKey": "TAB",
+          "completionSupport": false
+        },
+        "editorMode": "ace/mode/markdown",
+        "editorHide": true,
+        "tableHide": false
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003ch3\u003ePageRank until convergence\u003c/h3\u003e\n\u003cp\u003eAnd now let’s try the convergence implementation that will run PageRank until it\u003cbr/\u003ecloses in on a solution within the set tolerance:\u003c/p\u003e\n\u003c/div\u003e"
           }
         ]
       },
@@ -266,8 +327,8 @@
       "jobName": "paragraph_1579545505962_1135383306",
       "id": "20200120-183825_1043158984",
       "dateCreated": "2020-01-20 18:38:25.962",
-      "dateStarted": "2020-01-20 18:39:51.502",
-      "dateFinished": "2020-01-20 18:39:51.524",
+      "dateStarted": "2020-01-28 18:26:04.125",
+      "dateFinished": "2020-01-28 18:26:04.142",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
@@ -311,9 +372,9 @@
       "progressUpdateIntervalMs": 500
     },
     {
-      "text": "%md\n### Personalized PageRank\n",
+      "text": "%md\nThe PageRank scores for each person are slightly different than with the fixed number\nof iterations variant, but as we would expect, their order remains the same.\n",
       "user": "anonymous",
-      "dateUpdated": "2020-01-20 18:40:25.396",
+      "dateUpdated": "2020-01-28 18:26:20.292",
       "config": {
         "colWidth": 12.0,
         "fontSize": 9.0,
@@ -338,7 +399,48 @@
         "msg": [
           {
             "type": "HTML",
-            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003ch3\u003ePersonalized PageRank\u003c/h3\u003e\n\u003c/div\u003e"
+            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003cp\u003eThe PageRank scores for each person are slightly different than with the fixed number\u003cbr/\u003eof iterations variant, but as we would expect, their order remains the same.\u003c/p\u003e\n\u003c/div\u003e"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1580235976152_-1761020782",
+      "id": "20200128-182616_713903954",
+      "dateCreated": "2020-01-28 18:26:16.152",
+      "dateStarted": "2020-01-28 18:26:20.292",
+      "dateFinished": "2020-01-28 18:26:20.299",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%md\n### Personalized PageRank\nWe can calculate the personalized PageRank score for a given node by passing in the\nsourceId parameter. The following code calculates the PPR for Doug",
+      "user": "anonymous",
+      "dateUpdated": "2020-01-28 18:28:47.703",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "markdown",
+          "editOnDblClick": true,
+          "completionKey": "TAB",
+          "completionSupport": false
+        },
+        "editorMode": "ace/mode/markdown",
+        "editorHide": true,
+        "tableHide": false
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003ch3\u003ePersonalized PageRank\u003c/h3\u003e\n\u003cp\u003eWe can calculate the personalized PageRank score for a given node by passing in the\u003cbr/\u003esourceId parameter. The following code calculates the PPR for Doug\u003c/p\u003e\n\u003c/div\u003e"
           }
         ]
       },
@@ -346,15 +448,15 @@
       "jobName": "paragraph_1579545614420_-127746281",
       "id": "20200120-184014_824329656",
       "dateCreated": "2020-01-20 18:40:14.420",
-      "dateStarted": "2020-01-20 18:40:25.405",
-      "dateFinished": "2020-01-20 18:40:25.446",
+      "dateStarted": "2020-01-28 18:28:47.705",
+      "dateFinished": "2020-01-28 18:28:47.722",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
     {
       "text": "%pyspark\nme \u003d \"Doug\"\nresults \u003d g.pageRank(resetProbability\u003d0.15, maxIter\u003d20, sourceId\u003dme)\npeople_to_follow \u003d results.vertices.sort(\"pagerank\", ascending\u003dFalse)\n\nalready_follows \u003d list(g.edges.filter(\"src \u003d \u0027{me}\u0027\").toPandas()[\"dst\"])\npeople_to_exclude \u003d already_follows + [me]\n\npeople_to_follow[~people_to_follow.id.isin(people_to_exclude)].show()\n",
       "user": "anonymous",
-      "dateUpdated": "2020-01-19 19:35:35.105",
+      "dateUpdated": "2020-01-28 18:29:43.657",
       "config": {
         "colWidth": 12.0,
         "fontSize": 9.0,
@@ -377,16 +479,61 @@
         "msg": [
           {
             "type": "TEXT",
-            "data": "+-------+-------------------+\n|     id|           pagerank|\n+-------+-------------------+\n|   Mark| 0.3224818041454851|\n|  Alice| 0.1650183746272782|\n|Michael|  0.048842467744892|\n|Bridget|  0.048842467744892|\n|Charles|0.03497796119878669|\n|  James|                0.0|\n|    Amy|                0.0|\n|  David|                0.0|\n+-------+-------------------+\n\n"
+            "data": "+-------+--------------------+\n|     id|            pagerank|\n+-------+--------------------+\n|   Mark|  0.3224818041454851|\n|  Alice|  0.1650183746272782|\n|Michael|0.048842467744891996|\n|Bridget|0.048842467744891996|\n|Charles| 0.03497796119878669|\n|  David|                 0.0|\n|    Amy|                 0.0|\n|  James|                 0.0|\n+-------+--------------------+\n\n"
           }
         ]
+      },
+      "runtimeInfos": {
+        "jobUrl": {
+          "propertyName": "jobUrl",
+          "label": "SPARK JOB",
+          "tooltip": "View in Spark web UI",
+          "group": "spark",
+          "values": [
+            "http://172.27.0.3:4040/jobs/job?id\u003d62",
+            "http://172.27.0.3:4040/jobs/job?id\u003d63",
+            "http://172.27.0.3:4040/jobs/job?id\u003d64",
+            "http://172.27.0.3:4040/jobs/job?id\u003d65",
+            "http://172.27.0.3:4040/jobs/job?id\u003d66",
+            "http://172.27.0.3:4040/jobs/job?id\u003d67",
+            "http://172.27.0.3:4040/jobs/job?id\u003d68",
+            "http://172.27.0.3:4040/jobs/job?id\u003d69",
+            "http://172.27.0.3:4040/jobs/job?id\u003d70",
+            "http://172.27.0.3:4040/jobs/job?id\u003d71",
+            "http://172.27.0.3:4040/jobs/job?id\u003d72",
+            "http://172.27.0.3:4040/jobs/job?id\u003d73",
+            "http://172.27.0.3:4040/jobs/job?id\u003d74",
+            "http://172.27.0.3:4040/jobs/job?id\u003d75",
+            "http://172.27.0.3:4040/jobs/job?id\u003d76",
+            "http://172.27.0.3:4040/jobs/job?id\u003d77",
+            "http://172.27.0.3:4040/jobs/job?id\u003d78",
+            "http://172.27.0.3:4040/jobs/job?id\u003d79",
+            "http://172.27.0.3:4040/jobs/job?id\u003d80",
+            "http://172.27.0.3:4040/jobs/job?id\u003d81",
+            "http://172.27.0.3:4040/jobs/job?id\u003d82",
+            "http://172.27.0.3:4040/jobs/job?id\u003d83",
+            "http://172.27.0.3:4040/jobs/job?id\u003d84",
+            "http://172.27.0.3:4040/jobs/job?id\u003d85",
+            "http://172.27.0.3:4040/jobs/job?id\u003d86",
+            "http://172.27.0.3:4040/jobs/job?id\u003d87",
+            "http://172.27.0.3:4040/jobs/job?id\u003d88",
+            "http://172.27.0.3:4040/jobs/job?id\u003d89",
+            "http://172.27.0.3:4040/jobs/job?id\u003d90",
+            "http://172.27.0.3:4040/jobs/job?id\u003d91",
+            "http://172.27.0.3:4040/jobs/job?id\u003d92",
+            "http://172.27.0.3:4040/jobs/job?id\u003d93",
+            "http://172.27.0.3:4040/jobs/job?id\u003d94",
+            "http://172.27.0.3:4040/jobs/job?id\u003d95"
+          ],
+          "interpreterSettingId": "spark"
+        }
       },
       "apps": [],
       "jobName": "paragraph_1577897523615_1193860366",
       "id": "20200101-153518_1153514066",
       "dateCreated": "2020-01-01 16:52:03.615",
-      "dateStarted": "2020-01-19 19:35:41.683",
-      "dateFinished": "2020-01-19 19:45:22.754",
+      "dateStarted": "2020-01-28 18:29:43.681",
+      "dateFinished": "2020-01-28 18:29:52.618",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },

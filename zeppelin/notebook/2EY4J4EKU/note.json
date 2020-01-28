@@ -117,6 +117,47 @@
       "progressUpdateIntervalMs": 500
     },
     {
+      "text": "%md\n\n### Import graph\n",
+      "user": "anonymous",
+      "dateUpdated": "2020-01-28 18:20:47.036",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "markdown",
+          "editOnDblClick": true,
+          "completionKey": "TAB",
+          "completionSupport": false
+        },
+        "editorMode": "ace/mode/markdown",
+        "editorHide": true,
+        "tableHide": false
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003ch3\u003eImport graph\u003c/h3\u003e\n\u003c/div\u003e"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1580235635720_1932254607",
+      "id": "20200128-182035_1193701552",
+      "dateCreated": "2020-01-28 18:20:35.720",
+      "dateStarted": "2020-01-28 18:20:47.037",
+      "dateFinished": "2020-01-28 18:20:47.069",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
       "text": "%pyspark\ng \u003d create_social_graph()",
       "user": "anonymous",
       "dateUpdated": "2020-01-19 19:30:27.661",
@@ -141,25 +182,53 @@
         "code": "SUCCESS",
         "msg": []
       },
-      "runtimeInfos": {
-        "jobUrl": {
-          "propertyName": "jobUrl",
-          "label": "SPARK JOB",
-          "tooltip": "View in Spark web UI",
-          "group": "spark",
-          "values": [
-            "http://172.19.0.3:4040/jobs/job?id\u003d0",
-            "http://172.19.0.3:4040/jobs/job?id\u003d1"
-          ],
-          "interpreterSettingId": "spark"
-        }
-      },
       "apps": [],
       "jobName": "paragraph_1577904754442_-1314763455",
       "id": "20200101-112422_199127971",
       "dateCreated": "2020-01-01 18:52:34.442",
       "dateStarted": "2020-01-19 19:30:27.698",
       "dateFinished": "2020-01-19 19:30:31.043",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%md\n\n### Stream results\n\nWe first calculate the total, in, and out degrees. Then we join those DataFrames\ntogether, using a left join to retain any nodes that don’t have incoming or outgoing\nrelationships. If nodes don’t have relationships we set that value to 0 using the fillna\nfunction.\n",
+      "user": "anonymous",
+      "dateUpdated": "2020-01-28 18:21:06.659",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "markdown",
+          "editOnDblClick": true,
+          "completionKey": "TAB",
+          "completionSupport": false
+        },
+        "editorMode": "ace/mode/markdown",
+        "editorHide": true,
+        "tableHide": false
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003ch3\u003eStream results\u003c/h3\u003e\n\u003cp\u003eWe first calculate the total, in, and out degrees. Then we join those DataFrames\u003cbr/\u003etogether, using a left join to retain any nodes that don’t have incoming or outgoing\u003cbr/\u003erelationships. If nodes don’t have relationships we set that value to 0 using the fillna\u003cbr/\u003efunction.\u003c/p\u003e\n\u003c/div\u003e"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1580235650030_-758976303",
+      "id": "20200128-182050_279409069",
+      "dateCreated": "2020-01-28 18:20:50.030",
+      "dateStarted": "2020-01-28 18:21:06.661",
+      "dateFinished": "2020-01-28 18:21:06.688",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
@@ -193,20 +262,6 @@
           }
         ]
       },
-      "runtimeInfos": {
-        "jobUrl": {
-          "propertyName": "jobUrl",
-          "label": "SPARK JOB",
-          "tooltip": "View in Spark web UI",
-          "group": "spark",
-          "values": [
-            "http://172.19.0.3:4040/jobs/job?id\u003d2",
-            "http://172.19.0.3:4040/jobs/job?id\u003d3",
-            "http://172.19.0.3:4040/jobs/job?id\u003d4"
-          ],
-          "interpreterSettingId": "spark"
-        }
-      },
       "apps": [],
       "jobName": "paragraph_1577904754443_-872166498",
       "id": "20200101-112443_1061570403",
@@ -217,20 +272,60 @@
       "progressUpdateIntervalMs": 500
     },
     {
-      "text": "%pyspark\n",
+      "text": "%md\n\nWe can see in results that Doug is the most popular user in our Twitter graph,\nwith five followers (in-links). All other users in that part of the graph follow him and\nhe only follows one person back. In the real Twitter network, celebrities have high\nfollower counts but tend to follow few people. We could therefore consider Doug a\ncelebrity!\n",
       "user": "anonymous",
-      "dateUpdated": "2020-01-01 18:52:34.447",
+      "dateUpdated": "2020-01-28 18:21:31.513",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "markdown",
+          "editOnDblClick": true,
+          "completionKey": "TAB",
+          "completionSupport": false
+        },
+        "editorMode": "ace/mode/markdown",
+        "editorHide": true,
+        "tableHide": false
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003cp\u003eWe can see in results that Doug is the most popular user in our Twitter graph,\u003cbr/\u003ewith five followers (in-links). All other users in that part of the graph follow him and\u003cbr/\u003ehe only follows one person back. In the real Twitter network, celebrities have high\u003cbr/\u003efollower counts but tend to follow few people. We could therefore consider Doug a\u003cbr/\u003ecelebrity!\u003c/p\u003e\n\u003c/div\u003e"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1577904754447_-37947289",
+      "id": "20200101-165346_2145706540",
+      "dateCreated": "2020-01-01 18:52:34.447",
+      "dateStarted": "2020-01-28 18:21:31.528",
+      "dateFinished": "2020-01-28 18:21:31.560",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%md\n",
+      "user": "anonymous",
+      "dateUpdated": "2020-01-28 18:21:31.493",
       "config": {},
       "settings": {
         "params": {},
         "forms": {}
       },
       "apps": [],
-      "jobName": "paragraph_1577904754447_-37947289",
-      "id": "20200101-165346_2145706540",
-      "dateCreated": "2020-01-01 18:52:34.447",
+      "jobName": "paragraph_1580235691491_1060052250",
+      "id": "20200128-182131_123050009",
+      "dateCreated": "2020-01-28 18:21:31.491",
       "status": "READY",
-      "errorMessage": "",
       "progressUpdateIntervalMs": 500
     }
   ],

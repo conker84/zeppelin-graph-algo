@@ -1,0 +1,157 @@
+{
+  "paragraphs": [
+    {
+      "text": "%md\n# Minimum Spanning Tree\n\nThe Minimum (Weight) Spanning Tree algorithm starts from a given node and finds\nall its reachable nodes and the set of relationships that connect the nodes together\nwith the minimum possible weight. It traverses to the next unvisited node with the\nlowest weight from any visited node, avoiding cycles.\n",
+      "user": "anonymous",
+      "dateUpdated": "2020-01-28 16:57:21.719",
+      "config": {
+        "tableHide": false,
+        "editorSetting": {
+          "language": "markdown",
+          "editOnDblClick": true,
+          "completionKey": "TAB",
+          "completionSupport": false
+        },
+        "colWidth": 12.0,
+        "editorMode": "ace/mode/markdown",
+        "fontSize": 9.0,
+        "editorHide": true,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003ch1\u003eMinimum Spanning Tree\u003c/h1\u003e\n\u003cp\u003eThe Minimum (Weight) Spanning Tree algorithm starts from a given node and finds\u003cbr/\u003eall its reachable nodes and the set of relationships that connect the nodes together\u003cbr/\u003ewith the minimum possible weight. It traverses to the next unvisited node with the\u003cbr/\u003elowest weight from any visited node, avoiding cycles.\u003c/p\u003e\n\u003c/div\u003e"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1580230612537_581981066",
+      "id": "20200128-082446_626593832",
+      "dateCreated": "2020-01-28 16:56:52.537",
+      "dateStarted": "2020-01-28 16:57:21.729",
+      "dateFinished": "2020-01-28 16:57:21.754",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%md\n\n# When you can use it?\n\nUse Minimum Spanning Tree when you need the best route to visit all nodes. Because\nthe route is chosen based on the cost of each next step, it’s useful when you must visit\nall nodes in a single walk.\n\nYou can use this algorithm for optimizing paths for connected systems like water\npipes and circuit design. It’s also employed to approximate some problems with\nunknown compute times, such as the Traveling Salesman Problem and certain types\nof rounding problems.\n\nExample use cases include:\n\n- Minimizing the travel cost of exploring a country\n- Visualizing correlations between currency returns\n- Tracing the history of infection transmission in an outbreak\n",
+      "user": "anonymous",
+      "dateUpdated": "2020-01-28 16:58:22.588",
+      "config": {
+        "tableHide": false,
+        "editorSetting": {
+          "language": "markdown",
+          "editOnDblClick": true,
+          "completionKey": "TAB",
+          "completionSupport": false
+        },
+        "colWidth": 12.0,
+        "editorMode": "ace/mode/markdown",
+        "fontSize": 9.0,
+        "editorHide": true,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003ch1\u003eWhen you can use it?\u003c/h1\u003e\n\u003cp\u003eUse Minimum Spanning Tree when you need the best route to visit all nodes. Because\u003cbr/\u003ethe route is chosen based on the cost of each next step, it’s useful when you must visit\u003cbr/\u003eall nodes in a single walk.\u003c/p\u003e\n\u003cp\u003eYou can use this algorithm for optimizing paths for connected systems like water\u003cbr/\u003epipes and circuit design. It’s also employed to approximate some problems with\u003cbr/\u003eunknown compute times, such as the Traveling Salesman Problem and certain types\u003cbr/\u003eof rounding problems.\u003c/p\u003e\n\u003cp\u003eExample use cases include:\u003c/p\u003e\n\u003cul\u003e\n  \u003cli\u003eMinimizing the travel cost of exploring a country\u003c/li\u003e\n  \u003cli\u003eVisualizing correlations between currency returns\u003c/li\u003e\n  \u003cli\u003eTracing the history of infection transmission in an outbreak\u003c/li\u003e\n\u003c/ul\u003e\n\u003c/div\u003e"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1580230612542_1103742739",
+      "id": "20200128-082518_341828040",
+      "dateCreated": "2020-01-28 16:56:52.542",
+      "dateStarted": "2020-01-28 16:58:22.590",
+      "dateFinished": "2020-01-28 16:58:22.650",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%md\n\nYou can find the algorithm implemented in:\n\n* [Neo4j](/#/notebook/2EYQ66NNH)",
+      "user": "anonymous",
+      "dateUpdated": "2020-01-28 16:58:39.850",
+      "config": {
+        "tableHide": false,
+        "editorSetting": {
+          "language": "markdown",
+          "editOnDblClick": true,
+          "completionKey": "TAB",
+          "completionSupport": false
+        },
+        "colWidth": 12.0,
+        "editorMode": "ace/mode/markdown",
+        "fontSize": 9.0,
+        "editorHide": true,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003cp\u003eYou can find the algorithm implemented in:\u003c/p\u003e\n\u003cul\u003e\n  \u003cli\u003e\u003ca href\u003d\"/#/notebook/2EYQ66NNH\"\u003eNeo4j\u003c/a\u003e\u003c/li\u003e\n\u003c/ul\u003e\n\u003c/div\u003e"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1580230612544_-686801911",
+      "id": "20200128-082521_853675343",
+      "dateCreated": "2020-01-28 16:56:52.544",
+      "dateStarted": "2020-01-28 16:58:39.853",
+      "dateFinished": "2020-01-28 16:58:39.930",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%md\n",
+      "user": "anonymous",
+      "dateUpdated": "2020-01-28 16:56:52.553",
+      "config": {},
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "jobName": "paragraph_1580230612552_-746162797",
+      "id": "20200128-083003_347629143",
+      "dateCreated": "2020-01-28 16:56:52.552",
+      "status": "READY",
+      "errorMessage": "",
+      "progressUpdateIntervalMs": 500
+    }
+  ],
+  "name": "Path finding/Spanning tree/Spanning tree",
+  "id": "2EYWKHS4G",
+  "noteParams": {},
+  "noteForms": {},
+  "angularObjects": {
+    "md:shared_process": [],
+    "neo4j:shared_process": [],
+    "spark:shared_process": []
+  },
+  "config": {
+    "isZeppelinNotebookCronEnable": false
+  },
+  "info": {}
+}

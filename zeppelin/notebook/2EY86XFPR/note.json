@@ -1,0 +1,157 @@
+{
+  "paragraphs": [
+    {
+      "text": "%md\n# All Pairs Shortest Path\n\nThe All Pairs Shortest Path (APSP) algorithm calculates the shortest (weighted) path\nbetween all pairs of nodes. It’s more efficient than running the Single Source Shortest\nPath algorithm for every pair of nodes in the graph.\n",
+      "user": "anonymous",
+      "dateUpdated": "2020-01-28 17:20:01.500",
+      "config": {
+        "tableHide": false,
+        "editorSetting": {
+          "language": "markdown",
+          "editOnDblClick": true,
+          "completionKey": "TAB",
+          "completionSupport": false
+        },
+        "colWidth": 12.0,
+        "editorMode": "ace/mode/markdown",
+        "fontSize": 9.0,
+        "editorHide": true,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003ch1\u003eAll Pairs Shortest Path\u003c/h1\u003e\n\u003cp\u003eThe All Pairs Shortest Path (APSP) algorithm calculates the shortest (weighted) path\u003cbr/\u003ebetween all pairs of nodes. It’s more efficient than running the Single Source Shortest\u003cbr/\u003ePath algorithm for every pair of nodes in the graph.\u003c/p\u003e\n\u003c/div\u003e"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1580229815507_150058759",
+      "id": "20200128-082446_626593832",
+      "dateCreated": "2020-01-28 16:43:35.507",
+      "dateStarted": "2020-01-28 17:20:01.505",
+      "dateFinished": "2020-01-28 17:20:01.526",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%md\n\n# When you can use it?\n\nAll Pairs Shortest Path is commonly used for understanding alternate routing when\nthe shortest route is blocked or becomes suboptimal. For example, this algorithm is\nused in logical route planning to ensure the best multiple paths for diversity routing.\nUse All Pairs Shortest Path when you need to consider all possible routes between all\nor most of your nodes.\n\nExample use cases include:\n\n- Optimizing the location of urban facilities and the distribution of goods\n- Finding a network with maximum bandwidth and minimal latency as part of a data center design algorithm\n",
+      "user": "anonymous",
+      "dateUpdated": "2020-01-28 16:45:01.918",
+      "config": {
+        "tableHide": false,
+        "editorSetting": {
+          "language": "markdown",
+          "editOnDblClick": true,
+          "completionKey": "TAB",
+          "completionSupport": false
+        },
+        "colWidth": 12.0,
+        "editorMode": "ace/mode/markdown",
+        "fontSize": 9.0,
+        "editorHide": true,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003ch1\u003eWhen you can use it?\u003c/h1\u003e\n\u003cp\u003eAll Pairs Shortest Path is commonly used for understanding alternate routing when\u003cbr/\u003ethe shortest route is blocked or becomes suboptimal. For example, this algorithm is\u003cbr/\u003eused in logical route planning to ensure the best multiple paths for diversity routing.\u003cbr/\u003eUse All Pairs Shortest Path when you need to consider all possible routes between all\u003cbr/\u003eor most of your nodes.\u003c/p\u003e\n\u003cp\u003eExample use cases include:\u003c/p\u003e\n\u003cul\u003e\n  \u003cli\u003eOptimizing the location of urban facilities and the distribution of goods\u003c/li\u003e\n  \u003cli\u003eFinding a network with maximum bandwidth and minimal latency as part of a data center design algorithm\u003c/li\u003e\n\u003c/ul\u003e\n\u003c/div\u003e"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1580229815510_1908752707",
+      "id": "20200128-082518_341828040",
+      "dateCreated": "2020-01-28 16:43:35.510",
+      "dateStarted": "2020-01-28 16:45:01.919",
+      "dateFinished": "2020-01-28 16:45:01.959",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%md\n\nYou can find the algorithm implemented in:\n\n* [Neo4j](/#/notebook/2EX6JWPAG)\n* [Spark](/#/notebook/2EYQBRAT1)",
+      "user": "anonymous",
+      "dateUpdated": "2020-01-28 16:46:15.524",
+      "config": {
+        "tableHide": false,
+        "editorSetting": {
+          "language": "markdown",
+          "editOnDblClick": true,
+          "completionKey": "TAB",
+          "completionSupport": false
+        },
+        "colWidth": 12.0,
+        "editorMode": "ace/mode/markdown",
+        "fontSize": 9.0,
+        "editorHide": true,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003cp\u003eYou can find the algorithm implemented in:\u003c/p\u003e\n\u003cul\u003e\n  \u003cli\u003e\u003ca href\u003d\"/#/notebook/2EX6JWPAG\"\u003eNeo4j\u003c/a\u003e\u003c/li\u003e\n  \u003cli\u003e\u003ca href\u003d\"/#/notebook/2EYQBRAT1\"\u003eSpark\u003c/a\u003e\u003c/li\u003e\n\u003c/ul\u003e\n\u003c/div\u003e"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1580229815511_172053583",
+      "id": "20200128-082521_853675343",
+      "dateCreated": "2020-01-28 16:43:35.511",
+      "dateStarted": "2020-01-28 16:46:15.533",
+      "dateFinished": "2020-01-28 16:46:15.551",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%md\n",
+      "user": "anonymous",
+      "dateUpdated": "2020-01-28 16:43:35.513",
+      "config": {},
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "jobName": "paragraph_1580229815513_1768187962",
+      "id": "20200128-083003_347629143",
+      "dateCreated": "2020-01-28 16:43:35.513",
+      "status": "READY",
+      "errorMessage": "",
+      "progressUpdateIntervalMs": 500
+    }
+  ],
+  "name": "Path finding/All shortest paths/ All shortest paths",
+  "id": "2EY86XFPR",
+  "noteParams": {},
+  "noteForms": {},
+  "angularObjects": {
+    "md:shared_process": [],
+    "neo4j:shared_process": [],
+    "spark:shared_process": []
+  },
+  "config": {
+    "isZeppelinNotebookCronEnable": false
+  },
+  "info": {}
+}

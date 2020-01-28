@@ -177,9 +177,9 @@
       "progressUpdateIntervalMs": 500
     },
     {
-      "text": "%md\n### Stream un-weighted all-shortest paths algorithm",
+      "text": "%md\n### Stream un-weighted all-shortest paths algorithm\n\nNeo4j has a parallel implementation of the All Pairs Shortest Path algorithm, which\nreturns the distance between every pair of nodes.\nThe first parameter to this procedure is the property to use to work out the shortest\nweighted path. If we set this to null then the algorithm will calculate the unweighted\nshortest paths between all pairs of nodes.",
       "user": "anonymous",
-      "dateUpdated": "2020-01-19 20:17:30.323",
+      "dateUpdated": "2020-01-28 17:40:27.707",
       "config": {
         "colWidth": 12.0,
         "fontSize": 9.0,
@@ -203,7 +203,7 @@
         "msg": [
           {
             "type": "HTML",
-            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003ch3\u003eStream un-weighted all-shortest paths algorithm\u003c/h3\u003e\n\u003c/div\u003e"
+            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003ch3\u003eStream un-weighted all-shortest paths algorithm\u003c/h3\u003e\n\u003cp\u003eNeo4j has a parallel implementation of the All Pairs Shortest Path algorithm, which\u003cbr/\u003ereturns the distance between every pair of nodes.\u003cbr/\u003eThe first parameter to this procedure is the property to use to work out the shortest\u003cbr/\u003eweighted path. If we set this to null then the algorithm will calculate the unweighted\u003cbr/\u003eshortest paths between all pairs of nodes.\u003c/p\u003e\n\u003c/div\u003e"
           }
         ]
       },
@@ -211,8 +211,8 @@
       "jobName": "paragraph_1579465033174_-1876850110",
       "id": "20200119-201713_1980837387",
       "dateCreated": "2020-01-19 20:17:13.174",
-      "dateStarted": "2020-01-19 20:17:30.323",
-      "dateFinished": "2020-01-19 20:17:32.102",
+      "dateStarted": "2020-01-28 17:40:27.716",
+      "dateFinished": "2020-01-28 17:40:27.731",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
@@ -283,9 +283,9 @@
       "progressUpdateIntervalMs": 500
     },
     {
-      "text": "%md\n### Stream weighted all-shortest paths algorithm",
+      "text": "%md\nThis algorithm returns the shortest path between every pair of nodes twice, once\nwith each of the nodes as the source node. This would be helpful if you were evaluat‐\ning a directed graph of one-way streets. However, we don’t need to see each path\ntwice, so we filter the results to only keep one of them by using the sourceNodeId \u003c targetNodeId predicate.",
       "user": "anonymous",
-      "dateUpdated": "2020-01-19 20:17:57.881",
+      "dateUpdated": "2020-01-28 17:42:04.250",
       "config": {
         "colWidth": 12.0,
         "fontSize": 9.0,
@@ -309,7 +309,47 @@
         "msg": [
           {
             "type": "HTML",
-            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003ch3\u003eStream weighted all-shortest paths algorithm\u003c/h3\u003e\n\u003c/div\u003e"
+            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003cp\u003eThis algorithm returns the shortest path between every pair of nodes twice, once\u003cbr/\u003ewith each of the nodes as the source node. This would be helpful if you were evaluat‐\u003cbr/\u003eing a directed graph of one-way streets. However, we don’t need to see each path\u003cbr/\u003etwice, so we filter the results to only keep one of them by using the sourceNodeId \u0026lt; targetNodeId predicate.\u003c/p\u003e\n\u003c/div\u003e"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1580233188049_1417963161",
+      "id": "20200128-173948_1451221288",
+      "dateCreated": "2020-01-28 17:39:48.049",
+      "dateStarted": "2020-01-28 17:42:04.269",
+      "dateFinished": "2020-01-28 17:42:04.288",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%md\n### Stream weighted all-shortest paths algorithm\n\nIf we want to calculate the shortest weighted paths, rather than passing in null as the\nfirst parameter, we can pass in the property name that contains the cost to be used in\nthe shortest path calculation. This property will then be evaluated to work out the\nshortest weighted path between each pair of nodes.",
+      "user": "anonymous",
+      "dateUpdated": "2020-01-28 17:42:27.383",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "editOnDblClick": true,
+          "language": "markdown",
+          "completionSupport": false
+        },
+        "editorMode": "ace/mode/markdown",
+        "editorHide": true,
+        "tableHide": false
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003ch3\u003eStream weighted all-shortest paths algorithm\u003c/h3\u003e\n\u003cp\u003eIf we want to calculate the shortest weighted paths, rather than passing in null as the\u003cbr/\u003efirst parameter, we can pass in the property name that contains the cost to be used in\u003cbr/\u003ethe shortest path calculation. This property will then be evaluated to work out the\u003cbr/\u003eshortest weighted path between each pair of nodes.\u003c/p\u003e\n\u003c/div\u003e"
           }
         ]
       },
@@ -317,8 +357,8 @@
       "jobName": "paragraph_1579465061765_1029524433",
       "id": "20200119-201741_38280712",
       "dateCreated": "2020-01-19 20:17:41.765",
-      "dateStarted": "2020-01-19 20:17:57.883",
-      "dateFinished": "2020-01-19 20:17:57.906",
+      "dateStarted": "2020-01-28 17:42:27.406",
+      "dateFinished": "2020-01-28 17:42:27.455",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
@@ -389,16 +429,58 @@
       "progressUpdateIntervalMs": 500
     },
     {
+      "text": "%md\n\nNow we’re seeing the 10 pairs of locations furthest from each other in terms of the\ntotal distance between them. Notice that Doncaster shows up frequently along with\nseveral cities in the Netherlands. It looks like it would be a long drive if we wanted to\ntake a road trip between those areas.",
       "user": "anonymous",
+      "dateUpdated": "2020-01-28 17:42:49.983",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "editOnDblClick": true,
+          "language": "markdown",
+          "completionSupport": false
+        },
+        "editorMode": "ace/mode/markdown",
+        "editorHide": true,
+        "tableHide": false
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003cp\u003eNow we’re seeing the 10 pairs of locations furthest from each other in terms of the\u003cbr/\u003etotal distance between them. Notice that Doncaster shows up frequently along with\u003cbr/\u003eseveral cities in the Netherlands. It looks like it would be a long drive if we wanted to\u003cbr/\u003etake a road trip between those areas.\u003c/p\u003e\n\u003c/div\u003e"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1577905228454_292642731",
+      "id": "20200101-190028_1585661323",
+      "dateCreated": "2020-01-01 19:00:28.454",
+      "dateStarted": "2020-01-28 17:42:49.983",
+      "dateFinished": "2020-01-28 17:42:50.032",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%md\n",
+      "user": "anonymous",
+      "dateUpdated": "2020-01-28 17:42:49.951",
       "config": {},
       "settings": {
         "params": {},
         "forms": {}
       },
       "apps": [],
-      "jobName": "paragraph_1577905228454_292642731",
-      "id": "20200101-190028_1585661323",
-      "dateCreated": "2020-01-01 19:00:28.454",
+      "jobName": "paragraph_1580233369949_-45072121",
+      "id": "20200128-174249_1916262559",
+      "dateCreated": "2020-01-28 17:42:49.949",
       "status": "READY",
       "progressUpdateIntervalMs": 500
     }

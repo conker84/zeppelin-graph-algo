@@ -171,9 +171,9 @@
       "progressUpdateIntervalMs": 500
     },
     {
-      "text": "%md\n## Streaming PageRank centrality",
+      "text": "%md\n## Streaming PageRank centrality\n\nA call to the following procedure will calculate\nthe PageRank for each of the nodes in our graph:",
       "user": "anonymous",
-      "dateUpdated": "2020-01-02 17:09:26.632",
+      "dateUpdated": "2020-01-28 18:27:56.128",
       "config": {
         "tableHide": false,
         "editorSetting": {
@@ -198,7 +198,7 @@
         "msg": [
           {
             "type": "HTML",
-            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003ch2\u003eStreaming PageRank centrality\u003c/h2\u003e\n\u003c/div\u003e"
+            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003ch2\u003eStreaming PageRank centrality\u003c/h2\u003e\n\u003cp\u003eA call to the following procedure will calculate\u003cbr/\u003ethe PageRank for each of the nodes in our graph:\u003c/p\u003e\n\u003c/div\u003e"
           }
         ]
       },
@@ -206,8 +206,8 @@
       "jobName": "paragraph_1575718233536_-1291284381",
       "id": "20191207-112728_2069065216",
       "dateCreated": "2019-12-07 11:30:33.536",
-      "dateStarted": "2020-01-02 17:09:26.636",
-      "dateFinished": "2020-01-02 17:09:26.661",
+      "dateStarted": "2020-01-28 18:27:56.128",
+      "dateFinished": "2020-01-28 18:27:56.141",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
@@ -276,6 +276,46 @@
       "dateCreated": "2019-12-07 11:30:33.543",
       "dateStarted": "2019-12-07 11:30:50.822",
       "dateFinished": "2019-12-07 11:30:50.878",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%md\n\nDoug is the most influential user, and Mark follows\nclosely after as the only user that Doug follows.\n",
+      "user": "anonymous",
+      "dateUpdated": "2020-01-28 18:27:38.239",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "editOnDblClick": true,
+          "language": "markdown",
+          "completionSupport": false
+        },
+        "editorMode": "ace/mode/markdown",
+        "editorHide": true,
+        "tableHide": false
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003cp\u003eDoug is the most influential user, and Mark follows\u003cbr/\u003eclosely after as the only user that Doug follows.\u003c/p\u003e\n\u003c/div\u003e"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1580236033432_-739129132",
+      "id": "20200128-182713_2000076633",
+      "dateCreated": "2020-01-28 18:27:13.432",
+      "dateStarted": "2020-01-28 18:27:38.250",
+      "dateFinished": "2020-01-28 18:27:38.267",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },

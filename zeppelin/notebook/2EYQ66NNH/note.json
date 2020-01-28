@@ -177,9 +177,9 @@
       "progressUpdateIntervalMs": 500
     },
     {
-      "text": "%md\n\n### Write back minimum spanning tree algorithm results\n",
+      "text": "%md\n\n### Write back minimum spanning tree algorithm results\n\nLet’s see the Minimum Spanning Tree algorithm in action. The following query finds\na spanning tree starting from Amsterdam:",
       "user": "anonymous",
-      "dateUpdated": "2020-01-20 18:57:29.064",
+      "dateUpdated": "2020-01-28 17:55:29.843",
       "config": {
         "colWidth": 12.0,
         "fontSize": 9.0,
@@ -203,7 +203,7 @@
         "msg": [
           {
             "type": "HTML",
-            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003ch3\u003eWrite back minimum spanning tree algorithm results\u003c/h3\u003e\n\u003c/div\u003e"
+            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003ch3\u003eWrite back minimum spanning tree algorithm results\u003c/h3\u003e\n\u003cp\u003eLet’s see the Minimum Spanning Tree algorithm in action. The following query finds\u003cbr/\u003ea spanning tree starting from Amsterdam:\u003c/p\u003e\n\u003c/div\u003e"
           }
         ]
       },
@@ -211,8 +211,8 @@
       "jobName": "paragraph_1579465505039_-1666082605",
       "id": "20200119-202505_761721492",
       "dateCreated": "2020-01-19 20:25:05.039",
-      "dateStarted": "2020-01-20 18:57:29.064",
-      "dateFinished": "2020-01-20 18:57:29.077",
+      "dateStarted": "2020-01-28 17:55:29.848",
+      "dateFinished": "2020-01-28 17:55:29.865",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
@@ -284,9 +284,9 @@
       "progressUpdateIntervalMs": 500
     },
     {
-      "text": "%md\n\n### Return results",
+      "text": "%md\n\n### Return results\n\nThe above query stores its results in the graph. If we want to return the minimum weight\nspanning tree we can run the following query:",
       "user": "anonymous",
-      "dateUpdated": "2020-01-20 18:59:24.750",
+      "dateUpdated": "2020-01-28 17:55:55.646",
       "config": {
         "colWidth": 12.0,
         "fontSize": 9.0,
@@ -310,7 +310,7 @@
         "msg": [
           {
             "type": "HTML",
-            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003ch3\u003eReturn results\u003c/h3\u003e\n\u003c/div\u003e"
+            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003ch3\u003eReturn results\u003c/h3\u003e\n\u003cp\u003eThe above query stores its results in the graph. If we want to return the minimum weight\u003cbr/\u003espanning tree we can run the following query:\u003c/p\u003e\n\u003c/div\u003e"
           }
         ]
       },
@@ -318,8 +318,8 @@
       "jobName": "paragraph_1579546736283_512510968",
       "id": "20200120-185856_1085899446",
       "dateCreated": "2020-01-20 18:58:56.283",
-      "dateStarted": "2020-01-20 18:59:24.766",
-      "dateFinished": "2020-01-20 18:59:24.780",
+      "dateStarted": "2020-01-28 17:55:55.646",
+      "dateFinished": "2020-01-28 17:55:55.674",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },

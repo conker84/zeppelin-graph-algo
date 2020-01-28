@@ -170,9 +170,9 @@
       "progressUpdateIntervalMs": 500
     },
     {
-      "text": "%md\n## Stream Strongly connected components",
+      "text": "%md\n## Stream Strongly connected components\n\nExecute the following query to run the algorithm",
       "user": "anonymous",
-      "dateUpdated": "2019-12-07 11:53:28.328",
+      "dateUpdated": "2020-01-28 18:51:42.964",
       "config": {
         "tableHide": false,
         "editorSetting": {
@@ -196,7 +196,7 @@
         "msg": [
           {
             "type": "HTML",
-            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003ch2\u003eStream Strongly connected components\u003c/h2\u003e\n\u003c/div\u003e"
+            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003ch2\u003eStream Strongly connected components\u003c/h2\u003e\n\u003cp\u003eExecute the following query to run the algorithm\u003c/p\u003e\n\u003c/div\u003e"
           }
         ]
       },
@@ -204,8 +204,8 @@
       "jobName": "paragraph_1575719589871_-466958692",
       "id": "20191207-114641_1084520692",
       "dateCreated": "2019-12-07 11:53:09.871",
-      "dateStarted": "2019-12-07 11:53:28.354",
-      "dateFinished": "2019-12-07 11:53:28.394",
+      "dateStarted": "2020-01-28 18:51:42.969",
+      "dateFinished": "2020-01-28 18:51:42.990",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
@@ -271,6 +271,46 @@
       "dateCreated": "2019-12-07 11:53:09.875",
       "dateStarted": "2019-12-07 12:01:03.447",
       "dateFinished": "2019-12-07 12:01:03.620",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%md\n\nYou might notice that every library node is assigned to a unique component. This is\nthe partition or subgroup it belongs to, and as we (hopefully!) expected, every node is\nin its own partition. This means our software project has no circular dependencies\namongst these libraries.\n",
+      "user": "anonymous",
+      "dateUpdated": "2020-01-28 18:52:06.113",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "editOnDblClick": true,
+          "language": "markdown",
+          "completionSupport": false
+        },
+        "editorMode": "ace/mode/markdown",
+        "editorHide": true,
+        "tableHide": false
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003cp\u003eYou might notice that every library node is assigned to a unique component. This is\u003cbr/\u003ethe partition or subgroup it belongs to, and as we (hopefully!) expected, every node is\u003cbr/\u003ein its own partition. This means our software project has no circular dependencies\u003cbr/\u003eamongst these libraries.\u003c/p\u003e\n\u003c/div\u003e"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1580237520459_1227521740",
+      "id": "20200128-185200_1712880885",
+      "dateCreated": "2020-01-28 18:52:00.459",
+      "dateStarted": "2020-01-28 18:52:06.117",
+      "dateFinished": "2020-01-28 18:52:06.131",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
