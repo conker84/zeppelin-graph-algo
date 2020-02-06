@@ -3,7 +3,7 @@
     {
       "text": "%md\n\n###  Example taken from \"Graph Algorithms: Practical Examples in Apache Spark and Neo4j\" (https://neo4j.com/graph-algorithms-book/)\n\n### Please make sure that you have previously executed [this notebook](/#/notebook/2EZ4GSKAZ)",
       "user": "anonymous",
-      "dateUpdated": "2020-01-19 17:30:13.192",
+      "dateUpdated": "2020-02-06 22:10:47.484",
       "config": {
         "colWidth": 12.0,
         "fontSize": 9.0,
@@ -35,15 +35,15 @@
       "jobName": "paragraph_1577983763119_1711566129",
       "id": "20200102-164923_1369683845",
       "dateCreated": "2020-01-02 16:49:23.120",
-      "dateStarted": "2020-01-19 17:30:13.194",
-      "dateFinished": "2020-01-19 17:30:13.208",
+      "dateStarted": "2020-02-06 22:10:47.512",
+      "dateFinished": "2020-02-06 22:10:47.522",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
     {
-      "text": "%md\n# All pairs shortest paths algorithm\n\nhttps://neo4j.com/docs/graph-algorithms/current/labs-algorithms/all-pairs-shortest-path/",
+      "text": "%md\n# All pairs shortest paths algorithm",
       "user": "anonymous",
-      "dateUpdated": "2020-01-19 17:31:20.656",
+      "dateUpdated": "2020-02-06 22:10:47.611",
       "config": {
         "colWidth": 12.0,
         "fontSize": 9.0,
@@ -67,7 +67,7 @@
         "msg": [
           {
             "type": "HTML",
-            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003ch1\u003eAll pairs shortest paths algorithm\u003c/h1\u003e\n\u003cp\u003e\u003ca href\u003d\"https://neo4j.com/docs/graph-algorithms/current/labs-algorithms/all-pairs-shortest-path/\"\u003ehttps://neo4j.com/docs/graph-algorithms/current/labs-algorithms/all-pairs-shortest-path/\u003c/a\u003e\u003c/p\u003e\n\u003c/div\u003e"
+            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003ch1\u003eAll pairs shortest paths algorithm\u003c/h1\u003e\n\u003c/div\u003e"
           }
         ]
       },
@@ -75,15 +75,15 @@
       "jobName": "paragraph_1579455018171_580392602",
       "id": "20200119-173018_637495814",
       "dateCreated": "2020-01-19 17:30:18.171",
-      "dateStarted": "2020-01-19 17:31:20.656",
-      "dateFinished": "2020-01-19 17:31:20.670",
+      "dateStarted": "2020-02-06 22:10:47.633",
+      "dateFinished": "2020-02-06 22:10:47.647",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
     {
-      "text": "%neo4j\nMATCH p\u003d(:Place)-[:EROAD]-\u003e(:Place)\nRETURN p",
+      "text": "%neo4j_algo\nMATCH p\u003d(:Place)-[:EROAD]-\u003e(:Place)\nRETURN p",
       "user": "anonymous",
-      "dateUpdated": "2020-01-19 17:31:51.551",
+      "dateUpdated": "2020-02-06 22:10:47.733",
       "config": {
         "colWidth": 12.0,
         "fontSize": 9.0,
@@ -163,7 +163,7 @@
         "msg": [
           {
             "type": "NETWORK",
-            "data": "{\"nodes\":[{\"id\":48,\"data\":{\"latitude\":51.88921,\"id\":\"Colchester\",\"longitude\":51.88921,\"population\":104390},\"label\":\"Place\"},{\"id\":49,\"data\":{\"latitude\":51.509865,\"id\":\"London\",\"longitude\":51.509865,\"population\":8787892},\"label\":\"Place\"},{\"id\":50,\"data\":{\"latitude\":51.9225,\"id\":\"Rotterdam\",\"longitude\":51.9225,\"population\":623652},\"label\":\"Place\"},{\"id\":51,\"data\":{\"latitude\":52.01667,\"id\":\"Gouda\",\"longitude\":52.01667,\"population\":70939},\"label\":\"Place\"},{\"id\":40,\"data\":{\"latitude\":52.379189,\"id\":\"Amsterdam\",\"longitude\":52.379189,\"population\":821752},\"label\":\"Place\"},{\"id\":41,\"data\":{\"latitude\":52.092876,\"id\":\"Utrecht\",\"longitude\":52.092876,\"population\":334176},\"label\":\"Place\"},{\"id\":42,\"data\":{\"latitude\":52.078663,\"id\":\"Den Haag\",\"longitude\":52.078663,\"population\":514861},\"label\":\"Place\"},{\"id\":43,\"data\":{\"latitude\":53.61239,\"id\":\"Immingham\",\"longitude\":53.61239,\"population\":9642},\"label\":\"Place\"},{\"id\":44,\"data\":{\"latitude\":53.52285,\"id\":\"Doncaster\",\"longitude\":53.52285,\"population\":302400},\"label\":\"Place\"},{\"id\":45,\"data\":{\"latitude\":51.9775,\"id\":\"Hoek van Holland\",\"longitude\":51.9775,\"population\":9382},\"label\":\"Place\"},{\"id\":46,\"data\":{\"latitude\":51.96375,\"id\":\"Felixstowe\",\"longitude\":51.96375,\"population\":23689},\"label\":\"Place\"},{\"id\":47,\"data\":{\"latitude\":52.05917,\"id\":\"Ipswich\",\"longitude\":52.05917,\"population\":133384},\"label\":\"Place\"}],\"edges\":[{\"source\":40,\"target\":41,\"id\":34,\"data\":{\"distance\":46},\"label\":\"EROAD\"},{\"source\":40,\"target\":42,\"id\":35,\"data\":{\"distance\":59},\"label\":\"EROAD\"},{\"source\":42,\"target\":50,\"id\":36,\"data\":{\"distance\":26},\"label\":\"EROAD\"},{\"source\":40,\"target\":43,\"id\":37,\"data\":{\"distance\":369},\"label\":\"EROAD\"},{\"source\":43,\"target\":44,\"id\":38,\"data\":{\"distance\":74},\"label\":\"EROAD\"},{\"source\":44,\"target\":49,\"id\":39,\"data\":{\"distance\":277},\"label\":\"EROAD\"},{\"source\":45,\"target\":42,\"id\":40,\"data\":{\"distance\":27},\"label\":\"EROAD\"},{\"source\":46,\"target\":45,\"id\":41,\"data\":{\"distance\":207},\"label\":\"EROAD\"},{\"source\":47,\"target\":46,\"id\":42,\"data\":{\"distance\":22},\"label\":\"EROAD\"},{\"source\":48,\"target\":47,\"id\":43,\"data\":{\"distance\":32},\"label\":\"EROAD\"},{\"source\":49,\"target\":48,\"id\":44,\"data\":{\"distance\":106},\"label\":\"EROAD\"},{\"source\":51,\"target\":50,\"id\":45,\"data\":{\"distance\":25},\"label\":\"EROAD\"},{\"source\":51,\"target\":41,\"id\":46,\"data\":{\"distance\":35},\"label\":\"EROAD\"},{\"source\":42,\"target\":51,\"id\":47,\"data\":{\"distance\":32},\"label\":\"EROAD\"},{\"source\":45,\"target\":50,\"id\":48,\"data\":{\"distance\":33},\"label\":\"EROAD\"}],\"labels\":{\"User\":\"#67AD48\",\"Library\":\"#2B0671\",\"Place\":\"#78B189\"},\"types\":[\"FOLLOWS\",\"EROAD\",\"DEPENDS_ON\"],\"directed\":true}"
+            "data": "{\"nodes\":[{\"id\":32,\"data\":{\"latitude\":53.61239,\"id\":\"Immingham\",\"longitude\":53.61239,\"population\":9642},\"label\":\"Place\"},{\"id\":33,\"data\":{\"latitude\":53.52285,\"id\":\"Doncaster\",\"longitude\":53.52285,\"population\":302400},\"label\":\"Place\"},{\"id\":34,\"data\":{\"latitude\":51.9775,\"id\":\"Hoek van Holland\",\"longitude\":51.9775,\"population\":9382},\"label\":\"Place\"},{\"id\":35,\"data\":{\"latitude\":51.96375,\"id\":\"Felixstowe\",\"longitude\":51.96375,\"population\":23689},\"label\":\"Place\"},{\"id\":36,\"data\":{\"latitude\":52.05917,\"id\":\"Ipswich\",\"longitude\":52.05917,\"population\":133384},\"label\":\"Place\"},{\"id\":37,\"data\":{\"latitude\":51.88921,\"id\":\"Colchester\",\"longitude\":51.88921,\"population\":104390},\"label\":\"Place\"},{\"id\":38,\"data\":{\"latitude\":51.509865,\"id\":\"London\",\"longitude\":51.509865,\"population\":8787892},\"label\":\"Place\"},{\"id\":39,\"data\":{\"latitude\":51.9225,\"id\":\"Rotterdam\",\"longitude\":51.9225,\"population\":623652},\"label\":\"Place\"},{\"id\":40,\"data\":{\"latitude\":52.01667,\"id\":\"Gouda\",\"longitude\":52.01667,\"population\":70939},\"label\":\"Place\"},{\"id\":29,\"data\":{\"latitude\":52.379189,\"id\":\"Amsterdam\",\"longitude\":52.379189,\"population\":821752},\"label\":\"Place\"},{\"id\":30,\"data\":{\"latitude\":52.092876,\"id\":\"Utrecht\",\"longitude\":52.092876,\"population\":334176},\"label\":\"Place\"},{\"id\":31,\"data\":{\"latitude\":52.078663,\"id\":\"Den Haag\",\"longitude\":52.078663,\"population\":514861},\"label\":\"Place\"}],\"edges\":[{\"source\":29,\"target\":30,\"id\":36,\"data\":{\"distance\":46},\"label\":\"EROAD\"},{\"source\":29,\"target\":31,\"id\":37,\"data\":{\"distance\":59},\"label\":\"EROAD\"},{\"source\":31,\"target\":39,\"id\":38,\"data\":{\"distance\":26},\"label\":\"EROAD\"},{\"source\":29,\"target\":32,\"id\":39,\"data\":{\"distance\":369},\"label\":\"EROAD\"},{\"source\":32,\"target\":33,\"id\":40,\"data\":{\"distance\":74},\"label\":\"EROAD\"},{\"source\":33,\"target\":38,\"id\":41,\"data\":{\"distance\":277},\"label\":\"EROAD\"},{\"source\":34,\"target\":31,\"id\":42,\"data\":{\"distance\":27},\"label\":\"EROAD\"},{\"source\":35,\"target\":34,\"id\":43,\"data\":{\"distance\":207},\"label\":\"EROAD\"},{\"source\":36,\"target\":35,\"id\":44,\"data\":{\"distance\":22},\"label\":\"EROAD\"},{\"source\":37,\"target\":36,\"id\":45,\"data\":{\"distance\":32},\"label\":\"EROAD\"},{\"source\":38,\"target\":37,\"id\":46,\"data\":{\"distance\":106},\"label\":\"EROAD\"},{\"source\":40,\"target\":39,\"id\":47,\"data\":{\"distance\":25},\"label\":\"EROAD\"},{\"source\":40,\"target\":30,\"id\":48,\"data\":{\"distance\":35},\"label\":\"EROAD\"},{\"source\":31,\"target\":40,\"id\":49,\"data\":{\"distance\":32},\"label\":\"EROAD\"},{\"source\":34,\"target\":39,\"id\":50,\"data\":{\"distance\":33},\"label\":\"EROAD\"}],\"labels\":{\"User\":\"#6FF08D\",\"Library\":\"#6EAEB9\",\"Place\":\"#039A40\"},\"types\":[\"FOLLOWS\",\"EROAD\",\"DEPENDS_ON\",\"MINST\"],\"directed\":true}"
           }
         ]
       },
@@ -171,15 +171,55 @@
       "jobName": "paragraph_1579455092709_-400548423",
       "id": "20200119-173132_1085901944",
       "dateCreated": "2020-01-19 17:31:32.709",
-      "dateStarted": "2020-01-19 17:31:39.734",
-      "dateFinished": "2020-01-19 17:31:39.809",
+      "dateStarted": "2020-02-06 22:10:47.755",
+      "dateFinished": "2020-02-06 22:10:47.776",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%md\n## Neo4j graph algorithms library",
+      "user": "anonymous",
+      "dateUpdated": "2020-02-06 22:10:47.855",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "markdown",
+          "editOnDblClick": true,
+          "completionSupport": false
+        },
+        "editorMode": "ace/mode/markdown",
+        "editorHide": true,
+        "tableHide": false
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003ch2\u003eNeo4j graph algorithms library\u003c/h2\u003e\n\u003c/div\u003e"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1581021025084_2096263128",
+      "id": "20200206-203025_26907690",
+      "dateCreated": "2020-02-06 20:30:25.084",
+      "dateStarted": "2020-02-06 22:10:47.883",
+      "dateFinished": "2020-02-06 22:10:47.892",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
     {
       "text": "%md\n### Stream un-weighted all-shortest paths algorithm\n\nNeo4j has a parallel implementation of the All Pairs Shortest Path algorithm, which\nreturns the distance between every pair of nodes.\nThe first parameter to this procedure is the property to use to work out the shortest\nweighted path. If we set this to null then the algorithm will calculate the unweighted\nshortest paths between all pairs of nodes.",
       "user": "anonymous",
-      "dateUpdated": "2020-01-28 17:40:27.707",
+      "dateUpdated": "2020-02-06 22:10:47.980",
       "config": {
         "colWidth": 12.0,
         "fontSize": 9.0,
@@ -191,8 +231,8 @@
           "completionSupport": false
         },
         "editorMode": "ace/mode/markdown",
-        "editorHide": true,
-        "tableHide": false
+        "editorHide": false,
+        "tableHide": true
       },
       "settings": {
         "params": {},
@@ -211,15 +251,15 @@
       "jobName": "paragraph_1579465033174_-1876850110",
       "id": "20200119-201713_1980837387",
       "dateCreated": "2020-01-19 20:17:13.174",
-      "dateStarted": "2020-01-28 17:40:27.716",
-      "dateFinished": "2020-01-28 17:40:27.731",
+      "dateStarted": "2020-02-06 22:10:48.007",
+      "dateFinished": "2020-02-06 22:10:48.015",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
     {
-      "text": "CALL algo.allShortestPaths.stream(null)\nYIELD sourceNodeId, targetNodeId, distance\nWHERE sourceNodeId \u003c targetNodeId\nRETURN algo.getNodeById(sourceNodeId).id AS source,\n       algo.getNodeById(targetNodeId).id AS target,\n       distance\nORDER BY distance DESC\nLIMIT 10\n",
+      "text": "%neo4j_algo\nCALL algo.allShortestPaths.stream(null, {nodeQuery: \u0027Place\u0027 , relationshipQuery: \u0027EROAD\u0027})\nYIELD sourceNodeId, targetNodeId, distance\nWHERE sourceNodeId \u003c targetNodeId\nRETURN algo.getNodeById(sourceNodeId).id AS source,\n       algo.getNodeById(targetNodeId).id AS target,\n       distance\nORDER BY distance DESC\nLIMIT 10\n",
       "user": "anonymous",
-      "dateUpdated": "2020-01-01 19:00:22.107",
+      "dateUpdated": "2020-02-06 22:10:48.106",
       "config": {
         "colWidth": 12.0,
         "fontSize": 9.0,
@@ -256,7 +296,9 @@
           }
         },
         "editorSetting": {
-          "editOnDblClick": false
+          "editOnDblClick": false,
+          "language": "markdown",
+          "completionSupport": false
         },
         "editorMode": "ace/mode/undefined"
       },
@@ -277,15 +319,15 @@
       "jobName": "paragraph_1577905209007_69526644",
       "id": "20200101-190009_1220471711",
       "dateCreated": "2020-01-01 19:00:09.007",
-      "dateStarted": "2020-01-01 19:00:21.315",
-      "dateFinished": "2020-01-01 19:00:21.626",
+      "dateStarted": "2020-02-06 22:10:48.136",
+      "dateFinished": "2020-02-06 22:10:48.151",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
     {
       "text": "%md\nThis algorithm returns the shortest path between every pair of nodes twice, once\nwith each of the nodes as the source node. This would be helpful if you were evaluat‐\ning a directed graph of one-way streets. However, we don’t need to see each path\ntwice, so we filter the results to only keep one of them by using the sourceNodeId \u003c targetNodeId predicate.",
       "user": "anonymous",
-      "dateUpdated": "2020-01-28 17:42:04.250",
+      "dateUpdated": "2020-02-06 22:10:48.236",
       "config": {
         "colWidth": 12.0,
         "fontSize": 9.0,
@@ -317,15 +359,15 @@
       "jobName": "paragraph_1580233188049_1417963161",
       "id": "20200128-173948_1451221288",
       "dateCreated": "2020-01-28 17:39:48.049",
-      "dateStarted": "2020-01-28 17:42:04.269",
-      "dateFinished": "2020-01-28 17:42:04.288",
+      "dateStarted": "2020-02-06 22:10:48.267",
+      "dateFinished": "2020-02-06 22:10:48.273",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
     {
       "text": "%md\n### Stream weighted all-shortest paths algorithm\n\nIf we want to calculate the shortest weighted paths, rather than passing in null as the\nfirst parameter, we can pass in the property name that contains the cost to be used in\nthe shortest path calculation. This property will then be evaluated to work out the\nshortest weighted path between each pair of nodes.",
       "user": "anonymous",
-      "dateUpdated": "2020-01-28 17:42:27.383",
+      "dateUpdated": "2020-02-06 22:10:48.365",
       "config": {
         "colWidth": 12.0,
         "fontSize": 9.0,
@@ -337,8 +379,8 @@
           "completionSupport": false
         },
         "editorMode": "ace/mode/markdown",
-        "editorHide": true,
-        "tableHide": false
+        "editorHide": false,
+        "tableHide": true
       },
       "settings": {
         "params": {},
@@ -357,15 +399,15 @@
       "jobName": "paragraph_1579465061765_1029524433",
       "id": "20200119-201741_38280712",
       "dateCreated": "2020-01-19 20:17:41.765",
-      "dateStarted": "2020-01-28 17:42:27.406",
-      "dateFinished": "2020-01-28 17:42:27.455",
+      "dateStarted": "2020-02-06 22:10:48.397",
+      "dateFinished": "2020-02-06 22:10:48.406",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
     {
-      "text": "CALL algo.allShortestPaths.stream(\"distance\")\nYIELD sourceNodeId, targetNodeId, distance\nWHERE sourceNodeId \u003c targetNodeId\nRETURN algo.getNodeById(sourceNodeId).id AS source,\n       algo.getNodeById(targetNodeId).id AS target,\n       distance\nORDER BY distance DESC\nLIMIT 10\n",
+      "text": "%neo4j_algo\nCALL algo.allShortestPaths.stream(\"distance\", {nodeQuery: \u0027Place\u0027 , relationshipQuery: \u0027EROAD\u0027})\nYIELD sourceNodeId, targetNodeId, distance\nWHERE sourceNodeId \u003c targetNodeId\nRETURN algo.getNodeById(sourceNodeId).id AS source,\n       algo.getNodeById(targetNodeId).id AS target,\n       distance\nORDER BY distance DESC\nLIMIT 10\n",
       "user": "anonymous",
-      "dateUpdated": "2020-01-01 19:00:29.342",
+      "dateUpdated": "2020-02-06 22:10:48.492",
       "config": {
         "colWidth": 12.0,
         "fontSize": 9.0,
@@ -402,7 +444,9 @@
           }
         },
         "editorSetting": {
-          "editOnDblClick": false
+          "editOnDblClick": false,
+          "language": "markdown",
+          "completionSupport": false
         },
         "editorMode": "ace/mode/undefined"
       },
@@ -423,15 +467,15 @@
       "jobName": "paragraph_1577905221300_-1443780074",
       "id": "20200101-190021_1090575036",
       "dateCreated": "2020-01-01 19:00:21.300",
-      "dateStarted": "2020-01-01 19:00:28.463",
-      "dateFinished": "2020-01-01 19:00:28.658",
+      "dateStarted": "2020-02-06 22:10:48.519",
+      "dateFinished": "2020-02-06 22:10:48.560",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
     {
       "text": "%md\n\nNow we’re seeing the 10 pairs of locations furthest from each other in terms of the\ntotal distance between them. Notice that Doncaster shows up frequently along with\nseveral cities in the Netherlands. It looks like it would be a long drive if we wanted to\ntake a road trip between those areas.",
       "user": "anonymous",
-      "dateUpdated": "2020-01-28 17:42:49.983",
+      "dateUpdated": "2020-02-06 22:10:48.619",
       "config": {
         "colWidth": 12.0,
         "fontSize": 9.0,
@@ -463,25 +507,534 @@
       "jobName": "paragraph_1577905228454_292642731",
       "id": "20200101-190028_1585661323",
       "dateCreated": "2020-01-01 19:00:28.454",
-      "dateStarted": "2020-01-28 17:42:49.983",
-      "dateFinished": "2020-01-28 17:42:50.032",
+      "dateStarted": "2020-02-06 22:10:48.669",
+      "dateFinished": "2020-02-06 22:10:48.678",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
     {
-      "text": "%md\n",
+      "text": "%md\n## Neo4j graph data science library",
       "user": "anonymous",
-      "dateUpdated": "2020-01-28 17:42:49.951",
-      "config": {},
+      "dateUpdated": "2020-02-06 22:10:48.769",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "markdown",
+          "editOnDblClick": true,
+          "completionSupport": false
+        },
+        "editorMode": "ace/mode/markdown",
+        "editorHide": true,
+        "tableHide": false
+      },
       "settings": {
         "params": {},
         "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003ch2\u003eNeo4j graph data science library\u003c/h2\u003e\n\u003c/div\u003e"
+          }
+        ]
       },
       "apps": [],
       "jobName": "paragraph_1580233369949_-45072121",
       "id": "20200128-174249_1916262559",
       "dateCreated": "2020-01-28 17:42:49.949",
-      "status": "READY",
+      "dateStarted": "2020-02-06 22:10:48.794",
+      "dateFinished": "2020-02-06 22:10:48.808",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%md\nPreferred way to use GDS library is with loaded named graphs, where we first load the graph into memory and then proceed to run algorithms on it.\n",
+      "user": "anonymous",
+      "dateUpdated": "2020-02-06 22:10:48.894",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "markdown",
+          "editOnDblClick": true,
+          "completionSupport": false
+        },
+        "editorMode": "ace/mode/markdown",
+        "editorHide": false,
+        "tableHide": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003cp\u003ePreferred way to use GDS library is with loaded named graphs, where we first load the graph into memory and then proceed to run algorithms on it.\u003c/p\u003e\n\u003c/div\u003e"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1581021286839_-255667312",
+      "id": "20200206-203446_97532137",
+      "dateCreated": "2020-02-06 20:34:46.839",
+      "dateStarted": "2020-02-06 22:10:48.917",
+      "dateFinished": "2020-02-06 22:10:48.929",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%neo4j_gdn\nCALL gds.graph.create(\u0027allpair_example\u0027, \u0027Place\u0027, {EROAD: {type:\u0027EROAD\u0027, projection:\u0027Natural\u0027, properties: \u0027distance\u0027}});\n\n",
+      "user": "anonymous",
+      "dateUpdated": "2020-02-06 22:10:49.017",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {
+          "0": {
+            "graph": {
+              "mode": "table",
+              "height": 300.0,
+              "optionOpen": false,
+              "setting": {
+                "table": {
+                  "tableGridState": {},
+                  "tableColumnTypeState": {
+                    "names": {
+                      "graphName": "string",
+                      "nodeProjection.Place.label": "string",
+                      "relationshipProjection.EROAD.aggregation": "string",
+                      "relationshipProjection.EROAD.projection": "string",
+                      "relationshipProjection.EROAD.type": "string",
+                      "relationshipProjection.EROAD.properties.distance.property": "string",
+                      "relationshipProjection.EROAD.properties.distance.defaultValue": "string",
+                      "relationshipProjection.EROAD.properties.distance.aggregation": "string",
+                      "nodeCount": "string",
+                      "relationshipCount": "string",
+                      "createMillis": "string"
+                    },
+                    "updated": false
+                  },
+                  "tableOptionSpecHash": "[{\"name\":\"useFilter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable filter for columns\"},{\"name\":\"showPagination\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable pagination for better navigation\"},{\"name\":\"showAggregationFooter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable a footer for displaying aggregated values\"}]",
+                  "tableOptionValue": {
+                    "useFilter": false,
+                    "showPagination": false,
+                    "showAggregationFooter": false
+                  },
+                  "updated": false,
+                  "initialized": false
+                }
+              },
+              "commonSetting": {}
+            }
+          }
+        },
+        "editorSetting": {
+          "language": "markdown",
+          "editOnDblClick": false,
+          "completionSupport": false
+        },
+        "editorMode": "ace/mode/undefined"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TABLE",
+            "data": "graphName\tnodeProjection.Place.label\trelationshipProjection.EROAD.aggregation\trelationshipProjection.EROAD.projection\trelationshipProjection.EROAD.type\trelationshipProjection.EROAD.properties.distance.property\trelationshipProjection.EROAD.properties.distance.defaultValue\trelationshipProjection.EROAD.properties.distance.aggregation\tnodeCount\trelationshipCount\tcreateMillis\n\"allpair_example\"\tPlace\tDEFAULT\tNATURAL\tEROAD\tdistance\tNaN\tDEFAULT\t12\t15\t4\n"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1581021304851_-1327454323",
+      "id": "20200206-203504_1299689562",
+      "dateCreated": "2020-02-06 20:35:04.851",
+      "dateStarted": "2020-02-06 22:10:49.058",
+      "dateFinished": "2020-02-06 22:10:49.072",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%md\n### Stream un-weighted all-shortest paths algorithm\n\nNeo4j has a parallel implementation of the All Pairs Shortest Path algorithm, which\nreturns the distance between every pair of nodes.\nThe first parameter to this procedure is the property to use to work out the shortest\nweighted path. If we set this to null then the algorithm will calculate the unweighted\nshortest paths between all pairs of nodes.",
+      "user": "anonymous",
+      "dateUpdated": "2020-02-06 22:10:49.155",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "markdown",
+          "editOnDblClick": true,
+          "completionSupport": false
+        },
+        "editorMode": "ace/mode/markdown",
+        "editorHide": true,
+        "tableHide": false
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003ch3\u003eStream un-weighted all-shortest paths algorithm\u003c/h3\u003e\n\u003cp\u003eNeo4j has a parallel implementation of the All Pairs Shortest Path algorithm, which\u003cbr/\u003ereturns the distance between every pair of nodes.\u003cbr/\u003eThe first parameter to this procedure is the property to use to work out the shortest\u003cbr/\u003eweighted path. If we set this to null then the algorithm will calculate the unweighted\u003cbr/\u003eshortest paths between all pairs of nodes.\u003c/p\u003e\n\u003c/div\u003e"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1581021267341_-592270160",
+      "id": "20200206-203427_1353550025",
+      "dateCreated": "2020-02-06 20:34:27.341",
+      "dateStarted": "2020-02-06 22:10:49.180",
+      "dateFinished": "2020-02-06 22:10:49.184",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%neo4j_gdn\nCALL gds.alpha.allShortestPaths.stream(\u0027allpair_example\u0027, {weightProperty:null})\nYIELD sourceNodeId, targetNodeId, distance\nWHERE sourceNodeId \u003c targetNodeId\nRETURN gds.util.asNode(sourceNodeId).id AS source,\n       gds.util.asNode(targetNodeId).id AS target,\n       distance\nORDER BY distance DESC\nLIMIT 10",
+      "user": "anonymous",
+      "dateUpdated": "2020-02-06 22:10:49.279",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {
+          "0": {
+            "graph": {
+              "mode": "table",
+              "height": 300.0,
+              "optionOpen": false,
+              "setting": {
+                "table": {
+                  "tableGridState": {},
+                  "tableColumnTypeState": {
+                    "names": {
+                      "source": "string",
+                      "target": "string",
+                      "distance": "string"
+                    },
+                    "updated": false
+                  },
+                  "tableOptionSpecHash": "[{\"name\":\"useFilter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable filter for columns\"},{\"name\":\"showPagination\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable pagination for better navigation\"},{\"name\":\"showAggregationFooter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable a footer for displaying aggregated values\"}]",
+                  "tableOptionValue": {
+                    "useFilter": false,
+                    "showPagination": false,
+                    "showAggregationFooter": false
+                  },
+                  "updated": false,
+                  "initialized": false
+                }
+              },
+              "commonSetting": {}
+            }
+          }
+        },
+        "editorSetting": {
+          "language": "markdown",
+          "editOnDblClick": false,
+          "completionSupport": false
+        },
+        "editorMode": "ace/mode/undefined"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TABLE",
+            "data": "source\ttarget\tdistance\n\"Immingham\"\t\"Gouda\"\t8.0\n\"Amsterdam\"\t\"Hoek van Holland\"\t7.0\n\"Doncaster\"\t\"Gouda\"\t7.0\n\"Immingham\"\t\"Rotterdam\"\t7.0\n\"Doncaster\"\t\"Rotterdam\"\t6.0\n\"Amsterdam\"\t\"Felixstowe\"\t6.0\n\"London\"\t\"Gouda\"\t6.0\n\"Immingham\"\t\"Hoek van Holland\"\t6.0\n\"Amsterdam\"\t\"Ipswich\"\t5.0\n\"Doncaster\"\t\"Hoek van Holland\"\t5.0\n"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1581021278861_-852709497",
+      "id": "20200206-203438_771657057",
+      "dateCreated": "2020-02-06 20:34:38.861",
+      "dateStarted": "2020-02-06 22:10:49.309",
+      "dateFinished": "2020-02-06 22:10:49.327",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%md\n### Stream weighted all-shortest paths algorithm\n\nIf we want to calculate the shortest weighted paths, rather than passing in null as the\nfirst parameter, we can pass in the property name that contains the cost to be used in\nthe shortest path calculation. This property will then be evaluated to work out the\nshortest weighted path between each pair of nodes.",
+      "user": "anonymous",
+      "dateUpdated": "2020-02-06 22:10:49.409",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "markdown",
+          "editOnDblClick": true,
+          "completionSupport": false
+        },
+        "editorMode": "ace/mode/markdown",
+        "editorHide": true,
+        "tableHide": false
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003ch3\u003eStream weighted all-shortest paths algorithm\u003c/h3\u003e\n\u003cp\u003eIf we want to calculate the shortest weighted paths, rather than passing in null as the\u003cbr/\u003efirst parameter, we can pass in the property name that contains the cost to be used in\u003cbr/\u003ethe shortest path calculation. This property will then be evaluated to work out the\u003cbr/\u003eshortest weighted path between each pair of nodes.\u003c/p\u003e\n\u003c/div\u003e"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1581021441038_480583196",
+      "id": "20200206-203721_2058420979",
+      "dateCreated": "2020-02-06 20:37:21.038",
+      "dateStarted": "2020-02-06 22:10:49.435",
+      "dateFinished": "2020-02-06 22:10:49.446",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%neo4j_gdn\nCALL gds.alpha.allShortestPaths.stream(\u0027allpair_example\u0027, {relationshipWeightProperty:\u0027distance\u0027})\nYIELD sourceNodeId, targetNodeId, distance\nWHERE sourceNodeId \u003c targetNodeId\nRETURN gds.util.asNode(sourceNodeId).id AS source,\n       gds.util.asNode(targetNodeId).id AS target,\n       distance\nORDER BY distance DESC\nLIMIT 10",
+      "user": "anonymous",
+      "dateUpdated": "2020-02-06 22:10:49.635",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {
+          "0": {
+            "graph": {
+              "mode": "table",
+              "height": 300.0,
+              "optionOpen": false,
+              "setting": {
+                "table": {
+                  "tableGridState": {},
+                  "tableColumnTypeState": {
+                    "names": {
+                      "source": "string",
+                      "target": "string",
+                      "distance": "string"
+                    },
+                    "updated": false
+                  },
+                  "tableOptionSpecHash": "[{\"name\":\"useFilter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable filter for columns\"},{\"name\":\"showPagination\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable pagination for better navigation\"},{\"name\":\"showAggregationFooter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable a footer for displaying aggregated values\"}]",
+                  "tableOptionValue": {
+                    "useFilter": false,
+                    "showPagination": false,
+                    "showAggregationFooter": false
+                  },
+                  "updated": false,
+                  "initialized": false
+                }
+              },
+              "commonSetting": {}
+            }
+          }
+        },
+        "editorSetting": {
+          "language": "markdown",
+          "editOnDblClick": false,
+          "completionSupport": false
+        },
+        "editorMode": "ace/mode/undefined"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TABLE",
+            "data": "source\ttarget\tdistance\n\"Amsterdam\"\t\"Hoek van Holland\"\t1087.0\n\"Amsterdam\"\t\"Felixstowe\"\t880.0\n\"Amsterdam\"\t\"Ipswich\"\t858.0\n\"Amsterdam\"\t\"Colchester\"\t826.0\n\"Immingham\"\t\"Gouda\"\t777.0\n\"Immingham\"\t\"Rotterdam\"\t751.0\n\"Amsterdam\"\t\"London\"\t720.0\n\"Immingham\"\t\"Hoek van Holland\"\t718.0\n\"Doncaster\"\t\"Gouda\"\t703.0\n\"Doncaster\"\t\"Rotterdam\"\t677.0\n"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1581021519523_1658418537",
+      "id": "20200206-203839_252538629",
+      "dateCreated": "2020-02-06 20:38:39.523",
+      "dateStarted": "2020-02-06 22:10:49.662",
+      "dateFinished": "2020-02-06 22:10:49.688",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%md\nAfter we are done with our analyisis we release the graph from memory",
+      "user": "anonymous",
+      "dateUpdated": "2020-02-06 22:10:49.762",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "markdown",
+          "editOnDblClick": true,
+          "completionSupport": false
+        },
+        "editorMode": "ace/mode/markdown",
+        "editorHide": true,
+        "tableHide": false
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003cp\u003eAfter we are done with our analyisis we release the graph from memory\u003c/p\u003e\n\u003c/div\u003e"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1581021530994_760914346",
+      "id": "20200206-203850_1246712063",
+      "dateCreated": "2020-02-06 20:38:50.994",
+      "dateStarted": "2020-02-06 22:10:49.799",
+      "dateFinished": "2020-02-06 22:10:49.818",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%neo4j_gdn\nCALL gds.graph.drop(\u0027allpair_example\u0027)",
+      "user": "anonymous",
+      "dateUpdated": "2020-02-06 22:10:49.897",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {
+          "0": {
+            "graph": {
+              "mode": "table",
+              "height": 300.0,
+              "optionOpen": false,
+              "setting": {
+                "table": {
+                  "tableGridState": {},
+                  "tableColumnTypeState": {
+                    "names": {
+                      "graphName": "string",
+                      "nodeProjection.Place.label": "string",
+                      "relationshipProjection.EROAD.aggregation": "string",
+                      "relationshipProjection.EROAD.projection": "string",
+                      "relationshipProjection.EROAD.type": "string",
+                      "relationshipProjection.EROAD.properties.distance.property": "string",
+                      "relationshipProjection.EROAD.properties.distance.defaultValue": "string",
+                      "relationshipProjection.EROAD.properties.distance.aggregation": "string",
+                      "nodeQuery": "string",
+                      "relationshipQuery": "string",
+                      "nodeCount": "string",
+                      "relationshipCount": "string",
+                      "histogram.p99": "string",
+                      "histogram.min": "string",
+                      "histogram.max": "string",
+                      "histogram.mean": "string",
+                      "histogram.p90": "string",
+                      "histogram.p50": "string",
+                      "histogram.p999": "string",
+                      "histogram.p95": "string",
+                      "histogram.p75": "string"
+                    },
+                    "updated": false
+                  },
+                  "tableOptionSpecHash": "[{\"name\":\"useFilter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable filter for columns\"},{\"name\":\"showPagination\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable pagination for better navigation\"},{\"name\":\"showAggregationFooter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable a footer for displaying aggregated values\"}]",
+                  "tableOptionValue": {
+                    "useFilter": false,
+                    "showPagination": false,
+                    "showAggregationFooter": false
+                  },
+                  "updated": false,
+                  "initialized": false
+                }
+              },
+              "commonSetting": {}
+            }
+          }
+        },
+        "editorSetting": {
+          "language": "markdown",
+          "editOnDblClick": false,
+          "completionSupport": false
+        },
+        "editorMode": "ace/mode/undefined"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TABLE",
+            "data": "graphName\tnodeProjection.Place.label\trelationshipProjection.EROAD.aggregation\trelationshipProjection.EROAD.projection\trelationshipProjection.EROAD.type\trelationshipProjection.EROAD.properties.distance.property\trelationshipProjection.EROAD.properties.distance.defaultValue\trelationshipProjection.EROAD.properties.distance.aggregation\tnodeQuery\trelationshipQuery\tnodeCount\trelationshipCount\thistogram.p99\thistogram.min\thistogram.max\thistogram.mean\thistogram.p90\thistogram.p50\thistogram.p999\thistogram.p95\thistogram.p75\n\"allpair_example\"\tPlace\tDEFAULT\tNATURAL\tEROAD\tdistance\tNaN\tDEFAULT\tNULL\tNULL\t12\t15\t3\t0\t3\t1.25\t2\t1\t3\t2\t2\n"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1581021694217_1233019215",
+      "id": "20200206-204134_1643659125",
+      "dateCreated": "2020-02-06 20:41:34.217",
+      "dateStarted": "2020-02-06 22:10:49.962",
+      "dateFinished": "2020-02-06 22:10:49.996",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%neo4j_gdn\n",
+      "user": "anonymous",
+      "dateUpdated": "2020-02-06 22:10:50.061",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "markdown",
+          "editOnDblClick": false,
+          "completionSupport": false
+        },
+        "editorMode": "ace/mode/undefined"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "jobName": "paragraph_1581021702635_-1579162820",
+      "id": "20200206-204142_288679716",
+      "dateCreated": "2020-02-06 20:41:42.635",
+      "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     }
   ],
@@ -490,8 +1043,9 @@
   "noteParams": {},
   "noteForms": {},
   "angularObjects": {
+    "neo4j_algo:shared_process": [],
     "md:shared_process": [],
-    "neo4j:shared_process": []
+    "neo4j_gdn:shared_process": []
   },
   "config": {
     "isZeppelinNotebookCronEnable": false

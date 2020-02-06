@@ -42,23 +42,6 @@
       "progressUpdateIntervalMs": 500
     },
     {
-      "text": "%md\n",
-      "user": "anonymous",
-      "dateUpdated": "2020-01-28 16:54:31.416",
-      "config": {},
-      "settings": {
-        "params": {},
-        "forms": {}
-      },
-      "apps": [],
-      "jobName": "paragraph_1580230471415_-320457976",
-      "id": "20200128-164902_904036402",
-      "dateCreated": "2020-01-28 16:54:31.415",
-      "status": "READY",
-      "errorMessage": "",
-      "progressUpdateIntervalMs": 500
-    },
-    {
       "text": "%md\n\n# When you can use it?\n\nUse Shortest Path to find optimal routes between a pair of nodes, based on either the\nnumber of hops or any weighted relationship value. For example, it can provide real-time\nanswers about degrees of separation, the shortest distance between points, or the\nleast expensive route. You can also use this algorithm to simply explore the connections\nbetween particular nodes.\n\nExample use cases include:\n\n- Finding directions between locations\n- Finding the degrees of separation between people in social networks\n- Finding the number of degrees of separation between an actor and Kevin Bacon based on the movies they’ve appeared in (the Bacon Number)\n",
       "user": "anonymous",
       "dateUpdated": "2020-01-28 16:56:06.731",
@@ -164,7 +147,6 @@
   "noteForms": {},
   "angularObjects": {
     "md:shared_process": [],
-    "neo4j:shared_process": [],
     "spark:shared_process": []
   },
   "config": {

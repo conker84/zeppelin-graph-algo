@@ -1,9 +1,9 @@
 {
   "paragraphs": [
     {
-      "text": "%md\n\n###  Example taken from \"Graph Algorithms: Practical Examples in Apache Spark and Neo4j\" (https://neo4j.com/graph-algorithms-book/)\n\n### Please make sure that you have previously executed [this notebook](/#/notebook/2EZ4GSKAZ)",
+      "text": "%md\n# The Minimum Weight Spanning Tree algorithm migration guide",
       "user": "anonymous",
-      "dateUpdated": "2020-01-19 17:37:32.880",
+      "dateUpdated": "2020-02-06 21:45:41.831",
       "config": {
         "colWidth": 12.0,
         "fontSize": 9.0,
@@ -27,47 +27,7 @@
         "msg": [
           {
             "type": "HTML",
-            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003ch3\u003eExample taken from \u0026ldquo;Graph Algorithms: Practical Examples in Apache Spark and Neo4j\u0026rdquo; (\u003ca href\u003d\"https://neo4j.com/graph-algorithms-book/\"\u003ehttps://neo4j.com/graph-algorithms-book/\u003c/a\u003e)\u003c/h3\u003e\n\u003ch3\u003ePlease make sure that you have previously executed \u003ca href\u003d\"/#/notebook/2EZ4GSKAZ\"\u003ethis notebook\u003c/a\u003e\u003c/h3\u003e\n\u003c/div\u003e"
-          }
-        ]
-      },
-      "apps": [],
-      "jobName": "paragraph_1577983857844_-1174436502",
-      "id": "20200102-165057_1545889267",
-      "dateCreated": "2020-01-02 16:50:57.844",
-      "dateStarted": "2020-01-19 17:37:32.882",
-      "dateFinished": "2020-01-19 17:37:32.897",
-      "status": "FINISHED",
-      "progressUpdateIntervalMs": 500
-    },
-    {
-      "text": "%md\n# The Minimum Weight Spanning Tree algorithm\nhttps://neo4j.com/docs/graph-algorithms/current/labs-algorithms/minimum-weight-spanning-tree/",
-      "user": "anonymous",
-      "dateUpdated": "2020-01-19 17:39:12.800",
-      "config": {
-        "colWidth": 12.0,
-        "fontSize": 9.0,
-        "enabled": true,
-        "results": {},
-        "editorSetting": {
-          "editOnDblClick": true,
-          "language": "markdown",
-          "completionSupport": false
-        },
-        "editorMode": "ace/mode/markdown",
-        "editorHide": true,
-        "tableHide": false
-      },
-      "settings": {
-        "params": {},
-        "forms": {}
-      },
-      "results": {
-        "code": "SUCCESS",
-        "msg": [
-          {
-            "type": "HTML",
-            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003ch1\u003eThe Minimum Weight Spanning Tree algorithm\u003c/h1\u003e\n\u003cp\u003e\u003ca href\u003d\"https://neo4j.com/docs/graph-algorithms/current/labs-algorithms/minimum-weight-spanning-tree/\"\u003ehttps://neo4j.com/docs/graph-algorithms/current/labs-algorithms/minimum-weight-spanning-tree/\u003c/a\u003e\u003c/p\u003e\n\u003c/div\u003e"
+            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003ch1\u003eThe Minimum Weight Spanning Tree algorithm migration guide\u003c/h1\u003e\n\u003c/div\u003e"
           }
         ]
       },
@@ -75,15 +35,15 @@
       "jobName": "paragraph_1579455460978_-1737386020",
       "id": "20200119-173740_1158731147",
       "dateCreated": "2020-01-19 17:37:40.978",
-      "dateStarted": "2020-01-19 17:39:12.796",
-      "dateFinished": "2020-01-19 17:39:12.819",
+      "dateStarted": "2020-02-06 21:45:41.831",
+      "dateFinished": "2020-02-06 21:45:41.851",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
     {
-      "text": "%neo4j\nMATCH p\u003d(:Place)-[:EROAD]-\u003e(:Place)\nRETURN p",
+      "text": "%neo4j_algo\nMATCH p\u003d(:Place)-[:EROAD]-\u003e(:Place)\nRETURN p",
       "user": "anonymous",
-      "dateUpdated": "2020-01-20 19:00:15.203",
+      "dateUpdated": "2020-02-06 21:45:52.467",
       "config": {
         "colWidth": 12.0,
         "fontSize": 9.0,
@@ -163,7 +123,7 @@
         "msg": [
           {
             "type": "NETWORK",
-            "data": "{\"nodes\":[{\"id\":20,\"data\":{\"latitude\":51.9775,\"id\":\"Hoek van Holland\",\"longitude\":51.9775,\"population\":9382},\"label\":\"Place\"},{\"id\":21,\"data\":{\"latitude\":51.96375,\"id\":\"Felixstowe\",\"longitude\":51.96375,\"population\":23689},\"label\":\"Place\"},{\"id\":22,\"data\":{\"latitude\":52.05917,\"id\":\"Ipswich\",\"longitude\":52.05917,\"population\":133384},\"label\":\"Place\"},{\"id\":23,\"data\":{\"latitude\":51.88921,\"id\":\"Colchester\",\"longitude\":51.88921,\"population\":104390},\"label\":\"Place\"},{\"id\":24,\"data\":{\"latitude\":51.509865,\"id\":\"London\",\"longitude\":51.509865,\"population\":8787892},\"label\":\"Place\"},{\"id\":25,\"data\":{\"latitude\":51.9225,\"id\":\"Rotterdam\",\"longitude\":51.9225,\"population\":623652},\"label\":\"Place\"},{\"id\":26,\"data\":{\"latitude\":52.01667,\"id\":\"Gouda\",\"longitude\":52.01667,\"population\":70939},\"label\":\"Place\"},{\"id\":10,\"data\":{\"latitude\":52.379189,\"id\":\"Amsterdam\",\"longitude\":52.379189,\"population\":821752},\"label\":\"Place\"},{\"id\":11,\"data\":{\"latitude\":52.092876,\"id\":\"Utrecht\",\"longitude\":52.092876,\"population\":334176},\"label\":\"Place\"},{\"id\":12,\"data\":{\"latitude\":52.078663,\"id\":\"Den Haag\",\"longitude\":52.078663,\"population\":514861},\"label\":\"Place\"},{\"id\":13,\"data\":{\"latitude\":53.61239,\"id\":\"Immingham\",\"longitude\":53.61239,\"population\":9642},\"label\":\"Place\"},{\"id\":14,\"data\":{\"latitude\":53.52285,\"id\":\"Doncaster\",\"longitude\":53.52285,\"population\":302400},\"label\":\"Place\"}],\"edges\":[{\"source\":20,\"target\":25,\"id\":32,\"data\":{\"distance\":33},\"label\":\"EROAD\"},{\"source\":12,\"target\":25,\"id\":18,\"data\":{\"distance\":26},\"label\":\"EROAD\"},{\"source\":10,\"target\":13,\"id\":19,\"data\":{\"distance\":369},\"label\":\"EROAD\"},{\"source\":10,\"target\":11,\"id\":20,\"data\":{\"distance\":46},\"label\":\"EROAD\"},{\"source\":10,\"target\":12,\"id\":21,\"data\":{\"distance\":59},\"label\":\"EROAD\"},{\"source\":13,\"target\":14,\"id\":22,\"data\":{\"distance\":74},\"label\":\"EROAD\"},{\"source\":14,\"target\":24,\"id\":23,\"data\":{\"distance\":277},\"label\":\"EROAD\"},{\"source\":20,\"target\":12,\"id\":24,\"data\":{\"distance\":27},\"label\":\"EROAD\"},{\"source\":21,\"target\":20,\"id\":25,\"data\":{\"distance\":207},\"label\":\"EROAD\"},{\"source\":22,\"target\":21,\"id\":26,\"data\":{\"distance\":22},\"label\":\"EROAD\"},{\"source\":23,\"target\":22,\"id\":27,\"data\":{\"distance\":32},\"label\":\"EROAD\"},{\"source\":24,\"target\":23,\"id\":28,\"data\":{\"distance\":106},\"label\":\"EROAD\"},{\"source\":26,\"target\":25,\"id\":29,\"data\":{\"distance\":25},\"label\":\"EROAD\"},{\"source\":26,\"target\":11,\"id\":30,\"data\":{\"distance\":35},\"label\":\"EROAD\"},{\"source\":12,\"target\":26,\"id\":31,\"data\":{\"distance\":32},\"label\":\"EROAD\"}],\"labels\":{\"Library\":\"#821EA6\",\"Place\":\"#C4AB0B\"},\"types\":[\"EROAD\",\"DEPENDS_ON\"],\"directed\":true}"
+            "data": "{\"nodes\":[{\"id\":32,\"data\":{\"latitude\":53.61239,\"id\":\"Immingham\",\"longitude\":53.61239,\"population\":9642},\"label\":\"Place\"},{\"id\":33,\"data\":{\"latitude\":53.52285,\"id\":\"Doncaster\",\"longitude\":53.52285,\"population\":302400},\"label\":\"Place\"},{\"id\":34,\"data\":{\"latitude\":51.9775,\"id\":\"Hoek van Holland\",\"longitude\":51.9775,\"population\":9382},\"label\":\"Place\"},{\"id\":35,\"data\":{\"latitude\":51.96375,\"id\":\"Felixstowe\",\"longitude\":51.96375,\"population\":23689},\"label\":\"Place\"},{\"id\":36,\"data\":{\"latitude\":52.05917,\"id\":\"Ipswich\",\"longitude\":52.05917,\"population\":133384},\"label\":\"Place\"},{\"id\":37,\"data\":{\"latitude\":51.88921,\"id\":\"Colchester\",\"longitude\":51.88921,\"population\":104390},\"label\":\"Place\"},{\"id\":38,\"data\":{\"latitude\":51.509865,\"id\":\"London\",\"longitude\":51.509865,\"population\":8787892},\"label\":\"Place\"},{\"id\":39,\"data\":{\"latitude\":51.9225,\"id\":\"Rotterdam\",\"longitude\":51.9225,\"population\":623652},\"label\":\"Place\"},{\"id\":40,\"data\":{\"latitude\":52.01667,\"id\":\"Gouda\",\"longitude\":52.01667,\"population\":70939},\"label\":\"Place\"},{\"id\":29,\"data\":{\"latitude\":52.379189,\"id\":\"Amsterdam\",\"longitude\":52.379189,\"population\":821752},\"label\":\"Place\"},{\"id\":30,\"data\":{\"latitude\":52.092876,\"id\":\"Utrecht\",\"longitude\":52.092876,\"population\":334176},\"label\":\"Place\"},{\"id\":31,\"data\":{\"latitude\":52.078663,\"id\":\"Den Haag\",\"longitude\":52.078663,\"population\":514861},\"label\":\"Place\"}],\"edges\":[{\"source\":29,\"target\":30,\"id\":36,\"data\":{\"distance\":46},\"label\":\"EROAD\"},{\"source\":29,\"target\":31,\"id\":37,\"data\":{\"distance\":59},\"label\":\"EROAD\"},{\"source\":31,\"target\":39,\"id\":38,\"data\":{\"distance\":26},\"label\":\"EROAD\"},{\"source\":29,\"target\":32,\"id\":39,\"data\":{\"distance\":369},\"label\":\"EROAD\"},{\"source\":32,\"target\":33,\"id\":40,\"data\":{\"distance\":74},\"label\":\"EROAD\"},{\"source\":33,\"target\":38,\"id\":41,\"data\":{\"distance\":277},\"label\":\"EROAD\"},{\"source\":34,\"target\":31,\"id\":42,\"data\":{\"distance\":27},\"label\":\"EROAD\"},{\"source\":35,\"target\":34,\"id\":43,\"data\":{\"distance\":207},\"label\":\"EROAD\"},{\"source\":36,\"target\":35,\"id\":44,\"data\":{\"distance\":22},\"label\":\"EROAD\"},{\"source\":37,\"target\":36,\"id\":45,\"data\":{\"distance\":32},\"label\":\"EROAD\"},{\"source\":38,\"target\":37,\"id\":46,\"data\":{\"distance\":106},\"label\":\"EROAD\"},{\"source\":40,\"target\":39,\"id\":47,\"data\":{\"distance\":25},\"label\":\"EROAD\"},{\"source\":40,\"target\":30,\"id\":48,\"data\":{\"distance\":35},\"label\":\"EROAD\"},{\"source\":31,\"target\":40,\"id\":49,\"data\":{\"distance\":32},\"label\":\"EROAD\"},{\"source\":34,\"target\":39,\"id\":50,\"data\":{\"distance\":33},\"label\":\"EROAD\"}],\"labels\":{\"User\":\"#6FF08D\",\"Library\":\"#6EAEB9\",\"Place\":\"#039A40\"},\"types\":[\"FOLLOWS\",\"EROAD\",\"DEPENDS_ON\"],\"directed\":true}"
           }
         ]
       },
@@ -171,15 +131,55 @@
       "jobName": "paragraph_1579455555807_-1128772440",
       "id": "20200119-173915_1773293344",
       "dateCreated": "2020-01-19 17:39:15.807",
-      "dateStarted": "2020-01-20 19:00:15.299",
-      "dateFinished": "2020-01-20 19:00:15.364",
+      "dateStarted": "2020-02-06 21:45:52.481",
+      "dateFinished": "2020-02-06 21:45:52.528",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%md\n## Neo4j graph algorithms library",
+      "user": "anonymous",
+      "dateUpdated": "2020-02-06 21:46:19.443",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "markdown",
+          "editOnDblClick": true,
+          "completionSupport": false
+        },
+        "editorMode": "ace/mode/markdown",
+        "editorHide": true,
+        "tableHide": false
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003ch2\u003eNeo4j graph algorithms library\u003c/h2\u003e\n\u003c/div\u003e"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1581025568359_124578976",
+      "id": "20200206-214608_725308605",
+      "dateCreated": "2020-02-06 21:46:08.359",
+      "dateStarted": "2020-02-06 21:46:19.449",
+      "dateFinished": "2020-02-06 21:46:19.464",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
     {
       "text": "%md\n\n### Write back minimum spanning tree algorithm results\n\nLet’s see the Minimum Spanning Tree algorithm in action. The following query finds\na spanning tree starting from Amsterdam:",
       "user": "anonymous",
-      "dateUpdated": "2020-01-28 17:55:29.843",
+      "dateUpdated": "2020-02-06 21:51:42.872",
       "config": {
         "colWidth": 12.0,
         "fontSize": 9.0,
@@ -191,8 +191,8 @@
           "completionSupport": false
         },
         "editorMode": "ace/mode/markdown",
-        "editorHide": true,
-        "tableHide": false
+        "editorHide": false,
+        "tableHide": true
       },
       "settings": {
         "params": {},
@@ -211,18 +211,20 @@
       "jobName": "paragraph_1579465505039_-1666082605",
       "id": "20200119-202505_761721492",
       "dateCreated": "2020-01-19 20:25:05.039",
-      "dateStarted": "2020-01-28 17:55:29.848",
-      "dateFinished": "2020-01-28 17:55:29.865",
+      "dateStarted": "2020-02-06 21:46:24.538",
+      "dateFinished": "2020-02-06 21:46:24.544",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
     {
-      "text": "MATCH (n:Place {id:\"Amsterdam\"})\nCALL algo.spanningTree.minimum(\"Place\", \"EROAD\", \"distance\", id(n),\n  {write:true, writeProperty:\"MINST\"})\nYIELD loadMillis, computeMillis, writeMillis, effectiveNodeCount\nRETURN loadMillis, computeMillis, writeMillis, effectiveNodeCount",
+      "text": "%neo4j_algo\nMATCH (n:Place {id:\"Amsterdam\"})\nCALL algo.spanningTree.minimum(\"Place\", \"EROAD\", \"distance\", id(n),\n  {write:true, writeProperty:\"MINST\"})\nYIELD loadMillis, computeMillis, writeMillis, effectiveNodeCount\nRETURN loadMillis, computeMillis, writeMillis, effectiveNodeCount",
       "user": "anonymous",
-      "dateUpdated": "2020-01-20 19:00:21.452",
+      "dateUpdated": "2020-02-06 21:46:31.081",
       "config": {
         "editorSetting": {
-          "editOnDblClick": false
+          "editOnDblClick": false,
+          "language": "markdown",
+          "completionSupport": false
         },
         "colWidth": 12.0,
         "editorMode": "ace/mode/undefined",
@@ -270,7 +272,7 @@
         "msg": [
           {
             "type": "TABLE",
-            "data": "loadMillis\tcomputeMillis\twriteMillis\teffectiveNodeCount\n12\t2\t20\t12\n"
+            "data": "loadMillis\tcomputeMillis\twriteMillis\teffectiveNodeCount\n7\t2\t75\t12\n"
           }
         ]
       },
@@ -278,15 +280,15 @@
       "jobName": "paragraph_1577905414974_-882443438",
       "id": "20200101-190009_1220471711",
       "dateCreated": "2020-01-01 19:03:34.974",
-      "dateStarted": "2020-01-20 19:00:21.531",
-      "dateFinished": "2020-01-20 19:00:21.647",
+      "dateStarted": "2020-02-06 21:46:31.092",
+      "dateFinished": "2020-02-06 21:46:31.228",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
     {
       "text": "%md\n\n### Return results\n\nThe above query stores its results in the graph. If we want to return the minimum weight\nspanning tree we can run the following query:",
       "user": "anonymous",
-      "dateUpdated": "2020-01-28 17:55:55.646",
+      "dateUpdated": "2020-02-06 21:52:04.603",
       "config": {
         "colWidth": 12.0,
         "fontSize": 9.0,
@@ -298,8 +300,8 @@
           "completionSupport": false
         },
         "editorMode": "ace/mode/markdown",
-        "editorHide": true,
-        "tableHide": false
+        "editorHide": false,
+        "tableHide": true
       },
       "settings": {
         "params": {},
@@ -318,18 +320,20 @@
       "jobName": "paragraph_1579546736283_512510968",
       "id": "20200120-185856_1085899446",
       "dateCreated": "2020-01-20 18:58:56.283",
-      "dateStarted": "2020-01-28 17:55:55.646",
-      "dateFinished": "2020-01-28 17:55:55.674",
+      "dateStarted": "2020-02-06 21:46:54.682",
+      "dateFinished": "2020-02-06 21:46:54.699",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
     {
-      "text": "MATCH path \u003d (n:Place {id:\"Amsterdam\"})-[:MINST*]-()\nWITH relationships(path) AS rels\nUNWIND rels AS rel\nWITH DISTINCT rel AS rel\nRETURN startNode(rel).id AS source, endNode(rel).id AS destination, rel.distance AS cost\n",
+      "text": "%neo4j_algo\nMATCH path \u003d (n:Place {id:\"Amsterdam\"})-[:MINST*]-()\nWITH relationships(path) AS rels\nUNWIND rels AS rel\nWITH DISTINCT rel AS rel\nRETURN startNode(rel).id AS source, endNode(rel).id AS destination, rel.distance AS cost\n",
       "user": "anonymous",
-      "dateUpdated": "2020-01-20 19:02:26.205",
+      "dateUpdated": "2020-02-06 21:46:46.682",
       "config": {
         "editorSetting": {
-          "editOnDblClick": false
+          "editOnDblClick": false,
+          "language": "markdown",
+          "completionSupport": false
         },
         "colWidth": 12.0,
         "editorMode": "ace/mode/undefined",
@@ -365,7 +369,9 @@
             }
           }
         },
-        "enabled": true
+        "enabled": true,
+        "editorHide": false,
+        "tableHide": false
       },
       "settings": {
         "params": {},
@@ -384,25 +390,489 @@
       "jobName": "paragraph_1577905414975_757230981",
       "id": "20200101-190028_1585661323",
       "dateCreated": "2020-01-01 19:03:34.975",
-      "dateStarted": "2020-01-20 19:02:26.235",
-      "dateFinished": "2020-01-20 19:02:26.301",
+      "dateStarted": "2020-02-06 21:46:46.682",
+      "dateFinished": "2020-02-06 21:46:46.987",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
     {
+      "text": "%md\n## Neo4j graph data science library",
       "user": "anonymous",
-      "dateUpdated": "2020-01-01 19:03:34.980",
+      "dateUpdated": "2020-02-06 21:47:07.410",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "markdown",
+          "editOnDblClick": true,
+          "completionSupport": false
+        },
+        "editorMode": "ace/mode/markdown",
+        "editorHide": true,
+        "tableHide": false
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003ch2\u003eNeo4j graph data science library\u003c/h2\u003e\n\u003c/div\u003e"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1577905414980_-1530867245",
+      "id": "20200101-190304_1101702216",
+      "dateCreated": "2020-01-01 19:03:34.980",
+      "dateStarted": "2020-02-06 21:47:07.417",
+      "dateFinished": "2020-02-06 21:47:07.428",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%md\nPreferred way to use GDS library is with loaded named graphs, where we first load the graph into memory and then proceed to run algorithms on it.\n",
+      "user": "anonymous",
+      "dateUpdated": "2020-02-06 21:47:35.275",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "markdown",
+          "editOnDblClick": true,
+          "completionSupport": false
+        },
+        "editorMode": "ace/mode/markdown",
+        "editorHide": true,
+        "tableHide": false
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003cp\u003ePreferred way to use GDS library is with loaded named graphs, where we first load the graph into memory and then proceed to run algorithms on it.\u003c/p\u003e\n\u003c/div\u003e"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1581025627398_-237284280",
+      "id": "20200206-214707_818926307",
+      "dateCreated": "2020-02-06 21:47:07.398",
+      "dateStarted": "2020-02-06 21:47:35.275",
+      "dateFinished": "2020-02-06 21:47:35.287",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%neo4j_gdn\nCALL gds.graph.create(\u0027spanningtree_example\u0027, \u0027Place\u0027, {EROAD:{type:\u0027EROAD\u0027,projection:\u0027Natural\u0027,properties:\u0027distance\u0027}});",
+      "user": "anonymous",
+      "dateUpdated": "2020-02-06 21:58:39.954",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {
+          "0": {
+            "graph": {
+              "mode": "table",
+              "height": 300.0,
+              "optionOpen": false,
+              "setting": {
+                "table": {
+                  "tableGridState": {},
+                  "tableColumnTypeState": {
+                    "names": {
+                      "graphName": "string",
+                      "nodeProjection.Place.label": "string",
+                      "relationshipProjection.EROAD.aggregation": "string",
+                      "relationshipProjection.EROAD.projection": "string",
+                      "relationshipProjection.EROAD.type": "string",
+                      "relationshipProjection.EROAD.properties.distance.property": "string",
+                      "relationshipProjection.EROAD.properties.distance.defaultValue": "string",
+                      "relationshipProjection.EROAD.properties.distance.aggregation": "string",
+                      "nodeCount": "string",
+                      "relationshipCount": "string",
+                      "createMillis": "string"
+                    },
+                    "updated": false
+                  },
+                  "tableOptionSpecHash": "[{\"name\":\"useFilter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable filter for columns\"},{\"name\":\"showPagination\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable pagination for better navigation\"},{\"name\":\"showAggregationFooter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable a footer for displaying aggregated values\"}]",
+                  "tableOptionValue": {
+                    "useFilter": false,
+                    "showPagination": false,
+                    "showAggregationFooter": false
+                  },
+                  "updated": false,
+                  "initialized": false
+                }
+              },
+              "commonSetting": {}
+            }
+          }
+        },
+        "editorSetting": {
+          "language": "markdown",
+          "editOnDblClick": false,
+          "completionSupport": false
+        },
+        "editorMode": "ace/mode/undefined"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TABLE",
+            "data": "graphName\tnodeProjection.Place.label\trelationshipProjection.EROAD.aggregation\trelationshipProjection.EROAD.projection\trelationshipProjection.EROAD.type\trelationshipProjection.EROAD.properties.distance.property\trelationshipProjection.EROAD.properties.distance.defaultValue\trelationshipProjection.EROAD.properties.distance.aggregation\tnodeCount\trelationshipCount\tcreateMillis\n\"spanningtree_example\"\tPlace\tDEFAULT\tNATURAL\tEROAD\tdistance\tNaN\tDEFAULT\t12\t15\t13\n"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1581025655253_1738926662",
+      "id": "20200206-214735_466643794",
+      "dateCreated": "2020-02-06 21:47:35.253",
+      "dateStarted": "2020-02-06 21:58:38.923",
+      "dateFinished": "2020-02-06 21:58:38.963",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%md\n\n### Write back minimum spanning tree algorithm results\n\nLet’s see the Minimum Spanning Tree algorithm in action. The following query finds\na spanning tree starting from Amsterdam:",
+      "user": "anonymous",
+      "dateUpdated": "2020-02-06 21:58:49.299",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "markdown",
+          "editOnDblClick": true,
+          "completionSupport": false
+        },
+        "editorMode": "ace/mode/markdown",
+        "editorHide": true,
+        "tableHide": false
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003ch3\u003eWrite back minimum spanning tree algorithm results\u003c/h3\u003e\n\u003cp\u003eLet’s see the Minimum Spanning Tree algorithm in action. The following query finds\u003cbr/\u003ea spanning tree starting from Amsterdam:\u003c/p\u003e\n\u003c/div\u003e"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1581025917402_-653615492",
+      "id": "20200206-215157_973305546",
+      "dateCreated": "2020-02-06 21:51:57.402",
+      "dateStarted": "2020-02-06 21:58:49.299",
+      "dateFinished": "2020-02-06 21:58:49.312",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%neo4j_gdn\nMATCH (n:Place {id:\"Amsterdam\"})\nCALL gds.alpha.spanningTree.minimum.write(\u0027spanningtree_example\u0027, {weightWriteProperty:\u0027cost\u0027, startNodeId: id(n), writeProperty:\u0027MNIST\u0027, relationshipWeightProperty:\u0027distance\u0027})\nYIELD createMillis, computeMillis, writeMillis, effectiveNodeCount\nRETURN createMillis, computeMillis, writeMillis, effectiveNodeCount",
+      "user": "anonymous",
+      "dateUpdated": "2020-02-06 21:59:46.177",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {
+          "0": {
+            "graph": {
+              "mode": "table",
+              "height": 300.0,
+              "optionOpen": false,
+              "setting": {
+                "table": {
+                  "tableGridState": {},
+                  "tableColumnTypeState": {
+                    "names": {
+                      "createMillis": "string",
+                      "computeMillis": "string",
+                      "writeMillis": "string",
+                      "effectiveNodeCount": "string"
+                    },
+                    "updated": false
+                  },
+                  "tableOptionSpecHash": "[{\"name\":\"useFilter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable filter for columns\"},{\"name\":\"showPagination\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable pagination for better navigation\"},{\"name\":\"showAggregationFooter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable a footer for displaying aggregated values\"}]",
+                  "tableOptionValue": {
+                    "useFilter": false,
+                    "showPagination": false,
+                    "showAggregationFooter": false
+                  },
+                  "updated": false,
+                  "initialized": false
+                }
+              },
+              "commonSetting": {}
+            }
+          }
+        },
+        "editorSetting": {
+          "language": "markdown",
+          "editOnDblClick": false,
+          "completionSupport": false
+        },
+        "editorMode": "ace/mode/undefined"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TABLE",
+            "data": "createMillis\tcomputeMillis\twriteMillis\teffectiveNodeCount\n0\t4\t9\t1\n"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1581025688853_798874747",
+      "id": "20200206-214808_284803239",
+      "dateCreated": "2020-02-06 21:48:08.853",
+      "dateStarted": "2020-02-06 21:59:46.198",
+      "dateFinished": "2020-02-06 21:59:46.249",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%md\n\n### Return results\n\nThe above query stores its results in the graph. If we want to return the minimum weight\nspanning tree we can run the following query:",
+      "user": "anonymous",
+      "dateUpdated": "2020-02-06 21:52:13.816",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "markdown",
+          "editOnDblClick": true,
+          "completionSupport": false
+        },
+        "editorMode": "ace/mode/markdown",
+        "editorHide": true,
+        "tableHide": false
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003ch3\u003eReturn results\u003c/h3\u003e\n\u003cp\u003eThe above query stores its results in the graph. If we want to return the minimum weight\u003cbr/\u003espanning tree we can run the following query:\u003c/p\u003e\n\u003c/div\u003e"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1581025930970_-559997470",
+      "id": "20200206-215210_465327188",
+      "dateCreated": "2020-02-06 21:52:10.970",
+      "dateStarted": "2020-02-06 21:52:13.816",
+      "dateFinished": "2020-02-06 21:52:13.821",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%neo4j_gdn\nMATCH path \u003d (n:Place {id:\"Amsterdam\"})-[:MINST*]-()\nWITH relationships(path) AS rels\nUNWIND rels AS rel\nWITH DISTINCT rel AS rel\nRETURN startNode(rel).id AS source, endNode(rel).id AS destination, rel.distance AS cost",
+      "user": "anonymous",
+      "dateUpdated": "2020-02-06 21:59:57.613",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "markdown",
+          "editOnDblClick": false,
+          "completionSupport": false
+        },
+        "editorMode": "ace/mode/undefined"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": []
+      },
+      "apps": [],
+      "jobName": "paragraph_1581025778151_-742356042",
+      "id": "20200206-214938_1721484523",
+      "dateCreated": "2020-02-06 21:49:38.151",
+      "dateStarted": "2020-02-06 21:59:57.635",
+      "dateFinished": "2020-02-06 21:59:57.641",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%md\nAfter we are done with our analyisis we release the graph from memory",
+      "user": "anonymous",
+      "dateUpdated": "2020-02-06 22:00:00.666",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "markdown",
+          "editOnDblClick": true,
+          "completionSupport": false
+        },
+        "editorMode": "ace/mode/markdown",
+        "editorHide": true,
+        "tableHide": false
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003cp\u003eAfter we are done with our analyisis we release the graph from memory\u003c/p\u003e\n\u003c/div\u003e"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1581026283635_-1321492394",
+      "id": "20200206-215803_905830260",
+      "dateCreated": "2020-02-06 21:58:03.635",
+      "dateStarted": "2020-02-06 22:00:00.665",
+      "dateFinished": "2020-02-06 22:00:00.671",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%neo4j_gdn\nCALL gds.graph.drop(\u0027spanningtree_example\u0027)",
+      "user": "anonymous",
+      "dateUpdated": "2020-02-06 22:00:05.223",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {
+          "0": {
+            "graph": {
+              "mode": "table",
+              "height": 300.0,
+              "optionOpen": false,
+              "setting": {
+                "table": {
+                  "tableGridState": {},
+                  "tableColumnTypeState": {
+                    "names": {
+                      "graphName": "string",
+                      "nodeProjection.Place.label": "string",
+                      "relationshipProjection.EROAD.aggregation": "string",
+                      "relationshipProjection.EROAD.projection": "string",
+                      "relationshipProjection.EROAD.type": "string",
+                      "relationshipProjection.EROAD.properties.distance.property": "string",
+                      "relationshipProjection.EROAD.properties.distance.defaultValue": "string",
+                      "relationshipProjection.EROAD.properties.distance.aggregation": "string",
+                      "nodeQuery": "string",
+                      "relationshipQuery": "string",
+                      "nodeCount": "string",
+                      "relationshipCount": "string",
+                      "histogram.p99": "string",
+                      "histogram.min": "string",
+                      "histogram.max": "string",
+                      "histogram.mean": "string",
+                      "histogram.p90": "string",
+                      "histogram.p50": "string",
+                      "histogram.p999": "string",
+                      "histogram.p95": "string",
+                      "histogram.p75": "string"
+                    },
+                    "updated": false
+                  },
+                  "tableOptionSpecHash": "[{\"name\":\"useFilter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable filter for columns\"},{\"name\":\"showPagination\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable pagination for better navigation\"},{\"name\":\"showAggregationFooter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable a footer for displaying aggregated values\"}]",
+                  "tableOptionValue": {
+                    "useFilter": false,
+                    "showPagination": false,
+                    "showAggregationFooter": false
+                  },
+                  "updated": false,
+                  "initialized": false
+                }
+              },
+              "commonSetting": {}
+            }
+          }
+        },
+        "editorSetting": {
+          "language": "markdown",
+          "editOnDblClick": false,
+          "completionSupport": false
+        },
+        "editorMode": "ace/mode/undefined"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TABLE",
+            "data": "graphName\tnodeProjection.Place.label\trelationshipProjection.EROAD.aggregation\trelationshipProjection.EROAD.projection\trelationshipProjection.EROAD.type\trelationshipProjection.EROAD.properties.distance.property\trelationshipProjection.EROAD.properties.distance.defaultValue\trelationshipProjection.EROAD.properties.distance.aggregation\tnodeQuery\trelationshipQuery\tnodeCount\trelationshipCount\thistogram.p99\thistogram.min\thistogram.max\thistogram.mean\thistogram.p90\thistogram.p50\thistogram.p999\thistogram.p95\thistogram.p75\n\"spanningtree_example\"\tPlace\tDEFAULT\tNATURAL\tEROAD\tdistance\tNaN\tDEFAULT\tNULL\tNULL\t12\t15\t3\t0\t3\t1.25\t2\t1\t3\t2\t2\n"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1581026289441_933162842",
+      "id": "20200206-215809_726587180",
+      "dateCreated": "2020-02-06 21:58:09.441",
+      "dateStarted": "2020-02-06 22:00:02.801",
+      "dateFinished": "2020-02-06 22:00:02.807",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%neo4j_gdn\n",
+      "user": "anonymous",
+      "dateUpdated": "2020-02-06 21:58:28.833",
       "config": {},
       "settings": {
         "params": {},
         "forms": {}
       },
       "apps": [],
-      "jobName": "paragraph_1577905414980_-1530867245",
-      "id": "20200101-190304_1101702216",
-      "dateCreated": "2020-01-01 19:03:34.980",
+      "jobName": "paragraph_1581026308832_-1281847380",
+      "id": "20200206-215828_1960728630",
+      "dateCreated": "2020-02-06 21:58:28.832",
       "status": "READY",
-      "errorMessage": "",
       "progressUpdateIntervalMs": 500
     }
   ],
@@ -411,8 +881,9 @@
   "noteParams": {},
   "noteForms": {},
   "angularObjects": {
+    "neo4j_algo:shared_process": [],
     "md:shared_process": [],
-    "neo4j:shared_process": []
+    "neo4j_gdn:shared_process": []
   },
   "config": {
     "isZeppelinNotebookCronEnable": false

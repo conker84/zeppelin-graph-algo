@@ -1,0 +1,1586 @@
+{
+  "paragraphs": [
+    {
+      "text": "%pyspark\nimport pandas as pd\nfrom numpy.random import randint\nfrom pyspark.ml import Pipeline\nfrom pyspark.ml.classification import RandomForestClassifier\nfrom pyspark.ml.feature import StringIndexer, VectorAssembler\nfrom pyspark.ml.evaluation import BinaryClassificationEvaluator\nfrom pyspark.sql.types import *\nfrom pyspark.sql import functions as F\nfrom sklearn.metrics import roc_curve, auc\nfrom collections import Counter\nfrom cycler import cycler\nimport matplotlib\nimport matplotlib.pyplot as plt",
+      "user": "anonymous",
+      "dateUpdated": "2020-01-30 20:27:56.865",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "python",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "editorMode": "ace/mode/python"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": []
+      },
+      "apps": [],
+      "jobName": "paragraph_1580415107422_-1030430996",
+      "id": "20200130-201147_175473249",
+      "dateCreated": "2020-01-30 20:11:47.423",
+      "dateStarted": "2020-01-30 20:27:46.841",
+      "dateFinished": "2020-01-30 20:27:46.909",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%neo4j\n\nMATCH (a1)\u003c-[:AUTHOR]-(paper)-[:AUTHOR]-\u003e(a2:Author)\nWITH a1, a2, paper\nORDER BY a1, paper.year\nWITH a1, a2, collect(paper)[0].year AS year, count(*) AS collaborations\nMERGE (a1)-[coauthor:CO_AUTHOR {year: year}]-(a2)\nSET coauthor.collaborations \u003d collaborations;",
+      "user": "anonymous",
+      "dateUpdated": "2020-01-30 20:30:08.489",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "editorMode": "ace/mode/undefined"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "jobName": "paragraph_1580415131036_1844922377",
+      "id": "20200130-201211_1199085342",
+      "dateCreated": "2020-01-30 20:12:11.036",
+      "status": "READY",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%neo4j\n\nMATCH (article:Article)\nRETURN article.year AS year, count(*) AS count\nORDER BY year\n",
+      "user": "anonymous",
+      "dateUpdated": "2020-01-30 20:31:19.898",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "editorMode": "ace/mode/undefined"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "jobName": "paragraph_1580416237157_1959677758",
+      "id": "20200130-203037_1012865694",
+      "dateCreated": "2020-01-30 20:30:37.157",
+      "status": "READY",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%neo4j\nMATCH (article:Article)\nRETURN article.year \u003c 2006 AS training, count(*) AS count",
+      "user": "anonymous",
+      "dateUpdated": "2020-01-30 20:32:27.504",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "editorMode": "ace/mode/undefined"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "jobName": "paragraph_1580416282783_-1414356897",
+      "id": "20200130-203122_1634258043",
+      "dateCreated": "2020-01-30 20:31:22.783",
+      "status": "READY",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%neo4j\nMATCH (a1)\u003c-[:AUTHOR]-(paper)-[:AUTHOR]-\u003e(a2:Author)\nWITH a1, a2, paper\nORDER BY a1, paper.year\nWITH a1, a2, collect(paper)[0].year AS year, count(*) AS collaborations\nWHERE year \u003c 2006\nMERGE (a1)-[coauthor:CO_AUTHOR_EARLY {year: year}]-(a2)\nSET coauthor.collaborations \u003d collaborations;",
+      "user": "anonymous",
+      "dateUpdated": "2020-01-30 20:32:27.556",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "editorMode": "ace/mode/undefined"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "jobName": "paragraph_1580416305635_-497056222",
+      "id": "20200130-203145_534293801",
+      "dateCreated": "2020-01-30 20:31:45.636",
+      "status": "READY",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%neo4j\nMATCH (a1)\u003c-[:AUTHOR]-(paper)-[:AUTHOR]-\u003e(a2:Author)\nWITH a1, a2, paper\nORDER BY a1, paper.year\nWITH a1, a2, collect(paper)[0].year AS year, count(*) AS collaborations\nWHERE year \u003e\u003d 2006\nMERGE (a1)-[coauthor:CO_AUTHOR_LATE {year: year}]-(a2)\nSET coauthor.collaborations \u003d collaborations;",
+      "user": "anonymous",
+      "dateUpdated": "2020-01-30 20:32:27.618",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "editorMode": "ace/mode/undefined"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "jobName": "paragraph_1580416314117_645223448",
+      "id": "20200130-203154_214620233",
+      "dateCreated": "2020-01-30 20:31:54.117",
+      "status": "READY",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%neo4j\nMATCH ()-[:CO_AUTHOR_EARLY]-\u003e()\nRETURN count(*) AS count",
+      "user": "anonymous",
+      "dateUpdated": "2020-01-30 20:32:27.680",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "editorMode": "ace/mode/undefined"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "jobName": "paragraph_1580416322127_-981775050",
+      "id": "20200130-203202_566822862",
+      "dateCreated": "2020-01-30 20:32:02.128",
+      "status": "READY",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%neo4j\nMATCH ()-[:CO_AUTHOR_LATE]-\u003e()\nRETURN count(*) AS count",
+      "user": "anonymous",
+      "dateUpdated": "2020-01-30 20:32:27.733",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "editorMode": "ace/mode/undefined"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "jobName": "paragraph_1580416329529_-99873135",
+      "id": "20200130-203209_1989284442",
+      "dateCreated": "2020-01-30 20:32:09.529",
+      "status": "READY",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%md\n\n## Prepare training data\n",
+      "user": "anonymous",
+      "dateUpdated": "2020-01-30 20:34:03.621",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "markdown",
+          "editOnDblClick": true,
+          "completionKey": "TAB",
+          "completionSupport": false
+        },
+        "editorMode": "ace/mode/markdown",
+        "editorHide": true,
+        "tableHide": false
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003ch2\u003ePrepare training data\u003c/h2\u003e\n\u003c/div\u003e"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1580416414831_1745478839",
+      "id": "20200130-203334_2125556020",
+      "dateCreated": "2020-01-30 20:33:34.831",
+      "dateStarted": "2020-01-30 20:33:49.388",
+      "dateFinished": "2020-01-30 20:33:51.334",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%pyspark\ndef down_sample(df):\n    copy \u003d df.copy()\n    zero \u003d Counter(copy.label.values)[0]\n    un \u003d Counter(copy.label.values)[1]\n    n \u003d zero - un\n    copy \u003d copy.drop(copy[copy.label \u003d\u003d 0].sample(n\u003dn, random_state\u003d1).index)\n    return copy.sample(frac\u003d1)\n",
+      "user": "anonymous",
+      "dateUpdated": "2020-01-30 20:32:51.720",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "python",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "editorMode": "ace/mode/python"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": []
+      },
+      "apps": [],
+      "jobName": "paragraph_1580416340326_-360613118",
+      "id": "20200130-203220_43970856",
+      "dateCreated": "2020-01-30 20:32:20.326",
+      "dateStarted": "2020-01-30 20:32:37.717",
+      "dateFinished": "2020-01-30 20:32:37.745",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%pyspark\ntrain_existing_links \u003d graph.run(\"\"\"\nMATCH (author:Author)-[:CO_AUTHOR_EARLY]-\u003e(other:Author)\nRETURN id(author) AS node1, id(other) AS node2, 1 AS label\n\"\"\").to_data_frame()\ntrain_missing_links \u003d graph.run(\"\"\"\nMATCH (author:Author)\nWHERE (author)-[:CO_AUTHOR_EARLY]-()\nMATCH (author)-[:CO_AUTHOR_EARLY*2..3]-(other)\nWHERE not((author)-[:CO_AUTHOR_EARLY]-(other))\nRETURN id(author) AS node1, id(other) AS node2, 0 AS label\n\"\"\").to_data_frame()\ntrain_missing_links \u003d train_missing_links.drop_duplicates()\ntraining_df \u003d train_missing_links.append(train_existing_links, ignore_index\u003dTrue)\ntraining_df[\u0027label\u0027] \u003d training_df[\u0027label\u0027].astype(\u0027category\u0027)\ntraining_df \u003d down_sample(training_df)\ntraining_data \u003d spark.createDataFrame(training_df)",
+      "user": "anonymous",
+      "dateUpdated": "2020-01-30 20:33:13.729",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "editorMode": "ace/mode/scala"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "jobName": "paragraph_1580416357629_220593062",
+      "id": "20200130-203237_1830350312",
+      "dateCreated": "2020-01-30 20:32:37.629",
+      "status": "READY",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%pyspark\ntraining_data.show(n\u003d5)",
+      "user": "anonymous",
+      "dateUpdated": "2020-01-30 20:33:13.784",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "python",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "editorMode": "ace/mode/python"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "jobName": "paragraph_1580416384402_-1856525331",
+      "id": "20200130-203304_2007464715",
+      "dateCreated": "2020-01-30 20:33:04.403",
+      "status": "READY",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%pyspark\ntraining_data.groupby(\"label\").count().show()",
+      "user": "anonymous",
+      "dateUpdated": "2020-01-30 20:33:43.044",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "python",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "editorMode": "ace/mode/python"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "jobName": "paragraph_1580416402195_-1154172401",
+      "id": "20200130-203322_96883053",
+      "dateCreated": "2020-01-30 20:33:22.195",
+      "status": "READY",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%md\n### Prepare test data\n",
+      "user": "anonymous",
+      "dateUpdated": "2020-01-30 20:34:21.193",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "markdown",
+          "editOnDblClick": true,
+          "completionKey": "TAB",
+          "completionSupport": false
+        },
+        "editorMode": "ace/mode/markdown",
+        "editorHide": true,
+        "tableHide": false
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003ch3\u003ePrepare test data\u003c/h3\u003e\n\u003c/div\u003e"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1580416434069_-1551846675",
+      "id": "20200130-203354_1204288345",
+      "dateCreated": "2020-01-30 20:33:54.069",
+      "dateStarted": "2020-01-30 20:34:06.906",
+      "dateFinished": "2020-01-30 20:34:06.978",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%pyspark\n\ntest_existing_links \u003d graph.run(\"\"\"\nMATCH (author:Author)-[:CO_AUTHOR_LATE]-\u003e(other:Author)\nRETURN id(author) AS node1, id(other) AS node2, 1 AS label\n\"\"\").to_data_frame()\ntest_missing_links \u003d graph.run(\"\"\"\nMATCH (author:Author)\nWHERE (author)-[:CO_AUTHOR_LATE]-()\nMATCH (author)-[:CO_AUTHOR*2..3]-(other)\nWHERE not((author)-[:CO_AUTHOR]-(other))\nRETURN id(author) AS node1, id(other) AS node2, 0 AS label\n\"\"\").to_data_frame()\ntest_missing_links \u003d test_missing_links.drop_duplicates()\ntest_df \u003d test_missing_links.append(test_existing_links, ignore_index\u003dTrue)\ntest_df[\u0027label\u0027] \u003d test_df[\u0027label\u0027].astype(\u0027category\u0027)\ntest_df \u003d down_sample(test_df)\ntest_data \u003d spark.createDataFrame(test_df)\n",
+      "user": "anonymous",
+      "dateUpdated": "2020-01-30 20:35:12.731",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "python",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "editorMode": "ace/mode/python"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "jobName": "paragraph_1580416446721_752822131",
+      "id": "20200130-203406_1731198140",
+      "dateCreated": "2020-01-30 20:34:06.721",
+      "status": "READY",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%pyspark\ntest_data.groupby(\"label\").count().show()",
+      "user": "anonymous",
+      "dateUpdated": "2020-01-30 20:35:12.775",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "python",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "editorMode": "ace/mode/python"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "jobName": "paragraph_1580416486193_-1445881878",
+      "id": "20200130-203446_1230320362",
+      "dateCreated": "2020-01-30 20:34:46.193",
+      "status": "READY",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%md\n### Predict links\n",
+      "user": "anonymous",
+      "dateUpdated": "2020-01-30 20:36:24.116",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "markdown",
+          "editOnDblClick": true,
+          "completionKey": "TAB",
+          "completionSupport": false
+        },
+        "editorMode": "ace/mode/markdown",
+        "editorHide": true,
+        "tableHide": false
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003ch3\u003ePredict links\u003c/h3\u003e\n\u003c/div\u003e"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1580416565130_207713291",
+      "id": "20200130-203605_1518699263",
+      "dateCreated": "2020-01-30 20:36:05.130",
+      "dateStarted": "2020-01-30 20:36:13.108",
+      "dateFinished": "2020-01-30 20:36:13.120",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%pyspark\ndef create_pipeline(fields):\n    assembler \u003d VectorAssembler(inputCols\u003dfields, outputCol\u003d\"features\")\n    rf \u003d RandomForestClassifier(labelCol\u003d\"label\", featuresCol\u003d\"features\",\n    numTrees\u003d30, maxDepth\u003d10)\n    return Pipeline(stages\u003d[assembler, rf])\n",
+      "user": "anonymous",
+      "dateUpdated": "2020-01-30 20:36:34.307",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "editorMode": "ace/mode/scala"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": []
+      },
+      "apps": [],
+      "jobName": "paragraph_1580416490387_1766876868",
+      "id": "20200130-203450_238567598",
+      "dateCreated": "2020-01-30 20:34:50.387",
+      "dateStarted": "2020-01-30 20:36:34.412",
+      "dateFinished": "2020-01-30 20:36:34.428",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%pyspark\ndef apply_graphy_training_features(data):\n    query \u003d \"\"\"\n    UNWIND $pairs AS pair\n    MATCH (p1) WHERE id(p1) \u003d pair.node1\n    MATCH (p2) WHERE id(p2) \u003d pair.node2\n    RETURN pair.node1 AS node1,\n    pair.node2 AS node2,\n    size([(p1)-[:CO_AUTHOR_EARLY]-(a)-\n    [:CO_AUTHOR_EARLY]-(p2) | a]) AS commonAuthors,\n    size((p1)-[:CO_AUTHOR_EARLY]-()) * size((p2)-\n    [:CO_AUTHOR_EARLY]-()) AS prefAttachment,\n    size(apoc.coll.toSet(\n    [(p1)-[:CO_AUTHOR_EARLY]-(a) | id(a)] +\n    [(p2)-[:CO_AUTHOR_EARLY]-(a) | id(a)]\n    )) AS totalNeighbors\n    \"\"\"\n    pairs \u003d [{\"node1\": row[\"node1\"], \"node2\": row[\"node2\"]}\n    for row in data.collect()]\n    features \u003d spark.createDataFrame(graph.run(query,\n    {\"pairs\": pairs}).to_data_frame())\n    return data.join(features, [\"node1\", \"node2\"])",
+      "user": "anonymous",
+      "dateUpdated": "2020-01-30 20:37:16.503",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "editorMode": "ace/mode/scala"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": []
+      },
+      "apps": [],
+      "jobName": "paragraph_1580416594307_1192215396",
+      "id": "20200130-203634_1143338129",
+      "dateCreated": "2020-01-30 20:36:34.307",
+      "dateStarted": "2020-01-30 20:36:59.791",
+      "dateFinished": "2020-01-30 20:36:59.814",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%pyspark\ndef apply_graphy_test_features(data):\n    query \u003d \"\"\"\n    UNWIND $pairs AS pair\n    MATCH (p1) WHERE id(p1) \u003d pair.node1\n    MATCH (p2) WHERE id(p2) \u003d pair.node2\n    RETURN pair.node1 AS node1,\n    pair.node2 AS node2,\n    size([(p1)-[:CO_AUTHOR]-(a)-[:CO_AUTHOR]-(p2) | a]) AS commonAuthors,\n    size((p1)-[:CO_AUTHOR]-()) * size((p2)-[:CO_AUTHOR]-())\n    AS prefAttachment,\n    size(apoc.coll.toSet(\n    [(p1)-[:CO_AUTHOR]-(a) | id(a)] + [(p2)-[:CO_AUTHOR]-(a) | id(a)]\n    )) AS totalNeighbors\n    \"\"\"\n    pairs \u003d [{\"node1\": row[\"node1\"], \"node2\": row[\"node2\"]}\n    for row in data.collect()]\n    features \u003d spark.createDataFrame(graph.run(query,{\"pairs\": pairs}).to_data_frame())\n    return data.join(features, [\"node1\", \"node2\"])",
+      "user": "anonymous",
+      "dateUpdated": "2020-01-30 20:38:11.051",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "python",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "editorMode": "ace/mode/python"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": []
+      },
+      "apps": [],
+      "jobName": "paragraph_1580416614146_-1265602676",
+      "id": "20200130-203654_1695463148",
+      "dateCreated": "2020-01-30 20:36:54.147",
+      "dateStarted": "2020-01-30 20:37:46.742",
+      "dateFinished": "2020-01-30 20:37:46.768",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%pyspark\nplt.style.use(\u0027fivethirtyeight\u0027)\nfig, axs \u003d plt.subplots(1, 2, figsize\u003d(18, 7), sharey\u003dTrue)\ncharts \u003d [(1, \"have collaborated\"), (0, \"haven\u0027t collaborated\")]\nfor index, chart in enumerate(charts):\n    label, title \u003d chart\n    filtered \u003d training_data.filter(training_data[\"label\"] \u003d\u003d label)\n    common_authors \u003d filtered.toPandas()[\"commonAuthors\"]\n    histogram \u003d common_authors.value_counts().sort_index()\n    histogram /\u003d float(histogram.sum())\n    histogram.plot(kind\u003d\"bar\", x\u003d\u0027Common Authors\u0027, color\u003d\"darkblue\",\n    ax\u003daxs[index], title\u003df\"Authors who {title} (label\u003d{label})\")\n    axs[index].xaxis.set_label_text(\"Common Authors\")\nplt.tight_layout()\nplt.show()",
+      "user": "anonymous",
+      "dateUpdated": "2020-01-30 20:39:16.868",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "editorMode": "ace/mode/scala"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "jobName": "paragraph_1580416676945_138135138",
+      "id": "20200130-203756_1286901073",
+      "dateCreated": "2020-01-30 20:37:56.945",
+      "status": "READY",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%pyspark\ndef train_model(fields, training_data):\n    pipeline \u003d create_pipeline(fields)\n    model \u003d pipeline.fit(training_data)\n    return model",
+      "user": "anonymous",
+      "dateUpdated": "2020-01-30 20:39:36.731",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "python",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "editorMode": "ace/mode/python"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "jobName": "paragraph_1580416758222_808199719",
+      "id": "20200130-203918_1366281276",
+      "dateCreated": "2020-01-30 20:39:18.222",
+      "status": "READY",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%pyspark\nbasic_model \u003d train_model([\"commonAuthors\"], training_data)",
+      "user": "anonymous",
+      "dateUpdated": "2020-01-30 20:39:31.545",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "python",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "editorMode": "ace/mode/python"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "jobName": "paragraph_1580416768499_-590831960",
+      "id": "20200130-203928_1353421074",
+      "dateCreated": "2020-01-30 20:39:28.499",
+      "status": "READY",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%pyspark\neval_df \u003d spark.createDataFrame(\n    [(0,), (1,), (2,), (10,), (100,)],\n    [\u0027commonAuthors\u0027])\n\n(basic_model.transform(eval_df)\n.select(\"commonAuthors\", \"probability\", \"prediction\")\n.show(truncate\u003dFalse))",
+      "user": "anonymous",
+      "dateUpdated": "2020-01-30 20:40:10.920",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "python",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "editorMode": "ace/mode/python"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "jobName": "paragraph_1580416787651_1650357166",
+      "id": "20200130-203947_1836704509",
+      "dateCreated": "2020-01-30 20:39:47.651",
+      "status": "READY",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%pyspark\ndef evaluate_model(model, test_data):\n    # Execute the model against the test set\n    predictions \u003d model.transform(test_data)\n    # Compute true positive, false positive, false negative counts\n    tp \u003d predictions[(predictions.label \u003d\u003d 1) \u0026\n    (predictions.prediction \u003d\u003d 1)].count()\n    fp \u003d predictions[(predictions.label \u003d\u003d 0) \u0026\n    (predictions.prediction \u003d\u003d 1)].count()\n    fn \u003d predictions[(predictions.label \u003d\u003d 1) \u0026\n    (predictions.prediction \u003d\u003d 0)].count()\n    # Compute recall and precision manually\n    recall \u003d float(tp) / (tp + fn)\n    precision \u003d float(tp) / (tp + fp)\n    # Compute accuracy using Spark MLLib\u0027s binary classification evaluator\n    accuracy \u003d BinaryClassificationEvaluator().evaluate(predictions)\n    # Compute false positive rate and true positive rate using sklearn functions\n    labels \u003d [row[\"label\"] for row in predictions.select(\"label\").collect()]\n    preds \u003d [row[\"probability\"][1] for row in predictions.select\n    (\"probability\").collect()]\n    fpr, tpr, threshold \u003d roc_curve(labels, preds)\n    roc_auc \u003d auc(fpr, tpr)\n    return { \"fpr\": fpr, \"tpr\": tpr, \"roc_auc\": roc_auc, \"accuracy\": accuracy,\n    \"recall\": recall, \"precision\": precision }",
+      "user": "anonymous",
+      "dateUpdated": "2020-01-30 20:41:03.240",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "python",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "editorMode": "ace/mode/python"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "jobName": "paragraph_1580416813609_-1558325695",
+      "id": "20200130-204013_632531193",
+      "dateCreated": "2020-01-30 20:40:13.609",
+      "status": "READY",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%pyspark\ndef display_results(results):\n    results \u003d {k: v for k, v in results.items() if k not in\n    [\"fpr\", \"tpr\", \"roc_auc\"]}\n    return pd.DataFrame({\"Measure\": list(results.keys()),\n    \"Score\": list(results.values())})",
+      "user": "anonymous",
+      "dateUpdated": "2020-01-30 20:41:03.327",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "python",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "editorMode": "ace/mode/python"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "jobName": "paragraph_1580416825845_1711740998",
+      "id": "20200130-204025_105556922",
+      "dateCreated": "2020-01-30 20:40:25.845",
+      "status": "READY",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%pyspark\nbasic_results \u003d evaluate_model(basic_model, test_data)\ndisplay_results(basic_results)",
+      "user": "anonymous",
+      "dateUpdated": "2020-01-30 20:41:03.390",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "python",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "editorMode": "ace/mode/python"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "jobName": "paragraph_1580416843194_1920004400",
+      "id": "20200130-204043_912845599",
+      "dateCreated": "2020-01-30 20:40:43.194",
+      "status": "READY",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%pyspark\ndef create_roc_plot():\n    plt.style.use(\u0027classic\u0027)\n    fig \u003d plt.figure(figsize\u003d(13, 8))\n    plt.xlim([0, 1])\n    plt.ylim([0, 1])\n    plt.ylabel(\u0027True Positive Rate\u0027)\n    plt.xlabel(\u0027False Positive Rate\u0027)\n    plt.rc(\u0027axes\u0027, prop_cycle\u003d(cycler(\u0027color\u0027,\n    [\u0027r\u0027, \u0027g\u0027, \u0027b\u0027, \u0027c\u0027, \u0027m\u0027, \u0027y\u0027, \u0027k\u0027])))\n    plt.plot([0, 1], [0, 1], linestyle\u003d\u0027--\u0027, label\u003d\u0027Random score\n    (AUC \u003d 0.50)\u0027)\n    return plt, fig\ndef add_curve(plt, title, fpr, tpr, roc):\n    plt.plot(fpr, tpr, label\u003df\"{title} (AUC \u003d {roc:0.2})\")",
+      "user": "anonymous",
+      "dateUpdated": "2020-01-30 20:41:27.801",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "python",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "editorMode": "ace/mode/python"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "jobName": "paragraph_1580416855925_-1161145703",
+      "id": "20200130-204055_1292229138",
+      "dateCreated": "2020-01-30 20:40:55.926",
+      "status": "READY",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%pyspark\nplt, fig \u003d create_roc_plot()\nadd_curve(plt, \"Common Authors\",\n    basic_results[\"fpr\"], basic_results[\"tpr\"], basic_results[\"roc_auc\"])\nplt.legend(loc\u003d\u0027lower right\u0027)\nplt.show()",
+      "user": "anonymous",
+      "dateUpdated": "2020-01-30 20:41:57.520",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "python",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "editorMode": "ace/mode/python"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "jobName": "paragraph_1580416873652_-349249737",
+      "id": "20200130-204113_1193427264",
+      "dateCreated": "2020-01-30 20:41:13.652",
+      "status": "READY",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%pyspark\n(training_data.filter(training_data[\"label\"]\u003d\u003d1)\n.describe()\n.select(\"summary\", \"commonAuthors\", \"prefAttachment\", \"totalNeighbors\")\n.show())\n\n(training_data.filter(training_data[\"label\"]\u003d\u003d0)\n.describe()\n.select(\"summary\", \"commonAuthors\", \"prefAttachment\", \"totalNeighbors\")\n.show())",
+      "user": "anonymous",
+      "dateUpdated": "2020-01-30 20:41:57.556",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "python",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "editorMode": "ace/mode/python"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "jobName": "paragraph_1580416890267_-485927058",
+      "id": "20200130-204130_1007184955",
+      "dateCreated": "2020-01-30 20:41:30.267",
+      "status": "READY",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%pyspark\nfields \u003d [\"commonAuthors\", \"prefAttachment\", \"totalNeighbors\"]\ngraphy_model \u003d train_model(fields, training_data)",
+      "user": "anonymous",
+      "dateUpdated": "2020-01-30 20:41:57.598",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "python",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "editorMode": "ace/mode/python"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "jobName": "paragraph_1580416913319_-1652620533",
+      "id": "20200130-204153_904094748",
+      "dateCreated": "2020-01-30 20:41:53.319",
+      "status": "READY",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%pyspark\ngraphy_results \u003d evaluate_model(graphy_model, test_data)\ndisplay_results(graphy_results)",
+      "user": "anonymous",
+      "dateUpdated": "2020-01-30 20:42:04.024",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "python",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "editorMode": "ace/mode/python"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "jobName": "paragraph_1580416919348_134865489",
+      "id": "20200130-204159_925988252",
+      "dateCreated": "2020-01-30 20:41:59.348",
+      "status": "READY",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%pyspark\nplt, fig \u003d create_roc_plot()\nadd_curve(plt, \"Common Authors\",\n    basic_results[\"fpr\"], basic_results[\"tpr\"],\n                          basic_results[\"roc_auc\"])\nadd_curve(plt, \"Graphy\",\n    graphy_results[\"fpr\"], graphy_results[\"tpr\"],\n    graphy_results[\"roc_auc\"])\nplt.legend(loc\u003d\u0027lower right\u0027)\nplt.show()",
+      "user": "anonymous",
+      "dateUpdated": "2020-01-30 20:42:49.786",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "python",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "editorMode": "ace/mode/python"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "jobName": "paragraph_1580416932829_-1255686798",
+      "id": "20200130-204212_1047933217",
+      "dateCreated": "2020-01-30 20:42:12.830",
+      "status": "READY",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%pyspark\ndef plot_feature_importance(fields, feature_importances):\n    df \u003d pd.DataFrame({\"Feature\": fields, \"Importance\": feature_importances})\n    df \u003d df.sort_values(\"Importance\", ascending\u003dFalse)\n    ax \u003d df.plot(kind\u003d\u0027bar\u0027, x\u003d\u0027Feature\u0027, y\u003d\u0027Importance\u0027, legend\u003dNone)\n    ax.xaxis.set_label_text(\"\")\n    plt.tight_layout()\n    plt.show()",
+      "user": "anonymous",
+      "dateUpdated": "2020-01-30 20:43:20.081",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "python",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "editorMode": "ace/mode/python"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "jobName": "paragraph_1580416970056_-1070315240",
+      "id": "20200130-204250_374529541",
+      "dateCreated": "2020-01-30 20:42:50.056",
+      "status": "READY",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%pyspark\nrf_model \u003d graphy_model.stages[-1]\nplot_feature_importance(fields, rf_model.featureImportances)",
+      "user": "anonymous",
+      "dateUpdated": "2020-01-30 20:43:20.117",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "python",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "editorMode": "ace/mode/python"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "jobName": "paragraph_1580416991845_-635232056",
+      "id": "20200130-204311_1328181694",
+      "dateCreated": "2020-01-30 20:43:11.845",
+      "status": "READY",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%neo4j\n\nCALL algo.triangleCount(\u0027Author\u0027, \u0027CO_AUTHOR_EARLY\u0027, { write:true,\nwriteProperty:\u0027trianglesTrain\u0027, clusteringCoefficientProperty:\n\u0027coefficientTrain\u0027});\nCALL algo.triangleCount(\u0027Author\u0027, \u0027CO_AUTHOR\u0027, { write:true,\nwriteProperty:\u0027trianglesTest\u0027, clusteringCoefficientProperty:\n\u0027coefficientTest\u0027});\n",
+      "user": "anonymous",
+      "dateUpdated": "2020-01-30 20:44:28.860",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "python",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "editorMode": "ace/mode/undefined"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "jobName": "paragraph_1580417045210_1840816921",
+      "id": "20200130-204405_1153470436",
+      "dateCreated": "2020-01-30 20:44:05.210",
+      "status": "READY",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%pyspark\ndef apply_triangles_features(data, triangles_prop, coefficient_prop):\n    query \u003d \"\"\"\n    UNWIND $pairs AS pair\n    MATCH (p1) WHERE id(p1) \u003d pair.node1\n    MATCH (p2) WHERE id(p2) \u003d pair.node2\n    RETURN pair.node1 AS node1,\n    pair.node2 AS node2,\n    apoc.coll.min([p1[$trianglesProp], p2[$trianglesProp]])\n    AS minTriangles,\n    apoc.coll.max([p1[$trianglesProp], p2[$trianglesProp]])\n    AS maxTriangles,\n    apoc.coll.min([p1[$coefficientProp], p2[$coefficientProp]])\n    AS minCoefficient,\n    apoc.coll.max([p1[$coefficientProp], p2[$coefficientProp]])\n    AS maxCoefficient\n    \"\"\"\n    params \u003d {\n    \"pairs\": [{\"node1\": row[\"node1\"], \"node2\": row[\"node2\"]}\n    for row in data.collect()],\n    \"trianglesProp\": triangles_prop,\n    \"coefficientProp\": coefficient_prop\n    }\n    features \u003d spark.createDataFrame(graph.run(query, params).to_data_frame())\n    return data.join(features, [\"node1\", \"node2\"])\n",
+      "user": "anonymous",
+      "dateUpdated": "2020-01-30 20:44:48.293",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "python",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "editorMode": "ace/mode/python"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "jobName": "paragraph_1580417060506_-1630800331",
+      "id": "20200130-204420_98022585",
+      "dateCreated": "2020-01-30 20:44:20.506",
+      "status": "READY",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%pyspark\ntraining_data \u003d apply_triangles_features(training_data,\n                                        \"trianglesTrain\", \"coefficientTrain\")\ntest_data \u003d apply_triangles_features(test_data,\n                                        \"trianglesTest\", \"coefficientTest\")",
+      "user": "anonymous",
+      "dateUpdated": "2020-01-30 20:45:20.648",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "python",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "editorMode": "ace/mode/python"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "jobName": "paragraph_1580417091467_335813413",
+      "id": "20200130-204451_55811637",
+      "dateCreated": "2020-01-30 20:44:51.467",
+      "status": "READY",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%pyspark\n(training_data.filter(training_data[\"label\"]\u003d\u003d1)\n.describe()\n.select(\"summary\", \"minTriangles\", \"maxTriangles\",\n\"minCoefficient\", \"maxCoefficient\")\n.show())\n\n(training_data.filter(training_data[\"label\"]\u003d\u003d0)\n.describe()\n.select(\"summary\", \"minTriangles\", \"maxTriangles\", \"minCoefficient\",\n\"maxCoefficient\")\n.show())",
+      "user": "anonymous",
+      "dateUpdated": "2020-01-30 20:45:33.978",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "python",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "editorMode": "ace/mode/python"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "jobName": "paragraph_1580417112339_1830086423",
+      "id": "20200130-204512_241700501",
+      "dateCreated": "2020-01-30 20:45:12.339",
+      "status": "READY",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%pyspark\nfields \u003d [\"commonAuthors\", \"prefAttachment\", \"totalNeighbors\",\n\"minTriangles\", \"maxTriangles\", \"minCoefficient\", \"maxCoefficient\"]\ntriangle_model \u003d train_model(fields, training_data)",
+      "user": "anonymous",
+      "dateUpdated": "2020-01-30 20:45:27.695",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "python",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "editorMode": "ace/mode/python"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "jobName": "paragraph_1580417124644_-487373450",
+      "id": "20200130-204524_240293179",
+      "dateCreated": "2020-01-30 20:45:24.644",
+      "status": "READY",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%pyspark\ntriangle_results \u003d evaluate_model(triangle_model, test_data)\ndisplay_results(triangle_results)",
+      "user": "anonymous",
+      "dateUpdated": "2020-01-30 20:45:50.232",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "python",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "editorMode": "ace/mode/python"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "jobName": "paragraph_1580417131674_871518249",
+      "id": "20200130-204531_1544270652",
+      "dateCreated": "2020-01-30 20:45:31.674",
+      "status": "READY",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%pyspark\nplt, fig \u003d create_roc_plot()\nadd_curve(plt, \"Common Authors\",\n    basic_results[\"fpr\"], basic_results[\"tpr\"], basic_results[\"roc_auc\"])\nadd_curve(plt, \"Graphy\",\n    graphy_results[\"fpr\"], graphy_results[\"tpr\"],\n                           graphy_results[\"roc_auc\"])\nadd_curve(plt, \"Triangles\",\n    triangle_results[\"fpr\"], triangle_results[\"tpr\"],\n                             triangle_results[\"roc_auc\"])\nplt.legend(loc\u003d\u0027lower right\u0027)\nplt.show()",
+      "user": "anonymous",
+      "dateUpdated": "2020-01-30 20:46:32.572",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "python",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "editorMode": "ace/mode/python"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "jobName": "paragraph_1580417141470_-1669384170",
+      "id": "20200130-204541_284490831",
+      "dateCreated": "2020-01-30 20:45:41.471",
+      "status": "READY",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%pyspark\nrf_model \u003d triangle_model.stages[-1]\nplot_feature_importance(fields, rf_model.featureImportances)",
+      "user": "anonymous",
+      "dateUpdated": "2020-01-30 20:46:25.304",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "python",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "editorMode": "ace/mode/python"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "jobName": "paragraph_1580417184368_1998017274",
+      "id": "20200130-204624_1232091529",
+      "dateCreated": "2020-01-30 20:46:24.368",
+      "status": "READY",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%neo4j\nCALL algo.labelPropagation(\"Author\", \"CO_AUTHOR_EARLY\", \"BOTH\",\n{partitionProperty: \"partitionTrain\"});\n\nCALL algo.labelPropagation(\"Author\", \"CO_AUTHOR\", \"BOTH\",\n{partitionProperty: \"partitionTest\"});\n",
+      "user": "anonymous",
+      "dateUpdated": "2020-01-30 20:47:01.916",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "python",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "editorMode": "ace/mode/undefined"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "jobName": "paragraph_1580417195943_1419982308",
+      "id": "20200130-204635_263923176",
+      "dateCreated": "2020-01-30 20:46:35.943",
+      "status": "READY",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%neo4j\nCALL algo.louvain.stream(\"Author\", \"CO_AUTHOR_EARLY\",\n{includeIntermediateCommunities:true})\nYIELD nodeId, community, communities\nWITH algo.getNodeById(nodeId) AS node, communities[0] AS smallestCommunity\nSET node.louvainTrain \u003d smallestCommunity;\n\nCALL algo.louvain.stream(\"Author\", \"CO_AUTHOR\",\n{includeIntermediateCommunities:true})\nYIELD nodeId, community, communities\nWITH algo.getNodeById(nodeId) AS node, communities[0] AS smallestCommunity\nSET node.louvainTest \u003d smallestCommunity;",
+      "user": "anonymous",
+      "dateUpdated": "2020-01-30 20:47:34.467",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "editorMode": "ace/mode/undefined"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "jobName": "paragraph_1580417217621_-934569503",
+      "id": "20200130-204657_1741692131",
+      "dateCreated": "2020-01-30 20:46:57.621",
+      "status": "READY",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%pyspark\ndef apply_community_features(data, partition_prop, louvain_prop):\n    query \u003d \"\"\"\n    UNWIND $pairs AS pair\n    MATCH (p1) WHERE id(p1) \u003d pair.node1\n    MATCH (p2) WHERE id(p2) \u003d pair.node2\n    RETURN pair.node1 AS node1,\n    pair.node2 AS node2,\n    CASE WHEN p1[$partitionProp] \u003d p2[$partitionProp] THEN\n    1 ELSE 0 END AS samePartition,\n    CASE WHEN p1[$louvainProp] \u003d p2[$louvainProp] THEN\n    1 ELSE 0 END AS sameLouvain\n    \"\"\"\n    params \u003d {\n    \"pairs\": [{\"node1\": row[\"node1\"], \"node2\": row[\"node2\"]} for\n    row in data.collect()],\n    \"partitionProp\": partition_prop,\n    \"louvainProp\": louvain_prop\n    }\n    features \u003d spark.createDataFrame(graph.run(query, params).to_data_frame())\n    return data.join(features, [\"node1\", \"node2\"])\n",
+      "user": "anonymous",
+      "dateUpdated": "2020-01-30 20:47:52.855",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "python",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "editorMode": "ace/mode/python"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "jobName": "paragraph_1580417247213_585495560",
+      "id": "20200130-204727_2112972773",
+      "dateCreated": "2020-01-30 20:47:27.213",
+      "status": "READY",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%pyspark\ntraining_data \u003d apply_community_features(training_data,\n\"partitionTrain\", \"louvainTrain\")\ntest_data \u003d apply_community_features(test_data, \"partitionTest\", \"louvainTest\")",
+      "user": "anonymous",
+      "dateUpdated": "2020-01-30 20:47:48.243",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "python",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "editorMode": "ace/mode/python"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "jobName": "paragraph_1580417264544_-107862595",
+      "id": "20200130-204744_745656773",
+      "dateCreated": "2020-01-30 20:47:44.544",
+      "status": "READY",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%pyspark\nplt.style.use(\u0027fivethirtyeight\u0027)\nfig, axs \u003d plt.subplots(1, 2, figsize\u003d(18, 7), sharey\u003dTrue)\ncharts \u003d [(1, \"have collaborated\"), (0, \"haven\u0027t collaborated\")]\nfor index, chart in enumerate(charts):\nlabel, title \u003d chart\nfiltered \u003d training_data.filter(training_data[\"label\"] \u003d\u003d label)\nvalues \u003d (filtered.withColumn(\u0027samePartition\u0027,\nF.when(F.col(\"samePartition\") \u003d\u003d 0, \"False\")\n.otherwise(\"True\"))\n.groupby(\"samePartition\")\n.agg(F.count(\"label\").alias(\"count\"))\n.select(\"samePartition\", \"count\")\n.toPandas())\nvalues.set_index(\"samePartition\", drop\u003dTrue, inplace\u003dTrue)\nvalues.plot(kind\u003d\"bar\", ax\u003daxs[index], legend\u003dNone,\ntitle\u003df\"Authors who {title} (label\u003d{label})\")\naxs[index].xaxis.set_label_text(\"Same Partition\")\nplt.tight_layout()\nplt.show()",
+      "user": "anonymous",
+      "dateUpdated": "2020-01-30 20:48:30.118",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "python",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "editorMode": "ace/mode/python"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "jobName": "paragraph_1580417277028_303427118",
+      "id": "20200130-204757_1654775647",
+      "dateCreated": "2020-01-30 20:47:57.028",
+      "status": "READY",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%pyspark\nplt.style.use(\u0027fivethirtyeight\u0027)\nfig, axs \u003d plt.subplots(1, 2, figsize\u003d(18, 7), sharey\u003dTrue)\ncharts \u003d [(1, \"have collaborated\"), (0, \"haven\u0027t collaborated\")]\nfor index, chart in enumerate(charts):\nlabel, title \u003d chart\nfiltered \u003d training_data.filter(training_data[\"label\"] \u003d\u003d label)\nvalues \u003d (filtered.withColumn(\u0027sameLouvain\u0027,\n        F.when(F.col(\"sameLouvain\") \u003d\u003d 0, \"False\")\n        .otherwise(\"True\"))\n        .groupby(\"sameLouvain\")\n        .agg(F.count(\"label\").alias(\"count\"))\n        .select(\"sameLouvain\", \"count\")\n        .toPandas())\nvalues.set_index(\"sameLouvain\", drop\u003dTrue, inplace\u003dTrue)\nvalues.plot(kind\u003d\"bar\", ax\u003daxs[index], legend\u003dNone,\ntitle\u003df\"Authors who {title} (label\u003d{label})\")\naxs[index].xaxis.set_label_text(\"Same Louvain\")\nplt.tight_layout()\nplt.show()",
+      "user": "anonymous",
+      "dateUpdated": "2020-01-30 20:49:31.838",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "python",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "editorMode": "ace/mode/python"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "jobName": "paragraph_1580417302781_178504795",
+      "id": "20200130-204822_475297722",
+      "dateCreated": "2020-01-30 20:48:22.781",
+      "status": "READY",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%pyspark\nfields \u003d [\"commonAuthors\", \"prefAttachment\", \"totalNeighbors\",\n    \"minTriangles\", \"maxTriangles\", \"minCoefficient\", \"maxCoefficient\",\n    \"samePartition\", \"sameLouvain\"]\ncommunity_model \u003d train_model(fields, training_data)",
+      "user": "anonymous",
+      "dateUpdated": "2020-01-30 20:50:09.280",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "python",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "editorMode": "ace/mode/python"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "jobName": "paragraph_1580417378201_1426248282",
+      "id": "20200130-204938_1845745173",
+      "dateCreated": "2020-01-30 20:49:38.201",
+      "status": "READY",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%pyspark\n",
+      "user": "anonymous",
+      "dateUpdated": "2020-01-30 20:51:07.751",
+      "config": {},
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "jobName": "paragraph_1580417467747_-1914744652",
+      "id": "20200130-205107_16888089",
+      "dateCreated": "2020-01-30 20:51:07.748",
+      "status": "READY",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%pyspark\ncommunity_results \u003d evaluate_model(community_model, test_data)\ndisplay_results(community_results)",
+      "user": "anonymous",
+      "dateUpdated": "2020-01-30 20:50:09.368",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "python",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "editorMode": "ace/mode/python"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "jobName": "paragraph_1580417390020_-1405747318",
+      "id": "20200130-204950_1000471878",
+      "dateCreated": "2020-01-30 20:49:50.021",
+      "status": "READY",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%pyspark\nplt, fig \u003d create_roc_plot()\nadd_curve(plt, \"Common Authors\",\n    basic_results[\"fpr\"], basic_results[\"tpr\"], basic_results[\"roc_auc\"])\nadd_curve(plt, \"Graphy\",\n    graphy_results[\"fpr\"], graphy_results[\"tpr\"],\n                           graphy_results[\"roc_auc\"])\nadd_curve(plt, \"Triangles\",\n    triangle_results[\"fpr\"], triangle_results[\"tpr\"],\n                             triangle_results[\"roc_auc\"])\nadd_curve(plt, \"Community\",\n    community_results[\"fpr\"], community_results[\"tpr\"],\n                              community_results[\"roc_auc\"])\nplt.legend(loc\u003d\u0027lower right\u0027)\nplt.show()",
+      "user": "anonymous",
+      "dateUpdated": "2020-01-30 20:50:47.699",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "python",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "editorMode": "ace/mode/python"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "jobName": "paragraph_1580417399578_1370809085",
+      "id": "20200130-204959_1678536714",
+      "dateCreated": "2020-01-30 20:49:59.578",
+      "status": "READY",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%pyspark\nrf_model \u003d community_model.stages[-1]\nplot_feature_importance(fields, rf_model.featureImportances)",
+      "user": "anonymous",
+      "dateUpdated": "2020-01-30 20:51:17.008",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "python",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "editorMode": "ace/mode/python"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "jobName": "paragraph_1580417453486_-1138997949",
+      "id": "20200130-205053_837797170",
+      "dateCreated": "2020-01-30 20:50:53.486",
+      "status": "READY",
+      "progressUpdateIntervalMs": 500
+    }
+  ],
+  "name": "Analysis/Co-authorship link prediction",
+  "id": "2F1GBE9E5",
+  "noteParams": {},
+  "noteForms": {},
+  "angularObjects": {
+    "md:shared_process": [],
+    "neo4j:shared_process": [],
+    "spark:shared_process": []
+  },
+  "config": {
+    "isZeppelinNotebookCronEnable": false
+  },
+  "info": {}
+}

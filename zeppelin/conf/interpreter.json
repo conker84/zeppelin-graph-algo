@@ -509,6 +509,60 @@
         "isUserImpersonate": false
       }
     },
+    "neo4j_gdn": {
+      "id": "neo4j_gdn",
+      "name": "neo4j_gdn",
+      "group": "neo4j",
+      "properties": {
+        "neo4j.auth.user": {
+          "name": "neo4j.auth.user",
+          "value": "neo4j",
+          "type": "string"
+        },
+        "neo4j.auth.password": {
+          "name": "neo4j.auth.password",
+          "value": "zeppelin",
+          "type": "string"
+        },
+        "neo4j.auth.type": {
+          "name": "neo4j.auth.type",
+          "value": "BASIC",
+          "type": "string"
+        },
+        "neo4j.max.concurrency": {
+          "name": "neo4j.max.concurrency",
+          "value": "50",
+          "type": "number"
+        },
+        "neo4j.url": {
+          "name": "neo4j.url",
+          "value": "bolt://neo4j-gdn:7687",
+          "type": "string"
+        }
+      },
+      "status": "READY",
+      "interpreterGroup": [
+        {
+          "name": "neo4j",
+          "class": "org.apache.zeppelin.graph.neo4j.Neo4jCypherInterpreter",
+          "defaultInterpreter": false,
+          "editor": {
+            "editOnDblClick": false
+          }
+        }
+      ],
+      "dependencies": [],
+      "option": {
+        "remote": true,
+        "port": -1,
+        "perNote": "shared",
+        "perUser": "shared",
+        "isExistingProcess": false,
+        "setPermission": false,
+        "owners": [],
+        "isUserImpersonate": false
+      }
+    },
     "angular": {
       "id": "angular",
       "name": "angular",
@@ -797,60 +851,6 @@
       "option": {
         "remote": true,
         "port": -1,
-        "isExistingProcess": false,
-        "setPermission": false,
-        "owners": [],
-        "isUserImpersonate": false
-      }
-    },
-    "neo4j": {
-      "id": "neo4j",
-      "name": "neo4j",
-      "group": "neo4j",
-      "properties": {
-        "neo4j.auth.user": {
-          "name": "neo4j.auth.user",
-          "value": "neo4j",
-          "type": "string"
-        },
-        "neo4j.auth.password": {
-          "name": "neo4j.auth.password",
-          "value": "zeppelin",
-          "type": "string"
-        },
-        "neo4j.auth.type": {
-          "name": "neo4j.auth.type",
-          "value": "BASIC",
-          "type": "string"
-        },
-        "neo4j.max.concurrency": {
-          "name": "neo4j.max.concurrency",
-          "value": "50",
-          "type": "string"
-        },
-        "neo4j.url": {
-          "name": "neo4j.url",
-          "value": "bolt://neo4j:7687",
-          "type": "string"
-        }
-      },
-      "status": "READY",
-      "interpreterGroup": [
-        {
-          "name": "neo4j",
-          "class": "org.apache.zeppelin.graph.neo4j.Neo4jCypherInterpreter",
-          "defaultInterpreter": false,
-          "editor": {
-            "editOnDblClick": false
-          }
-        }
-      ],
-      "dependencies": [],
-      "option": {
-        "remote": true,
-        "port": -1,
-        "perNote": "shared",
-        "perUser": "shared",
         "isExistingProcess": false,
         "setPermission": false,
         "owners": [],
@@ -1517,6 +1517,60 @@
         "isUserImpersonate": false
       }
     },
+    "neo4j_algo": {
+      "id": "neo4j_algo",
+      "name": "neo4j_algo",
+      "group": "neo4j",
+      "properties": {
+        "neo4j.auth.user": {
+          "name": "neo4j.auth.user",
+          "value": "neo4j",
+          "type": "textarea"
+        },
+        "neo4j.auth.password": {
+          "name": "neo4j.auth.password",
+          "value": "zeppelin",
+          "type": "string"
+        },
+        "neo4j.auth.type": {
+          "name": "neo4j.auth.type",
+          "value": "BASIC",
+          "type": "textarea"
+        },
+        "neo4j.max.concurrency": {
+          "name": "neo4j.max.concurrency",
+          "value": "50",
+          "type": "number"
+        },
+        "neo4j.url": {
+          "name": "neo4j.url",
+          "value": "bolt://neo4j-algo:7687",
+          "type": "textarea"
+        }
+      },
+      "status": "READY",
+      "interpreterGroup": [
+        {
+          "name": "neo4j",
+          "class": "org.apache.zeppelin.graph.neo4j.Neo4jCypherInterpreter",
+          "defaultInterpreter": false,
+          "editor": {
+            "editOnDblClick": false
+          }
+        }
+      ],
+      "dependencies": [],
+      "option": {
+        "remote": true,
+        "port": -1,
+        "perNote": "shared",
+        "perUser": "shared",
+        "isExistingProcess": false,
+        "setPermission": false,
+        "owners": [],
+        "isUserImpersonate": false
+      }
+    },
     "hbase": {
       "id": "hbase",
       "name": "hbase",
@@ -1627,16 +1681,18 @@
   },
   "interpreterBindings": {
     "2EZ4GSKAZ": [
-      "neo4j",
-      "md"
+      "md",
+      "neo4j_algo",
+      "neo4j_gdn"
     ],
     "2EYECKESC": [
       "spark",
       "md"
     ],
     "2EUEDJ3R6": [
-      "neo4j",
-      "md"
+      "md",
+      "neo4j_algo",
+      "neo4j_gdn"
     ],
     "2EXRJZY7J": [
       "spark",
@@ -1658,7 +1714,6 @@
       "bigquery",
       "pig",
       "groovy",
-      "neo4j",
       "sap"
     ],
     "2EXTYPK53": [
@@ -1666,12 +1721,12 @@
       "md"
     ],
     "2EXEQC8RJ": [
-      "neo4j",
       "md"
     ],
     "2EWRRUE4E": [
-      "neo4j",
-      "md"
+      "md",
+      "neo4j_algo",
+      "neo4j_gdn"
     ],
     "2EYQR9WE6": [
       "spark",
@@ -1693,7 +1748,6 @@
       "bigquery",
       "pig",
       "groovy",
-      "neo4j",
       "sap"
     ],
     "2EY3UYPR1": [
@@ -1716,13 +1770,13 @@
       "bigquery",
       "pig",
       "groovy",
-      "neo4j",
       "sap"
     ],
     "2DPAS2TW8": [],
     "2EVY3PMRJ": [
-      "neo4j",
-      "md"
+      "md",
+      "neo4j_algo",
+      "neo4j_gdn"
     ],
     "2F1E1BSSZ": [
       "spark",
@@ -1744,12 +1798,12 @@
       "bigquery",
       "pig",
       "groovy",
-      "neo4j",
       "sap"
     ],
     "2EXP8M845": [
-      "neo4j",
-      "md"
+      "md",
+      "neo4j_algo",
+      "neo4j_gdn"
     ],
     "2EY4J4EKU": [
       "spark",
@@ -1760,8 +1814,9 @@
       "md"
     ],
     "2EWEVG83X": [
-      "neo4j",
-      "md"
+      "md",
+      "neo4j_algo",
+      "neo4j_gdn"
     ],
     "2EYWKHS4G": [
       "spark",
@@ -1783,7 +1838,6 @@
       "bigquery",
       "pig",
       "groovy",
-      "neo4j",
       "sap"
     ],
     "2EY4T9B2H": [
@@ -1806,7 +1860,6 @@
       "bigquery",
       "pig",
       "groovy",
-      "neo4j",
       "sap"
     ],
     "2EWK7AKFQ": [
@@ -1833,7 +1886,6 @@
       "bigquery",
       "pig",
       "groovy",
-      "neo4j",
       "sap"
     ],
     "2EYQBRAT1": [
@@ -1856,12 +1908,12 @@
       "bigquery",
       "pig",
       "groovy",
-      "neo4j",
       "sap"
     ],
     "2EV66D3TA": [
-      "neo4j",
-      "md"
+      "md",
+      "neo4j_algo",
+      "neo4j_gdn"
     ],
     "2EYUXH8U3": [
       "spark",
@@ -1887,12 +1939,12 @@
       "bigquery",
       "pig",
       "groovy",
-      "neo4j",
       "sap"
     ],
     "2EVJ1P6NU": [
-      "neo4j",
-      "md"
+      "md",
+      "neo4j_algo",
+      "neo4j_gdn"
     ],
     "2EY46XM2Y": [
       "spark",
@@ -1914,7 +1966,6 @@
       "bigquery",
       "pig",
       "groovy",
-      "neo4j",
       "sap"
     ],
     "2EZF3A6XW": [
@@ -1937,7 +1988,6 @@
       "bigquery",
       "pig",
       "groovy",
-      "neo4j",
       "sap"
     ],
     "2F2EUFPB6": [
@@ -1960,12 +2010,12 @@
       "bigquery",
       "pig",
       "groovy",
-      "neo4j",
       "sap"
     ],
     "2EW6YXEM1": [
-      "neo4j",
-      "md"
+      "md",
+      "neo4j_algo",
+      "neo4j_gdn"
     ],
     "2DNC8PD4M": [],
     "2EY9G1KBV": [
@@ -1996,7 +2046,6 @@
       "bigquery",
       "pig",
       "groovy",
-      "neo4j",
       "sap"
     ],
     "2EYGMDMY2": [
@@ -2019,12 +2068,12 @@
       "bigquery",
       "pig",
       "groovy",
-      "neo4j",
       "sap"
     ],
     "2EYQ66NNH": [
-      "neo4j",
-      "md"
+      "md",
+      "neo4j_algo",
+      "neo4j_gdn"
     ],
     "2EWCD4Q9X": [
       "spark",
@@ -2046,7 +2095,6 @@
       "bigquery",
       "pig",
       "groovy",
-      "neo4j",
       "sap"
     ],
     "2EY86XFPR": [
@@ -2069,12 +2117,12 @@
       "bigquery",
       "pig",
       "groovy",
-      "neo4j",
       "sap"
     ],
     "2EX6JWPAG": [
-      "neo4j",
-      "md"
+      "md",
+      "neo4j_algo",
+      "neo4j_gdn"
     ],
     "2EY2A8EQX": [
       "spark",
@@ -2096,43 +2144,27 @@
       "bigquery",
       "pig",
       "groovy",
-      "neo4j",
       "sap"
     ],
     "2EXB3TVAE": [
-      "neo4j",
-      "spark",
       "md",
-      "angular",
-      "sh",
-      "livy",
-      "alluxio",
-      "file",
-      "flink",
-      "python",
-      "ignite",
-      "lens",
-      "cassandra",
-      "kylin",
-      "elasticsearch",
-      "jdbc",
-      "hbase",
-      "bigquery",
-      "pig",
-      "groovy",
-      "sap"
+      "neo4j_algo",
+      "neo4j_gdn"
     ],
     "2EXZ2FFEG": [
-      "neo4j",
-      "md"
+      "md",
+      "neo4j_algo",
+      "neo4j_gdn"
     ],
     "2EYCYMWJJ": [
-      "neo4j",
-      "md"
+      "md",
+      "neo4j_algo",
+      "neo4j_gdn"
     ],
     "2EUU9CT3C": [
-      "neo4j",
-      "md"
+      "md",
+      "neo4j_algo",
+      "neo4j_gdn"
     ],
     "2DMJBRQPS": [],
     "2EY8PRHJ8": [
@@ -2155,7 +2187,6 @@
       "bigquery",
       "pig",
       "groovy",
-      "neo4j",
       "sap"
     ],
     "2EYYCADG3": [
@@ -2178,7 +2209,6 @@
       "bigquery",
       "pig",
       "groovy",
-      "neo4j",
       "sap"
     ],
     "2F137Q4MU": [
@@ -2201,12 +2231,12 @@
       "bigquery",
       "pig",
       "groovy",
-      "neo4j",
       "sap"
     ],
     "2EU4ZXFE3": [
-      "neo4j",
-      "md"
+      "md",
+      "neo4j_algo",
+      "neo4j_gdn"
     ],
     "2F1U9261F": [
       "spark",
@@ -2228,12 +2258,34 @@
       "bigquery",
       "pig",
       "groovy",
-      "neo4j",
+      "sap"
+    ],
+    "2F1GBE9E5": [
+      "spark",
+      "md",
+      "angular",
+      "sh",
+      "livy",
+      "alluxio",
+      "file",
+      "flink",
+      "python",
+      "ignite",
+      "lens",
+      "cassandra",
+      "kylin",
+      "elasticsearch",
+      "jdbc",
+      "hbase",
+      "bigquery",
+      "pig",
+      "groovy",
       "sap"
     ],
     "2EW8M6FY9": [
-      "neo4j",
-      "md"
+      "md",
+      "neo4j_algo",
+      "neo4j_gdn"
     ],
     "2EWBPX3F9": [],
     "2EVK2MZ36": [

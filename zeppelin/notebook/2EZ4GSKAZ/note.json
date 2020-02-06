@@ -1,9 +1,9 @@
 {
   "paragraphs": [
     {
-      "text": "%md\n## Import transport graph to Neo4j",
+      "text": "%md\n## Import transport graph to Neo4j graph algorithms",
       "user": "anonymous",
-      "dateUpdated": "2020-01-20 19:04:10.550",
+      "dateUpdated": "2020-02-06 20:32:27.009",
       "config": {
         "colWidth": 12.0,
         "fontSize": 9.0,
@@ -15,8 +15,8 @@
           "completionSupport": false
         },
         "editorMode": "ace/mode/markdown",
-        "editorHide": true,
-        "tableHide": false
+        "editorHide": false,
+        "tableHide": true
       },
       "settings": {
         "params": {},
@@ -27,7 +27,7 @@
         "msg": [
           {
             "type": "HTML",
-            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003ch2\u003eImport transport graph to Neo4j\u003c/h2\u003e\n\u003c/div\u003e"
+            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003ch2\u003eImport transport graph to Neo4j graph algorithms\u003c/h2\u003e\n\u003c/div\u003e"
           }
         ]
       },
@@ -35,24 +35,28 @@
       "jobName": "paragraph_1577983466077_-2029577180",
       "id": "20200102-164426_1459786605",
       "dateCreated": "2020-01-02 16:44:26.080",
-      "dateStarted": "2020-01-20 19:04:10.555",
-      "dateFinished": "2020-01-20 19:04:10.566",
+      "dateStarted": "2020-02-06 20:32:25.865",
+      "dateFinished": "2020-02-06 20:32:25.873",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
     {
-      "text": "// Import nodes\nWITH \"https://github.com/neo4j-graph-analytics/book/raw/master/data/transport-nodes.csv\"\nAS uri\nLOAD CSV WITH HEADERS FROM uri  AS row\nMERGE (place:Place {id:row.id})\nSET place.latitude \u003d toFloat(row.latitude),\n    place.longitude \u003d toFloat(row.latitude),\n    place.population \u003d toInteger(row.population)\n",
+      "text": "%neo4j_algo\n// Import nodes\nWITH \"https://github.com/neo4j-graph-analytics/book/raw/master/data/transport-nodes.csv\"\nAS uri\nLOAD CSV WITH HEADERS FROM uri  AS row\nMERGE (place:Place {id:row.id})\nSET place.latitude \u003d toFloat(row.latitude),\n    place.longitude \u003d toFloat(row.latitude),\n    place.population \u003d toInteger(row.population)\n",
       "user": "anonymous",
-      "dateUpdated": "2020-01-20 19:00:05.227",
+      "dateUpdated": "2020-02-06 20:32:58.610",
       "config": {
         "colWidth": 12.0,
         "fontSize": 9.0,
         "enabled": true,
         "results": {},
         "editorSetting": {
-          "editOnDblClick": false
+          "editOnDblClick": true,
+          "language": "markdown",
+          "completionSupport": false
         },
-        "editorMode": "ace/mode/undefined"
+        "editorMode": "ace/mode/markdown",
+        "editorHide": false,
+        "tableHide": true
       },
       "settings": {
         "params": {},
@@ -66,22 +70,24 @@
       "jobName": "paragraph_1577905158280_-622487282",
       "id": "20200101-185918_1723596286",
       "dateCreated": "2020-01-01 18:59:18.280",
-      "dateStarted": "2020-01-20 19:00:05.256",
-      "dateFinished": "2020-01-20 19:00:06.733",
+      "dateStarted": "2020-02-06 20:32:49.705",
+      "dateFinished": "2020-02-06 20:32:50.698",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
     {
-      "text": "// Import relationships\nWITH \"https://github.com/neo4j-graph-analytics/book/raw/master/data/transport-relationships.csv\"\nAS uri\nLOAD CSV WITH HEADERS FROM uri AS row\nMATCH (origin:Place {id: row.src})\nMATCH (destination:Place {id: row.dst})\nMERGE (origin)-[:EROAD {distance: toInteger(row.cost)}]-\u003e(destination)",
+      "text": "%neo4j_algo\n// Import relationships\nWITH \"https://github.com/neo4j-graph-analytics/book/raw/master/data/transport-relationships.csv\"\nAS uri\nLOAD CSV WITH HEADERS FROM uri AS row\nMATCH (origin:Place {id: row.src})\nMATCH (destination:Place {id: row.dst})\nMERGE (origin)-[:EROAD {distance: toInteger(row.cost)}]-\u003e(destination)",
       "user": "anonymous",
-      "dateUpdated": "2020-01-20 19:00:09.115",
+      "dateUpdated": "2020-02-06 20:32:55.299",
       "config": {
         "colWidth": 12.0,
         "fontSize": 9.0,
         "enabled": true,
         "results": {},
         "editorSetting": {
-          "editOnDblClick": false
+          "editOnDblClick": false,
+          "language": "markdown",
+          "completionSupport": false
         },
         "editorMode": "ace/mode/undefined"
       },
@@ -97,22 +103,130 @@
       "jobName": "paragraph_1577905161464_-679092108",
       "id": "20200101-185921_1885909668",
       "dateCreated": "2020-01-01 18:59:21.464",
-      "dateStarted": "2020-01-20 19:00:09.125",
-      "dateFinished": "2020-01-20 19:00:10.224",
+      "dateStarted": "2020-02-06 20:32:55.305",
+      "dateFinished": "2020-02-06 20:32:56.127",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
     {
+      "text": "%md\n## Import transport graph to Neo4j graph data science",
       "user": "anonymous",
+      "dateUpdated": "2020-02-06 20:32:35.221",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "markdown",
+          "editOnDblClick": true,
+          "completionSupport": false
+        },
+        "editorMode": "ace/mode/markdown",
+        "editorHide": true,
+        "tableHide": false
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003ch2\u003eImport transport graph to Neo4j graph data science\u003c/h2\u003e\n\u003c/div\u003e"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1577905170482_-1910942363",
+      "id": "20200101-185930_854950597",
+      "dateCreated": "2020-01-01 18:59:30.483",
+      "dateStarted": "2020-02-06 20:32:35.220",
+      "dateFinished": "2020-02-06 20:32:35.228",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%neo4j_gdn\n// Import nodes\nWITH \"https://github.com/neo4j-graph-analytics/book/raw/master/data/transport-nodes.csv\"\nAS uri\nLOAD CSV WITH HEADERS FROM uri  AS row\nMERGE (place:Place {id:row.id})\nSET place.latitude \u003d toFloat(row.latitude),\n    place.longitude \u003d toFloat(row.latitude),\n    place.population \u003d toInteger(row.population)\n",
+      "user": "anonymous",
+      "dateUpdated": "2020-02-06 20:33:07.148",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "markdown",
+          "editOnDblClick": false,
+          "completionSupport": false
+        },
+        "editorMode": "ace/mode/undefined"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": []
+      },
+      "apps": [],
+      "jobName": "paragraph_1581021155200_-262920754",
+      "id": "20200206-203235_1735498676",
+      "dateCreated": "2020-02-06 20:32:35.200",
+      "dateStarted": "2020-02-06 20:33:07.200",
+      "dateFinished": "2020-02-06 20:33:07.693",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%neo4j_gdn\n// Import relationships\nWITH \"https://github.com/neo4j-graph-analytics/book/raw/master/data/transport-relationships.csv\"\nAS uri\nLOAD CSV WITH HEADERS FROM uri AS row\nMATCH (origin:Place {id: row.src})\nMATCH (destination:Place {id: row.dst})\nMERGE (origin)-[:EROAD {distance: toInteger(row.cost)}]-\u003e(destination)",
+      "user": "anonymous",
+      "dateUpdated": "2020-02-06 20:33:16.826",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "markdown",
+          "editOnDblClick": false,
+          "completionSupport": false
+        },
+        "editorMode": "ace/mode/undefined"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": []
+      },
+      "apps": [],
+      "jobName": "paragraph_1581021187148_1394422100",
+      "id": "20200206-203307_1829891686",
+      "dateCreated": "2020-02-06 20:33:07.148",
+      "dateStarted": "2020-02-06 20:33:16.835",
+      "dateFinished": "2020-02-06 20:33:17.390",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%neo4j_gdn\n",
+      "user": "anonymous",
+      "dateUpdated": "2020-02-06 20:33:16.827",
       "config": {},
       "settings": {
         "params": {},
         "forms": {}
       },
       "apps": [],
-      "jobName": "paragraph_1577905170482_-1910942363",
-      "id": "20200101-185930_854950597",
-      "dateCreated": "2020-01-01 18:59:30.483",
+      "jobName": "paragraph_1581021196826_1137972494",
+      "id": "20200206-203316_1804145024",
+      "dateCreated": "2020-02-06 20:33:16.826",
       "status": "READY",
       "progressUpdateIntervalMs": 500
     }
@@ -122,8 +236,9 @@
   "noteParams": {},
   "noteForms": {},
   "angularObjects": {
+    "neo4j_algo:shared_process": [],
     "md:shared_process": [],
-    "neo4j:shared_process": []
+    "neo4j_gdn:shared_process": []
   },
   "config": {
     "isZeppelinNotebookCronEnable": false

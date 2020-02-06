@@ -3,7 +3,7 @@
     {
       "text": "%md\n\n###  Example taken from \"Graph Algorithms: Practical Examples in Apache Spark and Neo4j\" (https://neo4j.com/graph-algorithms-book/)\n\n### Please make sure that you have previously executed [this notebook](/#/notebook/2EW6YXEM1)",
       "user": "anonymous",
-      "dateUpdated": "2020-01-19 17:22:42.994",
+      "dateUpdated": "2020-02-06 17:15:49.917",
       "config": {
         "colWidth": 12.0,
         "fontSize": 9.0,
@@ -36,15 +36,15 @@
       "jobName": "paragraph_1577984264609_-1405880882",
       "id": "20200102-165744_1242591389",
       "dateCreated": "2020-01-02 16:57:44.609",
-      "dateStarted": "2020-01-19 17:22:42.994",
-      "dateFinished": "2020-01-19 17:22:43.003",
+      "dateStarted": "2020-02-06 17:15:50.013",
+      "dateFinished": "2020-02-06 17:15:50.030",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
     {
-      "text": "%md\n# PageRank\nhttps://neo4j.com/docs/graph-algorithms/current/algorithms/page-rank/\n",
+      "text": "%md\n# PageRank migration guide\n\nNeo4j graph algorithms are being deprecated and Neo4j Data Science library will be its successor.\n\nThis notebook is intended to demonstrate how to migrate PageRank algorithm procedure call from Neo4j Graph algorithms library to Neo4j Graph Data Science library. \n",
       "user": "anonymous",
-      "dateUpdated": "2020-01-02 17:09:18.059",
+      "dateUpdated": "2020-02-06 17:43:14.250",
       "config": {
         "colWidth": 12.0,
         "fontSize": 9.0,
@@ -56,8 +56,8 @@
           "completionSupport": false
         },
         "editorMode": "ace/mode/markdown",
-        "editorHide": true,
-        "tableHide": false
+        "editorHide": false,
+        "tableHide": true
       },
       "settings": {
         "params": {},
@@ -68,7 +68,7 @@
         "msg": [
           {
             "type": "HTML",
-            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003ch1\u003ePageRank\u003c/h1\u003e\n\u003cp\u003e\u003ca href\u003d\"https://neo4j.com/docs/graph-algorithms/current/algorithms/page-rank/\"\u003ehttps://neo4j.com/docs/graph-algorithms/current/algorithms/page-rank/\u003c/a\u003e\u003c/p\u003e\n\u003c/div\u003e"
+            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003ch1\u003ePageRank migration guide\u003c/h1\u003e\n\u003cp\u003eNeo4j graph algorithms are being deprecated and Neo4j Data Science library will be its successor.\u003c/p\u003e\n\u003cp\u003eThis notebook is intended to demonstrate how to migrate PageRank algorithm procedure call from Neo4j Graph algorithms library to Neo4j Graph Data Science library.\u003c/p\u003e\n\u003c/div\u003e"
           }
         ]
       },
@@ -76,15 +76,15 @@
       "jobName": "paragraph_1577984933048_828394210",
       "id": "20200102-170853_1997624530",
       "dateCreated": "2020-01-02 17:08:53.048",
-      "dateStarted": "2020-01-02 17:09:18.066",
-      "dateFinished": "2020-01-02 17:09:18.111",
+      "dateStarted": "2020-02-06 17:15:50.138",
+      "dateFinished": "2020-02-06 17:15:50.151",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
     {
-      "text": "%neo4j\nMATCH p\u003d(:User)-[:FOLLOWS]-\u003e(:User)\nRETURN p\n",
+      "text": "%neo4j_algo\nMATCH p\u003d(:User)-[:FOLLOWS]-\u003e(:User)\nRETURN p\n",
       "user": "anonymous",
-      "dateUpdated": "2020-01-19 17:23:45.550",
+      "dateUpdated": "2020-02-06 17:15:50.233",
       "config": {
         "colWidth": 12.0,
         "fontSize": 9.0,
@@ -157,7 +157,7 @@
         "msg": [
           {
             "type": "NETWORK",
-            "data": "{\"nodes\":[{\"id\":0,\"data\":{\"id\":\"Alice\"},\"label\":\"User\"},{\"id\":1,\"data\":{\"id\":\"Bridget\"},\"label\":\"User\"},{\"id\":2,\"data\":{\"id\":\"Charles\"},\"label\":\"User\"},{\"id\":3,\"data\":{\"id\":\"Doug\"},\"label\":\"User\"},{\"id\":4,\"data\":{\"id\":\"Mark\"},\"label\":\"User\"},{\"id\":5,\"data\":{\"id\":\"Michael\"},\"label\":\"User\"},{\"id\":6,\"data\":{\"id\":\"David\"},\"label\":\"User\"},{\"id\":7,\"data\":{\"id\":\"Amy\"},\"label\":\"User\"},{\"id\":8,\"data\":{\"id\":\"James\"},\"label\":\"User\"}],\"edges\":[{\"source\":0,\"target\":1,\"id\":0,\"data\":{},\"label\":\"FOLLOWS\"},{\"source\":0,\"target\":2,\"id\":1,\"data\":{},\"label\":\"FOLLOWS\"},{\"source\":4,\"target\":3,\"id\":2,\"data\":{},\"label\":\"FOLLOWS\"},{\"source\":1,\"target\":5,\"id\":3,\"data\":{},\"label\":\"FOLLOWS\"},{\"source\":3,\"target\":4,\"id\":4,\"data\":{},\"label\":\"FOLLOWS\"},{\"source\":5,\"target\":0,\"id\":5,\"data\":{},\"label\":\"FOLLOWS\"},{\"source\":0,\"target\":5,\"id\":6,\"data\":{},\"label\":\"FOLLOWS\"},{\"source\":1,\"target\":0,\"id\":7,\"data\":{},\"label\":\"FOLLOWS\"},{\"source\":5,\"target\":1,\"id\":8,\"data\":{},\"label\":\"FOLLOWS\"},{\"source\":2,\"target\":3,\"id\":9,\"data\":{},\"label\":\"FOLLOWS\"},{\"source\":1,\"target\":3,\"id\":10,\"data\":{},\"label\":\"FOLLOWS\"},{\"source\":5,\"target\":3,\"id\":11,\"data\":{},\"label\":\"FOLLOWS\"},{\"source\":0,\"target\":3,\"id\":12,\"data\":{},\"label\":\"FOLLOWS\"},{\"source\":4,\"target\":0,\"id\":13,\"data\":{},\"label\":\"FOLLOWS\"},{\"source\":6,\"target\":7,\"id\":14,\"data\":{},\"label\":\"FOLLOWS\"},{\"source\":8,\"target\":6,\"id\":15,\"data\":{},\"label\":\"FOLLOWS\"}],\"labels\":{\"User\":\"#67AD48\"},\"types\":[\"FOLLOWS\"],\"directed\":true}"
+            "data": "{\"nodes\":[{\"id\":0,\"data\":{\"id\":\"Alice\",\"pagerank\":1.1116563910618424},\"label\":\"User\"},{\"id\":1,\"data\":{\"id\":\"Bridget\",\"pagerank\":0.5358271526871249},\"label\":\"User\"},{\"id\":2,\"data\":{\"id\":\"Charles\",\"pagerank\":0.38475333093665537},\"label\":\"User\"},{\"id\":3,\"data\":{\"id\":\"Doug\",\"pagerank\":1.671956494869664},\"label\":\"User\"},{\"id\":4,\"data\":{\"id\":\"Mark\",\"pagerank\":1.5623059164267037},\"label\":\"User\"},{\"id\":5,\"data\":{\"id\":\"Michael\",\"pagerank\":0.5358271526871249},\"label\":\"User\"},{\"id\":6,\"data\":{\"id\":\"David\",\"pagerank\":0.27750000506639483},\"label\":\"User\"},{\"id\":7,\"data\":{\"id\":\"Amy\",\"pagerank\":0.3858750030398369},\"label\":\"User\"},{\"id\":8,\"data\":{\"id\":\"James\",\"pagerank\":0.15000000000000002},\"label\":\"User\"}],\"edges\":[{\"source\":0,\"target\":1,\"id\":0,\"data\":{},\"label\":\"FOLLOWS\"},{\"source\":0,\"target\":2,\"id\":1,\"data\":{},\"label\":\"FOLLOWS\"},{\"source\":4,\"target\":3,\"id\":2,\"data\":{},\"label\":\"FOLLOWS\"},{\"source\":1,\"target\":5,\"id\":3,\"data\":{},\"label\":\"FOLLOWS\"},{\"source\":3,\"target\":4,\"id\":4,\"data\":{},\"label\":\"FOLLOWS\"},{\"source\":5,\"target\":0,\"id\":5,\"data\":{},\"label\":\"FOLLOWS\"},{\"source\":0,\"target\":5,\"id\":6,\"data\":{},\"label\":\"FOLLOWS\"},{\"source\":1,\"target\":0,\"id\":7,\"data\":{},\"label\":\"FOLLOWS\"},{\"source\":5,\"target\":1,\"id\":8,\"data\":{},\"label\":\"FOLLOWS\"},{\"source\":2,\"target\":3,\"id\":9,\"data\":{},\"label\":\"FOLLOWS\"},{\"source\":1,\"target\":3,\"id\":10,\"data\":{},\"label\":\"FOLLOWS\"},{\"source\":5,\"target\":3,\"id\":11,\"data\":{},\"label\":\"FOLLOWS\"},{\"source\":0,\"target\":3,\"id\":12,\"data\":{},\"label\":\"FOLLOWS\"},{\"source\":4,\"target\":0,\"id\":13,\"data\":{},\"label\":\"FOLLOWS\"},{\"source\":6,\"target\":7,\"id\":14,\"data\":{},\"label\":\"FOLLOWS\"},{\"source\":8,\"target\":6,\"id\":15,\"data\":{},\"label\":\"FOLLOWS\"}],\"labels\":{\"User\":\"#6FF08D\"},\"types\":[\"FOLLOWS\"],\"directed\":true}"
           }
         ]
       },
@@ -165,29 +165,28 @@
       "jobName": "paragraph_1579454568611_-1118184898",
       "id": "20200119-172248_1105778544",
       "dateCreated": "2020-01-19 17:22:48.611",
-      "dateStarted": "2020-01-19 17:23:45.600",
-      "dateFinished": "2020-01-19 17:23:45.634",
+      "dateStarted": "2020-02-06 17:15:50.261",
+      "dateFinished": "2020-02-06 17:15:50.435",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
     {
-      "text": "%md\n## Streaming PageRank centrality\n\nA call to the following procedure will calculate\nthe PageRank for each of the nodes in our graph:",
+      "text": "%md\n## Neo4j graph algorithms library",
       "user": "anonymous",
-      "dateUpdated": "2020-01-28 18:27:56.128",
+      "dateUpdated": "2020-02-06 17:27:22.080",
       "config": {
-        "tableHide": false,
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
         "editorSetting": {
           "language": "markdown",
           "editOnDblClick": true,
-          "completionKey": "TAB",
           "completionSupport": false
         },
-        "colWidth": 12.0,
         "editorMode": "ace/mode/markdown",
-        "fontSize": 9.0,
-        "editorHide": true,
-        "results": {},
-        "enabled": true
+        "editorHide": false,
+        "tableHide": true
       },
       "settings": {
         "params": {},
@@ -198,23 +197,63 @@
         "msg": [
           {
             "type": "HTML",
-            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003ch2\u003eStreaming PageRank centrality\u003c/h2\u003e\n\u003cp\u003eA call to the following procedure will calculate\u003cbr/\u003ethe PageRank for each of the nodes in our graph:\u003c/p\u003e\n\u003c/div\u003e"
+            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003ch2\u003eNeo4j graph algorithms library\u003c/h2\u003e\n\u003c/div\u003e"
           }
         ]
       },
       "apps": [],
-      "jobName": "paragraph_1575718233536_-1291284381",
-      "id": "20191207-112728_2069065216",
-      "dateCreated": "2019-12-07 11:30:33.536",
-      "dateStarted": "2020-01-28 18:27:56.128",
-      "dateFinished": "2020-01-28 18:27:56.141",
+      "jobName": "paragraph_1580741311396_729811383",
+      "id": "20200203-144831_1920245850",
+      "dateCreated": "2020-02-03 14:48:31.396",
+      "dateStarted": "2020-02-06 17:15:50.534",
+      "dateFinished": "2020-02-06 17:15:50.548",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
     {
-      "text": "%neo4j\nCALL algo.pageRank.stream(\u0027User\u0027, \u0027FOLLOWS\u0027, {iterations:20, dampingFactor:0.85})\nYIELD nodeId, score\nRETURN algo.getNodeById(nodeId).id AS page, score\nORDER BY score DESC\n",
+      "text": "%md\n### Streaming PageRank results\nThe syntax we have had in graph algorithms library was algo.pageRank.stream(\u0027Node label\u0027, \u0027Relationship type\u0027, {configuration map})",
       "user": "anonymous",
-      "dateUpdated": "2019-12-07 11:30:51.012",
+      "dateUpdated": "2020-02-06 17:27:41.691",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "markdown",
+          "editOnDblClick": true,
+          "completionSupport": false
+        },
+        "editorMode": "ace/mode/markdown",
+        "editorHide": false,
+        "tableHide": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003ch3\u003eStreaming PageRank results\u003c/h3\u003e\n\u003cp\u003eThe syntax we have had in graph algorithms library was algo.pageRank.stream(\u0026lsquo;Node label\u0026rsquo;, \u0026lsquo;Relationship type\u0026rsquo;, {configuration map})\u003c/p\u003e\n\u003c/div\u003e"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1581008749571_-1904024254",
+      "id": "20200206-170549_1750664458",
+      "dateCreated": "2020-02-06 17:05:49.571",
+      "dateStarted": "2020-02-06 17:15:50.659",
+      "dateFinished": "2020-02-06 17:15:50.678",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%neo4j_algo\nCALL algo.pageRank.stream(\u0027User\u0027, \u0027FOLLOWS\u0027, {iterations:20, dampingFactor:0.85})\nYIELD nodeId, score\nRETURN algo.getNodeById(nodeId).id AS name, score\nORDER BY score DESC\n",
+      "user": "anonymous",
+      "dateUpdated": "2020-02-06 17:15:50.759",
       "config": {
         "editorSetting": {
           "language": "scala",
@@ -236,7 +275,7 @@
                   "tableGridState": {},
                   "tableColumnTypeState": {
                     "names": {
-                      "page": "string",
+                      "name": "string",
                       "score": "string"
                     },
                     "updated": false
@@ -266,7 +305,7 @@
         "msg": [
           {
             "type": "TABLE",
-            "data": "page\tscore\n\"Doug\"\t1.671956494869664\n\"Mark\"\t1.5623059164267037\n\"Alice\"\t1.1116563910618424\n\"Bridget\"\t0.5358271526871249\n\"Michael\"\t0.5358271526871249\n\"Amy\"\t0.3858750030398369\n\"Charles\"\t0.38475333093665537\n\"David\"\t0.27750000506639483\n\"James\"\t0.15000000000000002\n"
+            "data": "name\tscore\n\"Doug\"\t1.671956494869664\n\"Mark\"\t1.5623059164267037\n\"Alice\"\t1.1116563910618424\n\"Bridget\"\t0.5358271526871249\n\"Michael\"\t0.5358271526871249\n\"Amy\"\t0.3858750030398369\n\"Charles\"\t0.38475333093665537\n\"David\"\t0.27750000506639483\n\"James\"\t0.15000000000000002\n"
           }
         ]
       },
@@ -274,23 +313,23 @@
       "jobName": "paragraph_1575718233543_375177731",
       "id": "20191207-112455_1660358477",
       "dateCreated": "2019-12-07 11:30:33.543",
-      "dateStarted": "2019-12-07 11:30:50.822",
-      "dateFinished": "2019-12-07 11:30:50.878",
+      "dateStarted": "2020-02-06 17:15:50.792",
+      "dateFinished": "2020-02-06 17:15:50.974",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
     {
-      "text": "%md\n\nDoug is the most influential user, and Mark follows\nclosely after as the only user that Doug follows.\n",
+      "text": "%md\n### Write-back PageRank centrality\n",
       "user": "anonymous",
-      "dateUpdated": "2020-01-28 18:27:38.239",
+      "dateUpdated": "2020-02-06 17:15:50.989",
       "config": {
         "colWidth": 12.0,
         "fontSize": 9.0,
         "enabled": true,
         "results": {},
         "editorSetting": {
-          "editOnDblClick": true,
           "language": "markdown",
+          "editOnDblClick": true,
           "completionSupport": false
         },
         "editorMode": "ace/mode/markdown",
@@ -306,74 +345,27 @@
         "msg": [
           {
             "type": "HTML",
-            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003cp\u003eDoug is the most influential user, and Mark follows\u003cbr/\u003eclosely after as the only user that Doug follows.\u003c/p\u003e\n\u003c/div\u003e"
+            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003ch3\u003eWrite-back PageRank centrality\u003c/h3\u003e\n\u003c/div\u003e"
           }
         ]
       },
       "apps": [],
-      "jobName": "paragraph_1580236033432_-739129132",
-      "id": "20200128-182713_2000076633",
-      "dateCreated": "2020-01-28 18:27:13.432",
-      "dateStarted": "2020-01-28 18:27:38.250",
-      "dateFinished": "2020-01-28 18:27:38.267",
+      "jobName": "paragraph_1581008759193_275690990",
+      "id": "20200206-170559_962320126",
+      "dateCreated": "2020-02-06 17:05:59.194",
+      "dateStarted": "2020-02-06 17:15:51.047",
+      "dateFinished": "2020-02-06 17:15:51.058",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
     {
-      "text": "%md\n## Write back PageRank centrality\n",
+      "text": "%neo4j_algo\nCALL algo.pageRank(\u0027User\u0027, \u0027FOLLOWS\u0027, {iterations:20, dampingFactor:0.85})",
       "user": "anonymous",
-      "dateUpdated": "2020-01-02 17:09:34.616",
+      "dateUpdated": "2020-02-06 17:15:51.137",
       "config": {
-        "tableHide": false,
-        "editorSetting": {
-          "language": "markdown",
-          "editOnDblClick": true,
-          "completionKey": "TAB",
-          "completionSupport": false
-        },
         "colWidth": 12.0,
-        "editorMode": "ace/mode/markdown",
         "fontSize": 9.0,
-        "editorHide": true,
-        "results": {},
-        "enabled": true
-      },
-      "settings": {
-        "params": {},
-        "forms": {}
-      },
-      "results": {
-        "code": "SUCCESS",
-        "msg": [
-          {
-            "type": "HTML",
-            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003ch2\u003eWrite back PageRank centrality\u003c/h2\u003e\n\u003c/div\u003e"
-          }
-        ]
-      },
-      "apps": [],
-      "jobName": "paragraph_1575718233544_756286542",
-      "id": "20191207-112839_1421236737",
-      "dateCreated": "2019-12-07 11:30:33.544",
-      "dateStarted": "2020-01-02 17:09:34.623",
-      "dateFinished": "2020-01-02 17:09:34.642",
-      "status": "FINISHED",
-      "progressUpdateIntervalMs": 500
-    },
-    {
-      "text": "%neo4j\nCALL algo.pageRank(\u0027User\u0027, \u0027FOLLOWS\u0027, {iterations:20, dampingFactor:0.85})",
-      "user": "anonymous",
-      "dateUpdated": "2019-12-07 11:31:05.798",
-      "config": {
-        "editorSetting": {
-          "language": "scala",
-          "editOnDblClick": false,
-          "completionKey": "TAB",
-          "completionSupport": true
-        },
-        "colWidth": 12.0,
-        "editorMode": "ace/mode/undefined",
-        "fontSize": 9.0,
+        "enabled": true,
         "results": {
           "0": {
             "graph": {
@@ -410,7 +402,12 @@
             }
           }
         },
-        "enabled": true
+        "editorSetting": {
+          "language": "markdown",
+          "editOnDblClick": false,
+          "completionSupport": false
+        },
+        "editorMode": "ace/mode/undefined"
       },
       "settings": {
         "params": {},
@@ -421,16 +418,551 @@
         "msg": [
           {
             "type": "TABLE",
-            "data": "nodes\titerations\tloadMillis\tcomputeMillis\twriteMillis\tdampingFactor\twrite\twriteProperty\n9\t20\t15\t16\t1\t0.85\tTRUE\t\"pagerank\"\n"
+            "data": "nodes\titerations\tloadMillis\tcomputeMillis\twriteMillis\tdampingFactor\twrite\twriteProperty\n9\t20\t9\t4\t2\t0.85\tTRUE\t\"pagerank\"\n"
           }
         ]
       },
       "apps": [],
-      "jobName": "paragraph_1575718233545_-670379986",
-      "id": "20191207-112554_511336751",
-      "dateCreated": "2019-12-07 11:30:33.545",
-      "dateStarted": "2019-12-07 11:31:05.610",
-      "dateFinished": "2019-12-07 11:31:05.663",
+      "jobName": "paragraph_1581008776045_-1608121320",
+      "id": "20200206-170616_1912805005",
+      "dateCreated": "2020-02-06 17:06:16.045",
+      "dateStarted": "2020-02-06 17:15:51.173",
+      "dateFinished": "2020-02-06 17:15:51.228",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%md\n## Neo4j graph data science library",
+      "user": "anonymous",
+      "dateUpdated": "2020-02-06 17:30:07.440",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "markdown",
+          "editOnDblClick": true,
+          "completionSupport": false
+        },
+        "editorMode": "ace/mode/markdown",
+        "editorHide": false,
+        "tableHide": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003ch2\u003eNeo4j graph data science library\u003c/h2\u003e\n\u003c/div\u003e"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1580740734588_-1494957418",
+      "id": "20200203-143854_1787539181",
+      "dateCreated": "2020-02-03 14:38:54.589",
+      "dateStarted": "2020-02-06 17:15:51.330",
+      "dateFinished": "2020-02-06 17:15:51.349",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%md\nPreferred way to use GDS library is with loaded named graphs, where we first load the graph into memory and then proceed to run algorithms on it.",
+      "user": "anonymous",
+      "dateUpdated": "2020-02-06 17:30:15.583",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "markdown",
+          "editOnDblClick": true,
+          "completionSupport": false
+        },
+        "editorMode": "ace/mode/markdown",
+        "editorHide": false,
+        "tableHide": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003cp\u003ePreferred way to use GDS library is with loaded named graphs, where we first load the graph into memory and then proceed to run algorithms on it.\u003c/p\u003e\n\u003c/div\u003e"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1581008814438_-1271528214",
+      "id": "20200206-170654_1099246051",
+      "dateCreated": "2020-02-06 17:06:54.439",
+      "dateStarted": "2020-02-06 17:16:17.471",
+      "dateFinished": "2020-02-06 17:16:17.514",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%neo4j_gdn\nCALL gds.graph.create(\u0027pagerank_example\u0027, \u0027User\u0027, \u0027FOLLOWS\u0027)\n",
+      "user": "anonymous",
+      "dateUpdated": "2020-02-06 17:15:51.552",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {
+          "0": {
+            "graph": {
+              "mode": "table",
+              "height": 300.0,
+              "optionOpen": false,
+              "setting": {
+                "table": {
+                  "tableGridState": {},
+                  "tableColumnTypeState": {
+                    "names": {
+                      "graphName": "string",
+                      "nodeProjection.User.label": "string",
+                      "relationshipProjection.FOLLOWS.aggregation": "string",
+                      "relationshipProjection.FOLLOWS.projection": "string",
+                      "relationshipProjection.FOLLOWS.type": "string",
+                      "nodeCount": "string",
+                      "relationshipCount": "string",
+                      "createMillis": "string"
+                    },
+                    "updated": false
+                  },
+                  "tableOptionSpecHash": "[{\"name\":\"useFilter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable filter for columns\"},{\"name\":\"showPagination\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable pagination for better navigation\"},{\"name\":\"showAggregationFooter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable a footer for displaying aggregated values\"}]",
+                  "tableOptionValue": {
+                    "useFilter": false,
+                    "showPagination": false,
+                    "showAggregationFooter": false
+                  },
+                  "updated": false,
+                  "initialized": false
+                }
+              },
+              "commonSetting": {}
+            }
+          }
+        },
+        "editorSetting": {
+          "language": "markdown",
+          "editOnDblClick": false,
+          "completionSupport": false
+        },
+        "editorMode": "ace/mode/undefined"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TABLE",
+            "data": "graphName\tnodeProjection.User.label\trelationshipProjection.FOLLOWS.aggregation\trelationshipProjection.FOLLOWS.projection\trelationshipProjection.FOLLOWS.type\tnodeCount\trelationshipCount\tcreateMillis\n\"pagerank_example\"\tUser\tDEFAULT\tNATURAL\tFOLLOWS\t9\t16\t7\n"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1581008827047_-94058781",
+      "id": "20200206-170707_2067501281",
+      "dateCreated": "2020-02-06 17:07:07.047",
+      "dateStarted": "2020-02-06 17:15:51.592",
+      "dateFinished": "2020-02-06 17:15:51.612",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%md\n### Streaming PageRank results\nThe first parameter defines the in-memory graph we want to run the algorithm on and the second parameter is the configuration map.",
+      "user": "anonymous",
+      "dateUpdated": "2020-02-06 17:17:23.021",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "markdown",
+          "editOnDblClick": true,
+          "completionSupport": false
+        },
+        "editorMode": "ace/mode/markdown",
+        "editorHide": true,
+        "tableHide": false
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003ch3\u003eStreaming PageRank results\u003c/h3\u003e\n\u003cp\u003eThe first parameter defines the in-memory graph we want to run the algorithm on and the second parameter is the configuration map.\u003c/p\u003e\n\u003c/div\u003e"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1581008940837_-867501071",
+      "id": "20200206-170900_1031405434",
+      "dateCreated": "2020-02-06 17:09:00.837",
+      "dateStarted": "2020-02-06 17:17:23.022",
+      "dateFinished": "2020-02-06 17:17:23.055",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%neo4j_gdn\nCALL gds.pageRank.stream(\u0027pagerank_example\u0027,{maxIterations: 20,  dampingFactor: 0.85}) YIELD nodeId, score\nRETURN gds.util.asNode(nodeId).id AS name, score ORDER BY score DESC LIMIT 10\n",
+      "user": "anonymous",
+      "dateUpdated": "2020-02-06 17:15:51.814",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {
+          "0": {
+            "graph": {
+              "mode": "table",
+              "height": 300.0,
+              "optionOpen": false,
+              "setting": {
+                "table": {
+                  "tableGridState": {},
+                  "tableColumnTypeState": {
+                    "names": {
+                      "name": "string",
+                      "score": "string"
+                    },
+                    "updated": false
+                  },
+                  "tableOptionSpecHash": "[{\"name\":\"useFilter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable filter for columns\"},{\"name\":\"showPagination\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable pagination for better navigation\"},{\"name\":\"showAggregationFooter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable a footer for displaying aggregated values\"}]",
+                  "tableOptionValue": {
+                    "useFilter": false,
+                    "showPagination": false,
+                    "showAggregationFooter": false
+                  },
+                  "updated": false,
+                  "initialized": false
+                }
+              },
+              "commonSetting": {}
+            }
+          }
+        },
+        "editorSetting": {
+          "language": "markdown",
+          "editOnDblClick": false,
+          "completionSupport": false
+        },
+        "editorMode": "ace/mode/undefined"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TABLE",
+            "data": "name\tscore\n\"Doug\"\t1.671956494869664\n\"Mark\"\t1.5623059164267037\n\"Alice\"\t1.1116563910618424\n\"Michael\"\t0.5358271526871249\n\"Bridget\"\t0.5358271526871249\n\"Amy\"\t0.3858750030398369\n\"Charles\"\t0.38475333093665537\n\"David\"\t0.27750000506639483\n\"James\"\t0.15000000000000002\n"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1580590166713_-1946443068",
+      "id": "20200201-204926_589092598",
+      "dateCreated": "2020-02-01 20:49:26.713",
+      "dateStarted": "2020-02-06 17:15:51.833",
+      "dateFinished": "2020-02-06 17:15:51.858",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%md\n### Write-back PageRank centrality\n",
+      "user": "anonymous",
+      "dateUpdated": "2020-02-06 17:38:01.074",
+      "config": {
+        "tableHide": true,
+        "editorSetting": {
+          "language": "markdown",
+          "editOnDblClick": true,
+          "completionKey": "TAB",
+          "completionSupport": false
+        },
+        "colWidth": 12.0,
+        "editorMode": "ace/mode/markdown",
+        "fontSize": 9.0,
+        "editorHide": false,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003ch3\u003eWrite-back PageRank centrality\u003c/h3\u003e\n\u003c/div\u003e"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1575718233544_756286542",
+      "id": "20191207-112839_1421236737",
+      "dateCreated": "2019-12-07 11:30:33.544",
+      "dateStarted": "2020-02-06 17:15:51.964",
+      "dateFinished": "2020-02-06 17:15:51.972",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%neo4j_gdn\nCALL gds.pageRank.write(\u0027pagerank_example\u0027,{maxIterations: 20,  dampingFactor: 0.85, writeProperty:\u0027pageRank\u0027}) ",
+      "user": "anonymous",
+      "dateUpdated": "2020-02-06 17:15:52.063",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {
+          "0": {
+            "graph": {
+              "mode": "table",
+              "height": 300.0,
+              "optionOpen": false,
+              "setting": {
+                "table": {
+                  "tableGridState": {},
+                  "tableColumnTypeState": {
+                    "names": {
+                      "nodePropertiesWritten": "string",
+                      "relationshipPropertiesWritten": "string",
+                      "createMillis": "string",
+                      "computeMillis": "string",
+                      "writeMillis": "string",
+                      "ranIterations": "string",
+                      "didConverge": "string",
+                      "configuration.maxIterations": "string",
+                      "configuration.writeConcurrency": "string",
+                      "configuration.sourceNodes": "string",
+                      "configuration.writeProperty": "string",
+                      "configuration.relationshipWeightProperty": "string",
+                      "configuration.dampingFactor": "string",
+                      "configuration.relationshipTypes": "string",
+                      "configuration.cacheWeights": "string",
+                      "configuration.tolerance": "string",
+                      "configuration.concurrency": "string"
+                    },
+                    "updated": false
+                  },
+                  "tableOptionSpecHash": "[{\"name\":\"useFilter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable filter for columns\"},{\"name\":\"showPagination\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable pagination for better navigation\"},{\"name\":\"showAggregationFooter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable a footer for displaying aggregated values\"}]",
+                  "tableOptionValue": {
+                    "useFilter": false,
+                    "showPagination": false,
+                    "showAggregationFooter": false
+                  },
+                  "updated": false,
+                  "initialized": false
+                }
+              },
+              "commonSetting": {}
+            }
+          }
+        },
+        "editorSetting": {
+          "language": "markdown",
+          "editOnDblClick": false,
+          "completionSupport": false
+        },
+        "editorMode": "ace/mode/undefined",
+        "editorHide": false,
+        "tableHide": false
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TABLE",
+            "data": "nodePropertiesWritten\trelationshipPropertiesWritten\tcreateMillis\tcomputeMillis\twriteMillis\tranIterations\tdidConverge\tconfiguration.maxIterations\tconfiguration.writeConcurrency\tconfiguration.sourceNodes\tconfiguration.writeProperty\tconfiguration.relationshipWeightProperty\tconfiguration.dampingFactor\tconfiguration.relationshipTypes\tconfiguration.cacheWeights\tconfiguration.tolerance\tconfiguration.concurrency\n9\t0\t0\t11\t1\t20\tFALSE\t20\t4\t[]\tpageRank\t\t0.85\t[\"*\"]\tfalse\t1.0E-7\t4\n"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1580591038597_-1365372607",
+      "id": "20200201-210358_1423498944",
+      "dateCreated": "2020-02-01 21:03:58.597",
+      "dateStarted": "2020-02-06 17:15:52.093",
+      "dateFinished": "2020-02-06 17:15:52.136",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%md\nAfter we are done with our analyisis we release the graph from memory",
+      "user": "anonymous",
+      "dateUpdated": "2020-02-06 17:40:45.860",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "markdown",
+          "editOnDblClick": true,
+          "completionSupport": false
+        },
+        "editorMode": "ace/mode/markdown",
+        "editorHide": false,
+        "tableHide": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003cp\u003eAfter we are done with our analyisis we release the graph from memory\u003c/p\u003e\n\u003c/div\u003e"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1581009057781_-1162601714",
+      "id": "20200206-171057_578623152",
+      "dateCreated": "2020-02-06 17:10:57.781",
+      "dateStarted": "2020-02-06 17:15:52.243",
+      "dateFinished": "2020-02-06 17:15:52.249",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%neo4j_gdn\nCALL gds.graph.drop(\u0027pagerank_example\u0027);",
+      "user": "anonymous",
+      "dateUpdated": "2020-02-06 17:15:52.331",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {
+          "0": {
+            "graph": {
+              "mode": "table",
+              "height": 300.0,
+              "optionOpen": false,
+              "setting": {
+                "table": {
+                  "tableGridState": {},
+                  "tableColumnTypeState": {
+                    "names": {
+                      "graphName": "string",
+                      "nodeProjection.User.label": "string",
+                      "relationshipProjection.FOLLOWS.aggregation": "string",
+                      "relationshipProjection.FOLLOWS.projection": "string",
+                      "relationshipProjection.FOLLOWS.type": "string",
+                      "nodeQuery": "string",
+                      "relationshipQuery": "string",
+                      "nodeCount": "string",
+                      "relationshipCount": "string",
+                      "histogram.p99": "string",
+                      "histogram.min": "string",
+                      "histogram.max": "string",
+                      "histogram.mean": "string",
+                      "histogram.p90": "string",
+                      "histogram.p50": "string",
+                      "histogram.p999": "string",
+                      "histogram.p95": "string",
+                      "histogram.p75": "string"
+                    },
+                    "updated": false
+                  },
+                  "tableOptionSpecHash": "[{\"name\":\"useFilter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable filter for columns\"},{\"name\":\"showPagination\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable pagination for better navigation\"},{\"name\":\"showAggregationFooter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable a footer for displaying aggregated values\"}]",
+                  "tableOptionValue": {
+                    "useFilter": false,
+                    "showPagination": false,
+                    "showAggregationFooter": false
+                  },
+                  "updated": false,
+                  "initialized": false
+                }
+              },
+              "commonSetting": {}
+            }
+          }
+        },
+        "editorSetting": {
+          "language": "markdown",
+          "editOnDblClick": false,
+          "completionSupport": false
+        },
+        "editorMode": "ace/mode/undefined"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TABLE",
+            "data": "graphName\tnodeProjection.User.label\trelationshipProjection.FOLLOWS.aggregation\trelationshipProjection.FOLLOWS.projection\trelationshipProjection.FOLLOWS.type\tnodeQuery\trelationshipQuery\tnodeCount\trelationshipCount\thistogram.p99\thistogram.min\thistogram.max\thistogram.mean\thistogram.p90\thistogram.p50\thistogram.p999\thistogram.p95\thistogram.p75\n\"pagerank_example\"\tUser\tDEFAULT\tNATURAL\tFOLLOWS\tNULL\tNULL\t9\t16\t4\t0\t4\t1.7777777777777777\t3\t1\t4\t4\t3\n"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1580591272826_1392172660",
+      "id": "20200201-210752_1545325576",
+      "dateCreated": "2020-02-01 21:07:52.826",
+      "dateStarted": "2020-02-06 17:15:52.356",
+      "dateFinished": "2020-02-06 17:15:52.377",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%neo4j_gdn\n",
+      "user": "anonymous",
+      "dateUpdated": "2020-02-06 17:15:52.456",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "markdown",
+          "editOnDblClick": false,
+          "completionSupport": false
+        },
+        "editorMode": "ace/mode/undefined"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "jobName": "paragraph_1581009236817_-1825831449",
+      "id": "20200206-171356_657145290",
+      "dateCreated": "2020-02-06 17:13:56.817",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     }
@@ -440,8 +972,9 @@
   "noteParams": {},
   "noteForms": {},
   "angularObjects": {
+    "neo4j_algo:shared_process": [],
     "md:shared_process": [],
-    "neo4j:shared_process": []
+    "neo4j_gdn:shared_process": []
   },
   "config": {
     "isZeppelinNotebookCronEnable": false

@@ -42,9 +42,9 @@
       "progressUpdateIntervalMs": 500
     },
     {
-      "text": "%md\n# Closeness centrality\nhttps://neo4j.com/docs/graph-algorithms/current/labs-algorithms/closeness-centrality/",
+      "text": "%md\n# Closeness centrality migration guide",
       "user": "anonymous",
-      "dateUpdated": "2020-01-28 18:11:04.692",
+      "dateUpdated": "2020-02-06 17:43:22.782",
       "config": {
         "colWidth": 12.0,
         "fontSize": 9.0,
@@ -68,7 +68,7 @@
         "msg": [
           {
             "type": "HTML",
-            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003ch1\u003eCloseness centrality\u003c/h1\u003e\n\u003cp\u003e\u003ca href\u003d\"https://neo4j.com/docs/graph-algorithms/current/labs-algorithms/closeness-centrality/\"\u003ehttps://neo4j.com/docs/graph-algorithms/current/labs-algorithms/closeness-centrality/\u003c/a\u003e\u003c/p\u003e\n\u003c/div\u003e"
+            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003ch1\u003eCloseness centrality migration guide\u003c/h1\u003e\n\u003c/div\u003e"
           }
         ]
       },
@@ -76,15 +76,15 @@
       "jobName": "paragraph_1577984867638_-1017298659",
       "id": "20200102-170747_340826499",
       "dateCreated": "2020-01-02 17:07:47.639",
-      "dateStarted": "2020-01-28 18:11:04.692",
-      "dateFinished": "2020-01-28 18:11:04.698",
+      "dateStarted": "2020-02-06 17:43:22.782",
+      "dateFinished": "2020-02-06 17:43:22.803",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
     {
-      "text": "%neo4j\nMATCH p\u003d(:User)-[:FOLLOWS]-\u003e(:User)\nRETURN p",
+      "text": "%neo4j_algo\nMATCH p\u003d(:User)-[:FOLLOWS]-\u003e(:User)\nRETURN p",
       "user": "anonymous",
-      "dateUpdated": "2020-01-19 19:25:48.646",
+      "dateUpdated": "2020-02-06 17:43:39.209",
       "config": {
         "colWidth": 12.0,
         "fontSize": 9.0,
@@ -157,7 +157,7 @@
         "msg": [
           {
             "type": "NETWORK",
-            "data": "{\"nodes\":[{\"id\":0,\"data\":{\"centrality\":10.0,\"id\":\"Alice\"},\"label\":\"User\"},{\"id\":1,\"data\":{\"centrality\":0.0,\"id\":\"Bridget\"},\"label\":\"User\"},{\"id\":2,\"data\":{\"centrality\":0.0,\"id\":\"Charles\"},\"label\":\"User\"},{\"id\":3,\"data\":{\"centrality\":7.0,\"id\":\"Doug\"},\"label\":\"User\"},{\"id\":4,\"data\":{\"centrality\":7.0,\"id\":\"Mark\"},\"label\":\"User\"},{\"id\":5,\"data\":{\"centrality\":0.0,\"id\":\"Michael\"},\"label\":\"User\"},{\"id\":6,\"data\":{\"centrality\":1.0,\"id\":\"David\"},\"label\":\"User\"},{\"id\":7,\"data\":{\"centrality\":0.0,\"id\":\"Amy\"},\"label\":\"User\"},{\"id\":8,\"data\":{\"centrality\":0.0,\"id\":\"James\"},\"label\":\"User\"}],\"edges\":[{\"source\":0,\"target\":1,\"id\":0,\"data\":{},\"label\":\"FOLLOWS\"},{\"source\":0,\"target\":2,\"id\":1,\"data\":{},\"label\":\"FOLLOWS\"},{\"source\":4,\"target\":3,\"id\":2,\"data\":{},\"label\":\"FOLLOWS\"},{\"source\":1,\"target\":5,\"id\":3,\"data\":{},\"label\":\"FOLLOWS\"},{\"source\":3,\"target\":4,\"id\":4,\"data\":{},\"label\":\"FOLLOWS\"},{\"source\":5,\"target\":0,\"id\":5,\"data\":{},\"label\":\"FOLLOWS\"},{\"source\":0,\"target\":5,\"id\":6,\"data\":{},\"label\":\"FOLLOWS\"},{\"source\":1,\"target\":0,\"id\":7,\"data\":{},\"label\":\"FOLLOWS\"},{\"source\":5,\"target\":1,\"id\":8,\"data\":{},\"label\":\"FOLLOWS\"},{\"source\":2,\"target\":3,\"id\":9,\"data\":{},\"label\":\"FOLLOWS\"},{\"source\":1,\"target\":3,\"id\":10,\"data\":{},\"label\":\"FOLLOWS\"},{\"source\":5,\"target\":3,\"id\":11,\"data\":{},\"label\":\"FOLLOWS\"},{\"source\":0,\"target\":3,\"id\":12,\"data\":{},\"label\":\"FOLLOWS\"},{\"source\":4,\"target\":0,\"id\":13,\"data\":{},\"label\":\"FOLLOWS\"},{\"source\":6,\"target\":7,\"id\":14,\"data\":{},\"label\":\"FOLLOWS\"},{\"source\":8,\"target\":6,\"id\":15,\"data\":{},\"label\":\"FOLLOWS\"}],\"labels\":{\"User\":\"#E82A27\"},\"types\":[\"FOLLOWS\"],\"directed\":true}"
+            "data": "{\"nodes\":[{\"id\":0,\"data\":{\"centrality\":10.0,\"id\":\"Alice\",\"pagerank\":1.1116563910618424},\"label\":\"User\"},{\"id\":1,\"data\":{\"centrality\":0.0,\"id\":\"Bridget\",\"pagerank\":0.5358271526871249},\"label\":\"User\"},{\"id\":2,\"data\":{\"centrality\":0.0,\"id\":\"Charles\",\"pagerank\":0.38475333093665537},\"label\":\"User\"},{\"id\":3,\"data\":{\"centrality\":7.0,\"id\":\"Doug\",\"pagerank\":1.671956494869664},\"label\":\"User\"},{\"id\":4,\"data\":{\"centrality\":7.0,\"id\":\"Mark\",\"pagerank\":1.5623059164267037},\"label\":\"User\"},{\"id\":5,\"data\":{\"centrality\":0.0,\"id\":\"Michael\",\"pagerank\":0.5358271526871249},\"label\":\"User\"},{\"id\":6,\"data\":{\"centrality\":1.0,\"id\":\"David\",\"pagerank\":0.27750000506639483},\"label\":\"User\"},{\"id\":7,\"data\":{\"centrality\":0.0,\"id\":\"Amy\",\"pagerank\":0.3858750030398369},\"label\":\"User\"},{\"id\":8,\"data\":{\"centrality\":0.0,\"id\":\"James\",\"pagerank\":0.15000000000000002},\"label\":\"User\"}],\"edges\":[{\"source\":0,\"target\":1,\"id\":0,\"data\":{},\"label\":\"FOLLOWS\"},{\"source\":0,\"target\":2,\"id\":1,\"data\":{},\"label\":\"FOLLOWS\"},{\"source\":4,\"target\":3,\"id\":2,\"data\":{},\"label\":\"FOLLOWS\"},{\"source\":1,\"target\":5,\"id\":3,\"data\":{},\"label\":\"FOLLOWS\"},{\"source\":3,\"target\":4,\"id\":4,\"data\":{},\"label\":\"FOLLOWS\"},{\"source\":5,\"target\":0,\"id\":5,\"data\":{},\"label\":\"FOLLOWS\"},{\"source\":0,\"target\":5,\"id\":6,\"data\":{},\"label\":\"FOLLOWS\"},{\"source\":1,\"target\":0,\"id\":7,\"data\":{},\"label\":\"FOLLOWS\"},{\"source\":5,\"target\":1,\"id\":8,\"data\":{},\"label\":\"FOLLOWS\"},{\"source\":2,\"target\":3,\"id\":9,\"data\":{},\"label\":\"FOLLOWS\"},{\"source\":1,\"target\":3,\"id\":10,\"data\":{},\"label\":\"FOLLOWS\"},{\"source\":5,\"target\":3,\"id\":11,\"data\":{},\"label\":\"FOLLOWS\"},{\"source\":0,\"target\":3,\"id\":12,\"data\":{},\"label\":\"FOLLOWS\"},{\"source\":4,\"target\":0,\"id\":13,\"data\":{},\"label\":\"FOLLOWS\"},{\"source\":6,\"target\":7,\"id\":14,\"data\":{},\"label\":\"FOLLOWS\"},{\"source\":8,\"target\":6,\"id\":15,\"data\":{},\"label\":\"FOLLOWS\"}],\"labels\":{\"User\":\"#6FF08D\"},\"types\":[\"FOLLOWS\"],\"directed\":true}"
           }
         ]
       },
@@ -165,15 +165,55 @@
       "jobName": "paragraph_1579454398068_1819406247",
       "id": "20200119-171958_432377718",
       "dateCreated": "2020-01-19 17:19:58.068",
-      "dateStarted": "2020-01-19 19:25:48.763",
-      "dateFinished": "2020-01-19 19:25:48.845",
+      "dateStarted": "2020-02-06 17:43:39.227",
+      "dateFinished": "2020-02-06 17:43:39.249",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
     {
-      "text": "%md\n## Streaming closeness centrality\n\nA call to the following procedure will calculate the closeness centrality for each of the\nnodes in our graph:",
+      "text": "%md\n## Neo4j graph algorithms library",
       "user": "anonymous",
-      "dateUpdated": "2020-01-28 18:15:54.938",
+      "dateUpdated": "2020-02-06 17:43:57.425",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "markdown",
+          "editOnDblClick": true,
+          "completionSupport": false
+        },
+        "editorMode": "ace/mode/markdown",
+        "editorHide": true,
+        "tableHide": false
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003ch2\u003eNeo4j graph algorithms library\u003c/h2\u003e\n\u003c/div\u003e"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1581011034984_-1879929075",
+      "id": "20200206-174354_1860303594",
+      "dateCreated": "2020-02-06 17:43:54.984",
+      "dateStarted": "2020-02-06 17:43:57.425",
+      "dateFinished": "2020-02-06 17:43:57.430",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%md\n### Streaming closeness centrality\n\nThe syntax we have had in graph algorithms library was algo.closeness.stream(\u0027Node label\u0027, \u0027Relationship type\u0027, {configuration map})",
+      "user": "anonymous",
+      "dateUpdated": "2020-02-06 17:49:45.355",
       "config": {
         "colWidth": 12.0,
         "fontSize": 9.0,
@@ -198,7 +238,7 @@
         "msg": [
           {
             "type": "HTML",
-            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003ch2\u003eStreaming closeness centrality\u003c/h2\u003e\n\u003cp\u003eA call to the following procedure will calculate the closeness centrality for each of the\u003cbr/\u003enodes in our graph:\u003c/p\u003e\n\u003c/div\u003e"
+            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003ch3\u003eStreaming closeness centrality\u003c/h3\u003e\n\u003cp\u003eThe syntax we have had in graph algorithms library was algo.closeness.stream(\u0026lsquo;Node label\u0026rsquo;, \u0026lsquo;Relationship type\u0026rsquo;, {configuration map})\u003c/p\u003e\n\u003c/div\u003e"
           }
         ]
       },
@@ -206,15 +246,15 @@
       "jobName": "paragraph_1575718048369_1685479278",
       "id": "20191207-112728_2069065216",
       "dateCreated": "2019-12-07 11:27:28.369",
-      "dateStarted": "2020-01-28 18:15:27.063",
-      "dateFinished": "2020-01-28 18:15:27.071",
+      "dateStarted": "2020-02-06 17:44:47.269",
+      "dateFinished": "2020-02-06 17:44:47.288",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
     {
-      "text": "%neo4j\nCALL algo.closeness.stream(\"User\", \"FOLLOWS\")\nYIELD nodeId, centrality\nRETURN algo.getNodeById(nodeId).id as id, centrality\nORDER BY centrality DESC\n",
+      "text": "%neo4j_algo\nCALL algo.closeness.stream(\"User\", \"FOLLOWS\")\nYIELD nodeId, centrality\nRETURN algo.getNodeById(nodeId).id as id, centrality\nORDER BY centrality DESC\n",
       "user": "anonymous",
-      "dateUpdated": "2020-01-19 19:26:12.791",
+      "dateUpdated": "2020-02-06 17:44:25.598",
       "config": {
         "colWidth": 12.0,
         "fontSize": 9.0,
@@ -274,15 +314,15 @@
       "jobName": "paragraph_1575717895844_-902604898",
       "id": "20191207-112455_1660358477",
       "dateCreated": "2019-12-07 11:24:55.844",
-      "dateStarted": "2020-01-19 19:26:12.875",
-      "dateFinished": "2020-01-19 19:26:12.983",
+      "dateStarted": "2020-02-06 17:44:25.617",
+      "dateFinished": "2020-02-06 17:44:25.679",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
     {
       "text": "%md\n*Alice*, *Doug*, and *David* are the most closely connected nodes in the graph with a 1.0 score, which means each directly connects to all nodes in their part of the graph. David has only a few connections, within his group of friends that’s significant. In other words, this score represents the closeness of each user to others within their subgraph but not the entire graph.",
       "user": "anonymous",
-      "dateUpdated": "2020-01-28 18:15:11.993",
+      "dateUpdated": "2020-02-06 17:44:29.757",
       "config": {
         "colWidth": 12.0,
         "fontSize": 9.0,
@@ -314,15 +354,15 @@
       "jobName": "paragraph_1580200063796_-439340962",
       "id": "20200128-082743_1953130964",
       "dateCreated": "2020-01-28 08:27:43.796",
-      "dateStarted": "2020-01-28 18:15:11.999",
-      "dateFinished": "2020-01-28 18:15:12.026",
+      "dateStarted": "2020-02-06 17:44:29.757",
+      "dateFinished": "2020-02-06 17:44:29.766",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
     {
-      "text": "%md\n## Write back closeness centrality\n",
+      "text": "%md\n### Write-back closeness centrality\n",
       "user": "anonymous",
-      "dateUpdated": "2020-01-28 18:16:10.891",
+      "dateUpdated": "2020-02-06 17:51:20.703",
       "config": {
         "colWidth": 12.0,
         "fontSize": 9.0,
@@ -335,8 +375,8 @@
           "completionSupport": false
         },
         "editorMode": "ace/mode/markdown",
-        "editorHide": true,
-        "tableHide": false
+        "editorHide": false,
+        "tableHide": true
       },
       "settings": {
         "params": {},
@@ -347,7 +387,7 @@
         "msg": [
           {
             "type": "HTML",
-            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003ch2\u003eWrite back closeness centrality\u003c/h2\u003e\n\u003c/div\u003e"
+            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003ch3\u003eWrite-back closeness centrality\u003c/h3\u003e\n\u003c/div\u003e"
           }
         ]
       },
@@ -355,8 +395,8 @@
       "jobName": "paragraph_1575718119159_-1191599217",
       "id": "20191207-112839_1421236737",
       "dateCreated": "2019-12-07 11:28:39.159",
-      "dateStarted": "2020-01-28 18:16:10.890",
-      "dateFinished": "2020-01-28 18:16:10.906",
+      "dateStarted": "2020-02-06 17:44:39.141",
+      "dateFinished": "2020-02-06 17:44:39.177",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
@@ -431,9 +471,9 @@
       "progressUpdateIntervalMs": 500
     },
     {
-      "text": "%md\n## Wasserman-Faust implementation\n\nStanley Wasserman and Katherine Faust came up with an improved formula for cal‐\nculating closeness for graphs with multiple subgraphs without connections between\nthose groups.",
+      "text": "%md\n### Wasserman-Faust implementation\n\nStanley Wasserman and Katherine Faust came up with an improved formula for cal‐\nculating closeness for graphs with multiple subgraphs without connections between\nthose groups.",
       "user": "anonymous",
-      "dateUpdated": "2020-01-28 18:17:06.133",
+      "dateUpdated": "2020-02-06 17:52:03.855",
       "config": {
         "colWidth": 12.0,
         "fontSize": 9.0,
@@ -446,8 +486,8 @@
           "completionSupport": false
         },
         "editorMode": "ace/mode/markdown",
-        "editorHide": true,
-        "tableHide": false
+        "editorHide": false,
+        "tableHide": true
       },
       "settings": {
         "params": {},
@@ -458,7 +498,7 @@
         "msg": [
           {
             "type": "HTML",
-            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003ch2\u003eWasserman-Faust implementation\u003c/h2\u003e\n\u003cp\u003eStanley Wasserman and Katherine Faust came up with an improved formula for cal‐\u003cbr/\u003eculating closeness for graphs with multiple subgraphs without connections between\u003cbr/\u003ethose groups.\u003c/p\u003e\n\u003c/div\u003e"
+            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003ch3\u003eWasserman-Faust implementation\u003c/h3\u003e\n\u003cp\u003eStanley Wasserman and Katherine Faust came up with an improved formula for cal‐\u003cbr/\u003eculating closeness for graphs with multiple subgraphs without connections between\u003cbr/\u003ethose groups.\u003c/p\u003e\n\u003c/div\u003e"
           }
         ]
       },
@@ -466,15 +506,15 @@
       "jobName": "paragraph_1575718137960_1176841915",
       "id": "20191207-112857_1196936773",
       "dateCreated": "2019-12-07 11:28:57.960",
-      "dateStarted": "2020-01-28 18:17:06.137",
-      "dateFinished": "2020-01-28 18:17:06.154",
+      "dateStarted": "2020-02-06 17:44:59.395",
+      "dateFinished": "2020-02-06 17:44:59.419",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
     {
-      "text": "%neo4j\nCALL algo.closeness.stream(\"User\", \"FOLLOWS\", {improved: true})\nYIELD nodeId, centrality\nRETURN algo.getNodeById(nodeId).id AS user, centrality\nORDER BY centrality DESC\n",
+      "text": "%neo4j_algo\nCALL algo.closeness.stream(\"User\", \"FOLLOWS\", {improved: true})\nYIELD nodeId, centrality\nRETURN algo.getNodeById(nodeId).id AS user, centrality\nORDER BY centrality DESC\n",
       "user": "anonymous",
-      "dateUpdated": "2020-01-19 19:26:25.814",
+      "dateUpdated": "2020-02-06 17:45:25.907",
       "config": {
         "colWidth": 12.0,
         "fontSize": 9.0,
@@ -534,15 +574,15 @@
       "jobName": "paragraph_1575718018894_-925771656",
       "id": "20191207-112658_1960728024",
       "dateCreated": "2019-12-07 11:26:58.894",
-      "dateStarted": "2020-01-19 19:26:25.923",
-      "dateFinished": "2020-01-19 19:26:25.994",
+      "dateStarted": "2020-02-06 17:45:25.925",
+      "dateFinished": "2020-02-06 17:45:25.974",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
     {
       "text": "%md\n\nAs Results shows, the results are now more representative of the closeness of\nnodes to the entire graph. The scores for the members of the smaller subgraph\n(David, Amy, and James) have been dampened, and they now have the lowest scores\nof all users. This makes sense as they are the most isolated nodes. This formula is\nmore useful for detecting the importance of a node across the entire graph rather\nthan within its own subgraph.\n",
       "user": "anonymous",
-      "dateUpdated": "2020-01-28 18:18:52.884",
+      "dateUpdated": "2020-02-06 17:45:28.571",
       "config": {
         "colWidth": 12.0,
         "fontSize": 9.0,
@@ -574,15 +614,15 @@
       "jobName": "paragraph_1580235522395_829762722",
       "id": "20200128-181842_1613938795",
       "dateCreated": "2020-01-28 18:18:42.395",
-      "dateStarted": "2020-01-28 18:18:52.886",
-      "dateFinished": "2020-01-28 18:18:52.922",
+      "dateStarted": "2020-02-06 17:45:28.571",
+      "dateFinished": "2020-02-06 17:45:28.587",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
     {
       "text": "%md\n## Harmonic centrality\n\nHarmonic Centrality (also known as Valued Centrality) is a variant of Closeness Cen‐\ntrality, invented to solve the original problem with unconnected graphs. In “Harmony\nin a Small World”, M. Marchiori and V. Latora proposed this concept as a practical\nrepresentation of an average shortest path.\nWhen calculating the closeness score for each node, rather than summing the distances\nof a node to all other nodes, it sums the inverse of those distances. This means\nthat infinite values become irrelevant.",
       "user": "anonymous",
-      "dateUpdated": "2020-01-28 18:17:51.825",
+      "dateUpdated": "2020-02-06 17:52:55.337",
       "config": {
         "colWidth": 12.0,
         "fontSize": 9.0,
@@ -595,8 +635,8 @@
           "completionSupport": false
         },
         "editorMode": "ace/mode/markdown",
-        "editorHide": true,
-        "tableHide": false
+        "editorHide": false,
+        "tableHide": true
       },
       "settings": {
         "params": {},
@@ -615,15 +655,15 @@
       "jobName": "paragraph_1575718172568_1835037071",
       "id": "20191207-112932_534293801",
       "dateCreated": "2019-12-07 11:29:32.568",
-      "dateStarted": "2020-01-28 18:17:51.825",
-      "dateFinished": "2020-01-28 18:17:51.853",
+      "dateStarted": "2020-02-06 17:45:31.081",
+      "dateFinished": "2020-02-06 17:45:31.113",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
     {
-      "text": "%neo4j\nCALL algo.closeness.harmonic.stream(\"User\", \"FOLLOWS\")\nYIELD nodeId, centrality\nRETURN algo.getNodeById(nodeId).id AS user, centrality\nORDER BY centrality DESC\n",
+      "text": "%neo4j_algo\nCALL algo.closeness.harmonic.stream(\"User\", \"FOLLOWS\")\nYIELD nodeId, centrality\nRETURN algo.getNodeById(nodeId).id AS user, centrality\nORDER BY centrality DESC\n",
       "user": "anonymous",
-      "dateUpdated": "2020-01-19 19:26:54.037",
+      "dateUpdated": "2020-02-06 17:45:34.679",
       "config": {
         "colWidth": 12.0,
         "fontSize": 9.0,
@@ -683,15 +723,15 @@
       "jobName": "paragraph_1575718033110_2049842479",
       "id": "20191207-112713_1247662406",
       "dateCreated": "2019-12-07 11:27:13.111",
-      "dateStarted": "2020-01-19 19:26:54.112",
-      "dateFinished": "2020-01-19 19:26:54.212",
+      "dateStarted": "2020-02-06 17:45:34.699",
+      "dateFinished": "2020-02-06 17:45:34.745",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
     {
       "text": "%md\n\nThe results from this algorithm differ from those of the original Closeness Centrality\nalgorithm but are similar to those from the Wasserman and Faust improvement.\nEither algorithm can be used when working with graphs with more than one connec‐\nted component.\n",
       "user": "anonymous",
-      "dateUpdated": "2020-01-28 18:18:11.423",
+      "dateUpdated": "2020-02-06 17:45:42.985",
       "config": {
         "colWidth": 12.0,
         "fontSize": 9.0,
@@ -723,24 +763,582 @@
       "jobName": "paragraph_1579462014037_254887328",
       "id": "20200119-192654_1257387163",
       "dateCreated": "2020-01-19 19:26:54.038",
-      "dateStarted": "2020-01-28 18:18:11.425",
-      "dateFinished": "2020-01-28 18:18:11.450",
+      "dateStarted": "2020-02-06 17:45:42.985",
+      "dateFinished": "2020-02-06 17:45:42.996",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
     {
-      "text": "%md\n",
+      "text": "%md\n## Neo4j graph data science library",
       "user": "anonymous",
-      "dateUpdated": "2020-01-28 18:18:11.388",
+      "dateUpdated": "2020-02-06 17:48:59.095",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "markdown",
+          "editOnDblClick": true,
+          "completionSupport": false
+        },
+        "editorMode": "ace/mode/markdown",
+        "editorHide": true,
+        "tableHide": false
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003ch2\u003eNeo4j graph data science library\u003c/h2\u003e\n\u003c/div\u003e"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1580235491381_28752463",
+      "id": "20200128-181811_1200329026",
+      "dateCreated": "2020-01-28 18:18:11.381",
+      "dateStarted": "2020-02-06 17:48:59.099",
+      "dateFinished": "2020-02-06 17:48:59.107",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%md\nPreferred way to use GDS library is with loaded named graphs, where we first load the graph into memory and then proceed to run algorithms on it.",
+      "user": "anonymous",
+      "dateUpdated": "2020-02-06 17:49:08.962",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "markdown",
+          "editOnDblClick": true,
+          "completionSupport": false
+        },
+        "editorMode": "ace/mode/markdown",
+        "editorHide": true,
+        "tableHide": false
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003cp\u003ePreferred way to use GDS library is with loaded named graphs, where we first load the graph into memory and then proceed to run algorithms on it.\u003c/p\u003e\n\u003c/div\u003e"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1581011339066_-855648098",
+      "id": "20200206-174859_1022942739",
+      "dateCreated": "2020-02-06 17:48:59.066",
+      "dateStarted": "2020-02-06 17:49:08.965",
+      "dateFinished": "2020-02-06 17:49:08.995",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%neo4j_gdn\nCALL gds.graph.create(\u0027closeness_example\u0027, \u0027User\u0027, \u0027FOLLOWS\u0027)",
+      "user": "anonymous",
+      "dateUpdated": "2020-02-06 17:49:24.074",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {
+          "0": {
+            "graph": {
+              "mode": "table",
+              "height": 300.0,
+              "optionOpen": false,
+              "setting": {
+                "table": {
+                  "tableGridState": {},
+                  "tableColumnTypeState": {
+                    "names": {
+                      "graphName": "string",
+                      "nodeProjection.User.label": "string",
+                      "relationshipProjection.FOLLOWS.aggregation": "string",
+                      "relationshipProjection.FOLLOWS.projection": "string",
+                      "relationshipProjection.FOLLOWS.type": "string",
+                      "nodeCount": "string",
+                      "relationshipCount": "string",
+                      "createMillis": "string"
+                    },
+                    "updated": false
+                  },
+                  "tableOptionSpecHash": "[{\"name\":\"useFilter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable filter for columns\"},{\"name\":\"showPagination\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable pagination for better navigation\"},{\"name\":\"showAggregationFooter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable a footer for displaying aggregated values\"}]",
+                  "tableOptionValue": {
+                    "useFilter": false,
+                    "showPagination": false,
+                    "showAggregationFooter": false
+                  },
+                  "updated": false,
+                  "initialized": false
+                }
+              },
+              "commonSetting": {}
+            }
+          }
+        },
+        "editorSetting": {
+          "language": "markdown",
+          "editOnDblClick": false,
+          "completionSupport": false
+        },
+        "editorMode": "ace/mode/undefined"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TABLE",
+            "data": "graphName\tnodeProjection.User.label\trelationshipProjection.FOLLOWS.aggregation\trelationshipProjection.FOLLOWS.projection\trelationshipProjection.FOLLOWS.type\tnodeCount\trelationshipCount\tcreateMillis\n\"closeness_example\"\tUser\tDEFAULT\tNATURAL\tFOLLOWS\t9\t16\t5\n"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1581011348930_-912657351",
+      "id": "20200206-174908_825421920",
+      "dateCreated": "2020-02-06 17:49:08.930",
+      "dateStarted": "2020-02-06 17:49:22.664",
+      "dateFinished": "2020-02-06 17:49:22.694",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%md\n### Streaming closeness centrality\n",
+      "user": "anonymous",
+      "dateUpdated": "2020-02-06 17:50:05.343",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "markdown",
+          "editOnDblClick": true,
+          "completionSupport": false
+        },
+        "editorMode": "ace/mode/markdown",
+        "editorHide": true,
+        "tableHide": false
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003ch3\u003eStreaming closeness centrality\u003c/h3\u003e\n\u003c/div\u003e"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1581011399223_1959029436",
+      "id": "20200206-174959_162883102",
+      "dateCreated": "2020-02-06 17:49:59.223",
+      "dateStarted": "2020-02-06 17:50:05.357",
+      "dateFinished": "2020-02-06 17:50:05.383",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%neo4j_gdn\nCALL gds.alpha.closeness.stream(\u0027closeness_example\u0027) YIELD nodeId, centrality\nRETURN gds.util.asNode(nodeId).id AS name, centrality ORDER BY centrality DESC LIMIT 10",
+      "user": "anonymous",
+      "dateUpdated": "2020-02-06 17:51:07.214",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {
+          "0": {
+            "graph": {
+              "mode": "table",
+              "height": 300.0,
+              "optionOpen": false,
+              "setting": {
+                "table": {
+                  "tableGridState": {},
+                  "tableColumnTypeState": {
+                    "names": {
+                      "name": "string",
+                      "centrality": "string"
+                    },
+                    "updated": false
+                  },
+                  "tableOptionSpecHash": "[{\"name\":\"useFilter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable filter for columns\"},{\"name\":\"showPagination\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable pagination for better navigation\"},{\"name\":\"showAggregationFooter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable a footer for displaying aggregated values\"}]",
+                  "tableOptionValue": {
+                    "useFilter": false,
+                    "showPagination": false,
+                    "showAggregationFooter": false
+                  },
+                  "updated": false,
+                  "initialized": false
+                }
+              },
+              "commonSetting": {}
+            }
+          }
+        },
+        "editorSetting": {
+          "language": "markdown",
+          "editOnDblClick": false,
+          "completionSupport": false
+        },
+        "editorMode": "ace/mode/undefined",
+        "editorHide": false,
+        "tableHide": false
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TABLE",
+            "data": "name\tcentrality\n\"Doug\"\t1.0\n\"David\"\t1.0\n\"Alice\"\t0.625\n\"Mark\"\t0.5555555555555556\n\"Charles\"\t0.5\n\"Michael\"\t0.45454545454545453\n\"Bridget\"\t0.45454545454545453\n\"James\"\t0.0\n\"Amy\"\t0.0\n"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1581011362642_1427800881",
+      "id": "20200206-174922_1472909207",
+      "dateCreated": "2020-02-06 17:49:22.642",
+      "dateStarted": "2020-02-06 17:51:06.792",
+      "dateFinished": "2020-02-06 17:51:06.844",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%md\n### Write-back closeness centrality\n",
+      "user": "anonymous",
+      "dateUpdated": "2020-02-06 17:51:30.320",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "markdown",
+          "editOnDblClick": true,
+          "completionSupport": false
+        },
+        "editorMode": "ace/mode/markdown",
+        "editorHide": true,
+        "tableHide": false
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003ch3\u003eWrite-back closeness centrality\u003c/h3\u003e\n\u003c/div\u003e"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1581011472072_1782997504",
+      "id": "20200206-175112_1211122926",
+      "dateCreated": "2020-02-06 17:51:12.072",
+      "dateStarted": "2020-02-06 17:51:30.320",
+      "dateFinished": "2020-02-06 17:51:30.351",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%neo4j_gdn\nCALL gds.alpha.closeness.write(\u0027closeness_example\u0027, {writeProperty:\u0027closeness\u0027});",
+      "user": "anonymous",
+      "dateUpdated": "2020-02-06 17:51:57.517",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {
+          "0": {
+            "graph": {
+              "mode": "table",
+              "height": 300.0,
+              "optionOpen": false,
+              "setting": {
+                "table": {
+                  "tableGridState": {},
+                  "tableColumnTypeState": {
+                    "names": {
+                      "nodes": "string",
+                      "loadMillis": "string",
+                      "computeMillis": "string",
+                      "writeMillis": "string",
+                      "write": "string",
+                      "writeProperty": "string"
+                    },
+                    "updated": false
+                  },
+                  "tableOptionSpecHash": "[{\"name\":\"useFilter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable filter for columns\"},{\"name\":\"showPagination\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable pagination for better navigation\"},{\"name\":\"showAggregationFooter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable a footer for displaying aggregated values\"}]",
+                  "tableOptionValue": {
+                    "useFilter": false,
+                    "showPagination": false,
+                    "showAggregationFooter": false
+                  },
+                  "updated": false,
+                  "initialized": false
+                }
+              },
+              "commonSetting": {}
+            }
+          }
+        },
+        "editorSetting": {
+          "language": "markdown",
+          "editOnDblClick": false,
+          "completionSupport": false
+        },
+        "editorMode": "ace/mode/undefined"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TABLE",
+            "data": "nodes\tloadMillis\tcomputeMillis\twriteMillis\twrite\twriteProperty\n9\t0\t0\t5\tFALSE\t\"closeness\"\n"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1581011432967_1005837910",
+      "id": "20200206-175032_1990758292",
+      "dateCreated": "2020-02-06 17:50:32.968",
+      "dateStarted": "2020-02-06 17:51:56.042",
+      "dateFinished": "2020-02-06 17:51:56.067",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%md\n### Wasserman-Faust implementation\n\nStanley Wasserman and Katherine Faust came up with an improved formula for cal‐\nculating closeness for graphs with multiple subgraphs without connections between\nthose groups.",
+      "user": "anonymous",
+      "dateUpdated": "2020-02-06 17:52:21.835",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "markdown",
+          "editOnDblClick": true,
+          "completionSupport": false
+        },
+        "editorMode": "ace/mode/markdown",
+        "editorHide": true,
+        "tableHide": false
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003ch3\u003eWasserman-Faust implementation\u003c/h3\u003e\n\u003cp\u003eStanley Wasserman and Katherine Faust came up with an improved formula for cal‐\u003cbr/\u003eculating closeness for graphs with multiple subgraphs without connections between\u003cbr/\u003ethose groups.\u003c/p\u003e\n\u003c/div\u003e"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1581011516021_1766456151",
+      "id": "20200206-175156_2036435329",
+      "dateCreated": "2020-02-06 17:51:56.021",
+      "dateStarted": "2020-02-06 17:52:21.835",
+      "dateFinished": "2020-02-06 17:52:21.846",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%neo4j_gdn\nCALL gds.alpha.closeness.stream(\u0027closeness_example\u0027,{improved:true}) YIELD nodeId, centrality\nRETURN gds.util.asNode(nodeId).id AS name, centrality ORDER BY centrality DESC LIMIT 10",
+      "user": "anonymous",
+      "dateUpdated": "2020-02-06 17:52:43.523",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {
+          "0": {
+            "graph": {
+              "mode": "table",
+              "height": 300.0,
+              "optionOpen": false,
+              "setting": {
+                "table": {
+                  "tableGridState": {},
+                  "tableColumnTypeState": {
+                    "names": {
+                      "name": "string",
+                      "centrality": "string"
+                    },
+                    "updated": false
+                  },
+                  "tableOptionSpecHash": "[{\"name\":\"useFilter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable filter for columns\"},{\"name\":\"showPagination\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable pagination for better navigation\"},{\"name\":\"showAggregationFooter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable a footer for displaying aggregated values\"}]",
+                  "tableOptionValue": {
+                    "useFilter": false,
+                    "showPagination": false,
+                    "showAggregationFooter": false
+                  },
+                  "updated": false,
+                  "initialized": false
+                }
+              },
+              "commonSetting": {}
+            }
+          }
+        },
+        "editorSetting": {
+          "language": "markdown",
+          "editOnDblClick": false,
+          "completionSupport": false
+        },
+        "editorMode": "ace/mode/undefined"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TABLE",
+            "data": "name\tcentrality\n\"Doug\"\t0.5\n\"Alice\"\t0.3125\n\"Mark\"\t0.2777777777777778\n\"Charles\"\t0.25\n\"Bridget\"\t0.22727272727272727\n\"Michael\"\t0.22727272727272727\n\"James\"\t0.0\n\"David\"\t0.0\n\"Amy\"\t-0.0\n"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1581011541812_867006634",
+      "id": "20200206-175221_1281953122",
+      "dateCreated": "2020-02-06 17:52:21.812",
+      "dateStarted": "2020-02-06 17:52:41.464",
+      "dateFinished": "2020-02-06 17:52:41.519",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%md\n## Harmonic centrality\n\nHarmonic Centrality (also known as Valued Centrality) is a variant of Closeness Cen‐\ntrality, invented to solve the original problem with unconnected graphs. In “Harmony\nin a Small World”, M. Marchiori and V. Latora proposed this concept as a practical\nrepresentation of an average shortest path.\nWhen calculating the closeness score for each node, rather than summing the distances\nof a node to all other nodes, it sums the inverse of those distances. This means\nthat infinite values become irrelevant.",
+      "user": "anonymous",
+      "dateUpdated": "2020-02-06 17:53:16.328",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "markdown",
+          "editOnDblClick": true,
+          "completionSupport": false
+        },
+        "editorMode": "ace/mode/markdown",
+        "editorHide": true,
+        "tableHide": false
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003ch2\u003eHarmonic centrality\u003c/h2\u003e\n\u003cp\u003eHarmonic Centrality (also known as Valued Centrality) is a variant of Closeness Cen‐\u003cbr/\u003etrality, invented to solve the original problem with unconnected graphs. In “Harmony\u003cbr/\u003ein a Small World”, M. Marchiori and V. Latora proposed this concept as a practical\u003cbr/\u003erepresentation of an average shortest path.\u003cbr/\u003eWhen calculating the closeness score for each node, rather than summing the distances\u003cbr/\u003eof a node to all other nodes, it sums the inverse of those distances. This means\u003cbr/\u003ethat infinite values become irrelevant.\u003c/p\u003e\n\u003c/div\u003e"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1581011561444_-1682171076",
+      "id": "20200206-175241_663534241",
+      "dateCreated": "2020-02-06 17:52:41.444",
+      "dateStarted": "2020-02-06 17:53:16.328",
+      "dateFinished": "2020-02-06 17:53:16.352",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%neo4j_gdn\nCALL gds.alpha.harmonic.stream(\u0027closeness_example\u0027) YIELD nodeId, centrality\nRETURN gds.util.asNode(nodeId).id AS name, centrality ORDER BY centrality DESC LIMIT 10",
+      "user": "anonymous",
+      "dateUpdated": "2020-02-06 17:56:03.699",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "markdown",
+          "editOnDblClick": false,
+          "completionSupport": false
+        },
+        "editorMode": "ace/mode/undefined"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "ERROR",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "There is no procedure with the name `gds.alpha.harmonic.stream` registered for this database instance. Please ensure you\u0027ve spelled the procedure name correctly and that the procedure is properly deployed."
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1581011588096_533144541",
+      "id": "20200206-175308_1085019963",
+      "dateCreated": "2020-02-06 17:53:08.096",
+      "dateStarted": "2020-02-06 17:56:03.723",
+      "dateFinished": "2020-02-06 17:56:03.730",
+      "status": "ERROR",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%neo4j_gdn\n",
+      "user": "anonymous",
+      "dateUpdated": "2020-02-06 17:53:29.796",
       "config": {},
       "settings": {
         "params": {},
         "forms": {}
       },
       "apps": [],
-      "jobName": "paragraph_1580235491381_28752463",
-      "id": "20200128-181811_1200329026",
-      "dateCreated": "2020-01-28 18:18:11.381",
+      "jobName": "paragraph_1581011609795_108350653",
+      "id": "20200206-175329_1143711344",
+      "dateCreated": "2020-02-06 17:53:29.795",
       "status": "READY",
       "progressUpdateIntervalMs": 500
     }
@@ -750,8 +1348,9 @@
   "noteParams": {},
   "noteForms": {},
   "angularObjects": {
+    "neo4j_algo:shared_process": [],
     "md:shared_process": [],
-    "neo4j:shared_process": []
+    "neo4j_gdn:shared_process": []
   },
   "config": {
     "isZeppelinNotebookCronEnable": false
